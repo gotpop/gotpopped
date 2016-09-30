@@ -19,7 +19,7 @@ Feel free to clone locally.
 :file_folder: Clone this repo into your directory then run
 
 ```
-cd gp-project-movie
+cd gotpop
 ```
 Next
 ```
