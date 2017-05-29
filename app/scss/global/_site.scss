@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -23,17 +27,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 100vh;
 }
 
 section {
   background: rgba(0,0,0, .6);
   padding: 2rem;
-  max-width: 600px;
+  // max-width: 600px;
   flex: 1 1 auto;
   margin: 2rem;
+  box-sizing: border-box;
 }
+
+
 
 canvas {
   background: white;
@@ -41,24 +47,4 @@ canvas {
   left: 0;
   top: 0;
   z-index: -1;
-}
-
-header {
-  flex: 1 1 100%;
-  padding: 2rem;
-  background: white;
-  color: #999;
-  text-align: center;
-  align-self: flex-start;
-}
-
-
-
-footer {
-  flex: 1 1 100%;
-  padding: 2rem;
-  background: white;
-  color: #999;
-  text-align: center;
-  align-self: flex-end;
 }
