@@ -1,8 +1,19 @@
 header {
-  flex: 1 1 100%;
+  flex: 1 1 80%;
   padding: 2rem;
   background: white;
   color: #999;
   text-align: center;
   align-self: flex-start;
+  display: flex;
+}
+
+
+header .ma-menu {
+  display: flex;
+  margin: 1rem;
+  .ma-class a {
+    padding: 1rem 2rem;
+    background: yellow;
+  }
 }

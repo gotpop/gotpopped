@@ -47,12 +47,21 @@ export default class Header {
         let makeText = document.createTextNode(pageItem.name)
 
         makeA.setAttribute('href', '#')
+
+        makeA.addEventListener('click', function() {
+          console.log('Loving it!');
+        })
+
         makeLi.setAttribute('class', 'ma-class')
 
         makeA.appendChild(makeText)
         makeLi.appendChild(makeA)
 
         menuUl.appendChild(makeLi)
+
+  }
+
+  addListener() {
 
   }
 
