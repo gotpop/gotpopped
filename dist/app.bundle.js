@@ -251,29 +251,14 @@ class Github {
 // Header
 /////////////////////////////////////////////////
 
-let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header_js__["a" /* default */]
+document.addEventListener("DOMContentLoaded", function(event) {
 
-/////////////////////////////////////////////////
-// Create view
-/////////////////////////////////////////////////
+  let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header_js__["a" /* default */]
+  let maView = new __WEBPACK_IMPORTED_MODULE_1__view_js__["a" /* default */]
+  let maFooter = new __WEBPACK_IMPORTED_MODULE_2__footer_js__["a" /* default */]
+  let maCanvas = new __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__["a" /* default */]
 
-let view = document.createElement('div')
-view.setAttribute('id', 'view')
-document.body.appendChild(view)
-
-let maView = new __WEBPACK_IMPORTED_MODULE_1__view_js__["a" /* default */]
-
-
-/////////////////////////////////////////////////
-// Footer
-/////////////////////////////////////////////////
-
-let maFooter = new __WEBPACK_IMPORTED_MODULE_2__footer_js__["a" /* default */]
-
-
-
-
-let maCanvas = new __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__["a" /* default */]
+})
 
 
 /***/ }),
@@ -519,7 +504,7 @@ class Header {
   }
   makeHeader() {
     // Make header
-    let view = document.getElementById('view')
+    // let view = document.getElementById('view')
     let header = document.createElement('header')
     let siteTitleH1 = document.createElement('h1')
     let siteTitleH1Text = document.createTextNode('GotPop')
@@ -555,6 +540,10 @@ class View {
     this.makeView()
   }
   makeView() {
+
+    let view = document.createElement('div')
+    view.setAttribute('id', 'view')
+    document.body.appendChild(view)
 
     let maIcons = new __WEBPACK_IMPORTED_MODULE_0__icons__["a" /* default */]
     let testDecode = decodeURI(maIcons.triangle)
@@ -598,7 +587,7 @@ exports = module.exports = __webpack_require__(17)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100vw;\n  height: 100vh; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  max-width: 600px;\n  flex: 1 1 auto;\n  margin: 2rem; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\nheader {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-start; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  margin: 2rem;\n  box-sizing: border-box; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\nheader {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-start; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n", ""]);
 
 // exports
 
