@@ -14,38 +14,5 @@ import Social from './data/social.json'
 // Imports
 import './scss/index.scss'
 
-
 // // Import JS
 import './js/site.js'
-
-
-import Github from './js/github.js'
-
-
-let hello = new Github
-
-
-
-// // Icons
-// import Icons from './icons'
-// let maIcons = new Icons
-//
-//
-// let testDecode = decodeURI(maIcons.triangle)
-//
-//
-//
-// console.log('Ma decodeURI: ', testDecode)
-
-
-
-
-
-
-
-
-
-
-// import footer from './html/footer.html'
-//
-// console.log('Ma Html', footer);

@@ -6,14 +6,12 @@ import Header from './header.js'
 import View from './view.js'
 import Footer from './footer.js'
 import Canvas from './canvas/index.js'
-import Status from './status.js'
+import Github from './github.js'
+import MakePage from './page.js'
 
 /////////////////////////////////////////////////
 // Header
 /////////////////////////////////////////////////
-
-export let siteStatus = new Status
-console.log(siteStatus)
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -21,5 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
   let maView = new View
   let maFooter = new Footer
   let maCanvas = new Canvas
+  let makeGitHub = new Github
 
 })

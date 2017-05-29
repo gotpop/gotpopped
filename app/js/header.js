@@ -42,27 +42,25 @@ export default class Header {
 
   makeList(menuUl, pageItem) {
 
-        let makeLi = document.createElement('li')
-        let makeA = document.createElement('a')
-        let makeText = document.createTextNode(pageItem.name)
+    let makeLi = document.createElement('li')
+    let makeA = document.createElement('a')
+    let makeText = document.createTextNode(pageItem.name)
 
-        makeA.setAttribute('href', '#')
+    makeA.setAttribute('href', '#')
 
-        makeA.addEventListener('click', function() {
-          console.log('Loving it!');
-        })
+    makeA.addEventListener('click', function() {
+      console.log('Loving it!');
+    })
 
-        makeLi.setAttribute('class', 'ma-class')
+    makeLi.setAttribute('class', 'ma-class')
 
-        makeA.appendChild(makeText)
-        makeLi.appendChild(makeA)
+    makeA.appendChild(makeText)
+    makeLi.appendChild(makeA)
 
-        menuUl.appendChild(makeLi)
-
-  }
-
-  addListener() {
+    menuUl.appendChild(makeLi)
 
   }
+
+  addListener() {}
 
 }

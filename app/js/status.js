@@ -1,4 +1,8 @@
-export default class Status {
+/////////////////////////////////////////////////
+// Status
+/////////////////////////////////////////////////
+
+class Status {
   constructor() {
     this.makeStatus()
     this.currentPage
@@ -7,3 +11,6 @@ export default class Status {
     this.currentPage = 'home'
   }
 }
+
+export let siteStatus = new Status
+console.log(siteStatus)
