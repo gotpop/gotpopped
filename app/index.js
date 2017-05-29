@@ -17,30 +17,25 @@ import './scss/index.scss'
 
 // // Import JS
 import './js/site.js'
-import './js/view.js'
+
 
 import Github from './js/github.js'
-import Canvas from './js/canvas/index.js'
 
 
-// Temp code
 let hello = new Github
-let goodbye = new Canvas
-console.log('Ma data: ', Site)
-
-
-// Icons
-import Icons from './icons'
-let maIcons = new Icons
-
-
-let testDecode = decodeURI(maIcons.triangle)
 
 
 
-console.log('Ma decodeURI: ', testDecode)
-
-
+// // Icons
+// import Icons from './icons'
+// let maIcons = new Icons
+//
+//
+// let testDecode = decodeURI(maIcons.triangle)
+//
+//
+//
+// console.log('Ma decodeURI: ', testDecode)
 
 
 
@@ -49,6 +44,8 @@ console.log('Ma decodeURI: ', testDecode)
 
 
 
-import footer from './html/footer.html'
 
-console.log('Ma Html', footer);
+
+// import footer from './html/footer.html'
+//
+// console.log('Ma Html', footer);

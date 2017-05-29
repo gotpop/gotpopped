@@ -40,8 +40,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             favicon: "./app/img/favicon.ico",
-            title: 'Rebuild',
-            inject: true
+            title: 'GotPop',
+            inject: 'head'
         })
     ]
 }
