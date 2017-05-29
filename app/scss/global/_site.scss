@@ -1,0 +1,42 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+}
+
+
+body {
+  background: yellow;
+  color: rgba(#000, .6);
+  font-family: sans-serif;
+}
+
+.site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  background: rgba(0,0,0, .6);
+  padding: 2rem;
+  max-width: 600px;
+  flex: 1 1 auto;
+  margin: 2rem;
+}
+
+canvas {
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
