@@ -2,7 +2,7 @@
 // Header
 /////////////////////////////////////////////////
 
-import Pages from '../data/pages.json'
+import PagesData from '../data/pages.json'
 
 /////////////////////////////////////////////////
 // Header
@@ -33,8 +33,8 @@ export default class Header {
   }
 
   loopPages(menuUl) {
-    for (let pageItem of Pages) {
-      console.log('Pages', pageItem);
+    for (let pageItem of PagesData) {
+      // console.log('Pages', pageItem);
       this.makeList(menuUl, pageItem)
     }
 
