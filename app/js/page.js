@@ -21,20 +21,17 @@ export default class MakePage {
 
       // console.log(pageObject)
 
-      if (pageObject.name === "Home") {
+      if (pageObject.name === siteStatus.currentPage) {
 
         let maView = document.getElementById('view')
-
+        let maSection = document.createElement('section')
         let maH1 = document.createElement('h1')
         let maH1TextNode = document.createTextNode(pageObject.name)
 
         maH1.appendChild(maH1TextNode)
-
-        maView.appendChild(maH1)
-
+        maSection.appendChild(maH1)
+        maView.appendChild(maSection)
         console.log('Status xxx: ', pageObject)
-
-
 
       }
 

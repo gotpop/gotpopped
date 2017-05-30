@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////
 
 import PagesData from '../data/pages.json'
+import {siteStatus} from './status'
 
 /////////////////////////////////////////////////
 // Header
@@ -49,7 +50,8 @@ export default class Header {
     makeA.setAttribute('href', '#')
 
     makeA.addEventListener('click', function() {
-      console.log('Loving it!');
+      siteStatus.currentPage = 'Skills'
+      console.log('Loving it!', siteStatus);
     })
 
     makeLi.setAttribute('class', 'ma-class')
