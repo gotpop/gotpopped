@@ -15,11 +15,11 @@ import MakePage from './page.js'
 
 document.addEventListener("DOMContentLoaded", function() {
 
+  let maHeader = new Header
   let maView = new View
   let maPage = new MakePage
   let maFooter = new Footer
   let maCanvas = new Canvas
   let makeGitHub = new Github
-  let maHeader = new Header
 
 })

@@ -5,8 +5,9 @@
 import {siteStatus} from './status'
 import PagesData from '../data/pages.json'
 
-
-
+/////////////////////////////////////////////////
+// MakePage
+/////////////////////////////////////////////////
 
 export default class MakePage {
   constructor() {
@@ -15,17 +16,9 @@ export default class MakePage {
 
   loopPageObjects() {
 
-
     for (let pageObject of PagesData) {
 
-      // console.log(pageObject)
-
-console.log('pageObject.name', pageObject.name)
-console.log('siteStatus.currentPage', siteStatus.currentPage)
-
       if (pageObject.pageId === siteStatus.currentPage) {
-
-        console.log('Made a page!');
 
         let maView = document.getElementById('view')
         let maSection = document.createElement('section')

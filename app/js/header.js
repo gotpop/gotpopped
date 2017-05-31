@@ -28,15 +28,14 @@ export default class Header {
     header.appendChild(siteTitleH1)
     header.appendChild(menuUl)
 
-    this.loopPages(menuUl)
+    this.loopPagesData(menuUl)
 
     document.body.appendChild(header)
 
   }
 
-  loopPages(menuUl) {
+  loopPagesData(menuUl) {
     for (let pageItem of PagesData) {
-      // console.log('Pages', pageItem);
       this.makeList(menuUl, pageItem)
     }
 
@@ -51,20 +50,17 @@ export default class Header {
     makeA.setAttribute('href', '#')
     makeA.setAttribute('data-id', pageItem.pageId)
 
-
     function listenToThis() {
       siteStatus.currentPage = makeA.getAttribute('data-id')
-      let maNewPage = new this
+      let maNewPage = new MakePage
       console.log(siteStatus)
-
     }
-    makeA.addEventListener('click', listenToThis.bind(MakePage))
 
+    makeA.addEventListener('click', listenToThis)
     makeLi.setAttribute('class', 'ma-class')
 
     makeA.appendChild(makeText)
     makeLi.appendChild(makeA)
-
     menuUl.appendChild(makeLi)
 
   }
