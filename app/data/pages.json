@@ -1,5 +1,6 @@
 [{
   "name": "Home",
+  "pageId": "home",
   "title": "male",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
@@ -9,6 +10,7 @@
 }, {
   "name": "Work",
   "title": "male",
+  "pageId": "work",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
   "phone": "+1 (893) 459-2144",
@@ -17,6 +19,7 @@
 }, {
   "name": "Skills",
   "title": "male",
+  "pageId": "skills",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
   "phone": "+1 (893) 459-2144",

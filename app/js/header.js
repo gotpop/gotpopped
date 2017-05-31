@@ -4,6 +4,7 @@
 
 import PagesData from '../data/pages.json'
 import {siteStatus} from './status'
+import MakePage from './page.js'
 
 /////////////////////////////////////////////////
 // Header
@@ -48,11 +49,16 @@ export default class Header {
     let makeText = document.createTextNode(pageItem.name)
 
     makeA.setAttribute('href', '#')
+    makeA.setAttribute('data-id', pageItem.pageId)
 
-    makeA.addEventListener('click', function() {
-      siteStatus.currentPage = 'Skills'
-      console.log('Loving it!', siteStatus);
-    })
+
+    function listenToThis() {
+      siteStatus.currentPage = makeA.getAttribute('data-id')
+      let maNewPage = new this
+      console.log(siteStatus)
+
+    }
+    makeA.addEventListener('click', listenToThis.bind(MakePage))
 
     makeLi.setAttribute('class', 'ma-class')
 

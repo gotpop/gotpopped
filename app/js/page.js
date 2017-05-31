@@ -15,7 +15,7 @@ export default class MakePage {
 
   loopPageObjects() {
 
-    // console.log(PagesData);
+    console.log('Made a page!');
 
     for (let pageObject of PagesData) {
 
