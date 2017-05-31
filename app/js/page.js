@@ -35,8 +35,7 @@ export default class MakePage {
         maSection.appendChild(maP)
         maView.appendChild(maSection)
 
-        console.log('Status xxx: ', pageObject)
-
+        this.setIds(maView)
       }
 
     }
@@ -47,6 +46,23 @@ export default class MakePage {
   }
 
   buildPage() {
+
+  }
+
+  setIds(maView) {
+    maView.firstChild.setAttribute('id', 'first')
+    maView.firstChild.classList.remove('last')
+    maView.firstChild.classList.add('first')
+
+    if (maView.childNodes.length > 1) {
+      maView.lastChild.setAttribute('id', 'last')
+      maView.lastChild.classList.remove('first')
+      maView.lastChild.classList.add('last')
+    }
+
+    if (maView.childNodes.length > 2) {
+      maView.firstChild.remove()
+    }
 
   }
 
