@@ -15,13 +15,17 @@ export default class MakePage {
 
   loopPageObjects() {
 
-    console.log('Made a page!');
 
     for (let pageObject of PagesData) {
 
       // console.log(pageObject)
 
-      if (pageObject.name === siteStatus.currentPage) {
+console.log('pageObject.name', pageObject.name)
+console.log('siteStatus.currentPage', siteStatus.currentPage)
+
+      if (pageObject.pageId === siteStatus.currentPage) {
+
+        console.log('Made a page!');
 
         let maView = document.getElementById('view')
         let maSection = document.createElement('section')

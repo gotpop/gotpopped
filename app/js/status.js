@@ -8,7 +8,7 @@ class Status {
     this.currentPage
   }
   makeStatus() {
-    this.currentPage = 'Home'
+    this.currentPage = 'home'
   }
 }
 
