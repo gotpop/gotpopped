@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -35,7 +39,6 @@ section {
   padding: 2rem;
   // max-width: 600px;
   flex: 1 1 auto;
-  margin: 2rem;
   box-sizing: border-box;
   color: rgba(#fff, .5)
 }

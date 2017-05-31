@@ -6,6 +6,7 @@ header {
   text-align: center;
   align-self: flex-start;
   display: flex;
+  justify-content: space-between;
 }
 
 
@@ -14,6 +15,11 @@ header .ma-menu {
   margin: 1rem;
   .ma-class a {
     padding: 1rem 2rem;
-    background: yellow;
+    margin-left: 1rem;
+    &:hover {
+    transition: all .5s ease;
+      background: yellow;
+
+    }
   }
 }
