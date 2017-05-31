@@ -24,4 +24,6 @@
 .last {
   position: absolute;
   background: rgba(yellow, .2);
+  transition: all 2s ease;
+  transform: translateX(2em);
 }

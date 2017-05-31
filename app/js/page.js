@@ -55,16 +55,24 @@ export default class MakePage {
     maView.firstChild.classList.add('view-item', 'first')
 
     if (maView.childNodes.length > 1) {
+
+
+      console.log(maView.childNodes);
+
       maView.lastChild.setAttribute('id', 'last')
       maView.lastChild.classList.remove('first')
       maView.lastChild.classList.add('view-item', 'last')
+
+      maView.firstChild.setAttribute('id', 'first')
+      maView.firstChild.classList.remove('last')
+      maView.firstChild.classList.add('view-item', 'first')
+
     }
 
     if (maView.childNodes.length > 2) {
       maView.firstChild.remove()
     }
 
-    console.log(maView.childNodes);
   }
 
 }
