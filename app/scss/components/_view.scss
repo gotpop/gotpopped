@@ -19,7 +19,12 @@
 }
 
 .first {
-
+  position: absolute;
+  background: rgba(yellow, .2);
+  transform: translateX(0%);
+  animation-duration: 1s;
+  animation-name: slideout;
+  animation-fill-mode: forwards;
 }
 
 .last {
@@ -31,6 +36,11 @@
   animation-fill-mode: forwards;
 }
 
+.solo {
+    transform: translateX(0%);
+    animation-name: none;
+}
+
 
 
 @keyframes slidein {
@@ -40,5 +50,16 @@
 
   to {
     transform: translateX(0%);
+  }
+}
+
+
+@keyframes slideout {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
   }
 }
