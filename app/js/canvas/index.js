@@ -36,8 +36,8 @@ export default class Canvas {
       ctx.fillRect(0, 0, winWidth, winHeight);
 
       var time = new Date()
-      ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds())
-      ctx.drawImage(earth, 0, 0);
+      ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 600) * time.getMilliseconds())
+      ctx.drawImage(earth, 300, 300);
       ctx.restore();
       window.requestAnimationFrame(draw)
     }

@@ -1,25 +1,28 @@
 .view {
   position: relative;
   width: 100%;
+  background: rgba(red, .2)
 }
 
 
-// .view::before {
-//   content: "";
-//   display: table;
-//   clear: both;
-// }
-//
+.view::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 .view-item {
-  position: absolute;
+  // position: absolute;
+  float: left;
   top: 0;
   left: 0;
   margin: 2rem;
 }
 
 .first {
-  position: absolute;
+  // position: absolute;
+  float: left;
   background: rgba(yellow, .2);
   transform: translateX(0%);
   animation-duration: 1s;
@@ -28,7 +31,8 @@
 }
 
 .last {
-  position: absolute;
+  // position: absolute;
+  float: left;
   background: rgba(yellow, .2);
   transform: translateX(100%);
   animation-duration: 1s;
