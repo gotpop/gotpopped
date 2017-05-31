@@ -12,6 +12,7 @@ export default class View {
 
     let view = document.createElement('div')
     view.setAttribute('id', 'view')
+    view.setAttribute('class', 'view')
     document.body.appendChild(view)
 
     // let maIcons = new Icons

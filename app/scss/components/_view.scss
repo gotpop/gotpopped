@@ -1,0 +1,27 @@
+.view {
+  position: relative;
+  width: 100%;
+}
+
+
+.view::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.view-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.first {
+
+}
+
+.last {
+  position: absolute;
+  background: rgba(yellow, .2);
+}
