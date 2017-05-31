@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -102,37 +102,27 @@ module.exports = [
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = [
-	{
-		"name": "Home",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Work",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Skills",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	}
-];
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return siteStatus; });
+/////////////////////////////////////////////////
+// Status
+/////////////////////////////////////////////////
+
+class Status {
+  constructor() {
+    this.makeStatus()
+    this.currentPage
+  }
+  makeStatus() {
+    this.currentPage = 'Home'
+  }
+}
+
+let siteStatus = new Status
+console.log(siteStatus)
+
 
 /***/ }),
 /* 2 */
@@ -204,30 +194,37 @@ module.exports = [
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/////////////////////////////////////////////////
-// Github
-/////////////////////////////////////////////////
-
-class Github {
-  constructor() {
-    this.githubUrl = 'https://api.github.com/users/gotpop'
-    this.getGithubUrl()
-  }
-  getGithubUrl() {
-
-    fetch(this.githubUrl).then(function(response) {
-      console.log(response)
-      return response
-    })
-
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Github;
-
-
+module.exports = [
+	{
+		"name": "Home",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	},
+	{
+		"name": "Work",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	},
+	{
+		"name": "Skills",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	}
+];
 
 /***/ }),
 /* 5 */
@@ -235,12 +232,16 @@ class Github {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_js__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_js__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_js__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_js__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_js__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__github_js__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__page_js__ = __webpack_require__(15);
 /////////////////////////////////////////////////
 // Imports
 /////////////////////////////////////////////////
+
+
 
 
 
@@ -251,12 +252,14 @@ class Github {
 // Header
 /////////////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
 
   let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header_js__["a" /* default */]
   let maView = new __WEBPACK_IMPORTED_MODULE_1__view_js__["a" /* default */]
   let maFooter = new __WEBPACK_IMPORTED_MODULE_2__footer_js__["a" /* default */]
   let maCanvas = new __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__["a" /* default */]
+  let makeGitHub = new __WEBPACK_IMPORTED_MODULE_4__github_js__["a" /* default */]
+  let maPage = new __WEBPACK_IMPORTED_MODULE_5__page_js__["a" /* default */]
 
 })
 
@@ -286,7 +289,7 @@ module.exports = __webpack_require__.p + "offers.jpg";
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(16);
+var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -294,7 +297,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(18)(content, options);
+var update = __webpack_require__(19)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -315,41 +318,16 @@ if(false) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__triangle_svg__);
-
-
-class Icons {
-  constructor() {
-      this.triangle = __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default.a
-      this.makeIcons()
-  }
-  makeIcons() {
-    // console.log('Ma Icon: ', triangle)
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Icons;
-
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_site_json__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_site_json__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__data_site_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_portfolio_json__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_portfolio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_social_json__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_social_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__data_social_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scss_index_scss__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scss_index_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_site_js__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_github_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_portfolio_json__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_portfolio_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_social_json__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_social_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_social_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scss_index_scss__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scss_index_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_site_js__ = __webpack_require__(5);
 // Require static files
 __webpack_require__(6);
 __webpack_require__(7);
@@ -362,49 +340,15 @@ __webpack_require__(8);
 
 
 
-
 // Imports
-
 
 
 // // Import JS
 
 
 
-
-
-
-let hello = new __WEBPACK_IMPORTED_MODULE_6__js_github_js__["a" /* default */]
-
-
-
-// // Icons
-// import Icons from './icons'
-// let maIcons = new Icons
-//
-//
-// let testDecode = decodeURI(maIcons.triangle)
-//
-//
-//
-// console.log('Ma decodeURI: ', testDecode)
-
-
-
-
-
-
-
-
-
-
-// import footer from './html/footer.html'
-//
-// console.log('Ma Html', footer);
-
-
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -461,7 +405,7 @@ class Canvas {
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -490,10 +434,47 @@ class Footer {
 
 
 /***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/////////////////////////////////////////////////
+// Github
+/////////////////////////////////////////////////
+
+class Github {
+  constructor() {
+    this.githubUrl = 'https://api.github.com/users/gotpop'
+    this.getGithubUrl()
+  }
+  getGithubUrl() {
+
+    fetch(this.githubUrl).then(function(response) {
+      console.log(response)
+      return response
+    })
+
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Github;
+
+
+
+/***/ }),
 /* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_pages_json__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__data_pages_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__status__ = __webpack_require__(1);
+/////////////////////////////////////////////////
+// Header
+/////////////////////////////////////////////////
+
+
+
+
 /////////////////////////////////////////////////
 // Header
 /////////////////////////////////////////////////
@@ -502,18 +483,58 @@ class Header {
   constructor() {
     this.makeHeader()
   }
+
   makeHeader() {
-    // Make header
-    // let view = document.getElementById('view')
+
     let header = document.createElement('header')
     let siteTitleH1 = document.createElement('h1')
     let siteTitleH1Text = document.createTextNode('GotPop')
+    let menuUl = document.createElement('ul')
 
+    menuUl.setAttribute('id', 'menu')
+    menuUl.setAttribute('class', 'ma-menu')
     siteTitleH1.appendChild(siteTitleH1Text)
     header.appendChild(siteTitleH1)
+    header.appendChild(menuUl)
+
+    this.loopPages(menuUl)
+
     document.body.appendChild(header)
 
   }
+
+  loopPages(menuUl) {
+    for (let pageItem of __WEBPACK_IMPORTED_MODULE_0__data_pages_json___default.a) {
+      // console.log('Pages', pageItem);
+      this.makeList(menuUl, pageItem)
+    }
+
+  }
+
+  makeList(menuUl, pageItem) {
+
+    let makeLi = document.createElement('li')
+    let makeA = document.createElement('a')
+    let makeText = document.createTextNode(pageItem.name)
+
+    makeA.setAttribute('href', '#')
+
+    makeA.addEventListener('click', function() {
+      __WEBPACK_IMPORTED_MODULE_1__status__["a" /* siteStatus */].currentPage = 'Skills'
+      console.log('Loving it!', __WEBPACK_IMPORTED_MODULE_1__status__["a" /* siteStatus */]);
+    })
+
+    makeLi.setAttribute('class', 'ma-class')
+
+    makeA.appendChild(makeText)
+    makeLi.appendChild(makeA)
+
+    menuUl.appendChild(makeLi)
+
+  }
+
+  addListener() {}
+
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Header;
 
@@ -524,76 +545,141 @@ class Header {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__icons__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__status__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_pages_json__);
 /////////////////////////////////////////////////
 // Imports
 /////////////////////////////////////////////////
 
 
 
+
+
+
+
+class MakePage {
+  constructor() {
+      this.loopPageObjects()
+  }
+
+  loopPageObjects() {
+
+    // console.log(PagesData);
+
+    for (let pageObject of __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default.a) {
+
+      // console.log(pageObject)
+
+      if (pageObject.name === __WEBPACK_IMPORTED_MODULE_0__status__["a" /* siteStatus */].currentPage) {
+
+        let maView = document.getElementById('view')
+        let maSection = document.createElement('section')
+        let maH1 = document.createElement('h1')
+        let maH1TextNode = document.createTextNode(pageObject.name)
+
+        maH1.appendChild(maH1TextNode)
+        maSection.appendChild(maH1)
+        maView.appendChild(maSection)
+        console.log('Status xxx: ', pageObject)
+
+      }
+
+    }
+
+    // let maIcons = new Icons
+    // let testDecode = decodeURI(maIcons.triangle)
+
+  }
+
+  buildPage() {
+
+  }
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = MakePage;
+
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /////////////////////////////////////////////////
 // The View
 /////////////////////////////////////////////////
 
 class View {
+
   constructor() {
     this.makeView()
   }
+
   makeView() {
 
     let view = document.createElement('div')
     view.setAttribute('id', 'view')
     document.body.appendChild(view)
 
-    let maIcons = new __WEBPACK_IMPORTED_MODULE_0__icons__["a" /* default */]
-    let testDecode = decodeURI(maIcons.triangle)
+    // let maIcons = new Icons
+    // let testDecode = decodeURI(maIcons.triangle)
 
-    function template() {
-      let itemTemplate =  `<div class="site">
-      <section>
-      <h2>Lorem</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ex fugit architecto mollitia illo expedita cumque, inventore, perferendis natus maxime voluptas praesentium dicta illum! Itaque odit tenetur sapiente animi dolore.</p>
-      <img src="./columbus.jpg" width="50">
-      </section>
-      </div>`
-      return itemTemplate
-    }
-
-    view.innerHTML = template()
-    document.body.appendChild(view)
-
-    var myImage = document.querySelector('img');
-
-    fetch('./offers.jpg').then(function(response) {
-      return response.blob();
-    }).then(function(myBlob) {
-      var objectURL = URL.createObjectURL(myBlob);
-      myImage.src = objectURL;
-    });
+    // this.addImage()
 
 
   }
+
+  // addImage() {
+  //
+  //   view.innerHTML = this.addSection()
+  //   document.body.appendChild(view)
+  //
+  //   var myImage = document.querySelector('img');
+  //
+  //   fetch('./offers.jpg').then(function(response) {
+  //     return response.blob();
+  //   }).then(function(myBlob) {
+  //     var objectURL = URL.createObjectURL(myBlob);
+  //     myImage.src = objectURL;
+  //   });
+  //
+  // }
+  //
+  // addSection() {
+  //
+  //   let itemTemplate =  `<div class="site">
+  //   <section>
+  //   <h2>Lorem</h2>
+  //   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ex fugit architecto mollitia illo expedita cumque, inventore, perferendis natus maxime voluptas praesentium dicta illum! Itaque odit tenetur sapiente animi dolore.</p>
+  //   <img src="./columbus.jpg" width="50">
+  //   </section>
+  //   </div>`
+  //   return itemTemplate
+  //
+  // }
+
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = View;
 
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(17)(undefined);
+exports = module.exports = __webpack_require__(18)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  margin: 2rem;\n  box-sizing: border-box; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\nheader {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-start; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  margin: 2rem;\n  box-sizing: border-box; }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    background: yellow; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 /*
@@ -675,7 +761,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -712,7 +798,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(19);
+	fixUrls = __webpack_require__(20);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -988,7 +1074,7 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 
@@ -1081,12 +1167,6 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-module.exports = "\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 125' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M82.578,68.869l-31.427-51.02c-0.493-0.799-1.808-0.799-2.302,0l-31.426,51.02c-0.212,0.344-0.26,0.764-0.129,1.146 c0.131,0.381,0.426,0.685,0.803,0.828l31.426,11.822c0.155,0.057,0.316,0.086,0.477,0.086c0.162,0,0.322-0.029,0.477-0.086 l31.427-11.822c0.378-0.143,0.672-0.446,0.803-0.828C82.836,69.633,82.789,69.212,82.578,68.869z M79.383,68.901h-28.03V23.329 L79.415,68.89L79.383,68.901z M48.648,79.447l-24.438-9.193h24.438V79.447z M51.353,70.253H75.79l-24.438,9.193V70.253z M48.648,23.329v45.572H20.617l-0.031-0.012L48.648,23.329z'/%3E%3C/g%3E%3Ctext x='0' y='115' fill='%23000000' font-size='5px' font-weight='bold' font-family=''Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif'%3ECreated by naim%3C/text%3E%3Ctext x='0' y='120' fill='%23000000' font-size='5px' font-weight='bold' font-family=''Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif'%3Efrom the Noun Project%3C/text%3E%3C/svg%3E\""
 
 /***/ })
 /******/ ]);

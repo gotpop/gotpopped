@@ -30,7 +30,14 @@ export default class MakePage {
 
         maH1.appendChild(maH1TextNode)
         maSection.appendChild(maH1)
+
+        let maP = document.createElement('p')
+        let maPText = document.createTextNode(pageObject.about)
+
+        maP.appendChild(maPText)
+        maSection.appendChild(maP)
         maView.appendChild(maSection)
+
         console.log('Status xxx: ', pageObject)
 
       }
