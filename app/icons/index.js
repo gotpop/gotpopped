@@ -2,24 +2,39 @@
 // Icons
 /////////////////////////////////////////////////
 
-import triangle from './triangle.svg'
+import triangleSrc from './triangle.svg'
+import circleSrc from './circle.svg'
+import cubeSrc from './cube.svg'
 
-export default class Icon {
+/////////////////////////////////////////////////
+// Class
+/////////////////////////////////////////////////
+
+
+class IconsSrc {
+  constructor() {
+    this.triangle = triangleSrc
+    this.circle = circleSrc
+    this.cube = cubeSrc
+  }
+}
+
+export default class Icon extends IconsSrc {
   constructor(iconType, className) {
+      super()
       this.iconType = iconType
       this.className = className
-      this.makeIcons()
+      this.triangleSrc
+      this.init()
   }
-  makeIcons() {
-    console.log('iconType: ', this.iconType)
-    console.log('className: ', this.className)
+  init() {
+    console.log(this);
+    this.triangleSrc = decodeURI(triangleSrc)
   }
   wrapSvg() {
-    // // let svg = decodeURI(this.iconType)
-    // let wrap = document.createElement('span')
-    // wrap.setAttribute('class', this.className)
-    // // wrap.appendChild(svg)
-    // console.log('Bollox')
-    return 'Bollox!!!!!!!!!'
+    let wrap = document.createElement('span')
+    wrap.setAttribute('class', this.className)
+    wrap.innerHTML = this.triangleSrc
+    return wrap
   }
 }

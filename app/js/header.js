@@ -35,9 +35,9 @@ export default class Header {
 ///////////////////////////////////////
 
     let iconTriangle = new Icon('triangle', 'icon-class')
-
-    // console.log('iconTriangle', iconTriangle.wrapSvg());
-    // header.appendChild('iconTriangle.wrapSvg()')
+    let bollox = iconTriangle.wrapSvg()
+    // console.log('iconTriangle', bollox);
+    header.appendChild(bollox)
 
 
 /////////////////////////////////////////
