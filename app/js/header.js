@@ -5,7 +5,7 @@
 import PagesData from '../data/pages.json'
 import {siteStatus} from './status'
 import MakePage from './page.js'
-import Icons from '../icons'
+import Icon from '../icons'
 
 /////////////////////////////////////////////////
 // Header
@@ -32,28 +32,18 @@ export default class Header {
     this.loopPagesData(menuUl)
 
 
+///////////////////////////////////////
 
-    let maIcons = new Icons
-    let testDecode = decodeURI(maIcons.triangle)
-    console.log(testDecode)
+    let iconTriangle = new Icon('triangle', 'icon-class')
 
-
-    let maDiv = document.createElement('div')
-    maDiv.innerHTML = maIcons.triangle
-
-header.appendChild(maDiv)
+    // console.log('iconTriangle', iconTriangle.wrapSvg());
+    // header.appendChild('iconTriangle.wrapSvg()')
 
 
+/////////////////////////////////////////
 
 
     document.body.appendChild(header)
-
-
-
-
-
-
-
 
   }
 

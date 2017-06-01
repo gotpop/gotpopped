@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,6 +73,7 @@
 module.exports = [
 	{
 		"name": "Home",
+		"pageId": "home",
 		"title": "male",
 		"subtitle": "UTARIAN",
 		"link": "floreshardin@utarian.com",
@@ -83,6 +84,7 @@ module.exports = [
 	{
 		"name": "Work",
 		"title": "male",
+		"pageId": "work",
 		"subtitle": "UTARIAN",
 		"link": "floreshardin@utarian.com",
 		"phone": "+1 (893) 459-2144",
@@ -92,6 +94,7 @@ module.exports = [
 	{
 		"name": "Skills",
 		"title": "male",
+		"pageId": "skills",
 		"subtitle": "UTARIAN",
 		"link": "floreshardin@utarian.com",
 		"phone": "+1 (893) 459-2144",
@@ -102,6 +105,94 @@ module.exports = [
 
 /***/ }),
 /* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__status__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_pages_json__);
+/////////////////////////////////////////////////
+// Imports
+/////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////
+// MakePage
+/////////////////////////////////////////////////
+
+class MakePage {
+  constructor() {
+      this.loopPageObjects()
+  }
+
+  loopPageObjects() {
+
+    for (let pageObject of __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default.a) {
+
+      if (pageObject.pageId === __WEBPACK_IMPORTED_MODULE_0__status__["a" /* siteStatus */].currentPage) {
+
+        let maView = document.getElementById('view')
+        let maSection = document.createElement('section')
+        let maH1 = document.createElement('h1')
+        let maH1TextNode = document.createTextNode(pageObject.name)
+
+        maH1.appendChild(maH1TextNode)
+        maSection.appendChild(maH1)
+
+        let maP = document.createElement('p')
+        let maPText = document.createTextNode(pageObject.about)
+
+        maP.appendChild(maPText)
+        maSection.appendChild(maP)
+        maView.appendChild(maSection)
+
+        this.setIds(maView)
+      }
+
+    }
+
+    // let maIcons = new Icons
+    // let testDecode = decodeURI(maIcons.triangle)
+
+  }
+
+  buildPage() {
+
+  }
+
+  setIds(maView) {
+    maView.firstChild.setAttribute('id', 'first')
+    maView.firstChild.classList.remove('last')
+    maView.firstChild.classList.add('view-item', 'first', 'solo')
+
+    if (maView.childNodes.length > 1) {
+
+      if (maView.childNodes.length > 2) {
+        maView.firstChild.remove()
+      }
+
+      maView.firstChild.setAttribute('id', 'first')
+      maView.firstChild.classList.remove('last', 'solo')
+      maView.firstChild.classList.add('view-item', 'first')
+
+      maView.lastChild.setAttribute('id', 'last')
+      maView.lastChild.classList.remove('first', 'solo')
+      maView.lastChild.classList.add('view-item', 'last')
+
+    }
+
+
+  }
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = MakePage;
+
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,7 +207,7 @@ class Status {
     this.currentPage
   }
   makeStatus() {
-    this.currentPage = 'Home'
+    this.currentPage = 'home'
   }
 }
 
@@ -125,72 +216,10 @@ console.log(siteStatus)
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = [
-	{
-		"name": "Home",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Work",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Skills",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	}
-];
-
-/***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = [
-	{
-		"name": "Home",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Work",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Skills",
-		"title": "male",
-		"subtitle": "UTARIAN",
-		"link": "floreshardin@utarian.com",
-		"phone": "+1 (893) 459-2144",
-		"address": "480 Seigel Street, Yardville, Kansas, 2109",
-		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	}
-];
+module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 125' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M82.578,68.869l-31.427-51.02c-0.493-0.799-1.808-0.799-2.302,0l-31.426,51.02c-0.212,0.344-0.26,0.764-0.129,1.146 c0.131,0.381,0.426,0.685,0.803,0.828l31.426,11.822c0.155,0.057,0.316,0.086,0.477,0.086c0.162,0,0.322-0.029,0.477-0.086 l31.427-11.822c0.378-0.143,0.672-0.446,0.803-0.828C82.836,69.633,82.789,69.212,82.578,68.869z M79.383,68.901h-28.03V23.329 L79.415,68.89L79.383,68.901z M48.648,79.447l-24.438-9.193h24.438V79.447z M51.353,70.253H75.79l-24.438,9.193V70.253z M48.648,23.329v45.572H20.617l-0.031-0.012L48.648,23.329z'/%3E%3C/g%3E%3C/svg%3E"
 
 /***/ }),
 /* 4 */
@@ -228,15 +257,83 @@ module.exports = [
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"name": "Home",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	},
+	{
+		"name": "Work",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	},
+	{
+		"name": "Skills",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	}
+];
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"name": "Home",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	},
+	{
+		"name": "Work",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	},
+	{
+		"name": "Skills",
+		"title": "male",
+		"subtitle": "UTARIAN",
+		"link": "floreshardin@utarian.com",
+		"phone": "+1 (893) 459-2144",
+		"address": "480 Seigel Street, Yardville, Kansas, 2109",
+		"about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+	}
+];
+
+/***/ }),
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_js__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_js__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_js__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__github_js__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__page_js__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_js__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__view_js__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_js__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__github_js__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__page_js__ = __webpack_require__(1);
 /////////////////////////////////////////////////
 // Imports
 /////////////////////////////////////////////////
@@ -256,40 +353,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header_js__["a" /* default */]
   let maView = new __WEBPACK_IMPORTED_MODULE_1__view_js__["a" /* default */]
+  let maPage = new __WEBPACK_IMPORTED_MODULE_5__page_js__["a" /* default */]
   let maFooter = new __WEBPACK_IMPORTED_MODULE_2__footer_js__["a" /* default */]
   let maCanvas = new __WEBPACK_IMPORTED_MODULE_3__canvas_index_js__["a" /* default */]
   let makeGitHub = new __WEBPACK_IMPORTED_MODULE_4__github_js__["a" /* default */]
-  let maPage = new __WEBPACK_IMPORTED_MODULE_5__page_js__["a" /* default */]
 
 })
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "columbus.jpg";
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "hackett.jpg";
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "offers.jpg";
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(17);
+var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -297,7 +394,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(19)(content, options);
+var update = __webpack_require__(22)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -314,24 +411,46 @@ if(false) {
 }
 
 /***/ }),
-/* 10 */
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__triangle_svg__);
+
+
+class Icons {
+  constructor() {
+      this.triangle = __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default.a
+      this.makeIcons()
+  }
+  makeIcons() {
+    // console.log('Ma Icon: ', triangle)
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Icons;
+
+
+
+/***/ }),
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_site_json__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_site_json__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__data_site_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_portfolio_json__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_portfolio_json__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_portfolio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_social_json__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_social_json__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_social_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_social_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scss_index_scss__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scss_index_scss__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scss_index_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_site_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_site_js__ = __webpack_require__(7);
 // Require static files
-__webpack_require__(6);
-__webpack_require__(7);
 __webpack_require__(8);
+__webpack_require__(9);
+__webpack_require__(10);
 
 
 
@@ -348,7 +467,7 @@ __webpack_require__(8);
 
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -390,8 +509,8 @@ class Canvas {
       ctx.fillRect(0, 0, winWidth, winHeight);
 
       var time = new Date()
-      ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds())
-      ctx.drawImage(earth, 0, 0);
+      ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 600) * time.getMilliseconds())
+      ctx.drawImage(earth, 300, 300);
       ctx.restore();
       window.requestAnimationFrame(draw)
     }
@@ -405,7 +524,7 @@ class Canvas {
 
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -434,7 +553,7 @@ class Footer {
 
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -461,16 +580,28 @@ class Github {
 
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_pages_json__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__data_pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__status__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__status__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__icons__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icons_triangle_svg__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icons_triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__icons_triangle_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__html_footer_html__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__html_footer_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__html_footer_html__);
 /////////////////////////////////////////////////
 // Header
 /////////////////////////////////////////////////
+
+
+
+
+
+
 
 
 
@@ -497,15 +628,27 @@ class Header {
     header.appendChild(siteTitleH1)
     header.appendChild(menuUl)
 
-    this.loopPages(menuUl)
+    this.loopPagesData(menuUl)
+
+
+
+    let maIcons = new __WEBPACK_IMPORTED_MODULE_3__icons__["a" /* default */]
+    let testDecode = decodeURI(__WEBPACK_IMPORTED_MODULE_5__html_footer_html___default.a)
+    console.log(testDecode, 'testDecode')
+// console.log(te)
+
+
+
+    let maDiv = document.createElement('div')
+    maDiv.innerHTML = testDecode
+    header.appendChild(maDiv)
 
     document.body.appendChild(header)
 
   }
 
-  loopPages(menuUl) {
+  loopPagesData(menuUl) {
     for (let pageItem of __WEBPACK_IMPORTED_MODULE_0__data_pages_json___default.a) {
-      // console.log('Pages', pageItem);
       this.makeList(menuUl, pageItem)
     }
 
@@ -518,17 +661,19 @@ class Header {
     let makeText = document.createTextNode(pageItem.name)
 
     makeA.setAttribute('href', '#')
+    makeA.setAttribute('data-id', pageItem.pageId)
 
-    makeA.addEventListener('click', function() {
-      __WEBPACK_IMPORTED_MODULE_1__status__["a" /* siteStatus */].currentPage = 'Skills'
-      console.log('Loving it!', __WEBPACK_IMPORTED_MODULE_1__status__["a" /* siteStatus */]);
-    })
+    function listenToThis() {
+      __WEBPACK_IMPORTED_MODULE_1__status__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
+      let maNewPage = new __WEBPACK_IMPORTED_MODULE_2__page_js__["a" /* default */]
+      console.log(__WEBPACK_IMPORTED_MODULE_1__status__["a" /* siteStatus */])
+    }
 
+    makeA.addEventListener('click', listenToThis)
     makeLi.setAttribute('class', 'ma-class')
 
     makeA.appendChild(makeText)
     makeLi.appendChild(makeA)
-
     menuUl.appendChild(makeLi)
 
   }
@@ -541,68 +686,7 @@ class Header {
 
 
 /***/ }),
-/* 15 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__status__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_pages_json__);
-/////////////////////////////////////////////////
-// Imports
-/////////////////////////////////////////////////
-
-
-
-
-
-
-
-class MakePage {
-  constructor() {
-      this.loopPageObjects()
-  }
-
-  loopPageObjects() {
-
-    // console.log(PagesData);
-
-    for (let pageObject of __WEBPACK_IMPORTED_MODULE_1__data_pages_json___default.a) {
-
-      // console.log(pageObject)
-
-      if (pageObject.name === __WEBPACK_IMPORTED_MODULE_0__status__["a" /* siteStatus */].currentPage) {
-
-        let maView = document.getElementById('view')
-        let maSection = document.createElement('section')
-        let maH1 = document.createElement('h1')
-        let maH1TextNode = document.createTextNode(pageObject.name)
-
-        maH1.appendChild(maH1TextNode)
-        maSection.appendChild(maH1)
-        maView.appendChild(maSection)
-        console.log('Status xxx: ', pageObject)
-
-      }
-
-    }
-
-    // let maIcons = new Icons
-    // let testDecode = decodeURI(maIcons.triangle)
-
-  }
-
-  buildPage() {
-
-  }
-
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = MakePage;
-
-
-
-/***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -620,44 +704,20 @@ class View {
 
     let view = document.createElement('div')
     view.setAttribute('id', 'view')
-    document.body.appendChild(view)
+    view.setAttribute('class', 'view')
+
+    let site = document.createElement('div')
+    site.appendChild(view)
+    site.setAttribute('id', 'site')
+    site.setAttribute('class', 'site')
+
+
+    document.body.appendChild(site)
 
     // let maIcons = new Icons
     // let testDecode = decodeURI(maIcons.triangle)
 
-    // this.addImage()
-
-
   }
-
-  // addImage() {
-  //
-  //   view.innerHTML = this.addSection()
-  //   document.body.appendChild(view)
-  //
-  //   var myImage = document.querySelector('img');
-  //
-  //   fetch('./offers.jpg').then(function(response) {
-  //     return response.blob();
-  //   }).then(function(myBlob) {
-  //     var objectURL = URL.createObjectURL(myBlob);
-  //     myImage.src = objectURL;
-  //   });
-  //
-  // }
-  //
-  // addSection() {
-  //
-  //   let itemTemplate =  `<div class="site">
-  //   <section>
-  //   <h2>Lorem</h2>
-  //   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ex fugit architecto mollitia illo expedita cumque, inventore, perferendis natus maxime voluptas praesentium dicta illum! Itaque odit tenetur sapiente animi dolore.</p>
-  //   <img src="./columbus.jpg" width="50">
-  //   </section>
-  //   </div>`
-  //   return itemTemplate
-  //
-  // }
 
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = View;
@@ -665,21 +725,21 @@ class View {
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(18)(undefined);
+exports = module.exports = __webpack_require__(20)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  margin: 2rem;\n  box-sizing: border-box; }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    background: yellow; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nhtml {\n  overflow-y: scroll;\n  overflow-x: hidden; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 80vh;\n  width: 100%; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  box-sizing: border-box;\n  color: rgba(255, 255, 255, 0.5); }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex;\n  justify-content: space-between; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    margin-left: 1rem; }\n    header .ma-menu .ma-class a:hover {\n      transition: all .5s ease;\n      background: yellow; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\n.view {\n  position: relative;\n  width: 100%;\n  background: rgba(255, 0, 0, 0.2); }\n\n.view::before {\n  content: \"\";\n  display: table;\n  clear: both; }\n\n.view-item {\n  float: left;\n  top: 0;\n  left: 0;\n  margin: 2rem; }\n\n.first {\n  float: left;\n  background: rgba(255, 255, 0, 0.2);\n  transform: translateX(0%);\n  animation-duration: 1s;\n  animation-name: slideout;\n  animation-fill-mode: forwards; }\n\n.last {\n  float: left;\n  background: rgba(255, 255, 0, 0.2);\n  transform: translateX(100%);\n  animation-duration: 1s;\n  animation-name: slidein;\n  animation-fill-mode: forwards; }\n\n.solo {\n  transform: translateX(0%);\n  animation-name: none; }\n\n@keyframes slidein {\n  from {\n    transform: translateX(100%);\n    opacity: 0; }\n  to {\n    transform: translateX(0%);\n    opacity: 1; } }\n\n@keyframes slideout {\n  from {\n    transform: translateX(0%);\n    opacity: 1; }\n  to {\n    transform: translateX(-100%);\n    opacity: 0; } }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /*
@@ -761,7 +821,13 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 19 */
+/* 21 */
+/***/ (function(module, exports) {
+
+module.exports = "<footer>\n    <ul>\n        <li>1</li>\n        <li>2</li>\n        <li>3</li>\n    </ul>\n</footer>\n";
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -798,7 +864,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(20);
+	fixUrls = __webpack_require__(23);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -1074,7 +1140,7 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports) {
 
 
