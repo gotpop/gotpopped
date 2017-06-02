@@ -1,5 +1,7 @@
 class Draw {
   constructor() {
+    this.earth = new Image()
+    this.earth.src = "http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg"
     this.build()
   }
   build() {

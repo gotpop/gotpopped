@@ -1,15 +1,11 @@
-import Gradient from './gradients.js'
-import Draw from './draw.js'
-
+// import Gradient from './gradients.js'
+// import Draw from './draw.js'
 
 export default class Canvas {
   constructor() {
-    this.earth = new Image()
     this.winWidth = window.innerWidth
     this.winHeight = window.innerHeight
-    this.earth.src = "http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg"
-    // this.earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
-    this.makeCanvas()
+    // this.makeCanvas()
   }
   makeCanvas() {
 
@@ -21,10 +17,30 @@ export default class Canvas {
 
     var ctx = document.getElementById('canvas').getContext('2d')
 
-
-    let addGrad = new Gradient()
+    let addGrad = new Gradient
     addGrad.build()
   }
 
+}
+
+class Gradient extends Canvas {
+
+  constructor() {
+    super()
+    // this.winWidth = window.innerWidth;
+    this.winHeight = window.innerHeight;
+  }
+
+  build() {
+    
+var ctx = document.getElementById('canvas').getContext('2d')
+    var grad = ctx.createLinearGradient(0, 50, 0, 995);
+    grad.addColorStop(0.5, '#000');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+
+    // assign gradients to fill and stroke styles
+    ctx.fillStyle = grad
+    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+  }
 
 }

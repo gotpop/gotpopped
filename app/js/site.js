@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
   let maPage = new MakePage
   let maFooter = new Footer
   let maCanvas = new Canvas
+
+
+    maCanvas.makeCanvas()
+
   // let makeGitHub = new Github
 
 })
