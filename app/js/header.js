@@ -31,17 +31,9 @@ export default class Header {
 
     this.loopPagesData(menuUl)
 
-
-///////////////////////////////////////
-
-    let iconTriangle = new Icon('triangle', 'icon-class')
-    let bollox = iconTriangle.wrapSvg()
-    // console.log('iconTriangle', bollox);
-    header.appendChild(bollox)
-
-
-/////////////////////////////////////////
-
+    let makeIcon = new Icon('triangle', 'icon-class')
+    let iconTriangle = makeIcon.build()
+    header.appendChild(iconTriangle)
 
     document.body.appendChild(header)
 

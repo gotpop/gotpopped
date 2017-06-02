@@ -10,31 +10,52 @@ import cubeSrc from './cube.svg'
 // Class
 /////////////////////////////////////////////////
 
-
 class IconsSrc {
+
   constructor() {
     this.triangle = triangleSrc
     this.circle = circleSrc
     this.cube = cubeSrc
   }
+
 }
 
-export default class Icon extends IconsSrc {
+export default class Icon {
+
   constructor(iconType, className) {
-      super()
-      this.iconType = iconType
-      this.className = className
-      this.triangleSrc
-      this.init()
+    this.iconType = iconType
+    this.className = className
+    this.currentSvg
+    this.loopObject()
   }
-  init() {
-    console.log(this);
-    this.triangleSrc = decodeURI(triangleSrc)
+
+  loopObject() {
+
+    let iconsObject = new IconsSrc
+
+    for (let key in iconsObject) {
+      if (key === this.iconType) {
+        let decode = iconsObject[key]
+        this.currentSvg = decodeURI(decode)
+      }
+    }
+
   }
-  wrapSvg() {
+
+  removeTextNode(wrap) {
+
+    let check = wrap.childNodes[0]
+    check.remove()
+
+  }
+
+  build() {
     let wrap = document.createElement('span')
     wrap.setAttribute('class', this.className)
-    wrap.innerHTML = this.triangleSrc
+    wrap.innerHTML = this.currentSvg
+
+    this.removeTextNode(wrap)
+
     return wrap
   }
 }
