@@ -67,30 +67,15 @@ export default class Canvas {
     // radgrad.addColorStop(0.9, '#019F62');
     // ctx.fillStyle = radgrad;
 
-    // use getContext to use the canvas for drawing
-               var ctx = canvas.getContext('2d');
+     var ctx = canvas.getContext('2d');
 
-               // Create Linear Gradients
-               var lingrad = ctx.createLinearGradient(0,0,0,150);
+     var lingrad2 = ctx.createLinearGradient(0,50,0,95);
+     lingrad2.addColorStop(0.5, '#000');
+     lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
 
-               lingrad.addColorStop(0, '#00ABEB');
-               lingrad.addColorStop(0.5, '#fff');
-
-               lingrad.addColorStop(0.5, '#66CC00');
-               lingrad.addColorStop(1, '#fff');
-
-               var lingrad2 = ctx.createLinearGradient(0,50,0,95);
-               lingrad2.addColorStop(0.5, '#000');
-               lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
-
-               // assign gradients to fill and stroke styles
-               ctx.fillStyle = lingrad;
-               ctx.strokeStyle = lingrad2;
-
-               // draw shapes
-               ctx.fillRect(10,10,130,130);
-               ctx.strokeRect(50,50,50,50);
-
+     // assign gradients to fill and stroke styles
+     ctx.fillStyle = lingrad2
+     ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
   }
 
