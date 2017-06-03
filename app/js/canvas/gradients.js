@@ -2,27 +2,21 @@
 // The View
 /////////////////////////////////////////////////
 
-import Canvas from './index.js'
 
-export default class Gradient extends Canvas {
+export default class Gradient {
 
   constructor() {
-    super()
-    // this.winWidth = window.innerWidth;
-    this.winHeight = window.innerHeight;
+    this.ctx = document.getElementById('canvas').getContext('2d')
   }
 
   build() {
 
-    var ctx = document.getElementById('canvas').getContext('2d')
+    var grad = this.ctx.createLinearGradient(0, 50, 0, 995)
+    grad.addColorStop(0.5, '#000')
+    grad.addColorStop(1, 'rgba(0,0,0,0)')
 
-    var grad = ctx.createLinearGradient(0, 50, 0, 995);
-    grad.addColorStop(0.5, '#000');
-    grad.addColorStop(1, 'rgba(0,0,0,0)');
-
-    // assign gradients to fill and stroke styles
-    ctx.fillStyle = grad
-    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    this.ctx.fillStyle = grad
+    this.ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
   }
 
 }
