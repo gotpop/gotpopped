@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     maCanvas.makeCanvas()
+    maCanvas.drawCircle()
 
   // let makeGitHub = new Github
 
