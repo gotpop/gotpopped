@@ -19,11 +19,7 @@ export default class View {
     site.setAttribute('id', 'site')
     site.setAttribute('class', 'site')
 
-
     document.body.appendChild(site)
-
-    // let maIcons = new Icons
-    // let testDecode = decodeURI(maIcons.triangle)
 
   }
 

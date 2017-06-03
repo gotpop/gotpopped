@@ -40,16 +40,10 @@ export default class MakePage {
 
     }
 
-    // let maIcons = new Icons
-    // let testDecode = decodeURI(maIcons.triangle)
-
-  }
-
-  buildPage() {
-
   }
 
   setIds(maView) {
+
     maView.firstChild.setAttribute('id', 'first')
     maView.firstChild.classList.remove('last')
     maView.firstChild.classList.add('view-item', 'first', 'solo')
@@ -69,7 +63,6 @@ export default class MakePage {
       maView.lastChild.classList.add('view-item', 'last')
 
     }
-
 
   }
 

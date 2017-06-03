@@ -7,6 +7,7 @@ export default class Footer {
     this.makeFooter()
   }
   makeFooter() {
+    
     let view = document.getElementById('view')
     let header = document.createElement('footer')
     let siteTitleH1 = document.createElement('small')

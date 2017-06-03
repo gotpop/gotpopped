@@ -13,4 +13,3 @@ class Status {
 }
 
 export let siteStatus = new Status
-console.log(siteStatus)

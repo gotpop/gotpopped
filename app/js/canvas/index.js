@@ -9,6 +9,7 @@ export default class Canvas {
     this.winWidth = window.innerWidth
     this.winHeight = window.innerHeight
     this.myCanvas = document.createElement("canvas")
+    this.mainCanvas = document.getElementById("canvas");
   }
   makeCanvas() {
 
@@ -22,20 +23,26 @@ export default class Canvas {
 
   }
 
+}
+
+export class Circle extends Canvas {
+  constructor() {
+    super()
+    this.drawCircle()
+  }
+
   drawCircle() {
 
-    var mainCanvas = document.getElementById("canvas");
-    var mainContext = mainCanvas.getContext('2d');
+    console.log(this);
 
-    var canvasWidth = mainCanvas.width;
-    var canvasHeight = mainCanvas.height;
+    var mainContext = this.mainCanvas.getContext('2d');
+
+    var canvasWidth = this.mainCanvas.width;
+    var canvasHeight = this.mainCanvas.height;
 
     var angle = 0;
 
-    var requestAnimationFrame = window.requestAnimationFrame ||
-                                window.mozRequestAnimationFrame ||
-                                window.webkitRequestAnimationFrame ||
-                                window.msRequestAnimationFrame;
+    var requestAnimationFrame = window.requestAnimationFrame
 
     function drawCircle() {
         mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -60,6 +67,13 @@ export default class Canvas {
         requestAnimationFrame(drawCircle);
     }
     drawCircle();
+
   }
+
+
+
+
+
+
 
 }
