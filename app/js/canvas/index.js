@@ -18,8 +18,8 @@ export default class Canvas {
     this.myCanvas.setAttribute('id', 'canvas')
     document.body.appendChild(this.myCanvas)
 
-    let addGrad = new Gradient()
-    addGrad.build()
+    // let addGrad = new Gradient()
+    // addGrad.build()
 
   }
 
@@ -47,8 +47,15 @@ export class Circle extends Canvas {
     function drawCircle() {
         mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
 
+
+        var grad = mainContext.createLinearGradient(0, 50, 0, 255)
+        grad.addColorStop(0.5, '#000')
+        grad.addColorStop(1, 'rgba(0,0,0,0)')
+
+
         // color in the background
         mainContext.fillStyle = "#EEEEEE";
+        mainContext.fillStyle = grad
         mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
 
         // draw the circle
@@ -59,7 +66,7 @@ export class Circle extends Canvas {
         mainContext.closePath();
 
         // color in the circle
-        mainContext.fillStyle = "#006699";
+        mainContext.fillStyle = "#0ff";
         mainContext.fill();
 
         angle += Math.PI / 64;
