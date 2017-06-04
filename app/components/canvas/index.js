@@ -13,9 +13,14 @@ export default class Canvas {
   }
   makeCanvas() {
 
+console.log(this);
+    if (this.mainCanvas) {
+      this.mainCanvas.remove()
+    }
+
+    this.myCanvas.setAttribute('id', 'canvas')
     this.myCanvas.width = this.winWidth
     this.myCanvas.height = this.winHeight
-    this.myCanvas.setAttribute('id', 'canvas')
     document.body.appendChild(this.myCanvas)
 
     // let addGrad = new Gradient()
@@ -33,7 +38,7 @@ export class Circle extends Canvas {
 
   drawCircle() {
 
-    console.log(this);
+    // console.log(this);
 
     var mainContext = this.mainCanvas.getContext('2d');
 
@@ -77,12 +82,28 @@ export class Circle extends Canvas {
         requestAnimationFrame(drawCircle);
     }
     drawCircle();
-
+    this.redraw()
   }
 
 
 
+  redraw() {
 
+    // console.log('this', this);
+
+    function maFunction(event) {
+        // do stuff here
+
+        this.winWidth = window.innerWidth
+        this.winHeight = window.innerHeight
+        this.makeCanvas()
+        this.drawCircle()
+
+    }
+
+    window.addEventListener('resize', maFunction.bind(this) );
+
+  }
 
 
 
