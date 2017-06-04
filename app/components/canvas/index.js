@@ -48,9 +48,12 @@ export class Circle extends Canvas {
         mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
 
 
-        var grad = mainContext.createLinearGradient(0, 50, 0, 255)
+        var grad = mainContext.createLinearGradient(0, 0, 0, 900)
+        grad.addColorStop(0, 'rgba(200,200,200,0)')
+        grad.addColorStop(0.45, '#000')
         grad.addColorStop(0.5, '#000')
-        grad.addColorStop(1, 'rgba(0,0,0,0)')
+        grad.addColorStop(0.75, '#000')
+        grad.addColorStop(1, 'rgba(200,200,200,0)')
 
 
         // color in the background
@@ -61,8 +64,8 @@ export class Circle extends Canvas {
         // draw the circle
         mainContext.beginPath();
 
-        var radius = 25 + 150 * Math.abs(Math.cos(angle));
-        mainContext.arc(225, 225, radius, 0, Math.PI * 2, false);
+        var radius = 25 + 15 * Math.abs(Math.cos(angle));
+        mainContext.arc(300, 60, radius, 0, Math.PI * 2, false);
         mainContext.closePath();
 
         // color in the circle

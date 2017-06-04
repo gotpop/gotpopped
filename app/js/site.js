@@ -7,8 +7,8 @@ import View from './view.js'
 import Footer from './footer.js'
 import Github from './github.js'
 import MakePage from './page.js'
-import Canvas from './canvas/index.js'
-import {Circle} from './canvas/index.js'
+import Canvas from '../components/canvas'
+import {Circle} from '../components/canvas'
 
 /////////////////////////////////////////////////
 // Header
