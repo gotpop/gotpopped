@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let maCanvas = new Canvas
   maCanvas.makeCanvas()
-
+  //
   let maCircle = new Circle
+
   // maCircle.drawCircle()
 
 
