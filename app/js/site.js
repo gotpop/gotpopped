@@ -8,7 +8,6 @@ import Footer from './footer.js'
 import Github from './github.js'
 import MakePage from './page.js'
 import Canvas from '../components/canvas'
-import {Circle} from '../components/canvas'
 
 /////////////////////////////////////////////////
 // Header
@@ -21,15 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
   let maView = new View
   let maPage = new MakePage
   let maFooter = new Footer
-
   let maCanvas = new Canvas
-  maCanvas.drawGrad()
-  //
-  // let maCircle = new Circle
-
-  // maCircle.drawCircle()
-
-
-
 
 })
