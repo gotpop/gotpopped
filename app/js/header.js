@@ -5,7 +5,7 @@
 import PagesData from '../data/pages.json'
 import {siteStatus} from './status'
 import MakePage from './page.js'
-import Icon from '../icons'
+import Icon from '../components/icons'
 
 /////////////////////////////////////////////////
 // Header

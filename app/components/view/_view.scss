@@ -7,8 +7,6 @@
   margin: 2rem;
 }
 
-
-
 .view-item {
   margin: 2rem;
   min-width: calc(100% - 4rem);
@@ -34,8 +32,6 @@
     animation-name: none;
 }
 
-
-
 @keyframes slidein {
   from {
     transform: translateX(100%);
@@ -47,7 +43,6 @@
     opacity: 1;
   }
 }
-
 
 @keyframes slideout {
   from {
