@@ -10,17 +10,11 @@
 
 
 .view-item {
-  // position: absolute;
-  float: left;
-  top: 0;
-  left: 0;
   margin: 2rem;
   min-width: calc(100% - 4rem);
 }
 
 .first {
-  // position: absolute;
-  // float: left;
   background: rgba(yellow, .2);
   transform: translateX(0%);
   animation-duration: 1s;
@@ -29,17 +23,14 @@
 }
 
 .last {
-  // position: absolute;
-  // float: left;
   background: rgba(yellow, .2);
-  transform: translateX(100%);
+  transform: translateX( calc(100% - 2rem) );
   animation-duration: 1s;
   animation-name: slidein;
   animation-fill-mode: forwards;
 }
 
 .solo {
-    transform: translateX(0%);
     animation-name: none;
 }
 
@@ -52,7 +43,7 @@
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX( calc( -100% - 4rem));
     opacity: 1;
   }
 }
