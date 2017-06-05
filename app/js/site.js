@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
   let maFooter = new Footer
 
   let maCanvas = new Canvas
-  maCanvas.makeCanvas()
+  maCanvas.drawGrad()
   //
-  let maCircle = new Circle
+  // let maCircle = new Circle
 
   // maCircle.drawCircle()
 
