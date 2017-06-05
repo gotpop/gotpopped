@@ -31,7 +31,7 @@ export default class Canvas {
     this.mainContext.clearRect(0, 0, this.winWidth, this.winHeight);
 
     this.drawGrad()
-    this.drawCircle()
+    // this.drawCircle()
 
     this.mainContext.fillRect(0, 0, this.winWidth, this.winHeight);
     this.mainContext.fill();
