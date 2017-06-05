@@ -23,7 +23,7 @@ export default class MakePage {
         let maView = document.getElementById('view')
         let maSection = document.createElement('section')
         let maH1 = document.createElement('h1')
-        let maH1TextNode = document.createTextNode(pageObject.name)
+        let maH1TextNode = document.createTextNode(pageObject.title)
 
         maH1.appendChild(maH1TextNode)
         maSection.appendChild(maH1)

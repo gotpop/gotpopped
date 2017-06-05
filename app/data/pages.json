@@ -1,12 +1,12 @@
 [{
   "name": "Home",
   "pageId": "home",
-  "title": "male",
+  "title": "Hello, my name's Liam.",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
   "phone": "+1 (893) 459-2144",
   "address": "480 Seigel Street, Yardville, Kansas, 2109",
-  "about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "about": "I build enterprise websites that perform well on all devices, focusing on responsive design, aesthetics, clean code & page speed."
 }, {
   "name": "Work",
   "title": "male",

@@ -1,19 +1,21 @@
+/////////////////////////////////////////////////
+// View
+/////////////////////////////////////////////////
+
 .view {
-  position: relative;
-  background: rgba(red, .2);
-  max-width: 100vw;
   display: flex;
-  overflow: hidden;
+  max-width: 100vw;
   margin: 2rem;
 }
 
 .view-item {
   margin: 2rem;
   min-width: calc(100% - 4rem);
+  background: rgba(#fff, .5);
+  transition: all 1s ease;
 }
 
 .first {
-  background: rgba(yellow, .2);
   transform: translateX(0%);
   animation-duration: 1s;
   animation-name: slideout;
@@ -21,7 +23,6 @@
 }
 
 .last {
-  background: rgba(yellow, .2);
   transform: translateX( calc(100% - 2rem) );
   animation-duration: 1s;
   animation-name: slidein;
@@ -31,6 +32,10 @@
 .solo {
     animation-name: none;
 }
+
+/////////////////////////////////////////////////
+// Keyframes
+/////////////////////////////////////////////////
 
 @keyframes slidein {
   from {
