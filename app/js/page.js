@@ -4,6 +4,7 @@
 
 import {siteStatus} from './status'
 import PagesData from '../data/pages.json'
+import Home from '../components/home'
 
 /////////////////////////////////////////////////
 // MakePage
@@ -11,38 +12,36 @@ import PagesData from '../data/pages.json'
 
 export default class MakePage {
   constructor() {
-      this.loopPageObjects()
+    this.loopPageObjects()
   }
 
   loopPageObjects() {
+    let maView = document.getElementById('view')
 
     for (let pageObject of PagesData) {
 
       if (pageObject.pageId === siteStatus.currentPage) {
 
-        let maView = document.getElementById('view')
-        let maSection = document.createElement('section')
-        let maH1 = document.createElement('h1')
-        let maH1TextNode = document.createTextNode(pageObject.title)
+        if (pageObject.template === 'home') {
+          let maHome = new Home(pageObject)
+        }
 
-        maH1.appendChild(maH1TextNode)
-        maSection.appendChild(maH1)
+        if (pageObject.template === 'work') {
+          console.log('work');
+        }
 
-        let maP = document.createElement('p')
-        let maPText = document.createTextNode(pageObject.about)
+        if (pageObject.template === 'skills') {
+          console.log('skills');
+        }
 
-        maP.appendChild(maPText)
-        maSection.appendChild(maP)
-        maView.appendChild(maSection)
-
-        this.setIds(maView)
+        this.setPageIds(maView)
       }
 
     }
 
   }
 
-  setIds(maView) {
+  setPageIds(maView) {
 
     maView.firstChild.setAttribute('id', 'first')
     maView.firstChild.classList.remove('last')

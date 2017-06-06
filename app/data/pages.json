@@ -1,6 +1,7 @@
 [{
   "name": "Home",
   "pageId": "home",
+  "template": "home",
   "title": "Hello, my name's Liam.",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
@@ -9,8 +10,9 @@
   "about": "I build enterprise websites that perform well on all devices, focusing on responsive design, aesthetics, clean code & page speed."
 }, {
   "name": "Work",
-  "title": "male",
   "pageId": "work",
+  "template": "work",
+  "title": "male",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
   "phone": "+1 (893) 459-2144",
@@ -18,8 +20,9 @@
   "about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
 }, {
   "name": "Skills",
-  "title": "male",
   "pageId": "skills",
+  "template": "skills",
+  "title": "male",
   "subtitle": "UTARIAN",
   "link": "floreshardin@utarian.com",
   "phone": "+1 (893) 459-2144",

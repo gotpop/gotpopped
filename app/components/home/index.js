@@ -1,15 +1,13 @@
-import Portfolio from './portfolio.json'
-
 /////////////////////////////////////////////////
-// Work
+// Home
 /////////////////////////////////////////////////
 
-export default class Work {
+export default class Home {
   constructor(pageObject) {
     this.pageObject = pageObject
-    this.makeWork()
+    this.makeHome()
   }
-  makeWork(){
+  makeHome(){
       console.log('home');
       let maView = document.getElementById('view')
       let maSection = document.createElement('section')

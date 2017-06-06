@@ -3,14 +3,14 @@
 /////////////////////////////////////////////////
 
 import Header from '../components/header'
-import View from './view.js'
 import Footer from '../components/footer'
+import Canvas from '../components/canvas'
 import Github from './utils/github.js'
 import MakePage from './page.js'
-import Canvas from '../components/canvas'
+import View from './view.js'
 
 /////////////////////////////////////////////////
-// Header
+// DOMContentLoaded
 /////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function() {
