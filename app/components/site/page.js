@@ -3,10 +3,10 @@
 /////////////////////////////////////////////////
 
 import {siteStatus} from './status'
-import PagesData from '../data/pages.json'
-import Home from '../components/home'
-import Work from '../components/portfolio'
-import Skills from '../components/skills'
+import PagesData from './pages.json'
+import Home from '../home'
+import Work from '../portfolio'
+import Skills from '../skills'
 
 /////////////////////////////////////////////////
 // MakePage
