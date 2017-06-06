@@ -2,10 +2,10 @@
 // Header
 /////////////////////////////////////////////////
 
-import PagesData from '../data/pages.json'
-import {siteStatus} from './status'
-import MakePage from './page.js'
-import Icon from '../components/icons'
+import PagesData from '../../data/pages.json'
+import {siteStatus} from '../../js/status.js'
+import MakePage from '../../js/page.js'
+import Icon from '../icons'
 
 /////////////////////////////////////////////////
 // Header

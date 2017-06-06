@@ -2,10 +2,10 @@
 // Imports
 /////////////////////////////////////////////////
 
-import Header from './header.js'
+import Header from '../components/header'
 import View from './view.js'
-import Footer from './footer.js'
-import Github from './github.js'
+import Footer from '../components/footer'
+import Github from './utils/github.js'
 import MakePage from './page.js'
 import Canvas from '../components/canvas'
 
