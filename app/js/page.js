@@ -5,6 +5,8 @@
 import {siteStatus} from './status'
 import PagesData from '../data/pages.json'
 import Home from '../components/home'
+import Work from '../components/portfolio'
+import Skills from '../components/skills'
 
 /////////////////////////////////////////////////
 // MakePage
@@ -27,11 +29,11 @@ export default class MakePage {
         }
 
         if (pageObject.template === 'work') {
-          console.log('work');
+          let maWork = new Work(pageObject)
         }
 
         if (pageObject.template === 'skills') {
-          console.log('skills');
+          let maSkills = new Skills(pageObject)
         }
 
         this.setPageIds(maView)

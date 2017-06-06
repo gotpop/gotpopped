@@ -8,7 +8,7 @@ export default class Home {
     this.makeHome()
   }
   makeHome(){
-      console.log('home');
+      console.log('home aiint it');
       let maView = document.getElementById('view')
       let maSection = document.createElement('section')
       let maH1 = document.createElement('h1')

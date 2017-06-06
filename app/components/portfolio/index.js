@@ -10,7 +10,7 @@ export default class Work {
     this.makeWork()
   }
   makeWork(){
-      console.log('home');
+      console.log('work aint it');
       let maView = document.getElementById('view')
       let maSection = document.createElement('section')
       let maH1 = document.createElement('h1')
