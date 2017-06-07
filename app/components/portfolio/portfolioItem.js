@@ -15,13 +15,20 @@ export default class MakePortfolioPage {
   }
 
   loopPageObjects() {
-    let maView = document.getElementById('view')
 
-    for (let pageObject of PortfolioData) {
+    for (let portfolioObject of PortfolioData) {
 
-      if (pageObject.pageId === siteStatus.currentPortfolioPage) {
+      if (portfolioObject.ID === siteStatus.currentPortfolioPage) {
 
-          console.log(pageObject.pageId);
+        let maView = document.getElementById('portfolioWrap')
+          let maTitle = document.createElement('h2')
+          let maTextNode = document.createTextNode('OIIiiiiiii')
+
+          maTitle.appendChild(maTextNode)
+
+          maView.appendChild(maTitle)
+
+          console.log('Ohhhhhh eeee');
 
       }
 

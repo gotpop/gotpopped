@@ -9,7 +9,7 @@ class Status {
     this.currentPortfolioPage
   }
   makeStatus() {
-    this.currentPage = 'work'
+    this.currentPage = 'home'
     this.currentPortfolioPage = 'columbus'
   }
 }

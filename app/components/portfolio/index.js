@@ -16,6 +16,7 @@ export default class Work {
     this.maView = document.getElementById('view')
     this.maSection = document.createElement('section')
     this.maThumbnailWrap = document.createElement('div')
+    this.portfolioWrap = document.createElement('div')
     this.makeWrap()
   }
   makeWrap() {
@@ -23,14 +24,17 @@ export default class Work {
     this.maThumbnailWrap.setAttribute('class', 'portfolio-thumbnails')
     this.maSection.appendChild(this.maThumbnailWrap)
 
+    this.portfolioWrap.setAttribute('id', 'portfolioWrap')
+    this.maSection.appendChild(this.portfolioWrap)
+
     this.loopPortfolioData()
 
-
- new MakePortfolioPage
 
 
     this.maView.appendChild(this.maSection)
 
+
+    let maMakePortfolioPage = new MakePortfolioPage
   }
 
   loopPortfolioData() {
