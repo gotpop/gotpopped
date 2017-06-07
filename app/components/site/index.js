@@ -24,4 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
   let maFooter = new Footer
   let maCanvas = new Canvas
 
+  console.log(siteStatus);
+
 })

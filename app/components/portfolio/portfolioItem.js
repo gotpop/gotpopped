@@ -37,8 +37,6 @@ export default class MakePortfolioPage {
 
           this.maView.appendChild(mawrap)
 
-          console.log('Ohhhhhh eeee');
-
       }
 
     }

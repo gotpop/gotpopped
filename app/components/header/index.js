@@ -56,14 +56,19 @@ export default class Header {
     makeA.setAttribute('href', '#')
     makeA.setAttribute('data-id', pageItem.pageId)
 
+
+
     function listenToThis() {
+      siteStatus.currentPage = makeA.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('ma-class')
+
       for (let thumb of thumbClassArray) {
         thumb.classList.remove('active')
+        if (siteStatus.currentPage == makeA.getAttribute('data-id')) {
+          makeLi.classList.add('active')
+        }
       }
-      makeLi.classList.add('active')
 
-      siteStatus.currentPage = makeA.getAttribute('data-id')
       let maNewPage = new MakePage
       console.log(siteStatus)
     }
@@ -74,6 +79,10 @@ export default class Header {
     makeA.appendChild(makeText)
     makeLi.appendChild(makeA)
     menuUl.appendChild(makeLi)
+
+    if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+      makeLi.classList.add('active')
+    }
 
   }
 

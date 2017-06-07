@@ -8,7 +8,7 @@ export default class Skills {
     this.makeSkills()
   }
   makeSkills(){
-      console.log('skills innit');
+
       let maView = document.getElementById('view')
       let maSection = document.createElement('section')
       let maH1 = document.createElement('h1')
