@@ -2,8 +2,17 @@
 // Portfolio
 /////////////////////////////////////////////////
 
+.portfolio-thumbnails {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 .portfolio-thumbnail {
   background: yellow;
   min-height: 10rem;
   margin: 1rem;
+  cursor: pointer;
+  flex: 1 1 auto;
 }

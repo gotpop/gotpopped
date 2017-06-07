@@ -3,6 +3,8 @@
 /////////////////////////////////////////////////
 
 import PortfolioData from './portfolio.json'
+import MakePortfolioPage from './PortfolioItem'
+import {siteStatus} from '../site/status.js'
 
 /////////////////////////////////////////////////
 // Work
@@ -13,26 +15,47 @@ export default class Work {
     this.pageObject = pageObject
     this.maView = document.getElementById('view')
     this.maSection = document.createElement('section')
+    this.maThumbnailWrap = document.createElement('div')
     this.makeWrap()
   }
   makeWrap() {
+
+    this.maThumbnailWrap.setAttribute('class', 'portfolio-thumbnails')
+    this.maSection.appendChild(this.maThumbnailWrap)
+
     this.loopPortfolioData()
+
+
+ new MakePortfolioPage
+
+
     this.maView.appendChild(this.maSection)
+
   }
 
   loopPortfolioData() {
     for (let PortfolioObject of PortfolioData) {
-      this.makeThumbnails()
+      this.makeThumbnails(PortfolioObject)
     }
   }
 
-  makeThumbnails() {
-
+  makeThumbnails(PortfolioObject) {
     let maDiv = document.createElement('div')
-
     maDiv.setAttribute('class', 'portfolio-thumbnail')
+    maDiv.setAttribute('data-id', PortfolioObject.ID)
+    this.maThumbnailWrap.appendChild(maDiv)
 
-    this.maSection.appendChild(maDiv)
+    function listenToThis() {
+      siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
+      let maMakePortfolioPage = new MakePortfolioPage
+      console.log(siteStatus)
+    }
+
+    maDiv.addEventListener('click', listenToThis)
+
+
+
+
   }
 
   addListeners() {}

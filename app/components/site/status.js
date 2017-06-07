@@ -6,9 +6,11 @@ class Status {
   constructor() {
     this.makeStatus()
     this.currentPage
+    this.currentPortfolioPage
   }
   makeStatus() {
-    this.currentPage = 'home'
+    this.currentPage = 'work'
+    this.currentPortfolioPage = 'columbus'
   }
 }
 
