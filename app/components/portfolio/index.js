@@ -50,20 +50,25 @@ export default class Work {
     this.maThumbnailWrap.appendChild(maDiv)
 
     function listenToThis() {
+      siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
+
       for (let thumb of thumbClassArray) {
         thumb.classList.remove('active')
+        if (siteStatus.currentPortfolioPage == maDiv.getAttribute('data-id')) {
+          maDiv.classList.add('active')
+        }
       }
-      maDiv.classList.add('active')
-      siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
+
       let maMakePortfolioPage = new MakePortfolioPage
       console.log(siteStatus)
     }
 
     maDiv.addEventListener('click', listenToThis)
 
-
-
+    if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+      maDiv.classList.add('active')
+    }
 
   }
 

@@ -64,7 +64,7 @@ export default class Header {
 
       for (let thumb of thumbClassArray) {
         thumb.classList.remove('active')
-        if (siteStatus.currentPage == makeA.getAttribute('data-id')) {
+        if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
           makeLi.classList.add('active')
         }
       }
