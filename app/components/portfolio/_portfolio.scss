@@ -15,7 +15,13 @@
   margin: 1rem;
   cursor: pointer;
   flex: 1 1 auto;
+  &.active {
+    background: #0f0;
+  }
 }
+
+
+
 
 
 #portfolioWrap {

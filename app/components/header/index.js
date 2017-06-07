@@ -57,6 +57,12 @@ export default class Header {
     makeA.setAttribute('data-id', pageItem.pageId)
 
     function listenToThis() {
+      let thumbClassArray = document.getElementsByClassName('ma-class')
+      for (let thumb of thumbClassArray) {
+        thumb.classList.remove('active')
+      }
+      makeLi.classList.add('active')
+
       siteStatus.currentPage = makeA.getAttribute('data-id')
       let maNewPage = new MakePage
       console.log(siteStatus)

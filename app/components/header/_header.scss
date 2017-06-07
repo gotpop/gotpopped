@@ -13,13 +13,18 @@ header {
 header .ma-menu {
   display: flex;
   margin: 1rem;
-  .ma-class a {
-    padding: 1rem 2rem;
-    margin-left: 1rem;
-    &:hover {
-    transition: all .5s ease;
-      background: yellow;
+  .ma-class {
+    a {
+      padding: 1rem 2rem;
+      margin-left: 1rem;
+      &:hover {
+      transition: all .5s ease;
+        background: yellow;
 
+      }
+    }
+    &.active a {
+      background: green;
     }
   }
 }

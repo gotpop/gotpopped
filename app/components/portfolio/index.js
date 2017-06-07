@@ -50,6 +50,11 @@ export default class Work {
     this.maThumbnailWrap.appendChild(maDiv)
 
     function listenToThis() {
+      let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
+      for (let thumb of thumbClassArray) {
+        thumb.classList.remove('active')
+      }
+      maDiv.classList.add('active')
       siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
       let maMakePortfolioPage = new MakePortfolioPage
       console.log(siteStatus)
