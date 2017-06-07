@@ -12,7 +12,8 @@ import Icon from '../icons'
 /////////////////////////////////////////////////
 
 export default class Header {
-  constructor() {
+  constructor(siteStatus) {
+    this.siteStatus = siteStatus
     this.makeHeader()
   }
 

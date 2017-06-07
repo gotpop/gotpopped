@@ -36,10 +36,10 @@ export default class MakePage {
           let maSkills = new Skills(pageObject)
         }
 
-        this.setPageIds(maView)
       }
 
     }
+    this.setPageIds(maView)
 
   }
 
