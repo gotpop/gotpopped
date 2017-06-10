@@ -16,7 +16,9 @@ class Status {
   url() {
     let hashLocation = location.hash.substring(1)
     console.log('hashLocation: ', hashLocation);
-    this.currentPage = hashLocation
+    if (hashLocation > 1) {
+      this.currentPage = hashLocation
+    }
   }
 }
 
