@@ -20,15 +20,18 @@ export default class Header {
 
   makeHeader() {
 
-    let header = document.createElement('header')
+    // let header = document.createElement('header')
+    let header = new Html({type: 'header'}).build()
     let headline = new Html({type: 'h1', text: 'Liam GotPop'}).build()
 
     console.log('headline: ', headline);
 
     let menuUl = document.createElement('ul')
-
     menuUl.setAttribute('id', 'menu')
     menuUl.setAttribute('class', 'ma-menu')
+
+
+
 
     header.appendChild(headline)
     header.appendChild(menuUl)

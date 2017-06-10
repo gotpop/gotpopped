@@ -8,14 +8,17 @@ export default class Html {
   // this.options
   // this.options.text = 'OI'
   this.options = options
+  this.type = options.type
+  this.text = options.text
+
 
     this.build()
   }
   build() {
 
-    console.log('options: ', this.options);
+    console.log('options: ', this);
     let html = document.createElement(this.options.type)
-    let htmlText = document.createTextNode('GotPop')
+    let htmlText = document.createTextNode(this.options.text)
 
     html.appendChild(htmlText)
 
