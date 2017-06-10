@@ -53,7 +53,7 @@ export default class Header {
     let makeA = document.createElement('a')
     let makeText = document.createTextNode(pageItem.name)
 
-    makeA.setAttribute('href', '#')
+    makeA.setAttribute('href', '#' + pageItem.pageId)
     makeA.setAttribute('data-id', pageItem.pageId)
 
 
