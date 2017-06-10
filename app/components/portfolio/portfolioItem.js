@@ -21,7 +21,6 @@ export default class MakePortfolioPage {
 
       if (portfolioObject.ID === siteStatus.currentPortfolioPage) {
 
-
         let mawrap = document.createElement('section')
 
           let maTitle = document.createElement('h2')

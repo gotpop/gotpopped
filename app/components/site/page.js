@@ -6,6 +6,7 @@ import {siteStatus} from './status'
 import PagesData from './pages.json'
 import Home from '../home'
 import Work from '../portfolio'
+import MakePortfolioPage from '../portfolio'
 import Skills from '../skills'
 
 /////////////////////////////////////////////////
@@ -29,7 +30,13 @@ export default class MakePage {
         }
 
         if (pageObject.template === 'work') {
+
+          let portfolioWrap = document.getElementById('portfolioWrap')
+          if (portfolioWrap !== null) {
+            portfolioWrap.remove()
+          }
           let maWork = new Work(pageObject)
+          
         }
 
         if (pageObject.template === 'skills') {

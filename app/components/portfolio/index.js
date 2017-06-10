@@ -29,10 +29,7 @@ export default class Work {
 
     this.loopPortfolioData()
 
-
-
     this.maView.appendChild(this.maSection)
-
 
     let maMakePortfolioPage = new MakePortfolioPage
   }
@@ -61,7 +58,7 @@ export default class Work {
       }
 
       let maMakePortfolioPage = new MakePortfolioPage
-      console.log(siteStatus)
+
     }
 
     maDiv.addEventListener('click', listenToThis)

@@ -56,9 +56,8 @@ export default class Header {
     makeA.setAttribute('href', '#' + pageItem.pageId)
     makeA.setAttribute('data-id', pageItem.pageId)
 
-
-
     function listenToThis() {
+
       siteStatus.currentPage = makeA.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('ma-class')
 
@@ -70,7 +69,7 @@ export default class Header {
       }
 
       let maNewPage = new MakePage
-      console.log(siteStatus)
+
     }
 
     makeA.addEventListener('click', listenToThis)

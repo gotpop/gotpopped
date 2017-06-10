@@ -5,18 +5,17 @@
 class Status {
   constructor() {
     this.makeStatus()
-    this.url()
+    this.getSetLocation()
     this.currentPage
     this.currentPortfolioPage
   }
   makeStatus() {
-    this.currentPage = 'work'
+    this.currentPage = 'home'
     this.currentPortfolioPage = 'hackett'
   }
-  url() {
+  getSetLocation() {
     let hashLocation = location.hash.substring(1)
-    console.log('hashLocation: ', hashLocation);
-    if (hashLocation > 1) {
+    if (hashLocation.length > 1) {
       this.currentPage = hashLocation
     }
   }
