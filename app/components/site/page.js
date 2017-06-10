@@ -39,7 +39,7 @@ export default class MakePage {
       }
 
     }
-    // this.setPageIds(maView)
+    this.setPageIds(maView)
 
   }
 
