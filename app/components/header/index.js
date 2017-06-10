@@ -6,6 +6,7 @@ import PagesData from '../site/pages.json'
 import {siteStatus} from '../site/status.js'
 import MakePage from '../site/page.js'
 import Icon from '../icons'
+import Html from '../utils'
 
 /////////////////////////////////////////////////
 // Header
@@ -20,14 +21,16 @@ export default class Header {
   makeHeader() {
 
     let header = document.createElement('header')
-    let siteTitleH1 = document.createElement('h1')
-    let siteTitleH1Text = document.createTextNode('GotPop')
+    let headline = new Html({type: 'h1', text: 'Liam GotPop'}).build()
+
+    console.log('headline: ', headline);
+
     let menuUl = document.createElement('ul')
 
     menuUl.setAttribute('id', 'menu')
     menuUl.setAttribute('class', 'ma-menu')
-    siteTitleH1.appendChild(siteTitleH1Text)
-    header.appendChild(siteTitleH1)
+
+    header.appendChild(headline)
     header.appendChild(menuUl)
 
     this.loopPagesData(menuUl)
