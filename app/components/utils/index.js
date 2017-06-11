@@ -42,8 +42,12 @@ export default class Html {
       this.html.setAttribute('class', this.class)
     }
 
-    if (this.class !== undefined) {
+    if (this.dataId !== undefined) {
       this.html.setAttribute('data-id', this.dataId)
+    }
+
+    if (this.href !== undefined) {
+      this.html.setAttribute('href', this.href)
     }
 
   }
