@@ -1,25 +1,16 @@
 [{
-  "name": "Home",
-  "title": "male",
-  "subtitle": "UTARIAN",
-  "link": "floreshardin@utarian.com",
-  "phone": "+1 (893) 459-2144",
-  "address": "480 Seigel Street, Yardville, Kansas, 2109",
-  "about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "name": "codepen",
+  "title": "Codepen",
+  "link": "http://codepen.io/gotpop/",
+  "subtitle": "click"
 }, {
-  "name": "Work",
-  "title": "male",
-  "subtitle": "UTARIAN",
-  "link": "floreshardin@utarian.com",
-  "phone": "+1 (893) 459-2144",
-  "address": "480 Seigel Street, Yardville, Kansas, 2109",
-  "about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "name": "linkedin",
+  "title": "LinkedIn",
+  "link": "http://uk.linkedin.com/in/gotpop",
+  "subtitle": "click"
 }, {
-  "name": "Skills",
-  "title": "male",
-  "subtitle": "UTARIAN",
-  "link": "floreshardin@utarian.com",
-  "phone": "+1 (893) 459-2144",
-  "address": "480 Seigel Street, Yardville, Kansas, 2109",
-  "about": "Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "name": "github",
+  "title": "GitHub",
+  "link": "https://github.com/gotpop",
+  "subtitle": "click"
 }]
