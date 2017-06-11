@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////
 
 import PagesData from '../site/pages.json'
+import Site from '../site/site.json'
 import {siteStatus} from '../site/status.js'
 import MakePage from '../site/page.js'
 import Icon from '../icons'
@@ -20,27 +21,17 @@ export default class Header {
 
   makeHeader() {
 
-    // let header = document.createElement('header')
     let header = new Html({type: 'header'}).build()
-    let headline = new Html({type: 'h1', text: 'Liam GotPop'}).build()
 
-    console.log('headline: ', headline);
-
-    let menuUl = document.createElement('ul')
-    menuUl.setAttribute('id', 'menu')
-    menuUl.setAttribute('class', 'ma-menu')
-
-
-
-
+    let headline = new Html({type: 'h1', text: Site.siteTitle}).build()
     header.appendChild(headline)
-    header.appendChild(menuUl)
 
+    let menuUl = new Html({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
+    header.appendChild(menuUl)
     this.loopPagesData(menuUl)
 
-    let makeIcon = new Icon('triangle', 'icon-class')
-    let iconTriangle = makeIcon.build()
-    header.appendChild(iconTriangle)
+    let makeIcon = new Icon('triangle', 'icon-class').build()
+    header.appendChild(makeIcon)
 
     document.body.appendChild(header)
 
@@ -55,12 +46,16 @@ export default class Header {
 
   makeList(menuUl, pageItem) {
 
-    let makeLi = document.createElement('li')
-    let makeA = document.createElement('a')
-    let makeText = document.createTextNode(pageItem.name)
+    let makeA = new Html({
+      type: 'a',
+      href: '#' + pageItem.pageId,
+      dataId: pageItem.pageId,
+      text: pageItem.name
+    }).build()
 
-    makeA.setAttribute('href', '#' + pageItem.pageId)
-    makeA.setAttribute('data-id', pageItem.pageId)
+    let makeLi = new Html({type: 'li', class: 'ma-class'}).build()
+
+    makeLi.appendChild(makeA)
 
     function listenToThis() {
 
@@ -74,15 +69,10 @@ export default class Header {
         }
       }
 
-      let maNewPage = new MakePage
-
+      new MakePage
     }
 
     makeA.addEventListener('click', listenToThis)
-    makeLi.setAttribute('class', 'ma-class')
-
-    makeA.appendChild(makeText)
-    makeLi.appendChild(makeA)
     menuUl.appendChild(makeLi)
 
     if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
@@ -90,7 +80,5 @@ export default class Header {
     }
 
   }
-
-  addListener() {}
 
 }
