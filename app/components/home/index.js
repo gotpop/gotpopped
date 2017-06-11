@@ -1,4 +1,10 @@
 /////////////////////////////////////////////////
+// Import
+/////////////////////////////////////////////////
+
+import Html from '../utils'
+
+/////////////////////////////////////////////////
 // Home
 /////////////////////////////////////////////////
 
@@ -7,23 +13,17 @@ export default class Home {
     this.pageObject = pageObject
     this.makeHome()
   }
-  makeHome(){
+  makeHome() {
 
-      let maView = document.getElementById('view')
-      let maSection = document.createElement('section')
-      let maH1 = document.createElement('h1')
-      let maH1TextNode = document.createTextNode(this.pageObject.title)
+    let maView = document.getElementById('view')
+    let maSection = document.createElement('section')
 
-      maH1.appendChild(maH1TextNode)
-      maSection.appendChild(maH1)
+    let maH1 = new Html({type: 'h1', text: this.pageObject.title}).build()
+    let maP = new Html({type: 'p', text: this.pageObject.about}).build()
 
-      let maP = document.createElement('p')
-      let maPText = document.createTextNode(this.pageObject.about)
-
-      maP.appendChild(maPText)
-      maSection.appendChild(maP)
-      maView.appendChild(maSection)
-
+    maSection.appendChild(maH1)
+    maSection.appendChild(maP)
+    maView.appendChild(maSection)
 
   }
 }
