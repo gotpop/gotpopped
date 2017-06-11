@@ -1,4 +1,10 @@
 /////////////////////////////////////////////////
+// Header
+/////////////////////////////////////////////////
+
+import Html from '../utils'
+
+/////////////////////////////////////////////////
 // The View
 /////////////////////////////////////////////////
 
@@ -10,15 +16,10 @@ export default class View {
 
   makeView() {
 
-    let view = document.createElement('div')
-    view.setAttribute('id', 'view')
-    view.setAttribute('class', 'view')
+    let view = new Html({type: 'div', id: 'view', class: 'view'}).build()
+    let site = new Html({type: 'div', id: 'site', class: 'site'}).build()
 
-    let site = document.createElement('div')
     site.appendChild(view)
-    site.setAttribute('id', 'site')
-    site.setAttribute('class', 'site')
-
     document.body.appendChild(site)
 
   }

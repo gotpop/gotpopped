@@ -5,6 +5,7 @@
 import PortfolioData from './portfolio.json'
 import MakePortfolioPage from './PortfolioItem'
 import {siteStatus} from '../site/status.js'
+import Html from '../utils'
 
 /////////////////////////////////////////////////
 // Work
@@ -41,9 +42,12 @@ export default class Work {
   }
 
   makeThumbnails(PortfolioObject) {
-    let maDiv = document.createElement('div')
-    maDiv.setAttribute('class', 'portfolio-thumbnail')
-    maDiv.setAttribute('data-id', PortfolioObject.ID)
+
+    let maDiv = new Html({
+      type: 'div',
+      class: 'portfolio-thumbnail',
+      dataId: PortfolioObject.ID
+    }).build()
     this.maThumbnailWrap.appendChild(maDiv)
 
     function listenToThis() {
@@ -56,9 +60,7 @@ export default class Work {
           maDiv.classList.add('active')
         }
       }
-
-      let maMakePortfolioPage = new MakePortfolioPage
-
+      new MakePortfolioPage
     }
 
     maDiv.addEventListener('click', listenToThis)

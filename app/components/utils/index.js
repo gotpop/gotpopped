@@ -17,7 +17,6 @@ export default class Html {
   }
   build() {
 
-    console.log('options: ', this);
     this.buildThis()
     return this.html
 
