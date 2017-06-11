@@ -2,6 +2,8 @@
 // Import
 /////////////////////////////////////////////////
 
+import {siteStatus} from '../site/status.js'
+import MakePage from '../site/page.js'
 import Html from '../utils'
 
 /////////////////////////////////////////////////
@@ -25,6 +27,12 @@ export default class Home {
       href: '#work',
       text: 'Veiw'
     }).build()
+
+    function listenToThis() {
+      siteStatus.currentPage = 'work'
+      new MakePage
+    }
+    makeA.addEventListener('click', listenToThis)
 
     maSection.appendChild(maH1)
     maSection.appendChild(maP)

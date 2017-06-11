@@ -4,6 +4,7 @@
 
 import {siteStatus} from '../site/status.js'
 import PortfolioData from './portfolio.json'
+import Html from '../utils'
 
 /////////////////////////////////////////////////
 // MakePage
@@ -22,19 +23,16 @@ export default class MakePortfolioPage {
       if (portfolioObject.ID === siteStatus.currentPortfolioPage) {
 
         let mawrap = document.createElement('section')
+        let maTitle = new Html({type: 'h2', text: portfolioObject.title}).build()
+        let maP = new Html({type: 'p', text: portfolioObject.about}).build()
 
-          let maTitle = document.createElement('h2')
-          let maTextNode = document.createTextNode(portfolioObject.title)
-          maTitle.appendChild(maTextNode)
+        let maImage = new Image('600', '300')
+        maImage.src = portfolioObject.image.src
 
-          let maP = document.createElement('p')
-          let maPTextNode = document.createTextNode(portfolioObject.about)
-          maP.appendChild(maPTextNode)
-
-          mawrap.appendChild(maTitle)
-          mawrap.appendChild(maP)
-
-          this.maView.appendChild(mawrap)
+        mawrap.appendChild(maTitle)
+        mawrap.appendChild(maP)
+        mawrap.appendChild(maImage)
+        this.maView.appendChild(mawrap)
 
       }
 
