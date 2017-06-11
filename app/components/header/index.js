@@ -22,16 +22,15 @@ export default class Header {
   makeHeader() {
 
     let header = new Html({type: 'header'}).build()
-
     let headline = new Html({type: 'h1', text: Site.siteTitle}).build()
-    header.appendChild(headline)
-
     let menuUl = new Html({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
+    let makeIcon = new Icon('triangle', 'icon-class').build()
+
+    header.appendChild(headline)
+    header.appendChild(makeIcon)
     header.appendChild(menuUl)
     this.loopPagesData(menuUl)
 
-    let makeIcon = new Icon('triangle', 'icon-class').build()
-    header.appendChild(makeIcon)
 
     document.body.appendChild(header)
 

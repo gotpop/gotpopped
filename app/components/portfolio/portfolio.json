@@ -4,19 +4,22 @@
   "ID": "columbus",
   "subtitle": "Insurance",
   "link": "columbusdirect.com",
-  "about": "Columbus direct is an insurance provider - Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "about": "Columbus Direct is one of the UK's largest insurance providers. They recently embarked on a full rebrand including making both the brochureware and purchase process responsive from end to end.",
+  "skills": ["HTML, SASS & Javascript", "Implementation of Material design UI", "Angular 2"]
 }, {
   "name": "Hackett",
   "title": "Hackett",
   "ID": "hackett",
   "subtitle": "Insurance",
   "link": "columbusdirect.com",
-  "about": "Hackett direct is an insurance provider - Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "about": "Hackett is an iconic British menswear company. We were briefed with creating an in store loyalty application that tracks user purchases and preferences. The app is used by staff on both iPads and iPhones.",
+  "skills": ["HTML, SASS & Javascript", "Implementation of Material design UI", "Angular 2"]
 }, {
   "name": "Offers",
   "title": "Offers",
   "ID": "offers",
   "subtitle": "Insurance",
   "link": "columbusdirect.com",
-  "about": "Offers direct is an insurance provider - Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
+  "about": "Collinson group is one of the UK's largest insurance providers. They built an internal offers application in Angular 2. I worked with backend developers in Singapore to implement Material design and build the UI in Angular 2. The application is responsive.",
+  "skills": ["HTML, SASS & Javascript", "Implementation of Material design UI", "Angular 2"]
 }]
