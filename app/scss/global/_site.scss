@@ -68,6 +68,14 @@ section {
   #wrap-site {
     max-width: 100%;
     display: flex;
-    transform: translateX(00px);
+    transform: translateX(-200px);
+    transition: all .6s ease;
+  }
+}
+
+.mobile.menu-open {
+  #wrap-site {
+    transition: all .6s ease;
+    transform: translateX(0px);
   }
 }

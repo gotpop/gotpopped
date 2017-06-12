@@ -17,6 +17,7 @@ export default class Header {
   constructor(siteStatus) {
     this.siteStatus = siteStatus
     this.makeHeader()
+    this.addListenerToMenuToggle()
   }
 
   makeHeader() {
@@ -29,7 +30,7 @@ export default class Header {
     let makeA = new Html({
       type: 'a',
       href: '#',
-      id: '#mobileMenuTrigger',
+      id: 'mobileMenuTrigger',
       class: 'mobile-menu-trigger',
       text: 'X'
     }).build()
@@ -91,6 +92,14 @@ export default class Header {
       makeLi.classList.add('active')
     }
 
+  }
+
+  addListenerToMenuToggle() {
+    let triggered = document.getElementById('mobileMenuTrigger')
+
+    triggered.addEventListener('click', function() {
+      document.body.classList.toggle('menu-open')
+    })
   }
 
 }
