@@ -57,7 +57,9 @@ export default class Header {
 
     makeLi.appendChild(makeA)
 
-    function listenToThis() {
+    function listenToThis(event) {
+      event.preventDefault()
+      event.stopPropagation()
 
       siteStatus.currentPage = makeA.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('ma-class')

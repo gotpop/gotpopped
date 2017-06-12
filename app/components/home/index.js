@@ -28,7 +28,9 @@ export default class Home {
       text: 'Veiw'
     }).build()
 
-    function listenToThis() {
+    function listenToThis(event) {
+      event.preventDefault()
+      event.stopPropagation()
       siteStatus.currentPage = 'work'
       new MakePage
     }
