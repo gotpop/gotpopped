@@ -80,12 +80,15 @@ class Status {
   constructor() {
     this.makeStatus()
     this.getSetLocation()
+
     this.currentPage
     this.currentPortfolioPage
+    this.mobile
   }
   makeStatus() {
     this.currentPage = 'home'
     this.currentPortfolioPage = 'hackett'
+    // console.log(this)
   }
   getSetLocation() {
     let hashLocation = location.hash.substring(1)
@@ -93,6 +96,7 @@ class Status {
       this.currentPage = hashLocation
     }
   }
+
 }
 
 let siteStatus = new Status
@@ -169,7 +173,7 @@ class Html {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__status__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__skills__ = __webpack_require__(20);
 /////////////////////////////////////////////////
@@ -336,7 +340,7 @@ class Icon {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__portfolio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(1);
 /////////////////////////////////////////////////
@@ -391,7 +395,9 @@ class Work {
     }).build()
     this.maThumbnailWrap.appendChild(maDiv)
 
-    function listenToThis() {
+    function listenToThis(event) {
+      event.preventDefault()
+      event.stopPropagation()
       __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage = maDiv.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
 
@@ -525,12 +531,21 @@ module.exports = [
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"siteTitle": "GotPop",
+	"copyright": "© Copyright GotPop 2016"
+};
+
+/***/ }),
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__canvas__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__canvas__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_github_js__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__page_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_js__ = __webpack_require__(19);
@@ -568,25 +583,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "columbus.jpg";
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "hackett.jpg";
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "offers.jpg";
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -617,7 +632,7 @@ if(false) {
 }
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -648,11 +663,11 @@ class Gradient {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gradients_js__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gradients_js__ = __webpack_require__(13);
 /////////////////////////////////////////////////
 // The View
 /////////////////////////////////////////////////
@@ -764,10 +779,15 @@ class Canvas {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_site_json__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__site_site_json__);
+
+
+
 /////////////////////////////////////////////////
 // Footer
 /////////////////////////////////////////////////
@@ -781,7 +801,7 @@ class Footer {
     let view = document.getElementById('view')
     let footer = document.createElement('footer')
     let siteTitleH1 = document.createElement('small')
-    let siteTitleH1Text = document.createTextNode('GotPop footer')
+    let siteTitleH1Text = document.createTextNode(__WEBPACK_IMPORTED_MODULE_0__site_site_json___default.a.copyright)
 
     siteTitleH1.appendChild(siteTitleH1Text)
     footer.appendChild(siteTitleH1)
@@ -797,13 +817,13 @@ class Footer {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__site_pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__site_site_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__site_page_js__ = __webpack_require__(2);
@@ -837,9 +857,19 @@ class Header {
     let menuUl = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
     let makeIcon = new __WEBPACK_IMPORTED_MODULE_4__icons__["a" /* default */]('triangle', 'icon-class').build()
 
+    let makeA = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({
+      type: 'a',
+      href: '#',
+      id: '#mobileMenuTrigger',
+      class: 'mobile-menu-trigger',
+      text: 'X'
+    }).build()
+
+
     header.appendChild(headline)
     header.appendChild(makeIcon)
     header.appendChild(menuUl)
+    header.appendChild(makeA)
     this.loopPagesData(menuUl)
 
     var maWrap = document.getElementById('wrap-site');
@@ -868,7 +898,9 @@ class Header {
 
     makeLi.appendChild(makeA)
 
-    function listenToThis() {
+    function listenToThis(event) {
+      event.preventDefault()
+      event.stopPropagation()
 
       __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('ma-class')
@@ -898,7 +930,7 @@ class Header {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -935,7 +967,9 @@ class Home {
       text: 'Veiw'
     }).build()
 
-    function listenToThis() {
+    function listenToThis(event) {
+      event.preventDefault()
+      event.stopPropagation()
       __WEBPACK_IMPORTED_MODULE_0__site_status_js__["a" /* siteStatus */].currentPage = 'work'
       new __WEBPACK_IMPORTED_MODULE_1__site_page_js__["a" /* default */]
     }
@@ -953,7 +987,7 @@ class Home {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1034,23 +1068,16 @@ class MakePortfolioPage {
 
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = {
-	"siteTitle": "GotPop",
-	"copyright": "© Copyright GotPop 2016"
-};
-
-/***/ }),
 /* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_status_js__ = __webpack_require__(0);
 /////////////////////////////////////////////////
 // Header
 /////////////////////////////////////////////////
+
 
 
 
@@ -1062,6 +1089,7 @@ class View {
 
   constructor() {
     this.makeView()
+    this.checkMobileOrDesktop()
   }
 
   makeView() {
@@ -1073,6 +1101,31 @@ class View {
     site.appendChild(view)
     wrapSite.appendChild(site)
     document.body.appendChild(wrapSite)
+
+  }
+  checkMobileOrDesktop() {
+
+    let mediaQueryList = window.matchMedia('(max-width: 600px)')
+
+    document.body.classList.remove('mobile')
+    document.body.classList.remove('mobile')
+    if (mediaQueryList.matches) {
+      document.body.classList.add('mobile')
+    }
+
+
+    console.log(mediaQueryList);
+    function handleMediaChange(event) {
+      this.mobile = event.matches
+      document.body.classList.remove('mobile')
+      if (event.matches) {
+        document.body.classList.add('mobile')
+      } else {
+        document.body.classList.remove('mobile')
+      }
+    }
+    mediaQueryList.addListener(handleMediaChange.bind(this))
+    handleMediaChange.bind(this)
 
   }
 
@@ -1152,18 +1205,18 @@ class Github {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_index_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_site__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_site__ = __webpack_require__(8);
 /////////////////////////////////////////////////
 // Webpack entry point
 // Require site files here
 /////////////////////////////////////////////////
 
 // Require static files
-__webpack_require__(8);
 __webpack_require__(9);
 __webpack_require__(10);
+__webpack_require__(11);
 
 // Imports
 
@@ -1181,7 +1234,7 @@ exports = module.exports = __webpack_require__(24)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nhtml {\n  overflow-y: scroll;\n  overflow-x: hidden; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: start;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  align-items: start;\n  min-height: 90vh;\n  width: 100%; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  box-sizing: border-box;\n  color: rgba(255, 255, 255, 0.5); }\n\n#wrap-site {\n  max-width: 100%; }\n\n@media (max-width: 600px) {\n  body header {\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start; }\n    body header ul {\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start; }\n  #wrap-site {\n    max-width: 100%;\n    display: flex; } }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: rgba(255, 255, 255, 0.5);\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex;\n  justify-content: space-between; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    margin-left: 1rem; }\n    header .ma-menu .ma-class a:hover {\n      transition: all .5s ease;\n      background: yellow; }\n  header .ma-menu .ma-class.active a {\n    background: green; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\n.view {\n  display: flex;\n  max-width: 100vw;\n  margin: 2rem; }\n\n.view-item {\n  margin: 2rem;\n  min-width: calc(100% - 4rem);\n  transition: all 1s ease; }\n\n.first {\n  transform: translateX(0%);\n  animation-duration: 1s;\n  animation-name: slideout;\n  animation-fill-mode: forwards; }\n\n.last {\n  transform: translateX(calc(100% - 2rem));\n  animation-duration: 1s;\n  animation-name: slidein;\n  animation-fill-mode: forwards; }\n\n.solo {\n  animation-name: none; }\n\n@keyframes slidein {\n  from {\n    transform: translateX(100%);\n    opacity: 0; }\n  to {\n    transform: translateX(calc( -100% - 4rem));\n    opacity: 1; } }\n\n@keyframes slideout {\n  from {\n    transform: translateX(0%);\n    opacity: 1; }\n  to {\n    transform: translateX(-100%);\n    opacity: 0;\n    display: none; } }\n\nspan.icon-class {\n  height: 50px;\n  width: 50px; }\n  span.icon-class:hover svg {\n    fill: pink; }\n\n.portfolio-thumbnails {\n  display: flex;\n  flex-wrap: wrap; }\n\n.portfolio-thumbnail {\n  background: yellow;\n  min-height: 10rem;\n  margin: 1rem;\n  cursor: pointer;\n  flex: 1 1 auto; }\n  .portfolio-thumbnail.active {\n    background: #0f0; }\n\n#portfolioWrap {\n  min-height: 10rem;\n  background: pink;\n  color: #000;\n  padding: 2rem;\n  display: flex; }\n\nimg {\n  margin-top: 2rem;\n  max-width: 100%;\n  height: auto; }\n\nh2 {\n  font-size: 2rem;\n  margin-bottom: 2rem; }\n", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nhtml {\n  overflow-y: scroll;\n  overflow-x: hidden; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: start;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif;\n  max-width: 100%; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  align-items: start;\n  min-height: 90vh;\n  width: 100%; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  box-sizing: border-box;\n  color: rgba(255, 255, 255, 0.5); }\n\n#wrap-site {\n  max-width: 100%; }\n\n@media (max-width: 600px) {\n  body header {\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start; }\n    body header ul {\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start; }\n  #wrap-site {\n    max-width: 100%;\n    display: flex;\n    transform: translateX(0px); } }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: rgba(255, 255, 255, 0.5);\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  z-index: 9999; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu li {\n    display: flex; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    margin-left: 1rem; }\n    header .ma-menu .ma-class a:hover {\n      transition: all .5s ease;\n      background: yellow; }\n  header .ma-menu .ma-class.active a {\n    background: green; }\n\n.mobile-menu-trigger {\n  background: yellow;\n  padding: 1rem;\n  display: none;\n  position: absolute;\n  top: 0;\n  right: -40px; }\n\n.mobile .mobile-menu-trigger {\n  display: block; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\n.view {\n  display: flex;\n  max-width: 100vw;\n  margin: 2rem; }\n\n.view-item {\n  margin: 2rem;\n  min-width: calc(100% - 4rem);\n  transition: all 1s ease; }\n\n.first {\n  transform: translateX(0%);\n  animation-duration: 1s;\n  animation-name: slideout;\n  animation-fill-mode: forwards; }\n\n.last {\n  transform: translateX(calc(100% - 2rem));\n  animation-duration: 1s;\n  animation-name: slidein;\n  animation-fill-mode: forwards; }\n\n.solo {\n  animation-name: none; }\n\n@keyframes slidein {\n  from {\n    transform: translateX(100%);\n    opacity: 0; }\n  to {\n    transform: translateX(calc( -100% - 4rem));\n    opacity: 1; } }\n\n@keyframes slideout {\n  from {\n    transform: translateX(0%);\n    opacity: 1; }\n  to {\n    transform: translateX(-100%);\n    opacity: 0;\n    display: none; } }\n\nspan.icon-class {\n  height: 50px;\n  width: 50px; }\n  span.icon-class:hover svg {\n    fill: pink; }\n\n.portfolio-thumbnails {\n  display: flex;\n  flex-wrap: wrap; }\n\n.portfolio-thumbnail {\n  background: yellow;\n  min-height: 10rem;\n  margin: 1rem;\n  cursor: pointer;\n  flex: 1 1 auto; }\n  .portfolio-thumbnail.active {\n    background: #0f0; }\n\n#portfolioWrap {\n  min-height: 10rem;\n  background: pink;\n  color: #000;\n  padding: 2rem;\n  display: flex; }\n\nimg {\n  margin-top: 2rem;\n  max-width: 100%;\n  height: auto; }\n\nh2 {\n  font-size: 2rem;\n  margin-bottom: 2rem; }\n", ""]);
 
 // exports
 
