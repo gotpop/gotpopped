@@ -1,7 +1,7 @@
 {
-  "name": "rebuild",
+  "name": "GotPop",
   "version": "1.0.0",
-  "description": "A rebuild",
+  "description": "GotPop brochureware",
   "scripts": {
     "start": "node server.js",
     "dev": "webpack --env=dev --progress --profile --colors && webpack-dev-server",
@@ -28,17 +28,17 @@
   },
   "main": "server.js",
   "engines": {
-    "node": "7.7.4",
+    "node": "6.2.2",
     "npm": "4.1.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gotpop/rebuild.git"
+    "url": "git+https://github.com/gotpop/gotpop.git"
   },
-  "author": "",
+  "author": "GotPop",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gotpop/rebuild/issues"
+    "url": "https://github.com/gotpop/gotpop/issues"
   },
-  "homepage": "https://github.com/gotpop/rebuild#readme"
+  "homepage": "https://github.com/gotpop/gotpop#readme"
 }
