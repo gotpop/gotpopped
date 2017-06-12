@@ -1,3 +1,6 @@
+
+import Site from '../site/site.json'
+
 /////////////////////////////////////////////////
 // Footer
 /////////////////////////////////////////////////
@@ -11,7 +14,7 @@ export default class Footer {
     let view = document.getElementById('view')
     let footer = document.createElement('footer')
     let siteTitleH1 = document.createElement('small')
-    let siteTitleH1Text = document.createTextNode('GotPop footer')
+    let siteTitleH1Text = document.createTextNode(Site.copyright)
 
     siteTitleH1.appendChild(siteTitleH1Text)
     footer.appendChild(siteTitleH1)

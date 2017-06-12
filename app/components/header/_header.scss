@@ -7,6 +7,7 @@ header {
   align-self: flex-start;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 
@@ -27,4 +28,19 @@ header .ma-menu {
       background: green;
     }
   }
+}
+
+
+.mobile-menu-trigger {
+  background: pink;
+  padding: 1rem;
+  display: none;
+  // transform: translateX(-10px);
+  position: absolute;
+  top: 0;
+  right: -40px;
+}
+
+.mobile .mobile-menu-trigger  {
+  display: block;
 }

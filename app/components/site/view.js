@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////
 
 import Html from '../utils'
+import {siteStatus} from '../site/status.js'
 
 /////////////////////////////////////////////////
 // The View
@@ -12,6 +13,7 @@ export default class View {
 
   constructor() {
     this.makeView()
+    this.checkMobileOrDesktop()
   }
 
   makeView() {
@@ -23,6 +25,31 @@ export default class View {
     site.appendChild(view)
     wrapSite.appendChild(site)
     document.body.appendChild(wrapSite)
+
+  }
+  checkMobileOrDesktop() {
+
+    let mediaQueryList = window.matchMedia('(max-width: 600px)')
+
+    document.body.classList.remove('mobile')
+    document.body.classList.remove('mobile')
+    if (mediaQueryList.matches) {
+      document.body.classList.add('mobile')
+    }
+
+
+    console.log(mediaQueryList);
+    function handleMediaChange(event) {
+      this.mobile = event.matches
+      document.body.classList.remove('mobile')
+      if (event.matches) {
+        document.body.classList.add('mobile')
+      } else {
+        document.body.classList.remove('mobile')
+      }
+    }
+    mediaQueryList.addListener(handleMediaChange.bind(this))
+    handleMediaChange.bind(this)
 
   }
 

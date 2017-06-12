@@ -26,9 +26,19 @@ export default class Header {
     let menuUl = new Html({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
     let makeIcon = new Icon('triangle', 'icon-class').build()
 
+    let makeA = new Html({
+      type: 'a',
+      href: '#',
+      id: '#mobileMenuTrigger',
+      class: 'mobile-menu-trigger',
+      text: 'X'
+    }).build()
+
+
     header.appendChild(headline)
     header.appendChild(makeIcon)
     header.appendChild(menuUl)
+    header.appendChild(makeA)
     this.loopPagesData(menuUl)
 
     var maWrap = document.getElementById('wrap-site');
