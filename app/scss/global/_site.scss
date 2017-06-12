@@ -10,7 +10,7 @@ html {
 body {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -31,8 +31,9 @@ body {
 .site {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: start;
-  min-height: 80vh;
+  min-height: 90vh;
   width: 100%;
 }
 
@@ -43,4 +44,29 @@ section {
   flex: 1 1 auto;
   box-sizing: border-box;
   color: rgba(#fff, .5)
+}
+
+
+#wrap-site {
+  max-width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  body header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  #wrap-site {
+    max-width: 100%;
+    display: flex;
+
+  }
 }
