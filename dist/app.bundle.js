@@ -103,74 +103,61 @@ let siteStatus = new Status
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__triangle_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__circle_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__cube_svg__);
 /////////////////////////////////////////////////
-// Icons
+// Html
 /////////////////////////////////////////////////
 
+class Html {
+  constructor(options) {
+    this.options = options
+    this.type = options.type
+    this.text = options.text
+    this.id = options.id
+    this.class = options.class
+    this.dataId = options.dataId
+    this.href = options.href
+    this.html
 
+    this.build()
+  }
+  build() {
 
+    this.buildThis()
+    return this.html
 
-
-/////////////////////////////////////////////////
-// Class
-/////////////////////////////////////////////////
-
-class IconsSrc {
-
-  constructor() {
-    this.triangle = __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default.a
-    this.circle = __WEBPACK_IMPORTED_MODULE_1__circle_svg___default.a
-    this.cube = __WEBPACK_IMPORTED_MODULE_2__cube_svg___default.a
   }
 
-}
+  buildThis() {
 
-class Icon {
+    if (this.type !== undefined) {
+      this.html = document.createElement(this.options.type)
+    }
 
-  constructor(iconType, className) {
-    this.iconType = iconType
-    this.className = className
-    this.currentSvg
-    this.loopObject()
-  }
+    if (this.text !== undefined) {
+      let htmlText = document.createTextNode(this.options.text)
+      this.html.appendChild(htmlText)
+    }
 
-  loopObject() {
+    if (this.id !== undefined) {
+      this.html.setAttribute('id', this.id)
+    }
 
-    let iconsObject = new IconsSrc
+    if (this.class !== undefined) {
+      this.html.setAttribute('class', this.class)
+    }
 
-    for (let key in iconsObject) {
-      if (key === this.iconType) {
-        let decode = iconsObject[key]
-        this.currentSvg = decodeURI(decode)
-      }
+    if (this.dataId !== undefined) {
+      this.html.setAttribute('data-id', this.dataId)
+    }
+
+    if (this.href !== undefined) {
+      this.html.setAttribute('href', this.href)
     }
 
   }
 
-  removeTextNode(wrap) {
-
-    let check = wrap.childNodes[0]
-    check.remove()
-
-  }
-
-  build() {
-    let wrap = document.createElement('span')
-    wrap.setAttribute('class', this.className)
-    wrap.innerHTML = this.currentSvg
-
-    this.removeTextNode(wrap)
-
-    return wrap
-  }
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = Icon;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Html;
 
 
 
@@ -179,130 +166,12 @@ class Icon {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__portfolio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
-/////////////////////////////////////////////////
-// Imports
-/////////////////////////////////////////////////
-
-
-
-
-
-/////////////////////////////////////////////////
-// Work
-/////////////////////////////////////////////////
-
-class Work {
-  constructor(pageObject) {
-    this.pageObject = pageObject
-    this.maView = document.getElementById('view')
-    this.maSection = document.createElement('section')
-    this.maThumbnailWrap = document.createElement('div')
-    this.portfolioWrap = document.createElement('div')
-    this.makeWrap()
-  }
-  makeWrap() {
-
-    this.maThumbnailWrap.setAttribute('class', 'portfolio-thumbnails')
-    this.maSection.appendChild(this.maThumbnailWrap)
-
-    this.portfolioWrap.setAttribute('id', 'portfolioWrap')
-    this.maSection.appendChild(this.portfolioWrap)
-
-    this.loopPortfolioData()
-
-    this.maView.appendChild(this.maSection)
-
-    let maMakePortfolioPage = new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
-  }
-
-  loopPortfolioData() {
-    for (let PortfolioObject of __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default.a) {
-      this.makeThumbnails(PortfolioObject)
-    }
-  }
-
-  makeThumbnails(PortfolioObject) {
-    let maDiv = document.createElement('div')
-    maDiv.setAttribute('class', 'portfolio-thumbnail')
-    maDiv.setAttribute('data-id', PortfolioObject.ID)
-    this.maThumbnailWrap.appendChild(maDiv)
-
-    function listenToThis() {
-      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage = maDiv.getAttribute('data-id')
-      let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
-
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage == maDiv.getAttribute('data-id')) {
-          maDiv.classList.add('active')
-        }
-      }
-
-      let maMakePortfolioPage = new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
-
-    }
-
-    maDiv.addEventListener('click', listenToThis)
-
-    if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage === maDiv.getAttribute('data-id')) {
-      maDiv.classList.add('active')
-    }
-
-  }
-
-  addListeners() {}
-
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Work;
-
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = [
-	{
-		"name": "Columbus",
-		"title": "Columbus",
-		"ID": "columbus",
-		"subtitle": "Insurance",
-		"link": "columbusdirect.com",
-		"about": "Columbus direct is an insurance provider - Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Hackett",
-		"title": "Hackett",
-		"ID": "hackett",
-		"subtitle": "Insurance",
-		"link": "columbusdirect.com",
-		"about": "Hackett direct is an insurance provider - Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	},
-	{
-		"name": "Offers",
-		"title": "Offers",
-		"ID": "offers",
-		"subtitle": "Insurance",
-		"link": "columbusdirect.com",
-		"about": "Offers direct is an insurance provider - Cupidatat aliquip minim labore eu ea officia ea qui cupidatat sit labore fugiat consectetur eu. Irure ipsum anim consequat duis fugiat ipsum dolore consectetur eu cillum voluptate irure cillum ea. Commodo laboris ex commodo pariatur nulla. Officia esse reprehenderit laborum ad. Mollit reprehenderit eiusmod sunt voluptate aute. Anim ad nisi tempor reprehenderit voluptate in laborum ad ut dolore laborum cupidatat nulla."
-	}
-];
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__status__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__skills__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__skills__ = __webpack_require__(20);
 /////////////////////////////////////////////////
 // Imports
 /////////////////////////////////////////////////
@@ -385,7 +254,237 @@ class MakePage {
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__triangle_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__circle_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__cube_svg__);
+/////////////////////////////////////////////////
+// Icons
+/////////////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////////////////
+// Class
+/////////////////////////////////////////////////
+
+class IconsSrc {
+
+  constructor() {
+    this.triangle = __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default.a
+    this.circle = __WEBPACK_IMPORTED_MODULE_1__circle_svg___default.a
+    this.cube = __WEBPACK_IMPORTED_MODULE_2__cube_svg___default.a
+  }
+
+}
+
+class Icon {
+
+  constructor(iconType, className) {
+    this.iconType = iconType
+    this.className = className
+    this.currentSvg
+    this.loopObject()
+  }
+
+  loopObject() {
+
+    let iconsObject = new IconsSrc
+
+    for (let key in iconsObject) {
+      if (key === this.iconType) {
+        let decode = iconsObject[key]
+        this.currentSvg = decodeURI(decode)
+      }
+    }
+
+  }
+
+  removeTextNode(wrap) {
+
+    let check = wrap.childNodes[0]
+    check.remove()
+
+  }
+
+  build() {
+    let wrap = document.createElement('span')
+    wrap.setAttribute('class', this.className)
+    wrap.innerHTML = this.currentSvg
+
+    this.removeTextNode(wrap)
+
+    return wrap
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Icon;
+
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__portfolio_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(1);
+/////////////////////////////////////////////////
+// Imports
+/////////////////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// Work
+/////////////////////////////////////////////////
+
+class Work {
+  constructor(pageObject) {
+    this.pageObject = pageObject
+    this.maView = document.getElementById('view')
+    this.maSection = document.createElement('section')
+    this.maThumbnailWrap = document.createElement('div')
+    this.portfolioWrap = document.createElement('div')
+    this.makeWrap()
+  }
+  makeWrap() {
+
+    this.maThumbnailWrap.setAttribute('class', 'portfolio-thumbnails')
+    this.maSection.appendChild(this.maThumbnailWrap)
+
+    this.portfolioWrap.setAttribute('id', 'portfolioWrap')
+    this.maSection.appendChild(this.portfolioWrap)
+
+    this.loopPortfolioData()
+
+    this.maView.appendChild(this.maSection)
+
+    let maMakePortfolioPage = new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
+  }
+
+  loopPortfolioData() {
+    for (let PortfolioObject of __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default.a) {
+      this.makeThumbnails(PortfolioObject)
+    }
+  }
+
+  makeThumbnails(PortfolioObject) {
+
+    let maDiv = new __WEBPACK_IMPORTED_MODULE_3__utils__["a" /* default */]({
+      type: 'div',
+      class: 'portfolio-thumbnail',
+      dataId: PortfolioObject.ID
+    }).build()
+    this.maThumbnailWrap.appendChild(maDiv)
+
+    function listenToThis() {
+      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage = maDiv.getAttribute('data-id')
+      let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
+
+      for (let thumb of thumbClassArray) {
+        thumb.classList.remove('active')
+        if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage == maDiv.getAttribute('data-id')) {
+          maDiv.classList.add('active')
+        }
+      }
+      new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
+    }
+
+    maDiv.addEventListener('click', listenToThis)
+
+    if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage === maDiv.getAttribute('data-id')) {
+      maDiv.classList.add('active')
+    }
+
+  }
+
+  addListeners() {}
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Work;
+
+
+
+/***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"name": "Columbus",
+		"title": "Columbus",
+		"ID": "columbus",
+		"subtitle": "Insurance",
+		"link": "columbusdirect.com",
+		"image": {
+			"src": "columbus.jpg",
+			"alt": "Columbus",
+			"width": "200",
+			"height": "200"
+		},
+		"about": "Columbus Direct is one of the UK's largest insurance providers. They recently embarked on a full rebrand including making both the brochureware and purchase process responsive from end to end.",
+		"skills": [
+			"HTML, SASS & Javascript",
+			"Implementation of Material design UI",
+			"Angular 2"
+		]
+	},
+	{
+		"name": "Hackett",
+		"title": "Hackett",
+		"ID": "hackett",
+		"subtitle": "Insurance",
+		"link": "columbusdirect.com",
+		"image": {
+			"src": "hackett.jpg",
+			"alt": "Columbus",
+			"width": "200",
+			"height": "200"
+		},
+		"about": "Hackett is an iconic British menswear company. We were briefed with creating an in store loyalty application that tracks user purchases and preferences. The app is used by staff on both iPads and iPhones.",
+		"skills": [
+			"HTML, SASS & Javascript",
+			"Implementation of Material design UI",
+			"Angular 2"
+		]
+	},
+	{
+		"name": "Offers",
+		"title": "Offers",
+		"ID": "offers",
+		"subtitle": "Insurance",
+		"link": "columbusdirect.com",
+		"image": {
+			"src": "offers.jpg",
+			"alt": "Columbus",
+			"width": "200",
+			"height": "200"
+		},
+		"about": "Collinson group is one of the UK's largest insurance providers. They built an internal offers application in Angular 2. I worked with backend developers in Singapore to implement Material design and build the UI in Angular 2. The application is responsive.",
+		"skills": [
+			"HTML, SASS & Javascript",
+			"Implementation of Material design UI",
+			"Angular 2"
+		]
+	}
+];
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = [
@@ -425,17 +524,17 @@ module.exports = [
 ];
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__canvas__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_github_js__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__page_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_js__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__icons__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__canvas__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_github_js__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__page_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_js__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__icons__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__site_status_js__ = __webpack_require__(0);
 /////////////////////////////////////////////////
 // Imports
@@ -469,25 +568,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "columbus.jpg";
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "hackett.jpg";
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "offers.jpg";
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -518,7 +617,7 @@ if(false) {
 }
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -549,11 +648,11 @@ class Gradient {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gradients_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gradients_js__ = __webpack_require__(12);
 /////////////////////////////////////////////////
 // The View
 /////////////////////////////////////////////////
@@ -665,7 +764,7 @@ class Canvas {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -695,18 +794,18 @@ class Footer {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__site_pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__site_site_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__site_page_js__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icons__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__site_page_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icons__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils__ = __webpack_require__(1);
 /////////////////////////////////////////////////
 // Header
 /////////////////////////////////////////////////
@@ -730,28 +829,16 @@ class Header {
 
   makeHeader() {
 
-console.log(site);
-
     let header = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'header'}).build()
-    let headline = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'h1', text: site.siteTitle}).build()
-
-
-
-    let menuUl = document.createElement('ul')
-    menuUl.setAttribute('id', 'menu')
-    menuUl.setAttribute('class', 'ma-menu')
-
-
-
+    let headline = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'h1', text: __WEBPACK_IMPORTED_MODULE_1__site_site_json___default.a.siteTitle}).build()
+    let menuUl = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
+    let makeIcon = new __WEBPACK_IMPORTED_MODULE_4__icons__["a" /* default */]('triangle', 'icon-class').build()
 
     header.appendChild(headline)
+    header.appendChild(makeIcon)
     header.appendChild(menuUl)
-
     this.loopPagesData(menuUl)
 
-    let makeIcon = new __WEBPACK_IMPORTED_MODULE_4__icons__["a" /* default */]('triangle', 'icon-class')
-    let iconTriangle = makeIcon.build()
-    header.appendChild(iconTriangle)
 
     document.body.appendChild(header)
 
@@ -766,12 +853,16 @@ console.log(site);
 
   makeList(menuUl, pageItem) {
 
-    let makeLi = document.createElement('li')
-    let makeA = document.createElement('a')
-    let makeText = document.createTextNode(pageItem.name)
+    let makeA = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({
+      type: 'a',
+      href: '#' + pageItem.pageId,
+      dataId: pageItem.pageId,
+      text: pageItem.name
+    }).build()
 
-    makeA.setAttribute('href', '#' + pageItem.pageId)
-    makeA.setAttribute('data-id', pageItem.pageId)
+    let makeLi = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'li', class: 'ma-class'}).build()
+
+    makeLi.appendChild(makeA)
 
     function listenToThis() {
 
@@ -785,15 +876,10 @@ console.log(site);
         }
       }
 
-      let maNewPage = new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]
-
+      new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]
     }
 
     makeA.addEventListener('click', listenToThis)
-    makeLi.setAttribute('class', 'ma-class')
-
-    makeA.appendChild(makeText)
-    makeLi.appendChild(makeA)
     menuUl.appendChild(makeLi)
 
     if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage === makeA.getAttribute('data-id')) {
@@ -802,48 +888,8 @@ console.log(site);
 
   }
 
-  addListener() {}
-
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Header;
-
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/////////////////////////////////////////////////
-// Home
-/////////////////////////////////////////////////
-
-class Home {
-  constructor(pageObject) {
-    this.pageObject = pageObject
-    this.makeHome()
-  }
-  makeHome(){
-
-      let maView = document.getElementById('view')
-      let maSection = document.createElement('section')
-      let maH1 = document.createElement('h1')
-      let maH1TextNode = document.createTextNode(this.pageObject.title)
-
-      maH1.appendChild(maH1TextNode)
-      maSection.appendChild(maH1)
-
-      let maP = document.createElement('p')
-      let maPText = document.createTextNode(this.pageObject.about)
-
-      maP.appendChild(maPText)
-      maSection.appendChild(maP)
-      maView.appendChild(maSection)
-
-
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Home;
 
 
 
@@ -853,11 +899,68 @@ class Home {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_status_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_json__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_page_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(1);
+/////////////////////////////////////////////////
+// Import
+/////////////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////////////////
+// Home
+/////////////////////////////////////////////////
+
+class Home {
+  constructor(pageObject) {
+    this.pageObject = pageObject
+    this.makeHome()
+  }
+  makeHome() {
+
+    let maView = document.getElementById('view')
+    let maSection = document.createElement('section')
+
+    let maH1 = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'h1', text: this.pageObject.title}).build()
+    let maP = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'p', text: this.pageObject.about}).build()
+    let makeA = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({
+      type: 'a',
+      href: '#work',
+      text: 'Veiw'
+    }).build()
+
+    function listenToThis() {
+      __WEBPACK_IMPORTED_MODULE_0__site_status_js__["a" /* siteStatus */].currentPage = 'work'
+      new __WEBPACK_IMPORTED_MODULE_1__site_page_js__["a" /* default */]
+    }
+    makeA.addEventListener('click', listenToThis)
+
+    maSection.appendChild(maH1)
+    maSection.appendChild(maP)
+    maSection.appendChild(makeA)
+    maView.appendChild(maSection)
+
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Home;
+
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_status_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_json__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__portfolio_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(1);
 /////////////////////////////////////////////////
 // MakePage
 /////////////////////////////////////////////////
+
 
 
 
@@ -879,19 +982,16 @@ class MakePortfolioPage {
       if (portfolioObject.ID === __WEBPACK_IMPORTED_MODULE_0__site_status_js__["a" /* siteStatus */].currentPortfolioPage) {
 
         let mawrap = document.createElement('section')
+        let maTitle = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'h2', text: portfolioObject.title}).build()
+        let maP = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'p', text: portfolioObject.about}).build()
 
-          let maTitle = document.createElement('h2')
-          let maTextNode = document.createTextNode(portfolioObject.title)
-          maTitle.appendChild(maTextNode)
+        let maImage = new Image('600', '300')
+        maImage.src = portfolioObject.image.src
 
-          let maP = document.createElement('p')
-          let maPTextNode = document.createTextNode(portfolioObject.about)
-          maP.appendChild(maPTextNode)
-
-          mawrap.appendChild(maTitle)
-          mawrap.appendChild(maP)
-
-          this.maView.appendChild(mawrap)
+        mawrap.appendChild(maTitle)
+        mawrap.appendChild(maP)
+        mawrap.appendChild(maImage)
+        this.maView.appendChild(mawrap)
 
       }
 
@@ -930,18 +1030,26 @@ class MakePortfolioPage {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = {
-	"siteTitle": "GotPop"
+	"siteTitle": "GotPop",
+	"copyright": "© Copyright GotPop 2016"
 };
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(1);
+/////////////////////////////////////////////////
+// Header
+/////////////////////////////////////////////////
+
+
+
 /////////////////////////////////////////////////
 // The View
 /////////////////////////////////////////////////
@@ -954,15 +1062,10 @@ class View {
 
   makeView() {
 
-    let view = document.createElement('div')
-    view.setAttribute('id', 'view')
-    view.setAttribute('class', 'view')
+    let view = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'view', class: 'view'}).build()
+    let site = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'site', class: 'site'}).build()
 
-    let site = document.createElement('div')
     site.appendChild(view)
-    site.setAttribute('id', 'site')
-    site.setAttribute('class', 'site')
-
     document.body.appendChild(site)
 
   }
@@ -973,7 +1076,7 @@ class View {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1011,7 +1114,7 @@ class Skills {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1038,79 +1141,23 @@ class Github {
 
 
 /***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/////////////////////////////////////////////////
-// Html
-/////////////////////////////////////////////////
-
-class Html {
-  constructor(options) {
-    this.options = options
-    this.type = options.type
-    this.text = options.text
-    this.html
-
-    this.build()
-  }
-  build() {
-
-    console.log('Yaytime!')
-    console.log('options: ', this);
-
-    this.buildThis()
-
-
-    return this.html
-
-  }
-
-  buildThis() {
-
-    if (this.type !== undefined) {
-      this.html = document.createElement(this.options.type)
-    }
-
-    if (this.text !== undefined) {
-      let htmlText = document.createTextNode(this.options.text)
-      this.html.appendChild(htmlText)
-    }
-
-
-
-  }
-
-  // checkIfDefined(value, runThis) {
-  //   if (value !== undefined) {
-  //     console.log('Yaytime!')
-  //   }
-  // }
-
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Html;
-
-
-
-/***/ }),
 /* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_index_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_site__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_site__ = __webpack_require__(7);
 /////////////////////////////////////////////////
 // Webpack entry point
 // Require site files here
 /////////////////////////////////////////////////
 
 // Require static files
-__webpack_require__(7);
 __webpack_require__(8);
 __webpack_require__(9);
+__webpack_require__(10);
 
 // Imports
 
@@ -1128,7 +1175,7 @@ exports = module.exports = __webpack_require__(24)(undefined);
 
 
 // module
-exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nhtml {\n  overflow-y: scroll;\n  overflow-x: hidden; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  align-items: start;\n  min-height: 80vh;\n  width: 100%; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  box-sizing: border-box;\n  color: rgba(255, 255, 255, 0.5); }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: rgba(255, 255, 255, 0.5);\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex;\n  justify-content: space-between; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    margin-left: 1rem; }\n    header .ma-menu .ma-class a:hover {\n      transition: all .5s ease;\n      background: yellow; }\n  header .ma-menu .ma-class.active a {\n    background: green; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\n.view {\n  display: flex;\n  max-width: 100vw;\n  margin: 2rem; }\n\n.view-item {\n  margin: 2rem;\n  min-width: calc(100% - 4rem);\n  transition: all 1s ease; }\n\n.first {\n  transform: translateX(0%);\n  animation-duration: 1s;\n  animation-name: slideout;\n  animation-fill-mode: forwards; }\n\n.last {\n  transform: translateX(calc(100% - 2rem));\n  animation-duration: 1s;\n  animation-name: slidein;\n  animation-fill-mode: forwards; }\n\n.solo {\n  animation-name: none; }\n\n@keyframes slidein {\n  from {\n    transform: translateX(100%);\n    opacity: 0; }\n  to {\n    transform: translateX(calc( -100% - 4rem));\n    opacity: 1; } }\n\n@keyframes slideout {\n  from {\n    transform: translateX(0%);\n    opacity: 1; }\n  to {\n    transform: translateX(-100%);\n    opacity: 0;\n    display: none; } }\n\nspan.icon-class {\n  height: 50px;\n  width: 50px; }\n  span.icon-class:hover svg {\n    fill: pink; }\n\n.portfolio-thumbnails {\n  display: flex;\n  flex-wrap: wrap; }\n\n.portfolio-thumbnail {\n  background: yellow;\n  min-height: 10rem;\n  margin: 1rem;\n  cursor: pointer;\n  flex: 1 1 auto; }\n  .portfolio-thumbnail.active {\n    background: #0f0; }\n\n#portfolioWrap {\n  min-height: 10rem;\n  background: pink;\n  color: #000;\n  padding: 2rem;\n  display: flex; }\n", ""]);
+exports.push([module.i, "a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:\"\";content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box}html{overflow-y:scroll;overflow-x:hidden}body{min-height:100vh;align-items:center;flex-direction:row;flex-wrap:wrap}.column,body{display:flex;justify-content:center}body{background:#ff0;color:rgba(0,0,0,.6);font-family:sans-serif}.site{display:flex;justify-content:center;align-items:start;min-height:80vh;width:100%}section{background:rgba(0,0,0,.6);padding:2rem;flex:1 1 auto;box-sizing:border-box;color:hsla(0,0%,100%,.5)}header{flex:1 1 80%;padding:2rem;background:hsla(0,0%,100%,.5);color:#999;text-align:center;align-self:flex-start;display:flex;justify-content:space-between}header .ma-menu{display:flex;margin:1rem}header .ma-menu .ma-class a{padding:1rem 2rem;margin-left:1rem}header .ma-menu .ma-class a:hover{transition:all .5s ease;background:#ff0}header .ma-menu .ma-class.active a{background:green}footer{flex:1 1 100%;padding:2rem;color:#999;text-align:center;align-self:flex-end}canvas,footer{background:#fff}canvas{position:fixed;left:0;top:0;z-index:-1}.view{display:flex;max-width:100vw;margin:2rem}.view-item{margin:2rem;min-width:calc(100% - 4rem);transition:all 1s ease}.first{transform:translateX(0);animation-name:slideout;animation-fill-mode:forwards}.first,.last{animation-duration:1s}.last{transform:translateX(calc(100% - 2rem));animation-name:slidein;animation-fill-mode:forwards}.solo{animation-name:none}@keyframes slidein{0%{transform:translateX(100%);opacity:0}to{transform:translateX(calc(-100% - 4rem));opacity:1}}@keyframes slideout{0%{transform:translateX(0);opacity:1}to{transform:translateX(-100%);opacity:0;display:none}}span.icon-class{height:50px;width:50px}span.icon-class:hover svg{fill:pink}.portfolio-thumbnails{display:flex;flex-wrap:wrap}.portfolio-thumbnail{background:#ff0;min-height:10rem;margin:1rem;cursor:pointer;flex:1 1 auto}.portfolio-thumbnail.active{background:#0f0}#portfolioWrap{min-height:10rem;background:pink;color:#000;padding:2rem;display:flex}img{margin-top:2rem;max-width:100%;height:auto}h2{font-size:2rem;margin-bottom:2rem}", ""]);
 
 // exports
 
