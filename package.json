@@ -9,6 +9,7 @@
     "git": "git status && git add . && git commit -m 'commit' && git push origin redesign && git status"
   },
   "dependencies": {
+    "express": "~4.9.8",
     "bulma": "^0.4.0",
     "css-loader": "^0.28.1",
     "file-loader": "^0.11.1",
