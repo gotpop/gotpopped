@@ -555,9 +555,9 @@ module.exports = [
 
 document.addEventListener("DOMContentLoaded", function() {
 
+  let maView = new __WEBPACK_IMPORTED_MODULE_5__view_js__["a" /* default */]
   // let makeGitHub = new Github
   let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header__["a" /* default */]
-  let maView = new __WEBPACK_IMPORTED_MODULE_5__view_js__["a" /* default */]
   let maPage = new __WEBPACK_IMPORTED_MODULE_4__page_js__["a" /* default */]
   let maFooter = new __WEBPACK_IMPORTED_MODULE_1__footer__["a" /* default */]
   let maCanvas = new __WEBPACK_IMPORTED_MODULE_2__canvas__["a" /* default */]
@@ -777,15 +777,18 @@ class Footer {
     this.makeFooter()
   }
   makeFooter() {
-    
+
     let view = document.getElementById('view')
-    let header = document.createElement('footer')
+    let footer = document.createElement('footer')
     let siteTitleH1 = document.createElement('small')
     let siteTitleH1Text = document.createTextNode('GotPop footer')
 
     siteTitleH1.appendChild(siteTitleH1Text)
-    header.appendChild(siteTitleH1)
-    document.body.appendChild(header)
+    footer.appendChild(siteTitleH1)
+
+    let maWrap = document.getElementById('site')
+    maWrap.appendChild(footer)
+
 
   }
 }
@@ -839,8 +842,9 @@ class Header {
     header.appendChild(menuUl)
     this.loopPagesData(menuUl)
 
-
-    document.body.appendChild(header)
+    var maWrap = document.getElementById('wrap-site');
+    var theFirstChild = maWrap.firstChild;
+    maWrap.insertBefore(header, theFirstChild);
 
   }
 
@@ -1061,12 +1065,14 @@ class View {
   }
 
   makeView() {
-
-    let view = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'view', class: 'view'}).build()
+    let wrapSite = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'wrap-site', class: 'wrap-site'}).build()
     let site = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'site', class: 'site'}).build()
+    let view = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'view', class: 'view'}).build()
+
 
     site.appendChild(view)
-    document.body.appendChild(site)
+    wrapSite.appendChild(site)
+    document.body.appendChild(wrapSite)
 
   }
 
@@ -1175,7 +1181,7 @@ exports = module.exports = __webpack_require__(24)(undefined);
 
 
 // module
-exports.push([module.i, "a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:\"\";content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box}html{overflow-y:scroll;overflow-x:hidden}body{min-height:100vh;align-items:center;flex-direction:row;flex-wrap:wrap}.column,body{display:flex;justify-content:center}body{background:#ff0;color:rgba(0,0,0,.6);font-family:sans-serif}.site{display:flex;justify-content:center;align-items:start;min-height:80vh;width:100%}section{background:rgba(0,0,0,.6);padding:2rem;flex:1 1 auto;box-sizing:border-box;color:hsla(0,0%,100%,.5)}header{flex:1 1 80%;padding:2rem;background:hsla(0,0%,100%,.5);color:#999;text-align:center;align-self:flex-start;display:flex;justify-content:space-between}header .ma-menu{display:flex;margin:1rem}header .ma-menu .ma-class a{padding:1rem 2rem;margin-left:1rem}header .ma-menu .ma-class a:hover{transition:all .5s ease;background:#ff0}header .ma-menu .ma-class.active a{background:green}footer{flex:1 1 100%;padding:2rem;color:#999;text-align:center;align-self:flex-end}canvas,footer{background:#fff}canvas{position:fixed;left:0;top:0;z-index:-1}.view{display:flex;max-width:100vw;margin:2rem}.view-item{margin:2rem;min-width:calc(100% - 4rem);transition:all 1s ease}.first{transform:translateX(0);animation-name:slideout;animation-fill-mode:forwards}.first,.last{animation-duration:1s}.last{transform:translateX(calc(100% - 2rem));animation-name:slidein;animation-fill-mode:forwards}.solo{animation-name:none}@keyframes slidein{0%{transform:translateX(100%);opacity:0}to{transform:translateX(calc(-100% - 4rem));opacity:1}}@keyframes slideout{0%{transform:translateX(0);opacity:1}to{transform:translateX(-100%);opacity:0;display:none}}span.icon-class{height:50px;width:50px}span.icon-class:hover svg{fill:pink}.portfolio-thumbnails{display:flex;flex-wrap:wrap}.portfolio-thumbnail{background:#ff0;min-height:10rem;margin:1rem;cursor:pointer;flex:1 1 auto}.portfolio-thumbnail.active{background:#0f0}#portfolioWrap{min-height:10rem;background:pink;color:#000;padding:2rem;display:flex}img{margin-top:2rem;max-width:100%;height:auto}h2{font-size:2rem;margin-bottom:2rem}", ""]);
+exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\r\n   v2.0 | 20110126\r\n   License: none (public domain)\r\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n* {\n  box-sizing: border-box; }\n\nhtml {\n  overflow-y: scroll;\n  overflow-x: hidden; }\n\nbody {\n  min-height: 100vh;\n  display: flex;\n  justify-content: start;\n  align-items: center;\n  flex-direction: row;\n  flex-wrap: wrap; }\n\n.column {\n  display: flex;\n  justify-content: center; }\n\nbody {\n  background: yellow;\n  color: rgba(0, 0, 0, 0.6);\n  font-family: sans-serif; }\n\n.site {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  align-items: start;\n  min-height: 90vh;\n  width: 100%; }\n\nsection {\n  background: rgba(0, 0, 0, 0.6);\n  padding: 2rem;\n  flex: 1 1 auto;\n  box-sizing: border-box;\n  color: rgba(255, 255, 255, 0.5); }\n\n#wrap-site {\n  max-width: 100%; }\n\n@media (max-width: 600px) {\n  body header {\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start; }\n    body header ul {\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start; }\n  #wrap-site {\n    max-width: 100%;\n    display: flex; } }\n\nheader {\n  flex: 1 1 80%;\n  padding: 2rem;\n  background: rgba(255, 255, 255, 0.5);\n  color: #999;\n  text-align: center;\n  align-self: flex-start;\n  display: flex;\n  justify-content: space-between; }\n\nheader .ma-menu {\n  display: flex;\n  margin: 1rem; }\n  header .ma-menu .ma-class a {\n    padding: 1rem 2rem;\n    margin-left: 1rem; }\n    header .ma-menu .ma-class a:hover {\n      transition: all .5s ease;\n      background: yellow; }\n  header .ma-menu .ma-class.active a {\n    background: green; }\n\nfooter {\n  flex: 1 1 100%;\n  padding: 2rem;\n  background: white;\n  color: #999;\n  text-align: center;\n  align-self: flex-end; }\n\ncanvas {\n  background: white;\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: -1; }\n\n.view {\n  display: flex;\n  max-width: 100vw;\n  margin: 2rem; }\n\n.view-item {\n  margin: 2rem;\n  min-width: calc(100% - 4rem);\n  transition: all 1s ease; }\n\n.first {\n  transform: translateX(0%);\n  animation-duration: 1s;\n  animation-name: slideout;\n  animation-fill-mode: forwards; }\n\n.last {\n  transform: translateX(calc(100% - 2rem));\n  animation-duration: 1s;\n  animation-name: slidein;\n  animation-fill-mode: forwards; }\n\n.solo {\n  animation-name: none; }\n\n@keyframes slidein {\n  from {\n    transform: translateX(100%);\n    opacity: 0; }\n  to {\n    transform: translateX(calc( -100% - 4rem));\n    opacity: 1; } }\n\n@keyframes slideout {\n  from {\n    transform: translateX(0%);\n    opacity: 1; }\n  to {\n    transform: translateX(-100%);\n    opacity: 0;\n    display: none; } }\n\nspan.icon-class {\n  height: 50px;\n  width: 50px; }\n  span.icon-class:hover svg {\n    fill: pink; }\n\n.portfolio-thumbnails {\n  display: flex;\n  flex-wrap: wrap; }\n\n.portfolio-thumbnail {\n  background: yellow;\n  min-height: 10rem;\n  margin: 1rem;\n  cursor: pointer;\n  flex: 1 1 auto; }\n  .portfolio-thumbnail.active {\n    background: #0f0; }\n\n#portfolioWrap {\n  min-height: 10rem;\n  background: pink;\n  color: #000;\n  padding: 2rem;\n  display: flex; }\n\nimg {\n  margin-top: 2rem;\n  max-width: 100%;\n  height: auto; }\n\nh2 {\n  font-size: 2rem;\n  margin-bottom: 2rem; }\n", ""]);
 
 // exports
 

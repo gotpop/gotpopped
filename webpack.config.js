@@ -44,6 +44,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             favicon: "./app/img/favicon.ico",
             title: 'GotPop',
+            template: './app/my-index.ejs',
             inject: 'head'
         })
     ]
