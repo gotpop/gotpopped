@@ -17,9 +17,9 @@ import {siteStatus} from '../site/status.js'
 
 document.addEventListener("DOMContentLoaded", function() {
 
+  let maView = new View
   // let makeGitHub = new Github
   let maHeader = new Header
-  let maView = new View
   let maPage = new MakePage
   let maFooter = new Footer
   let maCanvas = new Canvas

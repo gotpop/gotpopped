@@ -31,8 +31,9 @@ export default class Header {
     header.appendChild(menuUl)
     this.loopPagesData(menuUl)
 
-
-    document.body.appendChild(header)
+    var maWrap = document.getElementById('wrap-site');
+    var theFirstChild = maWrap.firstChild;
+    maWrap.insertBefore(header, theFirstChild);
 
   }
 
