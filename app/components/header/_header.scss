@@ -8,12 +8,16 @@ header {
   display: flex;
   justify-content: space-between;
   position: relative;
+  z-index: 9999;
 }
 
 
 header .ma-menu {
   display: flex;
   margin: 1rem;
+  li {
+    display: flex;
+  }
   .ma-class {
     a {
       padding: 1rem 2rem;
