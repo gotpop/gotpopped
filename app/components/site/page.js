@@ -36,7 +36,7 @@ export default class MakePage {
             portfolioWrap.remove()
           }
           let maWork = new Work(pageObject)
-          
+
         }
 
         if (pageObject.template === 'skills') {
@@ -58,8 +58,8 @@ export default class MakePage {
 
     if (maView.childNodes.length > 1) {
 
+      maView.firstChild.remove()
       if (maView.childNodes.length > 2) {
-        maView.firstChild.remove()
       }
 
       maView.firstChild.setAttribute('id', 'first')
