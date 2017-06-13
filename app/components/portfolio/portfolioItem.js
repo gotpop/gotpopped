@@ -43,9 +43,9 @@ export default class MakePortfolioPage {
 
   setPageIds() {
 
-    this.maView.firstChild.setAttribute('id', 'first')
-    this.maView.firstChild.classList.remove('last')
-    this.maView.firstChild.classList.add('view-item', 'first', 'solo')
+    this.maView.firstChild.setAttribute('id', 'first-item')
+    this.maView.firstChild.classList.remove('last-item')
+    this.maView.firstChild.classList.add('view-item', 'first-item', 'solo')
 
     if (this.maView.childNodes.length > 1) {
 
@@ -53,13 +53,13 @@ export default class MakePortfolioPage {
         this.maView.firstChild.remove()
       }
 
-      this.maView.firstChild.setAttribute('id', 'first')
-      this.maView.firstChild.classList.remove('last', 'solo')
-      this.maView.firstChild.classList.add('view-item', 'first')
+      this.maView.firstChild.setAttribute('id', 'first-item')
+      this.maView.firstChild.classList.remove('last-item', 'solo')
+      this.maView.firstChild.classList.add('view-item', 'first-item')
 
-      this.maView.lastChild.setAttribute('id', 'last')
-      this.maView.lastChild.classList.remove('first', 'solo')
-      this.maView.lastChild.classList.add('view-item', 'last')
+      this.maView.lastChild.setAttribute('id', 'last-item')
+      this.maView.lastChild.classList.remove('first-item', 'solo')
+      this.maView.lastChild.classList.add('view-item', 'last-item')
 
     }
 
