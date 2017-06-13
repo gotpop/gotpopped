@@ -905,7 +905,7 @@ class Header {
       __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
       new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]
 
-      alert(__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage)
+      // alert(siteStatus.currentPage)
 
       let thumbClassArray = document.getElementsByClassName('ma-class')
 

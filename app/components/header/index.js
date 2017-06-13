@@ -74,7 +74,7 @@ export default class Header {
       siteStatus.currentPage = makeA.getAttribute('data-id')
       new MakePage
 
-      alert(siteStatus.currentPage)
+      // alert(siteStatus.currentPage)
 
       let thumbClassArray = document.getElementsByClassName('ma-class')
 
