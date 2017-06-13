@@ -9,12 +9,17 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, "/dist/"),
-        // compress: true,
         port: 9000,
         watchContentBase: true
     },
     module: {
         rules: [
+            {
+              test: /\.(woff|woff2|eot|ttf|otf)$/,
+              use: [
+                'file-loader'
+              ]
+            },
             {
               test: /\.js$/,
               exclude: /node_modules/,
