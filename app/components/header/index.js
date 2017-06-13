@@ -59,8 +59,8 @@ export default class Header {
 
     let makeA = new Html({
       type: 'a',
-      href: '#' + pageItem.pageId,
       dataId: pageItem.pageId,
+      href: '#' + pageItem.pageId,
       text: pageItem.name
     }).build()
 
@@ -69,7 +69,7 @@ export default class Header {
     makeLi.appendChild(makeA)
 
     function listenToThis(event) {
-      event.preventDefault()
+      // event.preventDefault()
       event.stopPropagation()
 
       siteStatus.currentPage = makeA.getAttribute('data-id')
@@ -86,6 +86,10 @@ export default class Header {
     }
 
     makeA.addEventListener('click', listenToThis)
+    makeA.addEventListener('touchstart', listenToThis)
+
+
+
     menuUl.appendChild(makeLi)
 
     if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
