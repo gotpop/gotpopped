@@ -78,29 +78,28 @@
 
 class Status {
   constructor() {
-    this.makeStatus()
-    this.getSetLocation()
+    this.makeStatus();
+    this.getSetLocation();
 
-    this.currentPage
-    this.currentPortfolioPage
-    this.mobile
+    this.currentPage;
+    this.currentPortfolioPage;
+    this.mobile;
   }
   makeStatus() {
-    this.currentPage = 'home'
-    this.currentPortfolioPage = 'hackett'
+    this.currentPage = 'home';
+    this.currentPortfolioPage = 'hackett';
     // console.log(this)
   }
   getSetLocation() {
-    let hashLocation = location.hash.substring(1)
+    let hashLocation = location.hash.substring(1);
     if (hashLocation.length > 1) {
-      this.currentPage = hashLocation
+      this.currentPage = hashLocation;
     }
   }
 
 }
 
-let siteStatus = new Status
-
+let siteStatus = new Status();
 
 /***/ }),
 /* 1 */
@@ -113,56 +112,53 @@ let siteStatus = new Status
 
 class Html {
   constructor(options) {
-    this.options = options
-    this.type = options.type
-    this.text = options.text
-    this.id = options.id
-    this.class = options.class
-    this.dataId = options.dataId
-    this.href = options.href
-    this.html
+    this.options = options;
+    this.type = options.type;
+    this.text = options.text;
+    this.id = options.id;
+    this.class = options.class;
+    this.dataId = options.dataId;
+    this.href = options.href;
+    this.html;
 
-    this.build()
+    this.build();
   }
   build() {
 
-    this.buildThis()
-    return this.html
-
+    this.buildThis();
+    return this.html;
   }
 
   buildThis() {
 
     if (this.type !== undefined) {
-      this.html = document.createElement(this.options.type)
+      this.html = document.createElement(this.options.type);
     }
 
     if (this.text !== undefined) {
-      let htmlText = document.createTextNode(this.options.text)
-      this.html.appendChild(htmlText)
+      let htmlText = document.createTextNode(this.options.text);
+      this.html.appendChild(htmlText);
     }
 
     if (this.id !== undefined) {
-      this.html.setAttribute('id', this.id)
+      this.html.setAttribute('id', this.id);
     }
 
     if (this.class !== undefined) {
-      this.html.setAttribute('class', this.class)
+      this.html.setAttribute('class', this.class);
     }
 
     if (this.dataId !== undefined) {
-      this.html.setAttribute('data-id', this.dataId)
+      this.html.setAttribute('data-id', this.dataId);
     }
 
     if (this.href !== undefined) {
-      this.html.setAttribute('href', this.href)
+      this.html.setAttribute('href', this.href);
     }
-
   }
 
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Html;
-
 
 
 /***/ }),
@@ -171,10 +167,10 @@ class Html {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__status__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__pages_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__skills__ = __webpack_require__(20);
 /////////////////////////////////////////////////
 // Imports
@@ -193,242 +189,64 @@ class Html {
 
 class MakePage {
   constructor() {
-    this.loopPageObjects()
+    this.loopPageObjects();
   }
 
   loopPageObjects() {
-    let maView = document.getElementById('view')
+    let maView = document.getElementById('view');
 
     for (let pageObject of __WEBPACK_IMPORTED_MODULE_1__pages_json___default.a) {
 
       if (pageObject.pageId === __WEBPACK_IMPORTED_MODULE_0__status__["a" /* siteStatus */].currentPage) {
 
         if (pageObject.template === 'home') {
-          let maHome = new __WEBPACK_IMPORTED_MODULE_2__home__["a" /* default */](pageObject)
+          let maHome = new __WEBPACK_IMPORTED_MODULE_2__home__["a" /* default */](pageObject);
         }
 
         if (pageObject.template === 'work') {
 
-          let portfolioWrap = document.getElementById('portfolioWrap')
+          let portfolioWrap = document.getElementById('portfolioWrap');
           if (portfolioWrap !== null) {
-            portfolioWrap.remove()
+            portfolioWrap.remove();
           }
-          let maWork = new __WEBPACK_IMPORTED_MODULE_3__portfolio__["a" /* default */](pageObject)
-
+          let maWork = new __WEBPACK_IMPORTED_MODULE_3__portfolio__["a" /* default */](pageObject);
         }
 
         if (pageObject.template === 'skills') {
-          let maSkills = new __WEBPACK_IMPORTED_MODULE_4__skills__["a" /* default */](pageObject)
+          let maSkills = new __WEBPACK_IMPORTED_MODULE_4__skills__["a" /* default */](pageObject);
         }
-
       }
-
     }
-    this.setPageIds(maView)
-
+    this.setPageIds(maView);
   }
 
   setPageIds(maView) {
 
-    maView.firstChild.setAttribute('id', 'first')
-    maView.firstChild.classList.remove('last')
-    maView.firstChild.classList.add('view-item', 'first', 'solo')
+    maView.firstChild.setAttribute('id', 'first');
+    maView.firstChild.classList.remove('last');
+    maView.firstChild.classList.add('view-item', 'first', 'solo');
 
     if (maView.childNodes.length > 1) {
 
-      maView.firstChild.remove()
-      if (maView.childNodes.length > 2) {
-      }
+      maView.firstChild.remove();
+      if (maView.childNodes.length > 2) {}
 
-      maView.firstChild.setAttribute('id', 'first')
-      maView.firstChild.classList.remove('last', 'solo')
-      maView.firstChild.classList.add('view-item', 'first')
+      maView.firstChild.setAttribute('id', 'first');
+      maView.firstChild.classList.remove('last', 'solo');
+      maView.firstChild.classList.add('view-item', 'first');
 
-      maView.lastChild.setAttribute('id', 'last')
-      maView.lastChild.classList.remove('first', 'solo')
-      maView.lastChild.classList.add('view-item', 'last')
-
+      maView.lastChild.setAttribute('id', 'last');
+      maView.lastChild.classList.remove('first', 'solo');
+      maView.lastChild.classList.add('view-item', 'last');
     }
-
   }
 
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = MakePage;
 
 
-
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__triangle_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__circle_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__cube_svg__);
-/////////////////////////////////////////////////
-// Icons
-/////////////////////////////////////////////////
-
-
-
-
-
-/////////////////////////////////////////////////
-// Class
-/////////////////////////////////////////////////
-
-class IconsSrc {
-
-  constructor() {
-    this.triangle = __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default.a
-    this.circle = __WEBPACK_IMPORTED_MODULE_1__circle_svg___default.a
-    this.cube = __WEBPACK_IMPORTED_MODULE_2__cube_svg___default.a
-  }
-
-}
-
-class Icon {
-
-  constructor(iconType, className) {
-    this.iconType = iconType
-    this.className = className
-    this.currentSvg
-    this.loopObject()
-  }
-
-  loopObject() {
-
-    let iconsObject = new IconsSrc
-
-    for (let key in iconsObject) {
-      if (key === this.iconType) {
-        let decode = iconsObject[key]
-        this.currentSvg = decodeURI(decode)
-      }
-    }
-
-  }
-
-  removeTextNode(wrap) {
-
-    let check = wrap.childNodes[0]
-    check.remove()
-
-  }
-
-  build() {
-    let wrap = document.createElement('span')
-    wrap.setAttribute('class', this.className)
-    wrap.innerHTML = this.currentSvg
-
-    this.removeTextNode(wrap)
-
-    return wrap
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Icon;
-
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__portfolio_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(1);
-/////////////////////////////////////////////////
-// Imports
-/////////////////////////////////////////////////
-
-
-
-
-
-
-/////////////////////////////////////////////////
-// Work
-/////////////////////////////////////////////////
-
-class Work {
-  constructor(pageObject) {
-    this.pageObject = pageObject
-    this.maView = document.getElementById('view')
-    this.maSection = document.createElement('section')
-    this.maThumbnailWrap = document.createElement('div')
-    this.portfolioWrap = document.createElement('div')
-    this.makeWrap()
-  }
-  makeWrap() {
-
-    this.maThumbnailWrap.setAttribute('class', 'portfolio-thumbnails')
-    this.maSection.appendChild(this.maThumbnailWrap)
-
-    this.portfolioWrap.setAttribute('id', 'portfolioWrap')
-    this.maSection.appendChild(this.portfolioWrap)
-
-    this.loopPortfolioData()
-
-    this.maView.appendChild(this.maSection)
-
-    let maMakePortfolioPage = new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
-  }
-
-  loopPortfolioData() {
-    for (let PortfolioObject of __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default.a) {
-      this.makeThumbnails(PortfolioObject)
-    }
-  }
-
-  makeThumbnails(PortfolioObject) {
-
-    let maDiv = new __WEBPACK_IMPORTED_MODULE_3__utils__["a" /* default */]({
-      type: 'div',
-      class: 'portfolio-thumbnail',
-      dataId: PortfolioObject.ID
-    }).build()
-    this.maThumbnailWrap.appendChild(maDiv)
-
-    function listenToThis(event) {
-      // event.preventDefault()
-      event.stopPropagation()
-      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage = maDiv.getAttribute('data-id')
-      new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
-
-      let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
-
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage == maDiv.getAttribute('data-id')) {
-          // alert(maDiv)
-          maDiv.classList.add('active')
-        }
-      }
-    }
-
-    maDiv.addEventListener('click', listenToThis)
-
-    if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage === maDiv.getAttribute('data-id')) {
-      maDiv.classList.add('active')
-    }
-
-  }
-
-  addListeners() {}
-
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Work;
-
-
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = [
@@ -492,7 +310,7 @@ module.exports = [
 ];
 
 /***/ }),
-/* 6 */
+/* 4 */
 /***/ (function(module, exports) {
 
 module.exports = [
@@ -532,13 +350,178 @@ module.exports = [
 ];
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = {
 	"siteTitle": "GotPop",
 	"copyright": "© Copyright GotPop 2016"
 };
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__triangle_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__circle_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__circle_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cube_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__cube_svg__);
+/////////////////////////////////////////////////
+// Icons
+/////////////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////////////////
+// Class
+/////////////////////////////////////////////////
+
+class IconsSrc {
+
+  constructor() {
+    this.triangle = __WEBPACK_IMPORTED_MODULE_0__triangle_svg___default.a;
+    this.circle = __WEBPACK_IMPORTED_MODULE_1__circle_svg___default.a;
+    this.cube = __WEBPACK_IMPORTED_MODULE_2__cube_svg___default.a;
+  }
+
+}
+
+class Icon {
+
+  constructor(iconType, className) {
+    this.iconType = iconType;
+    this.className = className;
+    this.currentSvg;
+    this.loopObject();
+  }
+
+  loopObject() {
+
+    let iconsObject = new IconsSrc();
+
+    for (let key in iconsObject) {
+      if (key === this.iconType) {
+        let decode = iconsObject[key];
+        this.currentSvg = decodeURI(decode);
+      }
+    }
+  }
+
+  removeTextNode(wrap) {
+
+    let check = wrap.childNodes[0];
+    check.remove();
+  }
+
+  build() {
+    let wrap = document.createElement('span');
+    wrap.setAttribute('class', this.className);
+    wrap.innerHTML = this.currentSvg;
+
+    this.removeTextNode(wrap);
+
+    return wrap;
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Icon;
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__portfolio_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils__ = __webpack_require__(1);
+/////////////////////////////////////////////////
+// Imports
+/////////////////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// Work
+/////////////////////////////////////////////////
+
+class Work {
+  constructor(pageObject) {
+    this.pageObject = pageObject;
+    this.maView = document.getElementById('view');
+    this.maSection = document.createElement('section');
+    this.maThumbnailWrap = document.createElement('div');
+    this.portfolioWrap = document.createElement('div');
+    this.makeWrap();
+  }
+  makeWrap() {
+
+    this.maThumbnailWrap.setAttribute('class', 'portfolio-thumbnails');
+    this.maSection.appendChild(this.maThumbnailWrap);
+
+    this.portfolioWrap.setAttribute('id', 'portfolioWrap');
+    this.maSection.appendChild(this.portfolioWrap);
+
+    this.loopPortfolioData();
+
+    this.maView.appendChild(this.maSection);
+
+    let maMakePortfolioPage = new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]();
+  }
+
+  loopPortfolioData() {
+    for (let PortfolioObject of __WEBPACK_IMPORTED_MODULE_0__portfolio_json___default.a) {
+      this.makeThumbnails(PortfolioObject);
+    }
+  }
+
+  makeThumbnails(PortfolioObject) {
+
+    let maDiv = new __WEBPACK_IMPORTED_MODULE_3__utils__["a" /* default */]({
+      type: 'div',
+      class: 'portfolio-thumbnail',
+      dataId: PortfolioObject.ID
+    }).build();
+    this.maThumbnailWrap.appendChild(maDiv);
+
+    function listenToThis(event) {
+      // event.preventDefault()
+      event.stopPropagation();
+      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage = maDiv.getAttribute('data-id');
+      new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]();
+
+      let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail');
+
+      for (let thumb of thumbClassArray) {
+        thumb.classList.remove('active');
+        if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage == maDiv.getAttribute('data-id')) {
+          // alert(maDiv)
+          maDiv.classList.add('active');
+        }
+      }
+    }
+
+    maDiv.addEventListener('click', listenToThis);
+
+    if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage === maDiv.getAttribute('data-id')) {
+      maDiv.classList.add('active');
+    }
+  }
+
+  addListeners() {}
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Work;
+
 
 /***/ }),
 /* 8 */
@@ -551,7 +534,7 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_github_js__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__page_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_js__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__icons__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__icons__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__site_status_js__ = __webpack_require__(0);
 /////////////////////////////////////////////////
 // Imports
@@ -570,19 +553,17 @@ module.exports = {
 // DOMContentLoaded
 /////////////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-  let maView = new __WEBPACK_IMPORTED_MODULE_5__view_js__["a" /* default */]
+  let maView = new __WEBPACK_IMPORTED_MODULE_5__view_js__["a" /* default */]();
   // let makeGitHub = new Github
-  let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header__["a" /* default */]
-  let maPage = new __WEBPACK_IMPORTED_MODULE_4__page_js__["a" /* default */]
-  let maFooter = new __WEBPACK_IMPORTED_MODULE_1__footer__["a" /* default */]
-  let maCanvas = new __WEBPACK_IMPORTED_MODULE_2__canvas__["a" /* default */]
+  let maHeader = new __WEBPACK_IMPORTED_MODULE_0__header__["a" /* default */]();
+  let maPage = new __WEBPACK_IMPORTED_MODULE_4__page_js__["a" /* default */]();
+  let maFooter = new __WEBPACK_IMPORTED_MODULE_1__footer__["a" /* default */]();
+  let maCanvas = new __WEBPACK_IMPORTED_MODULE_2__canvas__["a" /* default */]();
 
   // console.log(siteStatus);
-
-})
-
+});
 
 /***/ }),
 /* 9 */
@@ -646,22 +627,21 @@ if(false) {
 class Gradient {
 
   constructor() {
-    this.ctx = document.getElementById('canvas').getContext('2d')
+    this.ctx = document.getElementById('canvas').getContext('2d');
   }
 
   build() {
 
-    var grad = this.ctx.createLinearGradient(0, 50, 0, 995)
-    grad.addColorStop(0.5, '#000')
-    grad.addColorStop(1, 'rgba(0,0,0,0)')
+    var grad = this.ctx.createLinearGradient(0, 50, 0, 995);
+    grad.addColorStop(0.5, '#000');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
 
-    this.ctx.fillStyle = grad
+    this.ctx.fillStyle = grad;
     this.ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
   }
 
 }
 /* unused harmony export default */
-
 
 
 /***/ }),
@@ -677,107 +657,99 @@ class Gradient {
 
 
 class Canvas {
-  constructor() {
-    this.winWidth = window.innerWidth
-    this.winHeight = window.innerHeight
-    this.makeCanvas()
-    this.redraw()
-  }
-  makeCanvas() {
-
-    if (this.mainCanvas) {
-      this.mainCanvas.remove()
+    constructor() {
+        this.winWidth = window.innerWidth;
+        this.winHeight = window.innerHeight;
+        this.makeCanvas();
+        this.redraw();
     }
+    makeCanvas() {
 
-    this.myCanvas = document.createElement("canvas")
-    this.myCanvas.setAttribute('id', 'canvas')
+        if (this.mainCanvas) {
+            this.mainCanvas.remove();
+        }
 
-    this.myCanvas.width = this.winWidth
-    this.myCanvas.height = this.winHeight
+        this.myCanvas = document.createElement("canvas");
+        this.myCanvas.setAttribute('id', 'canvas');
 
-    document.body.appendChild(this.myCanvas)
+        this.myCanvas.width = this.winWidth;
+        this.myCanvas.height = this.winHeight;
 
-    this.mainCanvas = document.getElementById("canvas");
-    this.mainContext = this.mainCanvas.getContext('2d');
+        document.body.appendChild(this.myCanvas);
 
-    this.mainContext.clearRect(0, 0, this.winWidth, this.winHeight);
-
-    this.drawGrad()
-    // this.drawCircle()
-
-    this.mainContext.fillRect(0, 0, this.winWidth, this.winHeight);
-    this.mainContext.fill();
-  }
-
-  drawGrad() {
-
-    this.grad = this.mainContext.createLinearGradient(0, 0, 0, 900)
-
-    this.grad.addColorStop(0, 'rgba(200,200,200,0)')
-    this.grad.addColorStop(0.45, '#000')
-    this.grad.addColorStop(0.5, '#000')
-    this.grad.addColorStop(0.75, '#000')
-    this.grad.addColorStop(1, 'rgba(200,200,200,0)')
-
-    this.mainContext.fillStyle = this.grad
-
-  }
-
-
-  drawCircle() {
-
-      this.angle = 0;
-      this.requestAnimationFrame = window.requestAnimationFrame
-
-
-      function drawCircle() {
+        this.mainCanvas = document.getElementById("canvas");
+        this.mainContext = this.mainCanvas.getContext('2d');
 
         this.mainContext.clearRect(0, 0, this.winWidth, this.winHeight);
 
-        // color in the background
-        this.mainContext.fillStyle = this.grad
-        this.mainContext.fillRect(0, 0, this.winWidth, this.winHeight);
+        this.drawGrad
+        // this.drawCircle()
 
-        // draw the circle
-        this.mainContext.beginPath();
-
-        var radius = 25 + 150 * Math.abs(Math.cos(this.angle));
-        this.mainContext.arc(225, 225, radius, 0, Math.PI * 2, false);
-        this.mainContext.closePath();
-
-        // color in the circle
-        this.mainContext.fillStyle = "#006699";
+        ();this.mainContext.fillRect(0, 0, this.winWidth, this.winHeight);
         this.mainContext.fill();
-
-        this.angle += Math.PI / 64;
-
-        requestAnimationFrame(boundFunction);
-      }
-
-      let boundFunction = drawCircle.bind(this)
-
-      boundFunction();
-  }
-
-
-
-  redraw() {
-
-    function listenForResize() {
-
-      this.winWidth = window.innerWidth
-      this.winHeight = window.innerHeight
-      this.makeCanvas()
-      this.drawGrad()
-
     }
 
-    window.addEventListener('resize', listenForResize.bind(this) );
+    drawGrad() {
 
-  }
+        this.grad = this.mainContext.createLinearGradient(0, 0, 0, 900);
+
+        this.grad.addColorStop(0, 'rgba(200,200,200,0)');
+        this.grad.addColorStop(0.45, '#000');
+        this.grad.addColorStop(0.5, '#000');
+        this.grad.addColorStop(0.75, '#000');
+        this.grad.addColorStop(1, 'rgba(200,200,200,0)');
+
+        this.mainContext.fillStyle = this.grad;
+    }
+
+    drawCircle() {
+
+        this.angle = 0;
+        this.requestAnimationFrame = window.requestAnimationFrame;
+
+        function drawCircle() {
+
+            this.mainContext.clearRect(0, 0, this.winWidth, this.winHeight);
+
+            // color in the background
+            this.mainContext.fillStyle = this.grad;
+            this.mainContext.fillRect(0, 0, this.winWidth, this.winHeight);
+
+            // draw the circle
+            this.mainContext.beginPath();
+
+            var radius = 25 + 150 * Math.abs(Math.cos(this.angle));
+            this.mainContext.arc(225, 225, radius, 0, Math.PI * 2, false);
+            this.mainContext.closePath();
+
+            // color in the circle
+            this.mainContext.fillStyle = "#006699";
+            this.mainContext.fill();
+
+            this.angle += Math.PI / 64;
+
+            requestAnimationFrame(boundFunction);
+        }
+
+        let boundFunction = drawCircle.bind(this);
+
+        boundFunction();
+    }
+
+    redraw() {
+
+        function listenForResize() {
+
+            this.winWidth = window.innerWidth;
+            this.winHeight = window.innerHeight;
+            this.makeCanvas();
+            this.drawGrad();
+        }
+
+        window.addEventListener('resize', listenForResize.bind(this));
+    }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Canvas;
-
 
 
 /***/ }),
@@ -785,7 +757,7 @@ class Canvas {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_site_json__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_site_json__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__site_site_json__);
 
 
@@ -795,27 +767,24 @@ class Canvas {
 /////////////////////////////////////////////////
 
 class Footer {
-  constructor() {
-    this.makeFooter()
-  }
-  makeFooter() {
+    constructor() {
+        this.makeFooter();
+    }
+    makeFooter() {
 
-    let view = document.getElementById('view')
-    let footer = document.createElement('footer')
-    let siteTitleH1 = document.createElement('small')
-    let siteTitleH1Text = document.createTextNode(__WEBPACK_IMPORTED_MODULE_0__site_site_json___default.a.copyright)
+        let view = document.getElementById('view');
+        let footer = document.createElement('footer');
+        let siteTitleH1 = document.createElement('small');
+        let siteTitleH1Text = document.createTextNode(__WEBPACK_IMPORTED_MODULE_0__site_site_json___default.a.copyright);
 
-    siteTitleH1.appendChild(siteTitleH1Text)
-    footer.appendChild(siteTitleH1)
+        siteTitleH1.appendChild(siteTitleH1Text);
+        footer.appendChild(siteTitleH1);
 
-    let maWrap = document.getElementById('site')
-    maWrap.appendChild(footer)
-
-
-  }
+        let maWrap = document.getElementById('site');
+        maWrap.appendChild(footer);
+    }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Footer;
-
 
 
 /***/ }),
@@ -823,13 +792,13 @@ class Footer {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__site_pages_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__site_site_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__site_site_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_status_js__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__site_page_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icons__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icons__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils__ = __webpack_require__(1);
 /////////////////////////////////////////////////
 // Header
@@ -848,17 +817,17 @@ class Footer {
 
 class Header {
   constructor(siteStatus) {
-    this.siteStatus = siteStatus
-    this.makeHeader()
-    this.addListenerToMenuToggle()
+    this.siteStatus = siteStatus;
+    this.makeHeader();
+    this.addListenerToMenuToggle();
   }
 
   makeHeader() {
 
-    let header = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'header'}).build()
-    let headline = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'h1', text: __WEBPACK_IMPORTED_MODULE_1__site_site_json___default.a.siteTitle}).build()
-    let menuUl = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
-    let makeIcon = new __WEBPACK_IMPORTED_MODULE_4__icons__["a" /* default */]('triangle', 'icon-class').build()
+    let header = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({ type: 'header' }).build();
+    let headline = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({ type: 'h1', text: __WEBPACK_IMPORTED_MODULE_1__site_site_json___default.a.siteTitle }).build();
+    let menuUl = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({ type: 'ul', id: 'menu', class: 'ma-menu' }).build();
+    let makeIcon = new __WEBPACK_IMPORTED_MODULE_4__icons__["a" /* default */]('triangle', 'icon-class').build();
 
     let makeA = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({
       type: 'a',
@@ -866,26 +835,23 @@ class Header {
       id: 'mobileMenuTrigger',
       class: 'mobile-menu-trigger',
       text: 'X'
-    }).build()
+    }).build();
 
-
-    header.appendChild(headline)
-    header.appendChild(makeIcon)
-    header.appendChild(menuUl)
-    header.appendChild(makeA)
-    this.loopPagesData(menuUl)
+    header.appendChild(headline);
+    header.appendChild(makeIcon);
+    header.appendChild(menuUl);
+    header.appendChild(makeA);
+    this.loopPagesData(menuUl);
 
     var maWrap = document.getElementById('wrap-site');
     var theFirstChild = maWrap.firstChild;
     maWrap.insertBefore(header, theFirstChild);
-
   }
 
   loopPagesData(menuUl) {
     for (let pageItem of __WEBPACK_IMPORTED_MODULE_0__site_pages_json___default.a) {
-      this.makeList(menuUl, pageItem)
+      this.makeList(menuUl, pageItem);
     }
-
   }
 
   makeList(menuUl, pageItem) {
@@ -895,53 +861,49 @@ class Header {
       dataId: pageItem.pageId,
       href: '#' + pageItem.pageId,
       text: pageItem.name
-    }).build()
+    }).build();
 
-    let makeLi = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({type: 'li', class: 'ma-class'}).build()
+    let makeLi = new __WEBPACK_IMPORTED_MODULE_5__utils__["a" /* default */]({ type: 'li', class: 'ma-class' }).build();
 
-    makeLi.appendChild(makeA)
+    makeLi.appendChild(makeA);
 
     function listenToThis(event) {
-      event.preventDefault()
-      event.stopPropagation()
-      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
-      new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]
+      event.preventDefault();
+      event.stopPropagation();
+      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id');
+      new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]();
 
       // alert(siteStatus.currentPage)
 
-      let thumbClassArray = document.getElementsByClassName('ma-class')
+      let thumbClassArray = document.getElementsByClassName('ma-class');
 
       for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
+        thumb.classList.remove('active');
         if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage === makeA.getAttribute('data-id')) {
-          makeLi.classList.add('active')
+          makeLi.classList.add('active');
         }
       }
-
     }
 
-    makeLi.addEventListener('click', listenToThis)
+    makeLi.addEventListener('click', listenToThis);
 
-
-    menuUl.appendChild(makeLi)
+    menuUl.appendChild(makeLi);
 
     if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage === makeA.getAttribute('data-id')) {
-      makeLi.classList.add('active')
+      makeLi.classList.add('active');
     }
-
   }
 
   addListenerToMenuToggle() {
-    let triggered = document.getElementById('mobileMenuTrigger')
+    let triggered = document.getElementById('mobileMenuTrigger');
 
-    triggered.addEventListener('click', function() {
-      document.body.classList.toggle('menu-open')
-    })
+    triggered.addEventListener('click', function () {
+      document.body.classList.toggle('menu-open');
+    });
   }
 
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Header;
-
 
 
 /***/ }),
@@ -966,40 +928,38 @@ class Header {
 
 class Home {
   constructor(pageObject) {
-    this.pageObject = pageObject
-    this.makeHome()
+    this.pageObject = pageObject;
+    this.makeHome();
   }
   makeHome() {
 
-    let maView = document.getElementById('view')
-    let maSection = document.createElement('section')
+    let maView = document.getElementById('view');
+    let maSection = document.createElement('section');
 
-    let maH1 = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'h1', text: this.pageObject.title}).build()
-    let maP = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'p', text: this.pageObject.about}).build()
+    let maH1 = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({ type: 'h1', text: this.pageObject.title }).build();
+    let maP = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({ type: 'p', text: this.pageObject.about }).build();
     let makeA = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({
       type: 'a',
       href: '#work',
       class: 'btn',
       text: 'Veiw'
-    }).build()
+    }).build();
 
     function listenToThis(event) {
-      event.preventDefault()
-      event.stopPropagation()
-      __WEBPACK_IMPORTED_MODULE_0__site_status_js__["a" /* siteStatus */].currentPage = 'work'
-      new __WEBPACK_IMPORTED_MODULE_1__site_page_js__["a" /* default */]
+      event.preventDefault();
+      event.stopPropagation();
+      __WEBPACK_IMPORTED_MODULE_0__site_status_js__["a" /* siteStatus */].currentPage = 'work';
+      new __WEBPACK_IMPORTED_MODULE_1__site_page_js__["a" /* default */]();
     }
-    makeA.addEventListener('click', listenToThis)
+    makeA.addEventListener('click', listenToThis);
 
-    maSection.appendChild(maH1)
-    maSection.appendChild(maP)
-    maSection.appendChild(makeA)
-    maView.appendChild(maSection)
-
+    maSection.appendChild(maH1);
+    maSection.appendChild(maP);
+    maSection.appendChild(makeA);
+    maView.appendChild(maSection);
   }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Home;
-
 
 
 /***/ }),
@@ -1008,7 +968,7 @@ class Home {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__site_status_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_json__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_json__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__portfolio_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__portfolio_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(1);
 /////////////////////////////////////////////////
@@ -1025,8 +985,8 @@ class Home {
 
 class MakePortfolioPage {
   constructor() {
-    this.maView = document.getElementById('portfolioWrap')
-    this.loopPageObjects()
+    this.maView = document.getElementById('portfolioWrap');
+    this.loopPageObjects();
   }
 
   loopPageObjects() {
@@ -1035,52 +995,45 @@ class MakePortfolioPage {
 
       if (portfolioObject.ID === __WEBPACK_IMPORTED_MODULE_0__site_status_js__["a" /* siteStatus */].currentPortfolioPage) {
 
-        let mawrap = document.createElement('section')
-        let maTitle = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'h2', text: portfolioObject.title}).build()
-        let maP = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({type: 'p', text: portfolioObject.about}).build()
+        let mawrap = document.createElement('section');
+        let maTitle = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({ type: 'h2', text: portfolioObject.title }).build();
+        let maP = new __WEBPACK_IMPORTED_MODULE_2__utils__["a" /* default */]({ type: 'p', text: portfolioObject.about }).build();
 
-        let maImage = new Image('600', '300')
-        maImage.src = portfolioObject.image.src
+        let maImage = new Image('600', '300');
+        maImage.src = portfolioObject.image.src;
 
-        mawrap.appendChild(maTitle)
-        mawrap.appendChild(maP)
-        mawrap.appendChild(maImage)
-        this.maView.appendChild(mawrap)
-
+        mawrap.appendChild(maTitle);
+        mawrap.appendChild(maP);
+        mawrap.appendChild(maImage);
+        this.maView.appendChild(mawrap);
       }
-
     }
-    this.setPageIds()
-
+    this.setPageIds();
   }
 
   setPageIds() {
 
-    this.maView.firstChild.setAttribute('id', 'first-item')
-    this.maView.firstChild.classList.remove('last-item')
-    this.maView.firstChild.classList.add('view-item-portfolio', 'first-item', 'solo')
+    this.maView.firstChild.setAttribute('id', 'first-item');
+    this.maView.firstChild.classList.remove('last-item');
+    this.maView.firstChild.classList.add('view-item-portfolio', 'first-item', 'solo');
 
     if (this.maView.childNodes.length > 1) {
 
-      this.maView.firstChild.remove()
-      if (this.maView.childNodes.length > 2) {
-      }
+      this.maView.firstChild.remove();
+      if (this.maView.childNodes.length > 2) {}
 
-      this.maView.firstChild.setAttribute('id', 'first-item')
-      this.maView.firstChild.classList.remove('last-item', 'solo')
-      this.maView.firstChild.classList.add('view-item-portfolio', 'first-item')
+      this.maView.firstChild.setAttribute('id', 'first-item');
+      this.maView.firstChild.classList.remove('last-item', 'solo');
+      this.maView.firstChild.classList.add('view-item-portfolio', 'first-item');
 
-      this.maView.lastChild.setAttribute('id', 'last-item')
-      this.maView.lastChild.classList.remove('first-item', 'solo')
-      this.maView.lastChild.classList.add('view-item-portfolio', 'last-item')
-
+      this.maView.lastChild.setAttribute('id', 'last-item');
+      this.maView.lastChild.classList.remove('first-item', 'solo');
+      this.maView.lastChild.classList.add('view-item-portfolio', 'last-item');
     }
-
   }
 
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = MakePortfolioPage;
-
 
 
 /***/ }),
@@ -1104,50 +1057,45 @@ class MakePortfolioPage {
 class View {
 
   constructor() {
-    this.makeView()
-    this.checkMobileOrDesktop()
+    this.makeView();
+    this.checkMobileOrDesktop();
   }
 
   makeView() {
-    let wrapSite = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'wrap-site', class: 'wrap-site'}).build()
-    let site = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'site', class: 'site'}).build()
-    let view = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({type: 'div', id: 'view', class: 'view'}).build()
+    let wrapSite = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({ type: 'div', id: 'wrap-site', class: 'wrap-site' }).build();
+    let site = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({ type: 'div', id: 'site', class: 'site' }).build();
+    let view = new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */]({ type: 'div', id: 'view', class: 'view' }).build();
 
-
-    site.appendChild(view)
-    wrapSite.appendChild(site)
-    document.body.appendChild(wrapSite)
-
+    site.appendChild(view);
+    wrapSite.appendChild(site);
+    document.body.appendChild(wrapSite);
   }
   checkMobileOrDesktop() {
 
-    let mediaQueryList = window.matchMedia('(max-width: 600px)')
+    let mediaQueryList = window.matchMedia('(max-width: 600px)');
 
-    document.body.classList.remove('mobile')
-    document.body.classList.remove('mobile')
+    document.body.classList.remove('mobile');
+    document.body.classList.remove('mobile');
     if (mediaQueryList.matches) {
-      document.body.classList.add('mobile')
+      document.body.classList.add('mobile');
     }
-
 
     console.log(mediaQueryList);
     function handleMediaChange(event) {
-      this.mobile = event.matches
-      document.body.classList.remove('mobile')
+      this.mobile = event.matches;
+      document.body.classList.remove('mobile');
       if (event.matches) {
-        document.body.classList.add('mobile')
+        document.body.classList.add('mobile');
       } else {
-        document.body.classList.remove('mobile')
+        document.body.classList.remove('mobile');
       }
     }
-    mediaQueryList.addListener(handleMediaChange.bind(this))
-    handleMediaChange.bind(this)
-
+    mediaQueryList.addListener(handleMediaChange.bind(this));
+    handleMediaChange.bind(this);
   }
 
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = View;
-
 
 
 /***/ }),
@@ -1160,32 +1108,29 @@ class View {
 /////////////////////////////////////////////////
 
 class Skills {
-  constructor(pageObject) {
-    this.pageObject = pageObject
-    this.makeSkills()
-  }
-  makeSkills(){
+      constructor(pageObject) {
+            this.pageObject = pageObject;
+            this.makeSkills();
+      }
+      makeSkills() {
 
-      let maView = document.getElementById('view')
-      let maSection = document.createElement('section')
-      let maH1 = document.createElement('h1')
-      let maH1TextNode = document.createTextNode(this.pageObject.title)
+            let maView = document.getElementById('view');
+            let maSection = document.createElement('section');
+            let maH1 = document.createElement('h1');
+            let maH1TextNode = document.createTextNode(this.pageObject.title);
 
-      maH1.appendChild(maH1TextNode)
-      maSection.appendChild(maH1)
+            maH1.appendChild(maH1TextNode);
+            maSection.appendChild(maH1);
 
-      let maP = document.createElement('p')
-      let maPText = document.createTextNode(this.pageObject.about)
+            let maP = document.createElement('p');
+            let maPText = document.createTextNode(this.pageObject.about);
 
-      maP.appendChild(maPText)
-      maSection.appendChild(maP)
-      maView.appendChild(maSection)
-
-
-  }
+            maP.appendChild(maPText);
+            maSection.appendChild(maP);
+            maView.appendChild(maSection);
+      }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Skills;
-
 
 
 /***/ }),
@@ -1199,20 +1144,18 @@ class Skills {
 
 class Github {
   constructor() {
-    this.githubUrl = 'https://api.github.com/users/gotpop'
-    this.getGithubUrl()
+    this.githubUrl = 'https://api.github.com/users/gotpop';
+    this.getGithubUrl();
   }
   getGithubUrl() {
 
-    fetch(this.githubUrl).then(function(response) {
-      console.log(response)
-      return response
-    })
-
+    fetch(this.githubUrl).then(function (response) {
+      console.log(response);
+      return response;
+    });
   }
 }
 /* unused harmony export default */
-
 
 
 /***/ }),
@@ -1238,7 +1181,6 @@ __webpack_require__(11);
 
 
 // // Import JS
-
 
 
 /***/ }),
