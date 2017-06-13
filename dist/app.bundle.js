@@ -399,6 +399,8 @@ class Work {
       // event.preventDefault()
       event.stopPropagation()
       __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPortfolioPage = maDiv.getAttribute('data-id')
+      new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
+      
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
 
       for (let thumb of thumbClassArray) {
@@ -407,7 +409,6 @@ class Work {
           maDiv.classList.add('active')
         }
       }
-      new __WEBPACK_IMPORTED_MODULE_1__PortfolioItem__["a" /* default */]
     }
 
     maDiv.addEventListener('click', listenToThis)
@@ -919,26 +920,6 @@ class Header {
     }
 
     makeLi.addEventListener('click', listenToThis)
-
-
-    // makeLi.addEventListener('touchstart', function(event) {
-    //   // alert('Touch me!')
-    //   // event.preventDefault()
-    //   event.stopPropagation()
-    //
-    //   siteStatus.currentPage = makeA.getAttribute('data-id')
-    //   let thumbClassArray = document.getElementsByClassName('ma-class')
-    //
-    //   for (let thumb of thumbClassArray) {
-    //     thumb.classList.remove('active')
-    //     if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
-    //       makeLi.classList.add('active')
-    //     }
-    //   }
-    //
-    //   new MakePage
-    // })
-
 
 
     menuUl.appendChild(makeLi)

@@ -54,6 +54,8 @@ export default class Work {
       // event.preventDefault()
       event.stopPropagation()
       siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
+      new MakePortfolioPage
+      
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
 
       for (let thumb of thumbClassArray) {
@@ -62,7 +64,6 @@ export default class Work {
           maDiv.classList.add('active')
         }
       }
-      new MakePortfolioPage
     }
 
     maDiv.addEventListener('click', listenToThis)
