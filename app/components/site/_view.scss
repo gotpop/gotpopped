@@ -39,25 +39,25 @@
 
 @keyframes slidein {
   from {
-    transform: translateX(100%);
+    // transform: translateX(100%);
     opacity: 0;
   }
 
   to {
-    transform: translateX( calc( -100% - 4rem));
+    // transform: translateX( calc( -100% - 4rem));
     opacity: 1;
   }
 }
 
 @keyframes slideout {
   from {
-    transform: translateX(0%);
+    // transform: translateX(0%);
     opacity: 1;
   }
 
   to {
-    transform: translateX(-100%);
+    // transform: translateX(-100%);
     opacity: 0;
-    display: none;
+    // display: none;
   }
 }
