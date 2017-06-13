@@ -55,12 +55,13 @@ export default class Work {
       event.stopPropagation()
       siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
       new MakePortfolioPage
-      
+
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
 
       for (let thumb of thumbClassArray) {
         thumb.classList.remove('active')
         if (siteStatus.currentPortfolioPage == maDiv.getAttribute('data-id')) {
+          alert(maDiv)
           maDiv.classList.add('active')
         }
       }
