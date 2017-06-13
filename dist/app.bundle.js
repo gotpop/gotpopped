@@ -902,7 +902,7 @@ class Header {
     function listenToThis(event) {
       event.preventDefault()
       event.stopPropagation()
-      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = 'work'
+      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
 
       alert(__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage)
 

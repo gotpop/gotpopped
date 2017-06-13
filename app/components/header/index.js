@@ -71,7 +71,7 @@ export default class Header {
     function listenToThis(event) {
       event.preventDefault()
       event.stopPropagation()
-      siteStatus.currentPage = 'work'
+      siteStatus.currentPage = makeA.getAttribute('data-id')
 
       alert(siteStatus.currentPage)
 
