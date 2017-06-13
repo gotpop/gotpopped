@@ -2,7 +2,7 @@
 // Imports
 /////////////////////////////////////////////////
 
-import SkillsData from './skills.json'
+import SKillsData from './skills.json'
 import {siteStatus} from '../site/status.js'
 import Html from '../utils'
 
@@ -13,6 +13,7 @@ import Html from '../utils'
 export default class Skills {
   constructor(pageObject) {
     this.pageObject = pageObject
+    this.skillsUl
     this.makeSkills()
   }
   makeSkills() {
@@ -24,23 +25,22 @@ export default class Skills {
 
     let skillsP = new Html({type: 'p', text: this.pageObject.about}).build()
 
+    let skillsUl = new Html({type: 'ul'}).build()
+
     maSection.appendChild(maH1)
     maSection.appendChild(skillsP)
+
+    this.loopSkillsData(skillsUl)
+
+    maSection.appendChild(skillsUl)
     maView.appendChild(maSection)
 
   }
-  // loopSkillsData() {
-  //   for (let SKillsObject of SKillsData) {
-  //     this.makeSkillsList(SKillsObject)
-  //   }
-  // }
-  //
-  // makeSkillsList(SkillsObject) {
-  //   let maDiv = new Html({
-  //     type: 'div',
-  //     class: 'portfolio-thumbnail',
-  //     dataId: PortfolioObject.ID
-  //   }).build()
-  // }
+  loopSkillsData(skillsUl) {
+    for (let SKillsObject of SKillsData) {
+      let thisSkill = new Html({type: 'li', text: SKillsObject.skill}).build()
+      skillsUl.appendChild(thisSkill)
+    }
+  }
 
 }

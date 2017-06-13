@@ -1620,6 +1620,7 @@ var Skills = function () {
         _classCallCheck(this, Skills);
 
         this.pageObject = pageObject;
+        this.skillsUl;
         this.makeSkills();
     }
 
@@ -1634,24 +1635,45 @@ var Skills = function () {
 
             var skillsP = new _utils2.default({ type: 'p', text: this.pageObject.about }).build();
 
+            var skillsUl = new _utils2.default({ type: 'ul' }).build();
+
             maSection.appendChild(maH1);
             maSection.appendChild(skillsP);
+
+            this.loopSkillsData(skillsUl);
+
+            maSection.appendChild(skillsUl);
             maView.appendChild(maSection);
         }
-        // loopSkillsData() {
-        //   for (let SKillsObject of SKillsData) {
-        //     this.makeSkillsList(SKillsObject)
-        //   }
-        // }
-        //
-        // makeSkillsList(SkillsObject) {
-        //   let maDiv = new Html({
-        //     type: 'div',
-        //     class: 'portfolio-thumbnail',
-        //     dataId: PortfolioObject.ID
-        //   }).build()
-        // }
+    }, {
+        key: 'loopSkillsData',
+        value: function loopSkillsData(skillsUl) {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
 
+            try {
+                for (var _iterator = _skills2.default[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var SKillsObject = _step.value;
+
+                    var thisSkill = new _utils2.default({ type: 'li', text: SKillsObject.skill }).build();
+                    skillsUl.appendChild(thisSkill);
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+        }
     }]);
 
     return Skills;
