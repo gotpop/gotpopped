@@ -1,4 +1,12 @@
 /////////////////////////////////////////////////
+// Imports
+/////////////////////////////////////////////////
+
+import SkillsData from './skills.json'
+import {siteStatus} from '../site/status.js'
+import Html from '../utils'
+
+/////////////////////////////////////////////////
 // Skills
 /////////////////////////////////////////////////
 
@@ -7,23 +15,32 @@ export default class Skills {
     this.pageObject = pageObject
     this.makeSkills()
   }
-  makeSkills(){
+  makeSkills() {
 
-      let maView = document.getElementById('view')
-      let maSection = document.createElement('section')
-      let maH1 = document.createElement('h1')
-      let maH1TextNode = document.createTextNode(this.pageObject.title)
+    let maView = document.getElementById('view')
+    let maSection = document.createElement('section')
 
-      maH1.appendChild(maH1TextNode)
-      maSection.appendChild(maH1)
+    let maH1 = new Html({type: 'h2', text: this.pageObject.title}).build()
 
-      let maP = document.createElement('p')
-      let maPText = document.createTextNode(this.pageObject.about)
+    let skillsP = new Html({type: 'p', text: this.pageObject.about}).build()
 
-      maP.appendChild(maPText)
-      maSection.appendChild(maP)
-      maView.appendChild(maSection)
-
+    maSection.appendChild(maH1)
+    maSection.appendChild(skillsP)
+    maView.appendChild(maSection)
 
   }
+  // loopSkillsData() {
+  //   for (let SKillsObject of SKillsData) {
+  //     this.makeSkillsList(SKillsObject)
+  //   }
+  // }
+  //
+  // makeSkillsList(SkillsObject) {
+  //   let maDiv = new Html({
+  //     type: 'div',
+  //     class: 'portfolio-thumbnail',
+  //     dataId: PortfolioObject.ID
+  //   }).build()
+  // }
+
 }
