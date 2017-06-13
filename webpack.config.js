@@ -43,8 +43,7 @@ module.exports = {
                 use: {
                     loader: 'svg-url-loader',
                     options: {
-
-                      noquotes: true
+                    noquotes: true
                     }
                 }
             }
