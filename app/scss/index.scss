@@ -15,6 +15,7 @@
 /////////////////////////////////////////////////
 
 @import "global/site";
+@import "global/fonts";
 
 /////////////////////////////////////////////////
 // Components
@@ -26,25 +27,3 @@
 @import "../components/site/view";
 @import "../components/icons/icons";
 @import "../components/portfolio/portfolio";
-
-
-
-
-
-@font-face {
-  font-family: 'codepro';
-  src:  url('../fonts/codepro.woff') format('woff2'),
-        url('../fonts/codepro.woff2') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
-
-
-p {
-  font-family:  'codepro';
-}
-
-
-// app\fonts\codepro.eot
-//
-// app\fonts\codepro.ttf
