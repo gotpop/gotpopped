@@ -22,6 +22,7 @@ header .ma-menu {
     a {
       padding: 1rem 2rem;
       margin-left: 1rem;
+      cursor: pointer;
       &:hover {
       transition: all .5s ease;
         background: yellow;
@@ -36,7 +37,7 @@ header .ma-menu {
 
 
 .mobile-menu-trigger {
-  background: blue;
+  background: yellow;
   padding: 1rem;
   display: none;
   // transform: translateX(-10px);

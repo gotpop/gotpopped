@@ -51,7 +51,7 @@ export default class Work {
     this.maThumbnailWrap.appendChild(maDiv)
 
     function listenToThis(event) {
-      event.preventDefault()
+      // event.preventDefault()
       event.stopPropagation()
       siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
