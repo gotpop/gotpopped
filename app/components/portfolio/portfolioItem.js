@@ -49,8 +49,8 @@ export default class MakePortfolioPage {
 
     if (this.maView.childNodes.length > 1) {
 
+      this.maView.firstChild.remove()
       if (this.maView.childNodes.length > 2) {
-        this.maView.firstChild.remove()
       }
 
       this.maView.firstChild.setAttribute('id', 'first-item')
