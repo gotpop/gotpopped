@@ -25,6 +25,7 @@ export default class Home {
     let makeA = new Html({
       type: 'a',
       href: '#work',
+      class: 'btn',
       text: 'Veiw'
     }).build()
 

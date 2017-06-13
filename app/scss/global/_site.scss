@@ -88,3 +88,12 @@ section {
     overflow: hidden;
   }
 }
+
+
+.btn {
+  padding: 1rem 2rem;
+  background: pink;
+  display: flex;
+  margin: 1rem 0;
+  transition: all .6s ease;
+}
