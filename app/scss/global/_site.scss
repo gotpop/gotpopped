@@ -85,13 +85,13 @@ section {
     max-width: 100%;
     display: flex;
     transform: translateX(-200px);
-    transition: all .6s ease;
+    // transition: all .5s ease;
   }
 }
 
 .mobile.menu-open {
   #wrap-site {
-    transition: all .6s ease;
+    // transition: all .5s ease;
     transform: translateX(0px);
     // overflow: hidden;
   }
