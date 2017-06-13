@@ -85,8 +85,8 @@ export default class Header {
       new MakePage
     }
 
-    makeA.addEventListener('click', listenToThis)
-    makeA.addEventListener('touchstart', listenToThis)
+    makeLi.addEventListener('click', listenToThis)
+    makeLi.addEventListener('touchstart', listenToThis)
 
 
 
