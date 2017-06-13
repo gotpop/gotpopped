@@ -900,10 +900,10 @@ class Header {
     makeLi.appendChild(makeA)
 
     function listenToThis(event) {
-      // event.preventDefault()
+      event.preventDefault()
       event.stopPropagation()
+      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = 'work'
 
-      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('ma-class')
 
       for (let thumb of thumbClassArray) {
@@ -917,23 +917,25 @@ class Header {
     }
 
     makeLi.addEventListener('click', listenToThis)
-    makeLi.addEventListener('touchstart', function(event) {
-      // alert('Touch me!')
-      // event.preventDefault()
-      event.stopPropagation()
 
-      __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = makeA.getAttribute('data-id')
-      let thumbClassArray = document.getElementsByClassName('ma-class')
 
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage === makeA.getAttribute('data-id')) {
-          makeLi.classList.add('active')
-        }
-      }
-
-      new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]
-    })
+    // makeLi.addEventListener('touchstart', function(event) {
+    //   // alert('Touch me!')
+    //   // event.preventDefault()
+    //   event.stopPropagation()
+    //
+    //   siteStatus.currentPage = makeA.getAttribute('data-id')
+    //   let thumbClassArray = document.getElementsByClassName('ma-class')
+    //
+    //   for (let thumb of thumbClassArray) {
+    //     thumb.classList.remove('active')
+    //     if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+    //       makeLi.classList.add('active')
+    //     }
+    //   }
+    //
+    //   new MakePage
+    // })
 
 
 

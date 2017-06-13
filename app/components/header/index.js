@@ -69,10 +69,10 @@ export default class Header {
     makeLi.appendChild(makeA)
 
     function listenToThis(event) {
-      // event.preventDefault()
+      event.preventDefault()
       event.stopPropagation()
+      siteStatus.currentPage = 'work'
 
-      siteStatus.currentPage = makeA.getAttribute('data-id')
       let thumbClassArray = document.getElementsByClassName('ma-class')
 
       for (let thumb of thumbClassArray) {
@@ -86,23 +86,25 @@ export default class Header {
     }
 
     makeLi.addEventListener('click', listenToThis)
-    makeLi.addEventListener('touchstart', function(event) {
-      // alert('Touch me!')
-      // event.preventDefault()
-      event.stopPropagation()
 
-      siteStatus.currentPage = makeA.getAttribute('data-id')
-      let thumbClassArray = document.getElementsByClassName('ma-class')
 
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
-          makeLi.classList.add('active')
-        }
-      }
-
-      new MakePage
-    })
+    // makeLi.addEventListener('touchstart', function(event) {
+    //   // alert('Touch me!')
+    //   // event.preventDefault()
+    //   event.stopPropagation()
+    //
+    //   siteStatus.currentPage = makeA.getAttribute('data-id')
+    //   let thumbClassArray = document.getElementsByClassName('ma-class')
+    //
+    //   for (let thumb of thumbClassArray) {
+    //     thumb.classList.remove('active')
+    //     if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+    //       makeLi.classList.add('active')
+    //     }
+    //   }
+    //
+    //   new MakePage
+    // })
 
 
 
