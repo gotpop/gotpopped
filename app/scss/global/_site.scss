@@ -56,7 +56,6 @@ section {
 
 #wrap-site {
   max-width: 100%;
-  overflow: hidden;
 }
 
 
@@ -84,5 +83,6 @@ section {
   #wrap-site {
     transition: all .6s ease;
     transform: translateX(0px);
+    overflow: hidden;
   }
 }

@@ -6,7 +6,7 @@
     "start": "node server.js",
     "dev": "webpack --env=dev --progress --profile --colors && webpack-dev-server",
     "build": "webpack -p",
-    "deploy": "webpack -p && git add . && git commit -m 'Brochureware' && git push origin redesign",
+    "deploy": "webpack && git add . && git commit -m 'Brochureware' && git push origin redesign",
     "git": "git status && git add . && git commit -m 'basic' && git push origin redesign && git status"
   },
   "dependencies": {

@@ -1,1 +1,7 @@
-[{}, {}]
+[{
+  "skill": "html",
+  "link": ""
+}, {
+  "skill": "CSS",
+  "link": ""
+}]
