@@ -45,7 +45,7 @@ export default class MakePortfolioPage {
 
     this.maView.firstChild.setAttribute('id', 'first-item')
     this.maView.firstChild.classList.remove('last-item')
-    this.maView.firstChild.classList.add('view-item', 'first-item', 'solo')
+    this.maView.firstChild.classList.add('view-item-portfolio', 'first-item', 'solo')
 
     if (this.maView.childNodes.length > 1) {
 
@@ -55,11 +55,11 @@ export default class MakePortfolioPage {
 
       this.maView.firstChild.setAttribute('id', 'first-item')
       this.maView.firstChild.classList.remove('last-item', 'solo')
-      this.maView.firstChild.classList.add('view-item', 'first-item')
+      this.maView.firstChild.classList.add('view-item-portfolio', 'first-item')
 
       this.maView.lastChild.setAttribute('id', 'last-item')
       this.maView.lastChild.classList.remove('first-item', 'solo')
-      this.maView.lastChild.classList.add('view-item', 'last-item')
+      this.maView.lastChild.classList.add('view-item-portfolio', 'last-item')
 
     }
 
