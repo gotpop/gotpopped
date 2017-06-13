@@ -73,14 +73,16 @@ export default class Header {
       event.stopPropagation()
       siteStatus.currentPage = 'work'
 
-      let thumbClassArray = document.getElementsByClassName('ma-class')
+      alert(siteStatus.currentPage)
 
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
-          makeLi.classList.add('active')
-        }
-      }
+      // let thumbClassArray = document.getElementsByClassName('ma-class')
+      //
+      // for (let thumb of thumbClassArray) {
+      //   thumb.classList.remove('active')
+      //   if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+      //     makeLi.classList.add('active')
+      //   }
+      // }
 
       new MakePage
     }

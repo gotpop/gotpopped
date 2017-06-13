@@ -904,14 +904,16 @@ class Header {
       event.stopPropagation()
       __WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage = 'work'
 
-      let thumbClassArray = document.getElementsByClassName('ma-class')
+      alert(__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage)
 
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (__WEBPACK_IMPORTED_MODULE_2__site_status_js__["a" /* siteStatus */].currentPage === makeA.getAttribute('data-id')) {
-          makeLi.classList.add('active')
-        }
-      }
+      // let thumbClassArray = document.getElementsByClassName('ma-class')
+      //
+      // for (let thumb of thumbClassArray) {
+      //   thumb.classList.remove('active')
+      //   if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+      //     makeLi.classList.add('active')
+      //   }
+      // }
 
       new __WEBPACK_IMPORTED_MODULE_3__site_page_js__["a" /* default */]
     }
