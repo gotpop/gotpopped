@@ -86,7 +86,9 @@ export default class Header {
     }
 
     makeLi.addEventListener('click', listenToThis)
-    makeLi.addEventListener('touchstart', listenToThis)
+    makeLi.addEventListener('touchstart', function(event) {
+      alert('Touch me!')
+    })
 
 
 
