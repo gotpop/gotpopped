@@ -20,7 +20,7 @@ export default class Home {
     let maView = document.getElementById('view')
     let maSection = document.createElement('section')
 
-    let maH1 = new Html({type: 'h1', text: this.pageObject.title}).build()
+    let maH1 = new Html({type: 'h2', text: this.pageObject.title}).build()
     let maP = new Html({type: 'p', text: this.pageObject.about}).build()
     let makeA = new Html({
       type: 'a',

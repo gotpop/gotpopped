@@ -2,7 +2,11 @@
 // Typography
 /////////////////////////////////////////////////
 
-p {
+a {
+  text-decoration: none;
+}
+
+html {
   font-family: 'Code-Pro';
 }
 
@@ -10,5 +14,11 @@ p {
 h1 {
   font-family: 'Code-Pro-Light';
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-family: 'Code-Pro-Light';
+  font-size: 2rem;
+  line-height: 1.2em;
 }
