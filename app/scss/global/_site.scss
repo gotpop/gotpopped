@@ -48,13 +48,12 @@ body {
   // transition-delay: .6s;
 }
 
-section {
-  background: rgba(0,0,0, .6);
-  padding: 2rem;
-  // max-width: 600px;
-  flex: 1 1 auto;
-  box-sizing: border-box;
-  color: rgba(#fff, .5);
+
+
+img {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -66,7 +65,7 @@ section {
 
 @media (max-width: 600px) {
   body header {
-    
+
     ul {
       display: flex;
       flex-direction: column;

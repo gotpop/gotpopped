@@ -23,9 +23,9 @@ export default class Header {
   makeHeader() {
 
     let header = new Html({type: 'header', class: 'header'}).build()
-    let logoWrap = new Html({type: 'div', class: 'logo-wrap'}).build()
+    let logoWrap = new Html({type: 'div', class: 'header-logo-wrap'}).build()
     let headline = new Html({type: 'h1', text: Site.siteTitle}).build()
-    let menuUl = new Html({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
+    let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
     let makeIcon = new Icon('triangle', 'icon-class').build()
 
     let makeA = new Html({
@@ -68,7 +68,7 @@ export default class Header {
       text: pageItem.name
     }).build()
 
-    let makeLi = new Html({type: 'li', class: 'ma-class'}).build()
+    let makeLi = new Html({type: 'li', class: 'header-menu-list'}).build()
 
     makeLi.appendChild(makeA)
 
@@ -80,7 +80,7 @@ export default class Header {
 
       // alert(siteStatus.currentPage)
 
-      let thumbClassArray = document.getElementsByClassName('ma-class')
+      let thumbClassArray = document.getElementsByClassName('header-menu-list')
 
       for (let thumb of thumbClassArray) {
         thumb.classList.remove('active')
