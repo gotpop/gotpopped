@@ -5,11 +5,11 @@
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  color: #999;
-  font-size: 2rem;
+  color: $dark1;
   margin-top: 2rem;
   li {
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 1em;
     background: $light1;
     flex: 1 1 40%;
     margin: .5rem;
