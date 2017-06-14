@@ -2,9 +2,17 @@
 // View
 /////////////////////////////////////////////////
 
+.wrap-view {
+  min-width: 100vw;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .view {
   display: flex;
-  max-width: 100vw;
+  max-width: 800px;
   // margin: 2rem;
 }
 

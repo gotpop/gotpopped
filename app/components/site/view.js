@@ -19,10 +19,11 @@ export default class View {
   makeView() {
     let wrapSite = new Html({type: 'div', id: 'wrap-site', class: 'wrap-site'}).build()
     let site = new Html({type: 'div', id: 'site', class: 'site'}).build()
+    let wrapView = new Html({type: 'div', id: 'wrap-view', class: 'wrap-view'}).build()
     let view = new Html({type: 'div', id: 'view', class: 'view'}).build()
 
-
-    site.appendChild(view)
+    wrapView.appendChild(view)
+    site.appendChild(wrapView)
     wrapSite.appendChild(site)
     document.body.appendChild(wrapSite)
 
