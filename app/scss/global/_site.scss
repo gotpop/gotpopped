@@ -77,16 +77,16 @@ section {
       justify-content: flex-start;
     }
   }
-  #wrap-site {
+  .wrap-site {
     max-width: 100%;
     display: flex;
     transform: translateX(-200px);
-    // transition: all .5s ease;
+    transition: all .5s ease;
   }
 }
 
 .mobile.menu-open {
-  #wrap-site {
+  .wrap-site {
     // transition: all .5s ease;
     transform: translateX(0px);
     // overflow: hidden;
@@ -96,7 +96,7 @@ section {
 
 .btn {
   padding: 1rem 2rem;
-  background: pink;
+  background: $primary;
   display: flex;
   margin: 1rem 0;
   transition: all .6s ease;
