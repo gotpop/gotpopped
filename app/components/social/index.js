@@ -1,26 +1,37 @@
 /////////////////////////////////////////////////
-// Header
+// Social
 /////////////////////////////////////////////////
 
 import Html from '../utils'
-import Social from './social.json'
-
+import SocialData from './social.json'
+import Icon from '../icons'
 
 /////////////////////////////////////////////////
 // Social
 /////////////////////////////////////////////////
 
 export default class Social {
-  constructor() {
+  constructor(appendHere) {
+    this.appendHere = appendHere
     this.makeSocial()
   }
   makeSocial() {
 
-    let links = new Html({type: 'div', id: 'social', class: 'social'}).build()
+    let linksWrap = new Html({type: 'div', id: 'social', class: 'social'}).build()
+    let nav = new Html({type: 'nav', class: 'social-nav'}).build()
 
-    siteTitleH1.appendChild(siteTitleH1Text)
-    header.appendChild(siteTitleH1)
-    document.body.appendChild(header)
+    linksWrap.appendChild(nav)
+
+    for (let socialObject of SocialData) {
+      console.log(socialObject)
+      let links = new Html({type: 'a', class: 'social-link', href: socialObject.link}).build()
+      let makeIcon = new Icon('triangle', 'icon-class').build()
+      links.appendChild(makeIcon)
+      nav.appendChild(links)
+
+    }
+
+    this.appendHere.appendChild(linksWrap)
 
   }
 }

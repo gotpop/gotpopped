@@ -1,5 +1,6 @@
 
 import Site from '../site/site.json'
+import Social from '../social'
 
 /////////////////////////////////////////////////
 // Footer
@@ -20,6 +21,9 @@ export default class Footer {
     footer.appendChild(siteTitleH1)
 
     let maWrap = document.getElementById('site')
+
+    let footerSocial = new Social(footer)
+
     maWrap.appendChild(footer)
 
 
