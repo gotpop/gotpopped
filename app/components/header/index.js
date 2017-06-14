@@ -23,6 +23,7 @@ export default class Header {
   makeHeader() {
 
     let header = new Html({type: 'header'}).build()
+    let logoWrap = new Html({type: 'div', class: 'logo-wrap'}).build()
     let headline = new Html({type: 'h1', text: Site.siteTitle}).build()
     let menuUl = new Html({type: 'ul', id: 'menu', class: 'ma-menu'}).build()
     let makeIcon = new Icon('triangle', 'icon-class').build()
@@ -36,8 +37,11 @@ export default class Header {
     }).build()
 
 
-    header.appendChild(headline)
-    header.appendChild(makeIcon)
+    header.appendChild(logoWrap)
+
+
+    logoWrap.appendChild(makeIcon)
+    logoWrap.appendChild(headline)
     header.appendChild(menuUl)
     header.appendChild(makeA)
     this.loopPagesData(menuUl)
