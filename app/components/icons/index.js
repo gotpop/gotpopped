@@ -7,6 +7,14 @@ import circleSrc from './circle.svg'
 import cubeSrc from './cube.svg'
 
 /////////////////////////////////////////////////
+// Soocial Icons
+/////////////////////////////////////////////////
+
+import codepen from './social/codepen.svg'
+import github from './social/github.svg'
+import linkedin from './social/linkedin.svg'
+
+/////////////////////////////////////////////////
 // Class
 /////////////////////////////////////////////////
 
@@ -16,6 +24,9 @@ class IconsSrc {
     this.triangle = triangleSrc
     this.circle = circleSrc
     this.cube = cubeSrc
+    this.codepen = codepen
+    this.github = github
+    this.linkedin = linkedin
   }
 
 }

@@ -23,9 +23,10 @@ export default class Social {
     linksWrap.appendChild(nav)
 
     for (let socialObject of SocialData) {
+
       console.log(socialObject)
       let links = new Html({type: 'a', class: 'social-link', href: socialObject.link}).build()
-      let makeIcon = new Icon('triangle', 'icon-class').build()
+      let makeIcon = new Icon(socialObject.name, 'icon-class').build()
       links.appendChild(makeIcon)
       nav.appendChild(links)
 
