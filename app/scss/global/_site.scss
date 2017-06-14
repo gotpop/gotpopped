@@ -64,14 +64,6 @@ img {
 
 
 @media (max-width: 600px) {
-  body header {
-
-    // ul {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: flex-start;
-    // }
-  }
   .wrap-site {
     max-width: 100%;
     display: flex;
@@ -80,10 +72,9 @@ img {
   }
 }
 
+
 .mobile.menu-open {
   .wrap-site {
-    // transition: all .5s ease;
     transform: translateX(0px);
-    // overflow: hidden;
   }
 }

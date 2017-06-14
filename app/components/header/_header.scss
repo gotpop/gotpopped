@@ -20,6 +20,9 @@
     display: flex;
     flex-direction: column;
     width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
   }
 }
 
@@ -27,34 +30,49 @@
   display: flex;
   .mobile & {
     flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header-title {
+  .mobile & {
+    margin-bottom: 1rem;
   }
 }
 
 .header-menu {
   display: flex;
   margin: 1rem;
+  .mobile & {
+    flex-direction: column;
+  }
 }
 
 .header-menu-list {
   display: flex;
   margin: 0;
+  .mobile & {
+    margin-bottom: 1rem;
+  }
   a {
     flex: 1 1 auto;
     padding: 1rem 2rem;
     cursor: pointer;
+    color: $dark2;
     &:hover {
       transition: all 0.5s ease;
-      background: $secondary;
+      background: $hover;
     }
   }
   &.active a {
+    color: $light1;
     background: $primary;
   }
 }
 
 .mobile-menu-trigger {
   display: none;
-  background: $primary;
+  background: $light1;
   padding: 1.5rem;
   position: absolute;
   top: 0;
@@ -72,6 +90,6 @@
     width: 100%;
   }
   &:hover svg {
-    fill: pink;
+    fill: $primary;
   }
 }

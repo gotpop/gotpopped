@@ -23,10 +23,15 @@ export default class Header {
   makeHeader() {
 
     let header = new Html({type: 'header', class: 'header'}).build()
-    let logoWrap = new Html({type: 'div', class: 'header-logo-wrap'}).build()
-    let headline = new Html({type: 'h1', text: Site.siteTitle}).build()
-    let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
+    let logoWrap = new Html({type: 'section', class: 'header-logo-wrap'}).build()
     let makeIcon = new Icon('triangle', 'icon-class').build()
+    let headline = new Html({type: 'h1', class: 'header-title', text: Site.siteTitle}).build()
+    let headerNav = new Html({type: 'nav', class: 'header-nav'}).build()
+    let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
+    let makeAWrap = new Html({
+      type: 'a',
+      href: '#',
+    }).build()
 
     let makeA = new Html({
       type: 'a',
@@ -37,12 +42,14 @@ export default class Header {
     }).build()
 
 
-    header.appendChild(logoWrap)
-
+    header.appendChild(makeAWrap)
+    makeAWrap.appendChild(logoWrap)
 
     logoWrap.appendChild(makeIcon)
     logoWrap.appendChild(headline)
-    header.appendChild(menuUl)
+
+    header.appendChild(headerNav)
+    headerNav.appendChild(menuUl)
     header.appendChild(makeA)
     this.loopPagesData(menuUl)
 
