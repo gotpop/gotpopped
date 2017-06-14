@@ -26,6 +26,7 @@ export default class Work {
     this.maSection.appendChild(this.maThumbnailWrap)
 
     this.portfolioWrap.setAttribute('id', 'portfolioWrap')
+    this.portfolioWrap.setAttribute('class', 'portfolio-wrap')
     this.maSection.appendChild(this.portfolioWrap)
 
     this.loopPortfolioData()

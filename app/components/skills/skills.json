@@ -1,25 +1,25 @@
 [{
-  "skill": "html",
+  "skill": "Html 5",
   "link": ""
 }, {
-  "skill": "CSS",
+  "skill": "CSS3",
   "link": ""
 }, {
-  "skill": "html",
+  "skill": "Vannila JavaScript ES6",
   "link": ""
 }, {
-  "skill": "CSS",
+  "skill": "Single page applications",
   "link": ""
 }, {
-  "skill": "html",
+  "skill": "Rich media web",
   "link": ""
 }, {
-  "skill": "CSS",
+  "skill": "Git",
   "link": ""
 }, {
-  "skill": "html",
+  "skill": "Webpack",
   "link": ""
 }, {
-  "skill": "CSS",
+  "skill": "UI",
   "link": ""
 }]

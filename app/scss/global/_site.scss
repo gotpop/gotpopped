@@ -37,15 +37,15 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   align-items: start;
-  min-height: 90vh;
+  min-height: 100vh;
   min-width: 100%;
   transition: all .6s ease;
 }
 
 .menu-open .site {
-  // filter: blur(2px);
+  filter: blur(2px);
   transition: all .6s ease;
-  // transition-delay: .6s;
+  transition-delay: .6s;
 }
 
 
