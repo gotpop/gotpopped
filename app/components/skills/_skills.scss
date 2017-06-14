@@ -1,0 +1,16 @@
+/////////////////////////////////////////////////
+// View
+/////////////////////////////////////////////////
+
+.skills-list {
+  display: flex;
+  background: yellow;
+  padding: 1rem;
+  flex-wrap: wrap;
+  color: #999;
+  font-size: 2rem;
+  margin-top: 2rem;
+  li {
+    flex: 1 1 50%;
+  }
+}

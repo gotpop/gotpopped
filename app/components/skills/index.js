@@ -25,7 +25,7 @@ export default class Skills {
 
     let skillsP = new Html({type: 'p', text: this.pageObject.about}).build()
 
-    let skillsUl = new Html({type: 'ul'}).build()
+    let skillsUl = new Html({type: 'ul', class: 'skills-list'}).build()
 
     maSection.appendChild(maH1)
     maSection.appendChild(skillsP)
