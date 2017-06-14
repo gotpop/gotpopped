@@ -66,11 +66,7 @@ section {
 
 @media (max-width: 600px) {
   body header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 200px;
+    
     ul {
       display: flex;
       flex-direction: column;

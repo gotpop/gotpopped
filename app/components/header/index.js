@@ -22,7 +22,7 @@ export default class Header {
 
   makeHeader() {
 
-    let header = new Html({type: 'header'}).build()
+    let header = new Html({type: 'header', class: 'header'}).build()
     let logoWrap = new Html({type: 'div', class: 'logo-wrap'}).build()
     let headline = new Html({type: 'h1', text: Site.siteTitle}).build()
     let menuUl = new Html({type: 'ul', id: 'menu', class: 'ma-menu'}).build()

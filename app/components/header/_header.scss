@@ -1,4 +1,8 @@
-header {
+/////////////////////////////////////////////////
+// Header
+/////////////////////////////////////////////////
+
+.header {
   flex: 1 1 80%;
   padding: 2rem;
   background: rgba(white, .5);
@@ -9,48 +13,56 @@ header {
   justify-content: space-between;
   position: relative;
   z-index: 9999;
+  .mobile & {
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
 }
-
 
 .logo-wrap {
   display: flex;
 }
 
-
-header .ma-menu {
+.header .ma-menu {
   display: flex;
   margin: 1rem;
+
   li {
     display: flex;
   }
+
   .ma-class {
     a {
       padding: 1rem 2rem;
       margin-left: 1rem;
       cursor: pointer;
-      &:hover {
-      transition: all .5s ease;
-        background: yellow;
 
+      &:hover {
+        transition: all 0.5s ease;
+        background: yellow;
       }
     }
+
     &.active a {
       background: green;
     }
   }
 }
 
-
 .mobile-menu-trigger {
-  background: pink;
-  padding: 2rem;
+  background: $primary;
+  padding: 1.5rem;
   display: none;
   // transform: translateX(-10px);
   position: absolute;
   top: 0;
-  right: -4rem;
+  right: -3.9rem;
 }
 
-.mobile .mobile-menu-trigger  {
-  display: block;
+.mobile .mobile-menu-trigger {
+  display: flex;
 }
