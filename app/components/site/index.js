@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let maHeader = new Header
   let maPage = new MakePage
   let maFooter = new Footer
-  let maCanvas = new Canvas
+  // let maCanvas = new Canvas
 
   // console.log(siteStatus);
 
