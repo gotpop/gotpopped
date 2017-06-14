@@ -9,17 +9,18 @@
 
 .portfolio-thumbnail {
   background: $light1;
-  padding: 2rem;
+  padding: 1em 2em;
   margin: .5rem;
   cursor: pointer;
   flex: 1 1 50px;
+  text-align: center;
   &.active {
-    background: $primary;
+    color: $primary;
   }
 }
 
 .portfolio-wrap {
-  padding: 1rem;
+  padding: .5rem;
   display: flex;
   min-height: 60vh;
 }

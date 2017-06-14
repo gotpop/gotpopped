@@ -9,13 +9,6 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-  font-size: 16px;
-}
-
-@media (max-width: 600px) {
-  html {
-    // font-size: 12px;
-  }
 }
 
 body {
@@ -25,9 +18,7 @@ body {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background: #eee;
-  color: rgba(#000, .6);
-  font-family: sans-serif;
+  background: $light2;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -39,7 +30,6 @@ body {
   align-items: start;
   min-height: 100vh;
   min-width: 100%;
-  transition: all .6s ease;
 }
 
 .menu-open .site {
@@ -48,33 +38,22 @@ body {
   transition-delay: .6s;
 }
 
-
-
 img {
   margin-top: 2rem;
   max-width: 100%;
   height: auto;
 }
 
-
 .wrap-site {
   max-width: 100%;
   flex: 1 1 auto;
-}
-
-
-@media (max-width: 600px) {
-  .wrap-site {
+  .mobile & {
     max-width: 100%;
     display: flex;
     transform: translateX(-200px);
     transition: all .5s ease;
   }
-}
-
-
-.mobile.menu-open {
-  .wrap-site {
+  .mobile.menu-open & {
     transform: translateX(0px);
   }
 }

@@ -47,7 +47,8 @@ export default class Work {
     let maDiv = new Html({
       type: 'div',
       class: 'portfolio-thumbnail',
-      dataId: PortfolioObject.ID
+      dataId: PortfolioObject.ID,
+      text: PortfolioObject.name
     }).build()
     this.maThumbnailWrap.appendChild(maDiv)
 

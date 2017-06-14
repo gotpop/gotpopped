@@ -9,4 +9,8 @@
   margin: 1rem 0;
   transition: all .6s ease;
   color: $light1;
+  max-width: 300px;
+  .mobile & {
+    max-width: 100%;
+  }
 }
