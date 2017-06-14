@@ -75,7 +75,7 @@
   padding: 1.5rem;
   position: absolute;
   top: 0;
-  right: -3.9rem;
+  right: -112px;
   .mobile & {
     display: flex;
   }
@@ -90,5 +90,34 @@
   }
   &:hover svg {
     fill: $primary;
+  }
+}
+
+// .mobile-menu-trigger {
+//   position: relative;
+// }
+
+.mobile-menu-trigger-burger {
+  display: block;
+  height: 4px;
+  background: $dark1;
+  width: 20px;
+  &::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: $dark1;
+    width: 20px;
+    position: relative;
+    top: 5px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: $dark1;
+    width: 20px;
+    position: relative;
+    top: 10px;
   }
 }

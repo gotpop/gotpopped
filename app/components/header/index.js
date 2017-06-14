@@ -28,19 +28,14 @@ export default class Header {
     let headline = new Html({type: 'h1', class: 'header-title', text: Site.siteTitle}).build()
     let headerNav = new Html({type: 'nav', class: 'header-nav'}).build()
     let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
-    let makeAWrap = new Html({
-      type: 'a',
-      href: '#',
-    }).build()
+    let makeAWrap = new Html({type: 'a', href: '#'}).build()
+    let makeA = new Html({type: 'a', id: 'mobileMenuTrigger', class: 'mobile-menu-trigger'}).build()
 
-    let makeA = new Html({
-      type: 'a',
-      href: '#',
-      id: 'mobileMenuTrigger',
-      class: 'mobile-menu-trigger',
-      text: 'X'
-    }).build()
+    let makeASpan = new Html({type: 'span', class: 'mobile-menu-trigger-burger'}).build()
+    let makeASpanText = new Html({type: 'span', class: 'mobile-menu-trigger-text', text: 'Menu'}).build()
 
+    makeA.appendChild(makeASpan)
+    makeA.appendChild(makeASpanText)
 
     header.appendChild(makeAWrap)
     makeAWrap.appendChild(logoWrap)
@@ -99,7 +94,6 @@ export default class Header {
     }
 
     makeLi.addEventListener('click', listenToThis)
-
 
     menuUl.appendChild(makeLi)
 
