@@ -13,62 +13,38 @@
 .view {
   display: flex;
   max-width: 800px;
-  // margin: 2rem;
 }
 
 .view-item {
   margin: 2rem;
   min-width: calc(100% - 4rem);
-  // background: rgba(#fff, .5);
-  // transition: all 1s ease;
-}
-
-.first {
-  // opacity: 0;
-  // transform: translateX(0%);
-  animation-duration: 1s;
-  // animation-name: slideout;
-  animation-fill-mode: forwards;
-}
-
-.last {
-  // opacity: 0;
-  // transform: translateX( calc(100% - 0rem) );
-  animation-duration: 1s;
-  // animation-name: slidein;
-  animation-fill-mode: forwards;
-}
-
-.solo {
-    animation-name: none;
-    opacity: 1;
 }
 
 /////////////////////////////////////////////////
 // Keyframes
 /////////////////////////////////////////////////
 
-@keyframes slidein {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX( calc( -100%) );
-    opacity: 1;
-  }
-}
-
-@keyframes slideout {
-  from {
-    // transform: translateX(0%);
-    opacity: 1;
-  }
-
-  to {
-    // transform: translateX(-100%);
-    opacity: 0;
-    // display: none;
-  }
-}
+// @keyframes slidein {
+//   from {
+//     transform: translateX(100%);
+//     opacity: 0;
+//   }
+//
+//   to {
+//     transform: translateX( calc( -100%) );
+//     opacity: 1;
+//   }
+// }
+//
+// @keyframes slideout {
+//   from {
+//     // transform: translateX(0%);
+//     opacity: 1;
+//   }
+//
+//   to {
+//     // transform: translateX(-100%);
+//     opacity: 0;
+//     // display: none;
+//   }
+// }
