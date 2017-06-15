@@ -373,11 +373,13 @@ var MakePage = function () {
           if (pageObject.pageId === _status.siteStatus.currentPage) {
 
             if (pageObject.template === 'home') {
+              this.setBodyClass(pageObject);
               var maHome = new _home2.default(pageObject);
             }
 
             if (pageObject.template === 'work') {
 
+              this.setBodyClass(pageObject);
               var portfolioWrap = document.getElementById('portfolioWrap');
               if (portfolioWrap !== null) {
                 portfolioWrap.remove();
@@ -386,6 +388,7 @@ var MakePage = function () {
             }
 
             if (pageObject.template === 'skills') {
+              this.setBodyClass(pageObject);
               var maSkills = new _skills2.default(pageObject);
             }
           }
@@ -406,6 +409,36 @@ var MakePage = function () {
       }
 
       this.setPageIds(maView);
+    }
+  }, {
+    key: 'setBodyClass',
+    value: function setBodyClass(thisPageObject) {
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
+
+      try {
+        for (var _iterator2 = _pages2.default[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var pageObject = _step2.value;
+
+          document.body.classList.remove(pageObject.pageId);
+        }
+      } catch (err) {
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+            _iterator2.return();
+          }
+        } finally {
+          if (_didIteratorError2) {
+            throw _iteratorError2;
+          }
+        }
+      }
+
+      document.body.classList.add(thisPageObject.pageId);
     }
   }, {
     key: 'setPageIds',

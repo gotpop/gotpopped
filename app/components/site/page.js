@@ -26,11 +26,13 @@ export default class MakePage {
       if (pageObject.pageId === siteStatus.currentPage) {
 
         if (pageObject.template === 'home') {
+          this.setBodyClass(pageObject)
           let maHome = new Home(pageObject)
         }
 
         if (pageObject.template === 'work') {
 
+          this.setBodyClass(pageObject)
           let portfolioWrap = document.getElementById('portfolioWrap')
           if (portfolioWrap !== null) {
             portfolioWrap.remove()
@@ -40,6 +42,7 @@ export default class MakePage {
         }
 
         if (pageObject.template === 'skills') {
+          this.setBodyClass(pageObject)
           let maSkills = new Skills(pageObject)
         }
 
@@ -48,6 +51,13 @@ export default class MakePage {
     }
     this.setPageIds(maView)
 
+  }
+
+  setBodyClass(thisPageObject) {
+      for (let pageObject of PagesData) {
+        document.body.classList.remove(pageObject.pageId)
+      }
+      document.body.classList.add(thisPageObject.pageId)
   }
 
   setPageIds(maView) {
