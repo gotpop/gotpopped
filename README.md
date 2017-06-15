@@ -5,12 +5,13 @@ A no framework portfolio website built from components.
 ### Tools
 
 * Webpack
+* Babel
 
-##Live
+## Live
 
 http://www.gotpop.net
 
-##Staging
+## Staging
 
 https://gotpop-staging.herokuapp.com/
 
