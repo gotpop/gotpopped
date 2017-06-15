@@ -1,0 +1,60 @@
+/////////////////////////////////////////////////
+// Header
+/////////////////////////////////////////////////
+
+.mobile-menu-trigger {
+  display: none;
+  background: $light1;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: -124px;
+  .mobile & {
+    display: flex;
+  }
+}
+
+.mobile-menu-trigger-burger,.mobile-menu-trigger-burger:before,.mobile-menu-trigger-burger:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 30px;
+  background: $dark1;
+  position: absolute;
+  top: 20px;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out
+}
+
+.mobile-menu-trigger-burger:before {
+  top: -10px
+}
+
+.mobile-menu-trigger-burger:after {
+  top: 10px
+}
+
+.menu-open .mobile-menu-trigger-burger {
+  background-color: transparent
+}
+
+.menu-open .mobile-menu-trigger-burger:before,.menu-open .mobile-menu-trigger-burger:after {
+  top: 0
+}
+
+.menu-open .mobile-menu-trigger-burger:before {
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.menu-open .mobile-menu-trigger-burger:after {
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+
+.mobile-menu-trigger-text {
+  display: block;
+  margin-left: 3rem;
+}

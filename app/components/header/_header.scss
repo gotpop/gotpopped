@@ -69,19 +69,6 @@
   }
 }
 
-.mobile-menu-trigger {
-  display: none;
-  background: $light1;
-  padding: 1.5rem;
-  position: absolute;
-  top: 0;
-  right: -112px;
-  .mobile & {
-    display: flex;
-  }
-}
-
-
 .header .icon-class {
   max-height: 50px;
   max-width: 50px;
@@ -90,34 +77,5 @@
   }
   &:hover svg {
     fill: $primary;
-  }
-}
-
-// .mobile-menu-trigger {
-//   position: relative;
-// }
-
-.mobile-menu-trigger-burger {
-  display: block;
-  height: 4px;
-  background: $dark1;
-  width: 20px;
-  &::before {
-    content: '';
-    display: block;
-    height: 4px;
-    background: $dark1;
-    width: 20px;
-    position: relative;
-    top: 5px;
-  }
-  &::after {
-    content: '';
-    display: block;
-    height: 4px;
-    background: $dark1;
-    width: 20px;
-    position: relative;
-    top: 10px;
   }
 }
