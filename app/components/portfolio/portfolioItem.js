@@ -26,12 +26,12 @@ export default class MakePortfolioPage {
         let maTitle = new Html({type: 'h2', text: portfolioObject.title}).build()
         let maP = new Html({type: 'p', text: portfolioObject.about}).build()
 
-        let maImage = new Image('1001', '569')
-        maImage.src = portfolioObject.image.src
+        let portfolioImage = new Image('1001', '569')
+        portfolioImage.src = portfolioObject.image.src
 
         mawrap.appendChild(maTitle)
         mawrap.appendChild(maP)
-        mawrap.appendChild(maImage)
+        mawrap.appendChild(portfolioImage)
         this.maView.appendChild(mawrap)
 
       }

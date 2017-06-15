@@ -63,7 +63,7 @@ export default class Work {
       for (let thumb of thumbClassArray) {
         thumb.classList.remove('active')
         if (siteStatus.currentPortfolioPage == maDiv.getAttribute('data-id')) {
-          // alert(maDiv)
+          alert(maDiv.getAttribute('data-id'))
           maDiv.classList.add('active')
         }
       }
