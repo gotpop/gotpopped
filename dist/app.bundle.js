@@ -1144,6 +1144,7 @@ var Header = function () {
       function listenToThis(event) {
         event.stopPropagation();
         _status.siteStatus.currentPage = 'home';
+        document.body.classList.remove('menu-open');
         new _page2.default();
       }
       makeAWrap.addEventListener('click', listenToThis);

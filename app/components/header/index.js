@@ -51,6 +51,7 @@ export default class Header {
     function listenToThis(event) {
       event.stopPropagation()
       siteStatus.currentPage = 'home'
+      document.body.classList.remove('menu-open')
       new MakePage
     }
     makeAWrap.addEventListener('click', listenToThis)
