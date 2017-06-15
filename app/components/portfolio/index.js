@@ -69,12 +69,8 @@ export default class Work {
       // }
 
       for (let i = 0; i < thumbClassArray.length; i++) {
-        maDiv.classList.remove('active')
+        thumbClassArray[i].classList.remove('active')
         if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
-          // console.log('hello');
-          // console.log(siteStatus.currentPortfolioPage);
-          // console.log(maDiv.getAttribute('data-id'));
-          // alert(maDiv.getAttribute('data-id'))
           maDiv.classList.add('active')
         }
       }
