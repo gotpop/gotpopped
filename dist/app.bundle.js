@@ -95,6 +95,7 @@ var Status = function () {
     this.currentPage;
     this.currentPortfolioPage;
     this.mobile;
+    this.menuOpen = false;
   }
 
   _createClass(Status, [{
@@ -102,7 +103,7 @@ var Status = function () {
     value: function makeStatus() {
       this.currentPage = 'home';
       this.currentPortfolioPage = 'hackett';
-      // console.log(this)
+      console.log(this);
     }
   }, {
     key: 'getSetLocation',
@@ -1152,9 +1153,11 @@ var Header = function () {
         _status.siteStatus.currentPage = makeA.getAttribute('data-id');
         new _page2.default();
 
+        document.body.classList.remove('menu-open'
+
         // alert(siteStatus.currentPage)
 
-        var thumbClassArray = document.getElementsByClassName('header-menu-list');
+        );var thumbClassArray = document.getElementsByClassName('header-menu-list');
 
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
@@ -1197,9 +1200,15 @@ var Header = function () {
     key: 'addListenerToMenuToggle',
     value: function addListenerToMenuToggle() {
       var triggered = document.getElementById('mobileMenuTrigger');
+      var site = document.getElementById('site');
 
       triggered.addEventListener('click', function () {
         document.body.classList.toggle('menu-open');
+        function clickListener() {
+          document.body.classList.remove('menu-open');
+          site.removeEventListener('click', clickListener);
+        }
+        site.addEventListener('click', clickListener);
       });
     }
   }]);
@@ -1804,7 +1813,6 @@ var Social = function () {
                     var socialObject = _step.value;
 
 
-                    console.log(socialObject);
                     var links = new _utils2.default({ type: 'a', class: 'social-link', href: socialObject.link }).build();
                     var makeIcon = new _icons2.default(socialObject.name, 'icon-class').build();
                     links.appendChild(makeIcon);

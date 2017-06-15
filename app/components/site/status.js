@@ -10,11 +10,12 @@ class Status {
     this.currentPage
     this.currentPortfolioPage
     this.mobile
+    this.menuOpen = false
   }
   makeStatus() {
     this.currentPage = 'home'
     this.currentPortfolioPage = 'hackett'
-    // console.log(this)
+    console.log(this)
   }
   getSetLocation() {
     let hashLocation = location.hash.substring(1)

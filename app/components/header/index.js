@@ -80,6 +80,8 @@ export default class Header {
       siteStatus.currentPage = makeA.getAttribute('data-id')
       new MakePage
 
+      document.body.classList.remove('menu-open')
+
       // alert(siteStatus.currentPage)
 
       let thumbClassArray = document.getElementsByClassName('header-menu-list')
@@ -105,10 +107,17 @@ export default class Header {
 
   addListenerToMenuToggle() {
     let triggered = document.getElementById('mobileMenuTrigger')
+    let site = document.getElementById('site')
 
     triggered.addEventListener('click', function() {
       document.body.classList.toggle('menu-open')
+      function clickListener() {
+        document.body.classList.remove('menu-open')
+        site.removeEventListener('click', clickListener)
+      }
+      site.addEventListener('click', clickListener)
     })
+
   }
 
 }
