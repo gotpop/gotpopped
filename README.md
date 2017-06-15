@@ -13,7 +13,9 @@ http://www.gotpop.net
 
 ## Staging
 
-https://gotpop-staging.herokuapp.com/
+https://gotpop-staging.herokuapp.com
+
+## Build
 
 `git clone git@github.com:gotpop/gotpop.git`
 
