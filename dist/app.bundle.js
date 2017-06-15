@@ -1297,7 +1297,7 @@ var Home = function () {
         type: 'a',
         href: '#work',
         class: 'btn',
-        text: 'Veiw projects'
+        text: 'Veiw'
       }).build();
 
       function listenToThis(event) {
