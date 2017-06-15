@@ -44,12 +44,7 @@ export default class Work {
 
   makeThumbnails(PortfolioObject) {
 
-    let maDiv = new Html({
-      type: 'div',
-      class: 'portfolio-thumbnail',
-      dataId: PortfolioObject.ID,
-      text: PortfolioObject.name
-    }).build()
+    let maDiv = new Html({type: 'div', class: 'portfolio-thumbnail', dataId: PortfolioObject.ID, text: PortfolioObject.name}).build()
     this.maThumbnailWrap.appendChild(maDiv)
 
     function listenToThis(event) {
@@ -59,18 +54,39 @@ export default class Work {
       new MakePortfolioPage
 
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
-console.log(thumbClassArray);
-      for (let thumb of thumbClassArray) {
-        console.log(thumb);
-        thumb.classList.remove('active')
+      // console.log(thumbClassArray);
+
+      // for (let thumb of thumbClassArray) {
+      //   console.log(thumb);
+      //   thumb.classList.remove('active')
+      //   if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+      //     console.log('hello');
+      //     // console.log(siteStatus.currentPortfolioPage);
+      //     // console.log(maDiv.getAttribute('data-id'));
+      //     // alert(maDiv.getAttribute('data-id'))
+      //     maDiv.classList.add('active')
+      //   }
+      // }
+
+      for (let i = 0; i < thumbClassArray.length; i++) {
+        maDiv.classList.remove('active')
         if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
-console.log('hello');
-// console.log(siteStatus.currentPortfolioPage);
+          // console.log('hello');
+          // console.log(siteStatus.currentPortfolioPage);
           // console.log(maDiv.getAttribute('data-id'));
           // alert(maDiv.getAttribute('data-id'))
           maDiv.classList.add('active')
         }
       }
+
+
+
+
+
+
+
+
+
     }
 
     maDiv.addEventListener('click', listenToThis)

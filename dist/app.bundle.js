@@ -1541,12 +1541,7 @@ var Work = function () {
     key: 'makeThumbnails',
     value: function makeThumbnails(PortfolioObject) {
 
-      var maDiv = new _utils2.default({
-        type: 'div',
-        class: 'portfolio-thumbnail',
-        dataId: PortfolioObject.ID,
-        text: PortfolioObject.name
-      }).build();
+      var maDiv = new _utils2.default({ type: 'div', class: 'portfolio-thumbnail', dataId: PortfolioObject.ID, text: PortfolioObject.name }).build();
       this.maThumbnailWrap.appendChild(maDiv);
 
       function listenToThis(event) {
@@ -1555,38 +1550,29 @@ var Work = function () {
         _status.siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id');
         new _PortfolioItem2.default();
 
-        var thumbClassArray = document.getElementsByClassName('portfolio-thumbnail');
-        console.log(thumbClassArray);
-        var _iteratorNormalCompletion2 = true;
-        var _didIteratorError2 = false;
-        var _iteratorError2 = undefined;
+        var thumbClassArray = document.getElementsByClassName('portfolio-thumbnail'
+        // console.log(thumbClassArray);
 
-        try {
-          for (var _iterator2 = thumbClassArray[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-            var thumb = _step2.value;
+        // for (let thumb of thumbClassArray) {
+        //   console.log(thumb);
+        //   thumb.classList.remove('active')
+        //   if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+        //     console.log('hello');
+        //     // console.log(siteStatus.currentPortfolioPage);
+        //     // console.log(maDiv.getAttribute('data-id'));
+        //     // alert(maDiv.getAttribute('data-id'))
+        //     maDiv.classList.add('active')
+        //   }
+        // }
 
-            console.log(thumb);
-            thumb.classList.remove('active');
-            if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
-              console.log('hello');
-              // console.log(siteStatus.currentPortfolioPage);
-              // console.log(maDiv.getAttribute('data-id'));
-              // alert(maDiv.getAttribute('data-id'))
-              maDiv.classList.add('active');
-            }
-          }
-        } catch (err) {
-          _didIteratorError2 = true;
-          _iteratorError2 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion2 && _iterator2.return) {
-              _iterator2.return();
-            }
-          } finally {
-            if (_didIteratorError2) {
-              throw _iteratorError2;
-            }
+        );for (var i = 0; i < thumbClassArray.length; i++) {
+          maDiv.classList.remove('active');
+          if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+            // console.log('hello');
+            // console.log(siteStatus.currentPortfolioPage);
+            // console.log(maDiv.getAttribute('data-id'));
+            // alert(maDiv.getAttribute('data-id'))
+            maDiv.classList.add('active');
           }
         }
       }
