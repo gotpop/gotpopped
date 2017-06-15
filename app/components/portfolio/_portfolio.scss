@@ -1,0 +1,87 @@
+/////////////////////////////////////////////////
+// Portfolio
+/////////////////////////////////////////////////
+
+.portfolio-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-thumbnail {
+  background: $light1;
+  padding: 1em 2em;
+  margin: .5rem;
+  cursor: pointer;
+  flex: 1 1 auto;
+  text-align: center;
+  transition: all .5s ease;
+  &.active {
+    color: $primary;
+  }
+}
+
+.portfolio-wrap {
+  padding: .5rem;
+  display: flex;
+  min-height: 60vh;
+}
+
+
+
+
+/////////////////////////////////////////////////
+// View
+/////////////////////////////////////////////////
+
+// .view-item-portfolio {
+//   margin: 1rem;
+//   min-width: calc(100%);
+//   transition: all 1s ease;
+// }
+//
+// .first-item {
+//   transform: translateX(0%);
+//   animation-duration: 1s;
+//   animation-name: slideoutItem;
+//   animation-fill-mode: forwards;
+// }
+//
+// .last-item {
+//   transform: translateX( calc(100% - 0rem) );
+//   animation-duration: 1s;
+//   animation-name: slideinItem;
+//   animation-fill-mode: forwards;
+// }
+//
+// .solo {
+//     animation-name: none;
+// }
+//
+// /////////////////////////////////////////////////
+// // Keyframes
+// /////////////////////////////////////////////////
+//
+// @keyframes slideinItem {
+//   from {
+//     transform: translateX(100%);
+//     opacity: 0;
+//   }
+//
+//   to {
+//     transform: translateX( calc( -100% - 4rem));
+//     opacity: 1;
+//   }
+// }
+//
+// @keyframes slideoutItem {
+//   from {
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+//
+//   to {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//     display: none;
+//   }
+// }

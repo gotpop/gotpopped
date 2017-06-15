@@ -1,61 +1,56 @@
 //////////////////////////////////////////////////////////////////////
+// Note : Express is only used on Heroku
 // Vars
 //////////////////////////////////////////////////////////////////////
 
-var express 	= require('express');
-var nunjucks 	= require('nunjucks')
-var app 		= express();
+// var express	= require('express');
+// var app		= express();
+//
+//
+// //////////////////////////////////////////////////////////////////////
+// // Static assets
+// //////////////////////////////////////////////////////////////////////
+//
+// app.set('view engine', 'html');
+// app.use(express.static(__dirname + '/dist'));
+//
+// //////////////////////////////////////////////////////////////////////
+// // Routes
+// //////////////////////////////////////////////////////////////////////
+//
+// app.get('/', function(req, res) {
+// 	res.render('index.html');
+// });
+//
+// app.post('/api/test-endpoint', function(req, res) {
+// 	res.send("Endpoint working");
+// });
+//
+// //////////////////////////////////////////////////////////////////////
+// // Server
+// //////////////////////////////////////////////////////////////////////
+//
+//
 
-// set the port of our application
-// process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8000;
 
-//////////////////////////////////////////////////////////////////////
-// Templating
-//////////////////////////////////////////////////////////////////////
-
-// set the view engine to jade
-app.set('view engine', 'nunjucks');
-
-app.set('views', __dirname + '/views');
+var express = require('express'),
+  app = express(),
+  http = require('http'),
+  httpServer = http.Server(app);
 
 
-nunjucks.configure('views', {
-    autoescape: true,
-    express: app
+	// set the port of our application
+	// process.env.PORT lets the port be set by Heroku
+	var port = process.env.PORT || 9999;
+
+
+app.use(express.static(__dirname + '/dist'));
+
+app.get('*', function(req, res) {
+  res.sendfile(__dirname + '/index.html');
 });
-
-//////////////////////////////////////////////////////////////////////
-// Static assets
-//////////////////////////////////////////////////////////////////////
-
-// make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
-
-//////////////////////////////////////////////////////////////////////
-// Routes
-//////////////////////////////////////////////////////////////////////
-
-app.get('/', function(req, res) {
-	res.render('index.html');
-});
-
-app.get('/columbus', function (req, res) {
-  res.render('columbus.html');
-});
-
-app.get('/hackett', function (req, res) {
-  res.render('hackett.html');
-});
-
-app.get('/offers', function (req, res) {
-  res.render('offers.html');
-});
-
-//////////////////////////////////////////////////////////////////////
-// Server
-//////////////////////////////////////////////////////////////////////
+// app.listen(1111);
 
 app.listen(port, function() {
-	console.log('Our app is running on http://localhost:' + port);
+	console.log('GotPop is running on http://localhost:' + port);
 });

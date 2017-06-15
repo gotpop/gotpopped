@@ -1,0 +1,56 @@
+/////////////////////////////////////////////////
+// View
+/////////////////////////////////////////////////
+
+.wrap-view {
+  min-width: 100vw;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view {
+  display: flex;
+  max-width: 800px;
+}
+
+.work .view {
+    align-self: flex-start;
+}
+
+.view-item {
+  margin: 2rem;
+  .mobile & {
+    margin-top: 4rem;
+  }
+}
+
+/////////////////////////////////////////////////
+// Keyframes
+/////////////////////////////////////////////////
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX( calc( -100%) );
+    opacity: 1;
+  }
+}
+
+@keyframes slideout {
+  from {
+    // transform: translateX(0%);
+    opacity: 1;
+  }
+
+  to {
+    // transform: translateX(-100%);
+    opacity: 0;
+    // display: none;
+  }
+}

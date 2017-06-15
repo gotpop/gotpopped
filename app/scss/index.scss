@@ -1,0 +1,34 @@
+/////////////////////////////////////////////////
+// Variables
+/////////////////////////////////////////////////
+
+@import "global/variables";
+
+/////////////////////////////////////////////////
+// Global
+/////////////////////////////////////////////////
+
+@import "utils/reset";
+
+/////////////////////////////////////////////////
+// Global
+/////////////////////////////////////////////////
+
+@import "global/site";
+@import "global/fonts";
+@import "global/typogrphy";
+@import "global/btns";
+
+/////////////////////////////////////////////////
+// Components
+/////////////////////////////////////////////////
+
+@import "../components/header/header";
+@import "../components/header/menu-trigger";
+@import "../components/footer/footer";
+@import "../components/canvas/canvas";
+@import "../components/site/view";
+@import "../components/icons/icons";
+@import "../components/skills/skills";
+@import "../components/social/social";
+@import "../components/portfolio/portfolio";
