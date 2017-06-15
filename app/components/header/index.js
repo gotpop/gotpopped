@@ -28,7 +28,7 @@ export default class Header {
     let headline = new Html({type: 'h1', class: 'header-title', text: Site.siteTitle}).build()
     let headerNav = new Html({type: 'nav', class: 'header-nav'}).build()
     let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
-    let makeAWrap = new Html({type: 'a', class: 'header-logo-a-wrap'}).build()
+    let makeAWrap = new Html({type: 'a', href: '#home', class: 'header-logo-a-wrap'}).build()
     let makeA = new Html({type: 'a', id: 'mobileMenuTrigger', class: 'mobile-menu-trigger'}).build()
 
     let makeASpan = new Html({type: 'span', class: 'mobile-menu-trigger-burger'}).build()
@@ -47,6 +47,13 @@ export default class Header {
     headerNav.appendChild(menuUl)
     header.appendChild(makeA)
     this.loopPagesData(menuUl)
+
+    function listenToThis(event) {
+      event.stopPropagation()
+      siteStatus.currentPage = 'home'
+      new MakePage
+    }
+    makeAWrap.addEventListener('click', listenToThis)
 
     var maWrap = document.getElementById('wrap-site');
     var theFirstChild = maWrap.firstChild;
@@ -75,7 +82,6 @@ export default class Header {
     makeLi.appendChild(makeA)
 
     function listenToThis(event) {
-      event.preventDefault()
       event.stopPropagation()
       siteStatus.currentPage = makeA.getAttribute('data-id')
       new MakePage
