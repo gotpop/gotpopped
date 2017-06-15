@@ -4,7 +4,7 @@
 
 .wrap-view {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,9 @@
 
 .view-item {
   margin: 2rem;
+  .mobile & {
+    margin-top: 4rem;
+  }
 }
 
 /////////////////////////////////////////////////
