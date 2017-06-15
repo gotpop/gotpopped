@@ -1186,37 +1186,21 @@ var Header = function () {
         _status.siteStatus.currentPage = makeA.getAttribute('data-id');
         new _page2.default();
 
-        document.body.classList.remove('menu-open'
+        document.body.classList.remove('menu-open');
 
-        // alert(siteStatus.currentPage)
+        var thumbClassArray = document.getElementsByClassName('header-menu-list'
 
-        );var thumbClassArray = document.getElementsByClassName('header-menu-list');
+        // for (let thumb of thumbClassArray) {
+        //   thumb.classList.remove('active')
+        //   if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+        //     makeLi.classList.add('active')
+        //   }
+        // }
 
-        var _iteratorNormalCompletion2 = true;
-        var _didIteratorError2 = false;
-        var _iteratorError2 = undefined;
-
-        try {
-          for (var _iterator2 = thumbClassArray[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-            var thumb = _step2.value;
-
-            thumb.classList.remove('active');
-            if (_status.siteStatus.currentPage === makeA.getAttribute('data-id')) {
-              makeLi.classList.add('active');
-            }
-          }
-        } catch (err) {
-          _didIteratorError2 = true;
-          _iteratorError2 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion2 && _iterator2.return) {
-              _iterator2.return();
-            }
-          } finally {
-            if (_didIteratorError2) {
-              throw _iteratorError2;
-            }
+        );for (var i = 0; i < thumbClassArray.length; i++) {
+          thumbClassArray[i].classList.remove('active');
+          if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+            makeLi.classList.add('active');
           }
         }
       }
@@ -1550,22 +1534,9 @@ var Work = function () {
         _status.siteStatus.currentPortfolioPage = maDiv.getAttribute('data-id');
         new _PortfolioItem2.default();
 
-        var thumbClassArray = document.getElementsByClassName('portfolio-thumbnail'
-        // console.log(thumbClassArray);
+        var thumbClassArray = document.getElementsByClassName('portfolio-thumbnail');
 
-        // for (let thumb of thumbClassArray) {
-        //   console.log(thumb);
-        //   thumb.classList.remove('active')
-        //   if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
-        //     console.log('hello');
-        //     // console.log(siteStatus.currentPortfolioPage);
-        //     // console.log(maDiv.getAttribute('data-id'));
-        //     // alert(maDiv.getAttribute('data-id'))
-        //     maDiv.classList.add('active')
-        //   }
-        // }
-
-        );for (var i = 0; i < thumbClassArray.length; i++) {
+        for (var i = 0; i < thumbClassArray.length; i++) {
           thumbClassArray[i].classList.remove('active');
           if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
             maDiv.classList.add('active');

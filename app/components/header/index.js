@@ -82,13 +82,18 @@ export default class Header {
 
       document.body.classList.remove('menu-open')
 
-      // alert(siteStatus.currentPage)
-
       let thumbClassArray = document.getElementsByClassName('header-menu-list')
 
-      for (let thumb of thumbClassArray) {
-        thumb.classList.remove('active')
-        if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+      // for (let thumb of thumbClassArray) {
+      //   thumb.classList.remove('active')
+      //   if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
+      //     makeLi.classList.add('active')
+      //   }
+      // }
+
+      for (let i = 0; i < thumbClassArray.length; i++) {
+        thumbClassArray[i].classList.remove('active')
+        if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
           makeLi.classList.add('active')
         }
       }
