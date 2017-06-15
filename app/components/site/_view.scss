@@ -15,46 +15,39 @@
   max-width: 800px;
 }
 
+.work .view {
+    align-self: flex-start;
+}
+
 .view-item {
   margin: 2rem;
 }
-
-// section {
-//   background: rgba(0,0,0, .6);
-//   padding: 2rem;
-//   // max-width: 600px;
-//   flex: 1 1 auto;
-//   box-sizing: border-box;
-//   color: rgba(#fff, .5);
-// }
-
-
 
 /////////////////////////////////////////////////
 // Keyframes
 /////////////////////////////////////////////////
 
-// @keyframes slidein {
-//   from {
-//     transform: translateX(100%);
-//     opacity: 0;
-//   }
-//
-//   to {
-//     transform: translateX( calc( -100%) );
-//     opacity: 1;
-//   }
-// }
-//
-// @keyframes slideout {
-//   from {
-//     // transform: translateX(0%);
-//     opacity: 1;
-//   }
-//
-//   to {
-//     // transform: translateX(-100%);
-//     opacity: 0;
-//     // display: none;
-//   }
-// }
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX( calc( -100%) );
+    opacity: 1;
+  }
+}
+
+@keyframes slideout {
+  from {
+    // transform: translateX(0%);
+    opacity: 1;
+  }
+
+  to {
+    // transform: translateX(-100%);
+    opacity: 0;
+    // display: none;
+  }
+}
