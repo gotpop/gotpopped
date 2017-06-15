@@ -38,15 +38,14 @@ export default class View {
       document.body.classList.add('mobile')
     }
 
-
-    console.log(mediaQueryList);
     function handleMediaChange(event) {
       this.mobile = event.matches
       document.body.classList.remove('mobile')
+      document.body.classList.remove('desktop')
       if (event.matches) {
         document.body.classList.add('mobile')
       } else {
-        document.body.classList.remove('mobile')
+        document.body.classList.add('desktop')
       }
     }
     mediaQueryList.addListener(handleMediaChange.bind(this))
