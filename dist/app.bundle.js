@@ -1556,7 +1556,7 @@ var Work = function () {
         new _PortfolioItem2.default();
 
         var thumbClassArray = document.getElementsByClassName('portfolio-thumbnail');
-
+        console.log(thumbClassArray);
         var _iteratorNormalCompletion2 = true;
         var _didIteratorError2 = false;
         var _iteratorError2 = undefined;
@@ -1565,6 +1565,7 @@ var Work = function () {
           for (var _iterator2 = thumbClassArray[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
             var thumb = _step2.value;
 
+            console.log(thumb);
             thumb.classList.remove('active');
             if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
               console.log('hello');

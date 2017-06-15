@@ -59,8 +59,9 @@ export default class Work {
       new MakePortfolioPage
 
       let thumbClassArray = document.getElementsByClassName('portfolio-thumbnail')
-
+console.log(thumbClassArray);
       for (let thumb of thumbClassArray) {
+        console.log(thumb);
         thumb.classList.remove('active')
         if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
 console.log('hello');
