@@ -1566,8 +1566,11 @@ var Work = function () {
             var thumb = _step2.value;
 
             thumb.classList.remove('active');
-            if (_status.siteStatus.currentPortfolioPage == maDiv.getAttribute('data-id')) {
-              alert(maDiv.getAttribute('data-id'));
+            if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+              console.log('hello');
+              // console.log(siteStatus.currentPortfolioPage);
+              // console.log(maDiv.getAttribute('data-id'));
+              // alert(maDiv.getAttribute('data-id'))
               maDiv.classList.add('active');
             }
           }
