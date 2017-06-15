@@ -26,7 +26,7 @@ export default class Home {
       type: 'a',
       href: '#work',
       class: 'btn',
-      text: 'Veiw'
+      text: 'Veiw projects'
     }).build()
 
     function listenToThis(event) {

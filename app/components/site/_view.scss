@@ -3,7 +3,6 @@
 /////////////////////////////////////////////////
 
 .wrap-view {
-  min-width: 100vw;
   min-height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
@@ -20,9 +19,15 @@
 }
 
 .view-item {
-  margin: 2rem;
-  .mobile & {
-    margin-top: 4rem;
+  margin: 0 2rem 2rem 2rem;
+  animation-name: slidein;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  .work & {
+    margin-top: 2rem;
+  }
+  .mobile.work & {
+    margin-top: 5rem;
   }
 }
 
@@ -32,25 +37,12 @@
 
 @keyframes slidein {
   from {
-    transform: translateX(100%);
+    transform: translateX(50%);
     opacity: 0;
   }
 
   to {
-    transform: translateX( calc( -100%) );
+    transform: translateX( 0% );
     opacity: 1;
-  }
-}
-
-@keyframes slideout {
-  from {
-    // transform: translateX(0%);
-    opacity: 1;
-  }
-
-  to {
-    // transform: translateX(-100%);
-    opacity: 0;
-    // display: none;
   }
 }

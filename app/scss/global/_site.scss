@@ -23,12 +23,17 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
 .site {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: start;
-  // min-height: 100vh;
   min-width: 100%;
 }
 
@@ -38,11 +43,6 @@ body {
   transition-delay: .6s;
 }
 
-img {
-  margin-top: 2rem;
-  max-width: 100%;
-  height: auto;
-}
 
 .wrap-site {
   max-width: 100%;
