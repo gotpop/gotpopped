@@ -26,7 +26,8 @@
   .work & {
     margin-top: 2rem;
   }
-  .mobile.work & {
+  .mobile.work &,
+  .mobile.skills & {
     margin-top: 5rem;
   }
 }
