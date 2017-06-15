@@ -1199,7 +1199,7 @@ var Header = function () {
 
         );for (var i = 0; i < thumbClassArray.length; i++) {
           thumbClassArray[i].classList.remove('active');
-          if (_status.siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+          if (_status.siteStatus.currentPage === makeA.getAttribute('data-id')) {
             makeLi.classList.add('active');
           }
         }

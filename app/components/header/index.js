@@ -93,7 +93,7 @@ export default class Header {
 
       for (let i = 0; i < thumbClassArray.length; i++) {
         thumbClassArray[i].classList.remove('active')
-        if (siteStatus.currentPortfolioPage === maDiv.getAttribute('data-id')) {
+        if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
           makeLi.classList.add('active')
         }
       }
