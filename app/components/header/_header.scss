@@ -13,27 +13,39 @@
   position: relative;
   z-index: 9999;
   align-items: center;
+
   .mobile & {
     justify-content: flex-start;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     width: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
 .header-logo-wrap {
   display: flex;
+  align-items: center;
+
   .mobile & {
     flex-direction: column;
     align-items: center;
   }
 }
 
+.header-logo-a-wrap {
+  color: $dark2;
+}
+
 .header-title {
+  margin: 0;
+  line-height: 0.9em;
+  position: relative;
+  top: -5px;
+
   .mobile & {
     margin-bottom: 1rem;
     color: $dark2;
@@ -43,6 +55,7 @@
 .header-menu {
   display: flex;
   margin: 1rem;
+
   .mobile & {
     flex-direction: column;
   }
@@ -51,19 +64,23 @@
 .header-menu-list {
   display: flex;
   margin: 0;
+
   .mobile & {
     margin-bottom: 1rem;
   }
+
   a {
     flex: 1 1 auto;
     padding: 1rem 2rem;
     cursor: pointer;
     color: $dark2;
+
     &:hover {
       transition: all 0.5s ease;
       background: $hover;
     }
   }
+
   &.active a {
     color: $light1;
     background: $primary;
@@ -73,9 +90,12 @@
 .header .icon-class {
   max-height: 50px;
   max-width: 50px;
+  margin-right: 1rem;
+
   svg {
     width: 100%;
   }
+
   &:hover svg {
     fill: $primary;
   }

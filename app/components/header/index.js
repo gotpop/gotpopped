@@ -28,7 +28,7 @@ export default class Header {
     let headline = new Html({type: 'h1', class: 'header-title', text: Site.siteTitle}).build()
     let headerNav = new Html({type: 'nav', class: 'header-nav'}).build()
     let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
-    let makeAWrap = new Html({type: 'a', href: '#'}).build()
+    let makeAWrap = new Html({type: 'a', class: 'header-logo-a-wrap'}).build()
     let makeA = new Html({type: 'a', id: 'mobileMenuTrigger', class: 'mobile-menu-trigger'}).build()
 
     let makeASpan = new Html({type: 'span', class: 'mobile-menu-trigger-burger'}).build()
@@ -83,13 +83,6 @@ export default class Header {
       document.body.classList.remove('menu-open')
 
       let thumbClassArray = document.getElementsByClassName('header-menu-list')
-
-      // for (let thumb of thumbClassArray) {
-      //   thumb.classList.remove('active')
-      //   if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
-      //     makeLi.classList.add('active')
-      //   }
-      // }
 
       for (let i = 0; i < thumbClassArray.length; i++) {
         thumbClassArray[i].classList.remove('active')
