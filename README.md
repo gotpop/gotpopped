@@ -1,11 +1,21 @@
-# Rebuild
-A rebuild
+# Component based portfolio site.
 
-### Templates
+A no framework portfolio website built from components.
 
-Templates are compiled from template strings. Added Icons
+### Tools
 
+* Webpack
+
+##Live
 
 http://www.gotpop.net
 
+##Staging
+
 https://gotpop-staging.herokuapp.com/
+
+`git clone git@github.com:gotpop/gotpop.git`
+
+`npm i`
+
+`npm run dev`
