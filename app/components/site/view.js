@@ -30,7 +30,7 @@ export default class View {
   }
   checkMobileOrDesktop() {
 
-    let mediaQueryList = window.matchMedia('(max-width: 600px)')
+    let mediaQueryList = window.matchMedia('(max-width: 767px)')
 
     document.body.classList.add('desktop')
     document.body.classList.remove('mobile')
