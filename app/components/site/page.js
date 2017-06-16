@@ -62,24 +62,11 @@ export default class MakePage {
 
   setPageIds(maView) {
 
-    maView.firstChild.setAttribute('id', 'first')
-    maView.firstChild.classList.remove('last')
-    maView.firstChild.classList.add('view-item', 'first', 'solo')
+    maView.firstChild.classList.add('view-item')
 
     if (maView.childNodes.length > 1) {
-
       maView.firstChild.remove()
-      if (maView.childNodes.length > 2) {
-      }
-
-      maView.firstChild.setAttribute('id', 'first')
-      maView.firstChild.classList.remove('last', 'solo')
-      maView.firstChild.classList.add('view-item', 'first')
-
-      maView.lastChild.setAttribute('id', 'last')
-      maView.lastChild.classList.remove('first', 'solo')
-      maView.lastChild.classList.add('view-item', 'last')
-
+      maView.firstChild.classList.add('view-item')
     }
 
   }

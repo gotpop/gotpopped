@@ -32,10 +32,11 @@ export default class View {
 
     let mediaQueryList = window.matchMedia('(max-width: 600px)')
 
-    document.body.classList.remove('mobile')
+    document.body.classList.add('desktop')
     document.body.classList.remove('mobile')
     if (mediaQueryList.matches) {
       document.body.classList.add('mobile')
+      document.body.classList.remove('desktop')
     }
 
     function handleMediaChange(event) {

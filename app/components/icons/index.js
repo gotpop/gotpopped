@@ -37,9 +37,11 @@ class IconsSrc {
 
 export default class Icon {
 
-  constructor(iconType, className) {
-    this.iconType = iconType
-    this.className = className
+  constructor(options) {
+    this.options = options
+    this.iconType = options.type
+    this.className = options.class
+    this.append = options.append
     this.currentSvg
     this.loopObject()
   }
@@ -71,6 +73,11 @@ export default class Icon {
 
     this.removeTextNode(wrap)
 
-    return wrap
+    if (this.append !== undefined) {
+      this.append.appendChild(this.append)
+    } else {
+      return wrap
+    }
+
   }
 }

@@ -18,6 +18,9 @@ export default class Footer {
     let siteTitleH1Text = document.createTextNode(Site.copyright)
 
     let footerSocial = new Social(footer)
+
+// console.log(footerSocial);
+
     siteTitleH1.appendChild(siteTitleH1Text)
     footer.appendChild(siteTitleH1)
 

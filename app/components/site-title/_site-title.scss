@@ -1,0 +1,33 @@
+/////////////////////////////////////////////////
+// Site title
+/////////////////////////////////////////////////
+
+.header-logo-a-wrap {
+  cursor: pointer;
+}
+
+.header-logo-wrap {
+  display: flex;
+  align-items: center;
+
+  .mobile & {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header-logo-a-wrap {
+  color: $dark2;
+}
+
+.header-title {
+  margin: 0;
+  line-height: 0.9em;
+  position: relative;
+  top: -5px;
+
+  .mobile & {
+    margin-bottom: 1rem;
+    color: $dark2;
+  }
+}

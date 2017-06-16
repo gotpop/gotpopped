@@ -8,6 +8,8 @@ import {siteStatus} from '../site/status.js'
 import MakePage from '../site/page.js'
 import Icon from '../icons'
 import Html from '../utils'
+import SiteTitle from '../site-title'
+import MenuTrigger from '../menu-trigger'
 
 /////////////////////////////////////////////////
 // Header
@@ -17,49 +19,25 @@ export default class Header {
   constructor(siteStatus) {
     this.siteStatus = siteStatus
     this.makeHeader()
-    this.addListenerToMenuToggle()
   }
 
   makeHeader() {
 
-    let header = new Html({type: 'header', class: 'header'}).build()
-    let logoWrap = new Html({type: 'section', class: 'header-logo-wrap'}).build()
-    let makeIcon = new Icon('lollipop', 'icon-class').build()
-    let headline = new Html({type: 'h1', class: 'header-title', text: Site.siteTitle}).build()
+    let makeHeader = new Html({type: 'header', class: 'header'}).build()
+    new SiteTitle(makeHeader)
+    let MenuTriggerVar = new MenuTrigger(makeHeader)
+
     let headerNav = new Html({type: 'nav', class: 'header-nav'}).build()
+    makeHeader.appendChild(headerNav)
     let menuUl = new Html({type: 'ul', id: 'headerMenu', class: 'header-menu'}).build()
-    let makeAWrap = new Html({type: 'a', href: '#home', class: 'header-logo-a-wrap'}).build()
-    let makeA = new Html({type: 'a', id: 'mobileMenuTrigger', class: 'mobile-menu-trigger'}).build()
-
-    let makeASpan = new Html({type: 'span', class: 'mobile-menu-trigger-burger'}).build()
-    let makeASpanText = new Html({type: 'span', class: 'mobile-menu-trigger-text', text: 'Menu'}).build()
-
-    makeA.appendChild(makeASpan)
-    makeA.appendChild(makeASpanText)
-
-    header.appendChild(makeAWrap)
-    makeAWrap.appendChild(logoWrap)
-
-    logoWrap.appendChild(makeIcon)
-    logoWrap.appendChild(headline)
-
-    header.appendChild(headerNav)
     headerNav.appendChild(menuUl)
-    header.appendChild(makeA)
     this.loopPagesData(menuUl)
 
-    function listenToThis(event) {
-      event.stopPropagation()
-      siteStatus.currentPage = 'home'
-      document.body.classList.remove('menu-open')
-      new MakePage
-    }
-    makeAWrap.addEventListener('click', listenToThis)
+    var makeWrap = document.getElementById('wrap-site');
+    var theFirstChild = makeWrap.firstChild;
+    makeWrap.insertBefore(makeHeader, theFirstChild);
 
-    var maWrap = document.getElementById('wrap-site');
-    var theFirstChild = maWrap.firstChild;
-    maWrap.insertBefore(header, theFirstChild);
-
+    MenuTriggerVar.addListenerToMenuToggle()
   }
 
   loopPagesData(menuUl) {
@@ -107,21 +85,6 @@ export default class Header {
     if (siteStatus.currentPage === makeA.getAttribute('data-id')) {
       makeLi.classList.add('active')
     }
-
-  }
-
-  addListenerToMenuToggle() {
-    let triggered = document.getElementById('mobileMenuTrigger')
-    let site = document.getElementById('site')
-
-    triggered.addEventListener('click', function() {
-      document.body.classList.toggle('menu-open')
-      function clickListener() {
-        document.body.classList.remove('menu-open')
-        site.removeEventListener('click', clickListener)
-      }
-      site.addEventListener('click', clickListener)
-    })
 
   }
 

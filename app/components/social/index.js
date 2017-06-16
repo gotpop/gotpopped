@@ -25,7 +25,7 @@ export default class Social {
     for (let socialObject of SocialData) {
 
       let links = new Html({type: 'a', class: 'social-link', href: socialObject.link}).build()
-      let makeIcon = new Icon(socialObject.name, 'icon-class').build()
+      let makeIcon = new Icon({type: socialObject.name, class: 'icon'}).build()
       links.appendChild(makeIcon)
       nav.appendChild(links)
 

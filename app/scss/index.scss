@@ -17,14 +17,15 @@
 @import "global/site";
 @import "global/fonts";
 @import "global/typogrphy";
-@import "../components/btn/btns";
 
 /////////////////////////////////////////////////
 // Components
 /////////////////////////////////////////////////
 
+@import "../components/btn/btns";
+@import "../components/menu-trigger/menu-trigger";
+@import "../components/site-title/site-title";
 @import "../components/header/header";
-@import "../components/header/menu-trigger";
 @import "../components/footer/footer";
 @import "../components/canvas/canvas";
 @import "../components/site/view";

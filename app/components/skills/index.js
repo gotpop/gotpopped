@@ -26,13 +26,10 @@ export default class Skills {
     let skillsUl = new Html({type: 'ul', class: 'skills-list'}).build()
     let skillsIntro = new Html({type: 'section', class: 'skills-intro'}).build()
 
-
-
     skillsIntro.appendChild(maH1)
     skillsIntro.appendChild(skillsP)
 
     maSection.appendChild(skillsIntro)
-
     this.loopSkillsData(skillsUl)
 
     maSection.appendChild(skillsUl)
