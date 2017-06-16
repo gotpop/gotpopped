@@ -5,6 +5,8 @@
 import triangleSrc from './triangle.svg'
 import circleSrc from './circle.svg'
 import cubeSrc from './cube.svg'
+import binoSrc from './bino.svg'
+import lollipopSrc from './lollipop.svg'
 
 /////////////////////////////////////////////////
 // Soocial Icons
@@ -21,6 +23,8 @@ import linkedin from './social/linkedin.svg'
 class IconsSrc {
 
   constructor() {
+    this.bino = binoSrc
+    this.lollipop = lollipopSrc
     this.triangle = triangleSrc
     this.circle = circleSrc
     this.cube = cubeSrc

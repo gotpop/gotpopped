@@ -5,6 +5,7 @@
 export default class Html {
   constructor(options) {
     this.options = options
+    this.append = options.append
     this.type = options.type
     this.text = options.text
     this.id = options.id
@@ -18,7 +19,12 @@ export default class Html {
   build() {
 
     this.buildThis()
-    return this.html
+
+    if (this.append !== undefined) {
+      this.append.appendChild(this.html)
+    } else {
+      return this.html
+    }
 
   }
 

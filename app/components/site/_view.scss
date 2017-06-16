@@ -19,6 +19,8 @@
 }
 
 .view-item {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 2rem 2rem 2rem;
   animation-name: slidein;
   animation-duration: .4s;
