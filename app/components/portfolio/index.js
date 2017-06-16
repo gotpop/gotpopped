@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////
 
 import PortfolioData from './portfolio.json'
-import MakePortfolioPage from './PortfolioItem.js'
+import MakePortfolioPage from './portfolioItem.js'
 import {siteStatus} from '../site/status.js'
 import Html from '../utils'
 
