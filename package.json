@@ -3,11 +3,12 @@
   "version": "1.0.01",
   "description": "GotPop brochureware",
   "scripts": {
-    "start": "webpack && node server.js",
+    "start": "node server.js",
     "dev": "webpack --env=dev --progress --profile --colors && webpack-dev-server",
     "build": "webpack -p",
     "deploy": "webpack && git add . && git commit -m 'Brochureware' && git push origin master",
-    "git": "git status && git add . && git commit -m 'basic' && git push origin redesign && git status"
+    "git": "git status && git add . && git commit -m 'basic' && git push origin redesign && git status",
+    "postinstall": "webpack"
   },
   "dependencies": {
     "express": "~4.9.8",
