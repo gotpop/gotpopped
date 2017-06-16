@@ -10,6 +10,9 @@
   display: flex;
   align-items: center;
 
+  svg {
+    fill: $dark1;
+  }
   .mobile & {
     flex-direction: column;
     align-items: center;

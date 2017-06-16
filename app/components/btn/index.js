@@ -25,7 +25,7 @@ export default class Button {
       text: 'Veiw projects'
     }).build()
 
-    let makeIcon = new Icon('bino', 'icon').build()
+    let makeIcon = new Icon({type: 'bino', class: 'icon'}).build()
 
 
     makeA.appendChild(makeIcon)
