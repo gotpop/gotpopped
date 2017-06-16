@@ -3,7 +3,7 @@
   "version": "1.0.01",
   "description": "GotPop brochureware",
   "scripts": {
-    "start": "node server.js",
+    "start": "webpack && node server.js",
     "dev": "webpack --env=dev --progress --profile --colors && webpack-dev-server",
     "build": "webpack -p",
     "deploy": "webpack && git add . && git commit -m 'Brochureware' && git push origin master",
