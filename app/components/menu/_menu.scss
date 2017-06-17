@@ -25,6 +25,10 @@
     cursor: pointer;
     color: $dark2;
 
+    .icon svg {
+      max-width: 2em;
+    }
+
     &:hover {
       transition: all 0.5s ease;
       background: $hover;

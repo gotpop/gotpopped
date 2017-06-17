@@ -6,6 +6,7 @@ import PagesData from '../site/pages.json'
 import {siteStatus} from '../site/status.js'
 import MakePage from '../site/page.js'
 import Html from '../utils'
+import Icon from '../icons'
 
 /////////////////////////////////////////////////
 // Social
@@ -38,6 +39,9 @@ export default class Menu {
       href: '#' + pageItem.pageId,
       text: pageItem.name
     }).build()
+
+    let makeIcon = new Icon({type: 'skills', class: 'icon'}).build()
+    makeA.appendChild(makeIcon)
 
     let makeLi = new Html({type: 'li', class: 'header-menu-list'}).build()
 

@@ -12,6 +12,14 @@ import lollipopSrc from './lollipop.svg'
 // Soocial Icons
 /////////////////////////////////////////////////
 
+import homeSrc from './menu/home.svg'
+import codeSrc from './menu/code.svg'
+import skillsSrc from './menu/skills.svg'
+
+/////////////////////////////////////////////////
+// Soocial Icons
+/////////////////////////////////////////////////
+
 import codepen from './social/codepen.svg'
 import github from './social/github.svg'
 import linkedin from './social/linkedin.svg'
@@ -23,6 +31,9 @@ import linkedin from './social/linkedin.svg'
 class IconsSrc {
 
   constructor() {
+    this.home = homeSrc
+    this.code = codeSrc
+    this.skills = skillsSrc
     this.bino = binoSrc
     this.lollipop = lollipopSrc
     this.triangle = triangleSrc
