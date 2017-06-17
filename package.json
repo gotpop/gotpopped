@@ -6,9 +6,8 @@
     "start": "node server.js",
     "dev": "webpack --env=dev --progress --profile --colors && webpack-dev-server",
     "build": "webpack -p",
-    "deploy": "webpack -p && git add . && git commit -m 'Brochurewarebuild' && git push origin master",
-    "git": "git status && git add . && git commit -m 'basic' && git push origin redesign && git status",
-    "postinstall": "webpack"
+    "deploy": "git add . && git commit -m 'Brochurewarebuild' && git push origin master",
+    "postinstall": "webpack -p"
   },
   "dependencies": {
     "express": "~4.9.8",
