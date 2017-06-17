@@ -32,7 +32,7 @@ class IconsSrc {
 
   constructor() {
     this.home = homeSrc
-    this.code = codeSrc
+    this.work = codeSrc
     this.skills = skillsSrc
     this.bino = binoSrc
     this.lollipop = lollipopSrc

@@ -15,30 +15,10 @@
   align-items: center;
 
   .mobile & {
+    display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-}
-
-
-.header .icon {
-  max-height: 50px;
-  max-width: 50px;
-  margin-right: 1rem;
-  .mobile & {
-    margin: 0 0 1rem;;
-  }
-  svg {
-    width: 100%;
-  }
-
-  &:hover svg {
-    fill: $primary;
   }
 }

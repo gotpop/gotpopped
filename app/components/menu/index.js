@@ -40,7 +40,7 @@ export default class Menu {
       text: pageItem.name
     }).build()
 
-    let makeIcon = new Icon({type: 'skills', class: 'icon'}).build()
+    let makeIcon = new Icon({type: pageItem.pageId, class: 'icon'}).build()
     makeA.appendChild(makeIcon)
 
     let makeLi = new Html({type: 'li', class: 'header-menu-list'}).build()
