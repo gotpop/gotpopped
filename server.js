@@ -1,56 +1,22 @@
 //////////////////////////////////////////////////////////////////////
 // Note : Express is only used on Heroku
-// Vars
 //////////////////////////////////////////////////////////////////////
-
-// var express	= require('express');
-// var app		= express();
-//
-//
-// //////////////////////////////////////////////////////////////////////
-// // Static assets
-// //////////////////////////////////////////////////////////////////////
-//
-// app.set('view engine', 'html');
-// app.use(express.static(__dirname + '/dist'));
-//
-// //////////////////////////////////////////////////////////////////////
-// // Routes
-// //////////////////////////////////////////////////////////////////////
-//
-// app.get('/', function(req, res) {
-// 	res.render('index.html');
-// });
-//
-// app.post('/api/test-endpoint', function(req, res) {
-// 	res.send("Endpoint working");
-// });
-//
-// //////////////////////////////////////////////////////////////////////
-// // Server
-// //////////////////////////////////////////////////////////////////////
-//
-//
-
 
 var express = require('express'),
   app = express(),
   http = require('http'),
   httpServer = http.Server(app);
 
-
-	// set the port of our application
-	// process.env.PORT lets the port be set by Heroku
-	var port = process.env.PORT || 9999;
-
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 9999;
 
 app.use(express.static(__dirname + '/dist'));
 
 app.get('*', function(req, res) {
   res.sendfile(__dirname + '/index.html');
 });
-// app.listen(1111);
 
 app.listen(port, function() {
-	console.log('GotPop is running on http://localhost:' + port);
+  console.log('GotPop is running on http://localhost:' + port);
 });
