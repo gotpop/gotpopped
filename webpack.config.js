@@ -1,5 +1,6 @@
 let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
+let CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: __dirname + '/app/index.js',
@@ -60,6 +61,7 @@ module.exports = {
             title: 'GotPop',
             template: './app/my-index.ejs',
             inject: 'head'
-        })
+        }),
+        new CleanWebpackPlugin(['dist'])
     ]
 }
