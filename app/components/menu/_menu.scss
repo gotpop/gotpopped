@@ -33,7 +33,9 @@
 
     .icon {
       margin-left: 1em;
-        min-width: 1rem;
+      min-width: 1rem;
+      height: 50px;
+      display: flex;
     }
 
     .icon svg {

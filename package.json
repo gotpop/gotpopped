@@ -4,7 +4,7 @@
   "description": "GotPop brochureware",
   "scripts": {
     "start": "node server.js",
-    "dev": "webpack --env=dev --progress --profile --colors && webpack-dev-server",
+    "dev": "webpack-dev-server --env=dev --progress --profile --colors --open --hot",
     "build": "webpack -p",
     "deploy": "git add . && git commit -m 'Brochurewarebuild' && git push origin master",
     "postinstall": "webpack -p"
@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.2",
     "bulma": "^0.4.0",
     "clean-webpack-plugin": "^0.1.16",

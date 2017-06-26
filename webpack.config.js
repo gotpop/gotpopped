@@ -3,7 +3,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
-    entry: __dirname + '/app/index.js',
+    entry:  ["babel-polyfill", __dirname + '/app/index.js'],
     output: {
         filename: 'app.bundle.js',
         path: __dirname + '/dist'

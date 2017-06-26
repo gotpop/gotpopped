@@ -27,7 +27,7 @@
   margin: 0;
   line-height: 0.9em;
   position: relative;
-  top: -5px;
+  top: -8px;
 
   .mobile & {
     margin-bottom: 1rem;
@@ -39,6 +39,7 @@
   max-height: 50px;
   max-width: 50px;
   margin-right: 1rem;
+  height: 50px;
   .mobile & {
     margin: 0 0 1rem;;
   }

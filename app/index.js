@@ -3,6 +3,8 @@
 // Require site files here
 /////////////////////////////////////////////////
 
+import "babel-polyfill";
+
 // Require static files
 require("file-loader?name=[name].[ext]!./img/columbus.jpg");
 require("file-loader?name=[name].[ext]!./img/hackett.jpg");
