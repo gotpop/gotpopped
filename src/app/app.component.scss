@@ -1,7 +1,9 @@
-@import "src/app/shared/scss/index";
-/////////////////////////////////////////////////
-// View
-/////////////////////////////////////////////////
+/* Imports */
+
+@import "./shared/scss/global/variables";
+
+/* App SCSS */
+
 :host {
     flex: 1;
 }
@@ -18,29 +20,9 @@
     max-width: 800px;
 }
 
-.work .view {
-    align-self: flex-start;
-}
 
-.view-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem 2rem 6rem 2rem;
-    animation-name: slidein;
-    animation-duration: .4s;
-    animation-fill-mode: forwards;
-    .work & {
-        margin-top: 2rem;
-    }
-    .mobile.work &,
-    .mobile.skills & {
-        margin-top: 5rem;
-    }
-}
+/* Keyframes */
 
-/////////////////////////////////////////////////
-// Keyframes
-/////////////////////////////////////////////////
 @keyframes slidein {
     from {
         transform: translateX(50%);
