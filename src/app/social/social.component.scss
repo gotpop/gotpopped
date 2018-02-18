@@ -1,0 +1,18 @@
+/* Imports */
+
+@import "../shared/scss/index";
+
+/* SCSS */
+
+.social svg {
+    max-width: 100px;
+    fill: #999;
+}
+
+.social-link {
+    margin: 1rem;
+}
+
+.social {
+    margin: 2rem;
+}

@@ -1,0 +1,44 @@
+/////////////////////////////////////////////////
+// Typography
+/////////////////////////////////////////////////
+$line-height: 1.5em;
+/////////////////////////////////////////////////
+// Typography
+/////////////////////////////////////////////////
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Code-Pro-LC';
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Code-Pro-Light';
+    font-size: 2rem;
+    line-height: $line-height;
+}
+
+h2 {
+    font-family: 'Code-Pro-Light';
+    line-height: $line-height;
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1em;
+}
+
+p {
+    line-height: $line-height;
+}
+
+li {
+    line-height: $line-height;
+}

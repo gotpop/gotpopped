@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.skills-list li {
+    font-size: 1rem;
+    padding: 1em;
+    background: #fff;
+    flex: 1 1 40%;
+    margin: .5rem;
+}
+
+.view-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem 6rem;
+    animation-name: slidein;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}

@@ -13,10 +13,10 @@ var port = process.env.PORT || 9999;
 
 app.use(express.static(__dirname + '/dist'));
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
 
-app.listen(port, function() {
+app.listen(port, function () {
   console.log('GotPop is running on http://localhost:' + port);
 });

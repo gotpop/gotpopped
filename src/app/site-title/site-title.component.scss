@@ -1,0 +1,53 @@
+/* Imports */
+
+@import "../shared/scss/index";
+
+/* SCSS */
+
+.header-logo-a-wrap {
+    cursor: pointer;
+}
+
+.header-logo-wrap {
+    display: flex;
+    align-items: center;
+    svg {
+        fill: $dark1;
+    }
+    .mobile & {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.header-logo-a-wrap {
+    color: $dark2;
+}
+
+.header-title {
+    margin: 0;
+    line-height: 0.9em;
+    position: relative;
+    top: -8px;
+    .mobile & {
+        margin-bottom: 1rem;
+        color: $dark2;
+    }
+}
+
+.header-logo-wrap .icon {
+    max-height: 50px;
+    max-width: 50px;
+    margin-right: 1rem;
+    height: 50px;
+    .mobile & {
+        margin: 0 0 1rem;
+        ;
+    }
+    svg {
+        width: 100%;
+    }
+    &:hover svg {
+        fill: $primary;
+    }
+}

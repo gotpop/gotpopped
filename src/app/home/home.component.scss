@@ -1,0 +1,27 @@
+.site {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+    min-width: 100%;
+}
+
+.view-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem 6rem;
+    animation-name: slidein;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}
+
+.view {
+    display: flex;
+    max-width: 800px;
+}
+
+.wrap-view {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}

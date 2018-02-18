@@ -1,0 +1,59 @@
+/* Imports */
+
+@import "../shared/scss/index";
+
+/* SCSS */
+
+.portfolio-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.portfolio-thumbnail {
+    background: $light1;
+    padding: 1em 2em;
+    margin: .5rem;
+    cursor: pointer;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: all .5s ease;
+    &.active {
+        color: $primary;
+    }
+}
+
+.portfolio-wrap {
+    padding: .5rem;
+    display: flex;
+    min-height: 60vh;
+}
+
+.view-item-portfolio {
+    animation-name: slideinPorfolio;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}
+
+/////////////////////////////////////////////////
+// Keyframes
+/////////////////////////////////////////////////
+@keyframes slideinPorfolio {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX( 0%);
+        opacity: 1;
+    }
+}
+
+.view-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem 6rem;
+    animation-name: slidein;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}

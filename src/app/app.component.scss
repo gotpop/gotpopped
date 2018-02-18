@@ -1,0 +1,53 @@
+@import "src/app/shared/scss/index";
+/////////////////////////////////////////////////
+// View
+/////////////////////////////////////////////////
+:host {
+    flex: 1;
+}
+
+.wrap-view {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view {
+    display: flex;
+    max-width: 800px;
+}
+
+.work .view {
+    align-self: flex-start;
+}
+
+.view-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem 6rem 2rem;
+    animation-name: slidein;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    .work & {
+        margin-top: 2rem;
+    }
+    .mobile.work &,
+    .mobile.skills & {
+        margin-top: 5rem;
+    }
+}
+
+/////////////////////////////////////////////////
+// Keyframes
+/////////////////////////////////////////////////
+@keyframes slidein {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX( 0%);
+        opacity: 1;
+    }
+}
