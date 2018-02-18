@@ -4,6 +4,15 @@
 
 /* SCSS */
 
+.view-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem 6rem;
+    animation-name: slidein;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}
+
 .portfolio-thumbnails {
     display: flex;
     flex-wrap: wrap;
@@ -35,9 +44,9 @@
     animation-fill-mode: forwards;
 }
 
-/////////////////////////////////////////////////
-// Keyframes
-/////////////////////////////////////////////////
+
+/* Keyframes */
+
 @keyframes slideinPorfolio {
     from {
         transform: translateX(50%);
@@ -47,13 +56,4 @@
         transform: translateX( 0%);
         opacity: 1;
     }
-}
-
-.view-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem 2rem 6rem;
-    animation-name: slidein;
-    animation-duration: .4s;
-    animation-fill-mode: forwards;
 }
