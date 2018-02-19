@@ -15,6 +15,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SiteTitleComponent } from './site-title/site-title.component';
 import { SkillsComponent } from './skills/skills.component';
 import { SocialComponent } from './social/social.component';
+import { PortfolioModule } from './portfolio/portfolio.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SocialComponent } from './social/social.component';
   imports: [
     BrowserModule,
     RouterModule,
-    routes
+    routes,
+    PortfolioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
