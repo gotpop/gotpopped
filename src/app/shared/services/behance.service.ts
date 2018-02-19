@@ -1,18 +1,27 @@
+
+/* Behance service */
+
 import { Injectable } from '@angular/core';
-import { Jsonp } from '@angular/http';
+import { JsonpModule, Jsonp, Response } from '@angular/http';
+
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BehanceService {
 
-  private username = 'liam@gotpop.net';
+  private username = 'gotpop';
   private api_key = 'nMLvtkO7CdwZg0ld8S1lcWrLzRiW3nRQ';
+  private key;
 
-  constructor(private _Jsonp: Jsonp) { }
+  constructor(private _jsonp: Jsonp) { }
 
   getProjects() {
-    return this._Jsonp.get('http://www.behance.net/v2/users/' + this.username + '/projects');
-    // console.log('Get projects!');
+    this.key = 'http://www.behance.net/v2/users/'
+      + this.username + '/projects?api_key='
+      + this.api_key + '&callback=JSONP_CALLBACK';
 
+    return this._jsonp.get(this.key).map(res => res.json());
   }
+
 }

@@ -17,6 +17,7 @@ import { SkillsComponent } from './templates/skills/skills.component';
 import { SocialComponent } from './shared/components/social/social.component';
 import { WorkModule } from './templates/work/work.module';
 import { BehanceService } from './shared/services/behance.service';
+import { JsonpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BehanceService } from './shared/services/behance.service';
     BrowserModule,
     RouterModule,
     routes,
-    WorkModule
+    WorkModule,
+    JsonpModule
   ],
   providers: [
     BehanceService
