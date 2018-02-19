@@ -9,16 +9,17 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MenuTriggerComponent implements OnInit {
 
-  @Output() userUpdated = new EventEmitter();
+  public toggleClick: boolean = false;;
+
+  @Output() toggleUpdated = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
   public toggleMenu() {
-    console.log('Testing !!!!!!!!');
-    this.userUpdated.emit('Hello');
-
+    this.toggleClick = !this.toggleClick;
+    this.toggleUpdated.emit(this.toggleClick);
   }
 
 }

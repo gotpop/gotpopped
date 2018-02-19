@@ -8,15 +8,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  public toggleMenu: boolean;
+  public menuOpen: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  handleToggleUpdated(event) {
-    console.log('Logged! ', event);
+  handleToggleUpdated(event: boolean) {
+    this.menuOpen = event;
+    console.log('Logged! ', this.menuOpen);
   }
 
 }

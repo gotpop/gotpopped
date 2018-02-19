@@ -1,4 +1,4 @@
-<nav class="header-nav">
+<nav class="header-nav" *ngIf="!menuOpen">
   <ul id="headerMenu" class="header-menu">
     <li class="header-menu-list active" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <a>Home
