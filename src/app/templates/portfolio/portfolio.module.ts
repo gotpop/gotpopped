@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
-import { PortfolioComponent } from "./portfolio.component";
+import { PortfolioComponent } from './portfolio.component';
 import { WorkItemComponent } from './work-item/work-item.component';
 import { WorkNavComponent } from './work-nav/work-nav.component';
 

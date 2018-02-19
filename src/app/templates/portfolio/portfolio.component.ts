@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Route, RouterLink } from "@angular/router";
+import { Router, Route, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
