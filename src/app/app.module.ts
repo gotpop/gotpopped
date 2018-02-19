@@ -16,6 +16,7 @@ import { SiteTitleComponent } from './templates/header/site-title/site-title.com
 import { SkillsComponent } from './templates/skills/skills.component';
 import { SocialComponent } from './shared/components/social/social.component';
 import { WorkModule } from './templates/work/work.module';
+import { BehanceService } from './shared/services/behance.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { WorkModule } from './templates/work/work.module';
     routes,
     WorkModule
   ],
-  providers: [],
+  providers: [
+    BehanceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
