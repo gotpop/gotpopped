@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, Route, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: 'app-work',
+  templateUrl: './work.component.html',
+  styleUrls: ['./work.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class WorkComponent implements OnInit {
 
   constructor() { }
 

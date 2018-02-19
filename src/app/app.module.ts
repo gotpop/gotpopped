@@ -11,13 +11,11 @@ import { HeaderComponent } from './templates/header/header.component';
 import { HomeComponent } from './templates/home/home.component';
 import { MenuComponent } from './templates/header/menu/menu.component';
 import { MenuTriggerComponent } from './templates/header/menu-trigger/menu-trigger.component';
-import { PortfolioComponent } from './templates/portfolio/portfolio.component';
+import { WorkComponent } from './templates/work/work.component';
 import { SiteTitleComponent } from './templates/header/site-title/site-title.component';
 import { SkillsComponent } from './templates/skills/skills.component';
 import { SocialComponent } from './shared/components/social/social.component';
-import { PortfolioModule } from './templates/portfolio/portfolio.module';
-import { LandingComponent } from './portfolio/landing/landing.component';
-
+import { WorkModule } from './templates/work/work.module';
 
 @NgModule({
   declarations: [
@@ -28,17 +26,16 @@ import { LandingComponent } from './portfolio/landing/landing.component';
     HomeComponent,
     MenuComponent,
     MenuTriggerComponent,
-    PortfolioComponent,
+    WorkComponent,
     SiteTitleComponent,
     SkillsComponent,
-    SocialComponent,
-    LandingComponent
+    SocialComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     routes,
-    PortfolioModule
+    WorkModule
   ],
   providers: [],
   bootstrap: [AppComponent]

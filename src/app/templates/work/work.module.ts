@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PortfolioRoutingModule } from './portfolio-routing.module';
-import { PortfolioComponent } from './portfolio.component';
+import { WorkRoutingModule } from './work-routing.module';
+import { WorkComponent } from './work.component';
 import { WorkItemComponent } from './work-item/work-item.component';
 import { WorkNavComponent } from './work-nav/work-nav.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    PortfolioRoutingModule
+    WorkRoutingModule
   ],
   declarations: [
     WorkItemComponent,
@@ -19,4 +19,4 @@ import { WorkNavComponent } from './work-nav/work-nav.component';
     WorkNavComponent
   ]
 })
-export class PortfolioModule { }
+export class WorkModule { }
