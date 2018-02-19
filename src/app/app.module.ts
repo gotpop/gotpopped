@@ -10,7 +10,7 @@ import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { HomeComponent } from './templates/home/home.component';
 import { MenuComponent } from './templates/header/menu/menu.component';
-import { MenuTriggerComponent } from './templates/header/menu-trigger/menu-trigger.component';
+import { MenuTriggerComponent } from './templates/header/menu/menu-trigger/menu-trigger.component';
 import { WorkComponent } from './templates/work/work.component';
 import { SiteTitleComponent } from './templates/header/site-title/site-title.component';
 import { SkillsComponent } from './templates/skills/skills.component';

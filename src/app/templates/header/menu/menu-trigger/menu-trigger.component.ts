@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-menu-trigger',
@@ -8,9 +9,19 @@ import { RouterLink } from '@angular/router';
 })
 export class MenuTriggerComponent implements OnInit {
 
+  @Output() userUpdated = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
+  public toggleMenu() {
+    console.log('Testing !!!!!!!!');
+    this.userUpdated.emit('Hello');
+
+  }
+
 }
+
+
+

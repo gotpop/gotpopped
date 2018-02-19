@@ -1,16 +1,15 @@
 /* Imports */
 
-@import "../../../shared/scss/global/variables";
+@import "../../../../shared/scss/global/variables";
 
 /* SCSS */
 
 .mobile-menu-trigger {
-    display: none;
+    // display: none;
     background: $light1;
     padding: 1rem;
     position: absolute;
-    top: 0;
-    right: -124px;
+    top: 0; // right: -124px;
     .mobile & {
         display: flex;
     }
