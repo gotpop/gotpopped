@@ -1,0 +1,24 @@
+/* Imports */
+
+@import "../../shared/scss/global/variables";
+
+/* SCSS */
+
+.portfolio-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.portfolio-thumbnail {
+    background: $light1;
+    padding: 1em 2em;
+    margin: .5rem;
+    cursor: pointer;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: all .5s ease;
+    &.active {
+        color: $primary;
+    }
+}
