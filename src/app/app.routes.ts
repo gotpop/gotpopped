@@ -9,7 +9,6 @@ import { SkillsComponent } from './templates/skills/skills.component';
 
 export const router: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'work', component: WorkItemComponent },
   { path: 'work/:id', component: WorkItemComponent },
   { path: 'skills', component: SkillsComponent },
 ];
