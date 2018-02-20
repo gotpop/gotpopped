@@ -21,16 +21,14 @@ export class WorkComponent implements OnInit {
     private _behanceService: BehanceService) { }
 
   ngOnInit() {
+    // First grab the Id from the route params.
     this.subscribeToRouteParams = this.route.params.subscribe(params => {
       this.id = + params['id'];
-      console.log(this.id);
-
+      // Once we have the Id we can request the project.
       this._behanceService.getProject(this.id).subscribe(projects => {
         this.project = projects.project;
-        console.log(this.projects, 'Work Item Component');
       });
     });
-
   }
 
 }
