@@ -13,15 +13,11 @@ export class WorkComponent implements OnInit {
 
   public projects: any;
   public project: any;
-  public state = 'inactive';
 
   constructor(private _behanceService: BehanceService) { }
 
   ngOnInit() {
-    this._behanceService.getProjects().subscribe(projects => {
-      this.projects = projects.projects;
-      console.log(this.projects, 'this.projects');
-    });
+
   }
 
 }

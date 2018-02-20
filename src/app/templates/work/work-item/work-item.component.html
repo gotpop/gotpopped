@@ -1,11 +1,10 @@
 <app-work-nav></app-work-nav>
-<h1>Work item components</h1>
 <div *ngIf="project" id="portfolioWrap" class="portfolio-wrap">
   <section class="view-item-portfolio">
     <h1>{{ project.name }}</h1>
     <small>Project Id: {{ project.id }}</small>
     <hr>
-    <p>{{ project.modules[1].text }}</p>
-    <img src="{{ project.modules[0].src }}" alt="Hackett" width="1001" height="569">
+    <p *ngIf="project.modules[1].text">{{ project.modules[1].text }}</p>
+    <img *ngIf="project.modules[0].src" src="{{ project.modules[0].src }}" alt="Hackett" width="1001" height="569">
   </section>
 </div>

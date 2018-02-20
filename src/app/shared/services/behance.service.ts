@@ -27,7 +27,7 @@ export class BehanceService {
     return this._jsonp.get(this.projectsApiUrl).map(res => res.json());
   }
 
-  private getProject(project_id) {
+  public getProject(project_id) {
     this.projectApiUrl = 'http://www.behance.net/v2/projects/' + project_id
       + '?api_key=' + this.api_key + '&callback=JSONP_CALLBACK';
 
