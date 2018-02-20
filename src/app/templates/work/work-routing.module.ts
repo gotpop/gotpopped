@@ -8,8 +8,7 @@ const routes: Routes = [
   {
     path: 'work', component: WorkComponent,
     children: [
-      { path: 'columbus', component: WorkItemComponent },
-      { path: 'hackett', component: WorkItemComponent }
+      { path: ':id', component: WorkItemComponent },
     ]
   }
 ];

@@ -22,11 +22,6 @@ export class WorkComponent implements OnInit {
       this.projects = projects.projects;
       console.log(this.projects, 'this.projects');
     });
-
-    this._behanceService.getProject(62283705).subscribe(projects => {
-      this.project = projects.project;
-      console.log(this.project, 'this.project');
-    });
   }
 
 }
