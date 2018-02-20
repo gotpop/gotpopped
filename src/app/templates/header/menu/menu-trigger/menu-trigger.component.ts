@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MenuTriggerComponent implements OnInit {
 
-  public toggleClick: boolean = false;;
+  public toggleClick = false;
 
   @Output() toggleUpdated = new EventEmitter();
   constructor() { }

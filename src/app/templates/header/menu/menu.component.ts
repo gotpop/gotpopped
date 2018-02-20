@@ -8,7 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  public menuOpen: boolean = false;
+  public menuOpen = false;
 
   constructor() { }
 
