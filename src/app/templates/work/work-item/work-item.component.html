@@ -1,8 +1,9 @@
-<div id="portfolioWrap" class="portfolio-wrap">
-  <section id="first-item" class="view-item-portfolio first-item solo">
-    <h2 *ngIf="id">{{ id }}</h2>
-    <p>Hackett is an iconic British menswear company. We were briefed with creating an in store loyalty application that tracks
-      user purchases and preferences. The app is used by staff on both iPads and iPhones.</p>
-    <img src="/assets/media/img/hackett.jpg" alt="Hackett" width="1001" height="569">
+<div *ngIf="project" id="portfolioWrap" class="portfolio-wrap">
+  <section class="view-item-portfolio">
+    <h1>{{ project.name }}</h1>
+    <small>Project Id: {{ project.id }}</small>
+    <hr>
+    <p>{{ project.modules[1].text }}</p>
+    <img src="{{ project.modules[0].src }}" alt="Hackett" width="1001" height="569">
   </section>
 </div>
