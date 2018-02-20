@@ -15,9 +15,10 @@ import { WorkComponent } from './templates/work/work.component';
 import { SiteTitleComponent } from './templates/header/site-title/site-title.component';
 import { SkillsComponent } from './templates/skills/skills.component';
 import { SocialComponent } from './shared/components/social/social.component';
-import { WorkModule } from './templates/work/work.module';
 import { BehanceService } from './shared/services/behance.service';
 import { JsonpModule, HttpModule } from '@angular/http';
+import { WorkItemComponent } from './templates/work/work-item/work-item.component';
+import { WorkNavComponent } from './templates/work/work-nav/work-nav.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,14 @@ import { JsonpModule, HttpModule } from '@angular/http';
     WorkComponent,
     SiteTitleComponent,
     SkillsComponent,
-    SocialComponent
+    SocialComponent,
+    WorkItemComponent,
+    WorkNavComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     routes,
-    WorkModule,
     JsonpModule,
     HttpModule
   ],
