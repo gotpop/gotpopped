@@ -9,7 +9,7 @@ import { SkillsComponent } from './templates/skills/skills.component';
 
 export const router: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'work/:id', component: WorkItemComponent },
+  { path: 'work/:id', component: WorkComponent },
   { path: 'skills', component: SkillsComponent },
 ];
 
