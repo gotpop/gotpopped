@@ -11,18 +11,20 @@ import 'rxjs/add/operator/map';
 export class BehanceService {
 
   private username = 'gotpop';
-  private api_key = 'nMLvtkO7CdwZg0ld8S1lcWrLzRiW3nRQ';
-  private key;
+  // private api_key = 'nMLvtkO7CdwZg0ld8S1lcWrLzRiW3nRQ';
+  private api_key = 'H2rbXT84MudGzvzQtdbRWCgnBpeTvVmj';
+
+  private projectsKey;
   private projectKey;
 
   constructor(private _jsonp: Jsonp) { }
 
   getProjects() {
-    this.key = 'http://www.behance.net/v2/users/'
+    this.projectsKey = 'http://www.behance.net/v2/users/'
       + this.username + '/projects?api_key='
       + this.api_key + '&callback=JSONP_CALLBACK';
 
-    return this._jsonp.get(this.key).map(res => res.json());
+    return this._jsonp.get(this.projectsKey).map(res => res.json());
   }
 
   getProject(project_id) {

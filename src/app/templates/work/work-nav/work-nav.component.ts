@@ -17,7 +17,7 @@ export class WorkNavComponent implements OnInit {
   ngOnInit() {
     this._behanceService.getProjects().subscribe(projects => {
       this.projects = projects.projects;
-      console.log(this.projects, 'this.projects');
+      console.log(this.projects, 'this.projects nav');
     });
   }
 
