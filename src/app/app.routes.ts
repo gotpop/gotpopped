@@ -1,7 +1,6 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { HomeComponent } from './templates/home/home.component';
 import { WorkComponent } from './templates/work/work.component';
 import { SkillsComponent } from './templates/skills/skills.component';

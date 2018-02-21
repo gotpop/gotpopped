@@ -1,6 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-menu-trigger',

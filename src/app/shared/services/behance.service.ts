@@ -1,13 +1,9 @@
-
 /* Behance service */
 
 import { Injectable } from '@angular/core';
-import { JsonpModule, Jsonp, Response } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { Jsonp } from '@angular/http';
 
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class BehanceService {

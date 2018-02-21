@@ -1,8 +1,7 @@
-import { Component, OnInit, HostBinding, OnChanges, SimpleChanges, Input } from '@angular/core';
-import { Router, Route, RouterLink, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { BehanceService } from '../../shared/services/behance.service';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-work',

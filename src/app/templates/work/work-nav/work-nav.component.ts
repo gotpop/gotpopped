@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BehanceService } from '../../../shared/services/behance.service';
-import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-work-nav',
