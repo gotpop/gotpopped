@@ -20,6 +20,7 @@ import { SocialComponent } from './shared/components/social/social.component';
 import { BehanceService } from './shared/services/behance.service';
 import { WorkItemComponent } from './templates/work/work-item/work-item.component';
 import { WorkNavComponent } from './templates/work/work-nav/work-nav.component';
+import { SiteComponent } from './templates/site/site.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { WorkNavComponent } from './templates/work/work-nav/work-nav.component';
     SkillsComponent,
     SocialComponent,
     WorkItemComponent,
-    WorkNavComponent
+    WorkNavComponent,
+    SiteComponent
   ],
   imports: [
     BrowserModule,
