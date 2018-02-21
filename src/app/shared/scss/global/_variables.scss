@@ -18,3 +18,57 @@ $hover: $dark1;
 /* Font file path */
 
 $fontPath: "/assets/fonts/codepro";
+
+/* Basic */
+
+$white: #ffffff;
+$black: #000000;
+
+/* Light Colour Vars */
+
+$light1: rgb(236, 236, 236);
+$light2: rgb(204, 202, 202);
+$light3: rgb(179, 179, 179);
+$light4: rgb(182, 182, 182);
+
+/* light Tints */
+
+$lighttint1: #bccddb;
+$lighttint2: #bccddb;
+$lighttint3: #bbc9d6;
+$lighttint4: #69747c;
+
+/* Dark Colour Vars */
+
+$dark1: rgb(102, 102, 102);
+$dark2: rgb(90, 90, 90);
+$dark3: rgb(39, 39, 39);
+$dark4: rgb(26, 25, 25);
+
+/* Dark Tints */
+
+$darktint1: #5a656e;
+$darktint2: #5c6a75;
+$darktint3: #373d42;
+$darktint4: #23272b;
+
+/* Hightlights */
+
+$highlight: #5a656e;
+
+/* Applied Vars */
+
+$shadow1: 5px 5px 5px rgba($dark4, .5);
+$shadow2: 0px 1px 20px rgba($black, .2);
+$shadow3: 0px -10px 20px rgba($black, .2);
+
+/* Spacing */
+
+$padding-tiny: .5em;
+$padding-small: 1em;
+$padding-medium: 2em;
+$padding-large: 3em;
+$margin-tiny: .5em;
+$margin-small: 1em;
+$margin-medium: 2em;
+$margin-large: 3em;

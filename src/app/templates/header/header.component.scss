@@ -1,14 +1,36 @@
+/* Import */
+
+@import "../../shared/scss/global/variables";
+
 /* Header */
 
 .header {
-    flex: 1 1 80%;
     padding: 2rem;
     background: rgba(white, .5);
     color: #999;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
     z-index: 9999;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    display: grid;
+    background: $darktint1;
+    padding: $padding-small;
+    grid-area: header;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logo link";
+    grid-gap: $padding-small;
+    box-shadow: $shadow2;
+}
+
+
+/* Style */
+
+// :host {
+// }
+.link {
+    grid-area: link;
+    justify-self: end;
+    grid-column: span 3;
+    background: $light2;
+    color: $dark2;
+    padding: $padding-small;
 }

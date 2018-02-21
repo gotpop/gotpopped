@@ -1,13 +1,31 @@
 /* Footer SCSS */
 
+
+/* Import */
+
+@import "../../shared/scss/global/variables";
+
+/* Style */
+
 :host {
-    flex: 1 1 100%;
-    padding: 2rem;
-    background: white;
-    color: #999;
-    text-align: center;
-    align-self: flex-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: $darktint2;
+    padding: $padding-large;
+    grid-area: footer;
+    align-self: end;
+    margin-top: $padding-large;
+    box-shadow: $shadow3;
+    display: grid;
+    justify-items: center;
+}
+
+.social-link {
+    margin: $margin-tiny;
+    text-decoration: none;
+    svg {
+        fill: $darktint4;
+    }
+}
+
+small {
+    color: $darktint3;
 }

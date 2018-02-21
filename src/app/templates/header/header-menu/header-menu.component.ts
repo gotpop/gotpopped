@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-header-menu',
+  templateUrl: './header-menu.component.html',
+  styleUrls: ['./header-menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+
+export class HeaderMenuComponent implements OnInit {
 
   public menuOpen = false;
 

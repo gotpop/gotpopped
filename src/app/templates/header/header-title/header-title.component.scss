@@ -4,8 +4,13 @@
 
 /* SCSS */
 
-.header-logo-a-wrap {
+:host {
     cursor: pointer;
+    grid-area: logo;
+    grid-column: span 1;
+    padding: $padding-small;
+    background: $light2;
+    color: $dark2;
 }
 
 .header-logo-wrap {
