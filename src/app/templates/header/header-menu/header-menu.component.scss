@@ -5,10 +5,15 @@
 /* Menu */
 
 :host {
-    grid-column: span 2;
+    grid-area: menu;
     background: $light2;
     color: $dark2;
     padding: $padding-small;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: end;
 }
 
 .header-menu-list {

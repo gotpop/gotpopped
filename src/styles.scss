@@ -5,8 +5,7 @@
 /* View Item */
 
 .view-item {
-    background: $lighttint2;
+    background: $light2;
     padding: $padding-large;
-    display: block;
-    flex: 1 1 100%;
+    min-height: 100vh;
 }

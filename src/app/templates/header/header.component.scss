@@ -8,7 +8,7 @@
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "logo link";
+    grid-template-areas: "title menu menu menu";
     grid-gap: $padding-small;
     z-index: 9999;
     position: sticky;

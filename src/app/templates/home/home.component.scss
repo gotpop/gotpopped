@@ -1,10 +1,5 @@
 /* Home SCSS */
 
-.view-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem 2rem 6rem;
-    animation-name: slidein;
-    animation-duration: .4s;
-    animation-fill-mode: forwards;
+:host {
+    max-width: 600px;
 }

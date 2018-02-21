@@ -1,19 +1,28 @@
+/* Imports */
+
+@import "../../shared/scss/variables";
+
+/* SCSS */
+
 :host {
     display: flex;
     flex-direction: column;
 }
 
+.skills-title-bar {
+    margin-bottom: 2em;
+    background: $light1;
+}
+
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $padding-medium;
     color: #999;
-    margin-top: 2rem;
-    width: 100%;
+    background: $light3;
     li {
         font-size: 1rem;
         padding: 1em;
         background: #fff;
-        flex: 1 1 40%;
-        margin: .5rem;
     }
 }
