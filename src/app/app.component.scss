@@ -4,22 +4,6 @@
 
 /* App SCSS */
 
-:host {
-    flex: 1;
-}
-
-.wrap-view {
-    min-height: calc(100vh - 200px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.view {
-    display: flex;
-    max-width: 700px;
-}
-
 
 /* Keyframes */
 
