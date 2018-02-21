@@ -1,3 +1,3 @@
-<div class="portfolio-thumbnails" *ngIf="projects">
-  <div class="portfolio-thumbnail" [routerLink]="['/work', project.id]" *ngFor="let project of projects">{{project.name}}</div>
+<div class="work-buttons" *ngIf="projects">
+  <div class="work-button" [routerLink]="['/work', project.id]" routerLinkActive="active" *ngFor="let project of projects">{{project.name}}</div>
 </div>

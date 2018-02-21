@@ -4,13 +4,13 @@
 
 /* SCSS */
 
-.portfolio-thumbnails {
+.work-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $padding-medium;
 }
 
-.portfolio-thumbnail {
+.work-button {
     background: $white;
     padding: 1em 2em;
     cursor: pointer;
