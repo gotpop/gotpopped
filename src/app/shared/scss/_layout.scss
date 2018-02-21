@@ -14,8 +14,8 @@ app-root {
 app-site {
     grid-area: site;
     grid-column: span 3;
-    background: $light2;
-    color: $dark2;
+    background: $site-background;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }

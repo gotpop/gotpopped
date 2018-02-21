@@ -5,7 +5,10 @@
 /* View Item */
 
 .view-item {
-    background: $light2;
     padding: $padding-large;
-    min-height: 100vh;
+    margin: $margin-large;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: $padding-large;
 }

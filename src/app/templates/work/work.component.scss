@@ -4,41 +4,6 @@
 
 /* SCSS */
 
-.view-item {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem 2rem 6rem;
-    animation-name: slidein;
-    animation-duration: .4s;
-    animation-fill-mode: forwards;
-}
-
-.portfolio-wrap {
-    padding: .5rem;
-    display: flex;
-    min-height: 60vh;
-}
-
-.view-item-portfolio {
-    animation-name: slideinPorfolio;
-    animation-duration: .4s;
-    animation-fill-mode: forwards;
-}
-
-
-/* Keyframes */
-
-@keyframes slideinPorfolio {
-    from {
-        transform: translateX(50%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX( 0%);
-        opacity: 1;
-    }
-}
-
 .work-title-bar {
     display: flex;
     align-items: center;

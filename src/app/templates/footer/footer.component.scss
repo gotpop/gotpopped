@@ -6,9 +6,9 @@
 
 :host {
     grid-area: footer;
-    background: $darktint2;
+    background: $footer-background;
     padding: $padding-large;
-    box-shadow: $shadow3;
+    box-shadow: $shadow2;
     display: grid;
     justify-items: center;
 }

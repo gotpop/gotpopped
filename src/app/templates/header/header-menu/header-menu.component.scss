@@ -6,9 +6,14 @@
 
 :host {
     grid-area: menu;
-    background: $light2;
     color: $dark2;
     padding: $padding-small;
+    transition: all .4s ease;
+    border-bottom: 1px solid rgba(black, 0);
+    &:hover {
+        border-bottom: 1px solid rgba(black, .15);
+        transition: all .4s ease;
+    }
 }
 
 .header-menu {

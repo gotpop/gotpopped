@@ -8,10 +8,15 @@
     grid-area: title;
     cursor: pointer;
     padding: $padding-small;
-    background: $light2;
     color: $dark2;
     display: flex;
     align-content: center;
+    transition: all .4s ease;
+    border-bottom: 1px solid rgba(black, 0);
+    &:hover {
+        border-bottom: 1px solid rgba(black, .15);
+        transition: all .4s ease;
+    }
 }
 
 .header-logo-wrap {
