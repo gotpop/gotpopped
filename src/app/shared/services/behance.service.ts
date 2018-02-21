@@ -21,7 +21,7 @@ export class BehanceService {
   constructor(private _jsonp: Jsonp) { }
 
   public getProjects() {
-    this.projectsApiUrl = 'http://www.behance.net/v2/users/'
+    this.projectsApiUrl = 'https://www.behance.net/v2/users/'
       + this.username + '/projects?api_key='
       + this.api_key + '&callback=JSONP_CALLBACK';
 
@@ -29,7 +29,7 @@ export class BehanceService {
   }
 
   public getProject(project_id) {
-    this.projectApiUrl = 'http://www.behance.net/v2/projects/' + project_id
+    this.projectApiUrl = 'https://www.behance.net/v2/projects/' + project_id
       + '?api_key=' + this.api_key + '&callback=JSONP_CALLBACK';
 
     return this._jsonp.get(this.projectApiUrl).map(response => response.json());
