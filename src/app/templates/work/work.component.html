@@ -1,7 +1,6 @@
-<!-- <app-work-item [project]="project"></app-work-item> -->
 <app-work-nav></app-work-nav>
-<div *ngIf="project" id="portfolioWrap" class="portfolio-wrap">
-  <section class="view-item-portfolio">
+<div *ngIf="project" class="work-wrap">
+  <section class="work-item">
     <div class="work-title-bar">
       <h1>{{ project.name }}</h1>
       <small>Project Id: {{ project.id }}</small>
