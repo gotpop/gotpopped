@@ -18,7 +18,6 @@ import { WorkComponent } from './templates/work/work.component';
 import { SkillsComponent } from './templates/skills/skills.component';
 import { SocialComponent } from './shared/components/social/social.component';
 import { BehanceService } from './shared/services/behance.service';
-import { WorkItemComponent } from './templates/work/work-item/work-item.component';
 import { WorkNavComponent } from './templates/work/work-nav/work-nav.component';
 import { SiteComponent } from './templates/site/site.component';
 
@@ -35,7 +34,6 @@ import { SiteComponent } from './templates/site/site.component';
     HeaderTitleComponent,
     SkillsComponent,
     SocialComponent,
-    WorkItemComponent,
     WorkNavComponent,
     SiteComponent
   ],

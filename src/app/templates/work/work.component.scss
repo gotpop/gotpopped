@@ -38,3 +38,12 @@
         opacity: 1;
     }
 }
+
+.work-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    small {
+        opacity: .5;
+    }
+}
