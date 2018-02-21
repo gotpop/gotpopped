@@ -1,1 +1,28 @@
 /* Global SCSS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: $light2;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    margin-top: 2rem;
+    max-width: 720px;
+    height: auto;
+}
