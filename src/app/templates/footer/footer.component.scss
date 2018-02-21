@@ -1,18 +1,13 @@
 /* Footer SCSS */
 
-
-/* Import */
-
 @import "../../shared/scss/variables";
 
 /* Style */
 
 :host {
+    grid-area: footer;
     background: $darktint2;
     padding: $padding-large;
-    grid-area: footer;
-    align-self: end;
-    margin-top: $padding-large;
     box-shadow: $shadow3;
     display: grid;
     justify-items: center;

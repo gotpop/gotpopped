@@ -11,14 +11,9 @@ html {
 
 body {
     min-height: 100vh;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background: $light2;
     max-width: 100%;
     overflow-x: hidden;
+    background: $light2;
 }
 
 img {
