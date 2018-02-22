@@ -25,6 +25,7 @@
     color: $dark2;
     display: flex;
     align-items: center;
+    border-radius: $radius;
     .icon {
         margin-left: 1em;
         min-width: 1rem;
@@ -42,6 +43,9 @@
     &.active {
         color: $light1;
         background: $primary;
+        &:hover {
+            background: lighten($primary, 5%);
+        }
         svg {
             fill: $light1;
         }

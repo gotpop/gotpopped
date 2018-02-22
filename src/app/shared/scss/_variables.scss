@@ -1,7 +1,3 @@
-/* Font file path */
-
-$fontPath: "/assets/fonts/codepro";
-
 /* Basic */
 
 $white: #ffffff;
@@ -35,32 +31,36 @@ $darktint2: #5c6a75;
 $darktint3: #373d42;
 $darktint4: #23272b;
 
-/* Hightlights */
+/* Applied Vars main */
 
-$highlight: #5a656e;
+$primary: rgb(216, 30, 30);
+$secondary: #303a3f;
 
 /* Applied Vars */
 
-$primary: red;
-$secondary: blue;
+$background-dark: #c5d2db;
+$background-light: $lighttint1;
 
-/* Variables */
+/* Layout colours applied */
 
-$site-background: $lighttint1;
-$header-background: #c5d2db;
-$panel-background: $site-background;
-$footer-background: #c5d2db;
-$footer-text: #303a3f;
+$site-background: $background-light;
+$header-background: $background-dark;
+$panel-background: $background-light;
+$footer-background: $background-dark;
 
 /* Shadows */
 
 $shadow: 5px 5px 5px rgba($dark4, .5);
 $shadow-inset: 0px 5px 20px inset rgba($black, .1);
 
+/* Border radius */
+
+$radius: 2px;
+
 /* Links */
 
 $active: $primary;
-$hover: $dark1;
+$hover: $background-light;
 
 /* Padding */
 
@@ -76,6 +76,14 @@ $margin-small: 1em;
 $margin-medium: 2em;
 $margin-large: 3em;
 
+/* Font file path */
+
+$fontPath: "/assets/fonts/codepro";
+
 /* Type */
 
 $line-height: 2em;
+
+/* Hightlights */
+
+$highlight: #5a656e;
