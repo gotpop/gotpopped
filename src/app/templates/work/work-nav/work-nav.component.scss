@@ -12,7 +12,9 @@
 
 .work-button {
     background: $white;
-    padding: 1em 2em;
+    padding: $padding-medium $padding-medium;
+    margin-bottom: $margin-large;
+    border-radius: $radius;
     cursor: pointer;
     text-align: center;
     transition: all .5s ease;

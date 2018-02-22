@@ -14,6 +14,9 @@
     color: $light1;
     max-width: 270px;
     border-radius: $radius;
+    &:hover {
+        background: lighten($primary, 5%);
+    }
 }
 
 .btn .icon {

@@ -18,11 +18,11 @@
 
 .header-menu-list {
     display: flex;
+    cursor: pointer;
     margin: 0;
     flex: 1 1 auto;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    color: $dark2;
+    padding: $padding-small $padding-medium;
+    color: $body-colour;
     display: flex;
     align-items: center;
     border-radius: $radius;

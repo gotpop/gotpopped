@@ -8,7 +8,7 @@
     grid-area: title;
     cursor: pointer;
     padding: $padding-small;
-    color: $dark2;
+    color: $body-colour;
     display: flex;
     align-content: center;
 }
@@ -17,19 +17,18 @@
     display: flex;
     align-items: center;
     svg {
-        fill: $dark1;
+        fill: lighten($body-colour, 15%);
     }
-}
-
-.header-logo-a-wrap {
-    color: $dark2;
+    &:hover svg {
+        fill: $primary;
+    }
 }
 
 .header-title {
     margin: 0;
     line-height: 0.9em;
     position: relative;
-    top: -8px;
+    top: -11px;
 }
 
 .header-logo-wrap .icon {
@@ -39,8 +38,5 @@
     height: 50px;
     svg {
         width: 100%;
-    }
-    &:hover svg {
-        fill: $primary;
     }
 }

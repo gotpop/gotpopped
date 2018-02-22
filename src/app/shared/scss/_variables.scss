@@ -12,7 +12,7 @@ $light4: rgb(182, 182, 182);
 
 /* light Tints */
 
-$lighttint1: #e8eaeb;
+$lighttint1: #eaecee;
 $lighttint2: #c5cace;
 $lighttint3: #9a9da0;
 $lighttint4: #616e77;
@@ -38,7 +38,7 @@ $secondary: #303a3f;
 
 /* Applied Vars */
 
-$background-dark: #c5d2db;
+$background-dark: #c9d2d8;
 $background-light: $lighttint1;
 
 /* Layout colours applied */
@@ -87,3 +87,8 @@ $line-height: 2em;
 /* Hightlights */
 
 $highlight: #5a656e;
+
+/* Typography colour */
+
+$body-colour: $dark4;
+$header-colour: $dark4;

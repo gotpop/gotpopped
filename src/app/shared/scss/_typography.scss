@@ -9,9 +9,13 @@ html {
     font-size: 16px;
 }
 
+body {
+    color: $body-colour;
+}
+
 h1 {
     font-family: 'Code-Pro-Light';
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: $line-height;
 }
 
@@ -27,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 1em;
+    color: $header-colour;
 }
 
 p {

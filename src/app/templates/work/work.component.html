@@ -2,7 +2,7 @@
 <section class="work-item" *ngIf="project" [@slideIn]='state'>
   <div class="work-title-bar">
     <h1>{{ project.name }}</h1>
-    <small>Project Id: {{ project.id }}</small>
+    <small>Project ID: {{ project.id }}</small>
   </div>
   <div class="work-text" *ngIf="project.modules[1]">
     <div [innerHTML]="project.modules[1].text"></div>
