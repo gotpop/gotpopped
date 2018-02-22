@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: $padding-medium;
-    color: #999;
+    color: $body-colour;
     li {
         font-size: 1rem;
         padding: $padding-small $padding-medium;
