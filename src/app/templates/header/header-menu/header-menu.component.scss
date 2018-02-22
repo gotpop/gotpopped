@@ -26,14 +26,15 @@
     display: flex;
     align-items: center;
     border-radius: $radius;
+    justify-content: space-around;
+    font-size: 1.2em;
     .icon {
-        margin-left: 1em;
         min-width: 1rem;
         height: 50px;
         display: flex;
     }
     .icon svg {
-        max-width: 2em;
+        max-width: 1.5em;
         width: 100%;
     }
     &:hover {
