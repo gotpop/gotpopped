@@ -7,13 +7,13 @@
 html {
     overflow-y: scroll;
     overflow-x: hidden;
+    background: $site-background;
 }
 
 body {
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
-    background: $light2;
     color: $dark3;
 }
 
