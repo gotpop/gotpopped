@@ -18,6 +18,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: $padding-medium;
     color: $body-colour;
+    border-radius: $radius;
     li {
         font-size: 1rem;
         padding: $padding-small $padding-medium;
