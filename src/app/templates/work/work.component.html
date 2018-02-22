@@ -1,5 +1,5 @@
-<app-work-nav></app-work-nav>
-<section class="work-item" *ngIf="project">
+<app-work-nav [@slideIn]='state'></app-work-nav>
+<section class="work-item" *ngIf="project" [@slideIn]='state'>
   <div class="work-title-bar">
     <h1>{{ project.name }}</h1>
     <small>Project Id: {{ project.id }}</small>
