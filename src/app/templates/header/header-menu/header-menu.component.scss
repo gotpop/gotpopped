@@ -8,8 +8,7 @@
     grid-area: menu;
     color: $dark2;
     padding: $padding-small;
-    align-items: center;
-    grid-column: span 3;
+    align-items: center; // grid-column: span 3;
 }
 
 @media screen and (min-width: $large-up) {
@@ -37,7 +36,7 @@
     cursor: pointer;
     margin: 0;
     flex: 1 1 auto;
-    padding: $padding-small $padding-medium;
+    padding: $padding-tiny $padding-medium;
     color: $body-colour;
     display: flex;
     align-items: center;
@@ -48,6 +47,7 @@
         min-width: 1rem;
         height: 50px;
         display: flex;
+        margin: $margin-small;
     }
     .icon svg {
         max-width: 1.5em;
