@@ -11,16 +11,14 @@
     box-shadow: $shadow2;
     display: grid;
     justify-items: center;
+    flex: 1;
 }
 
 .social-link {
     margin: $margin-tiny;
     text-decoration: none;
-    svg {
-        fill: $darktint4;
-    }
 }
 
 small {
-    color: $darktint3;
+    color: $footer-text;
 }

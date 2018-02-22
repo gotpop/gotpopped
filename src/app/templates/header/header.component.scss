@@ -1,5 +1,8 @@
 /* Import */
 
+
+/* autoprefixer: off */
+
 @import "../../shared/scss/variables";
 
 /* Header */
@@ -7,7 +10,7 @@
 :host {
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr auto;
     grid-template-areas: "title . . menu";
     grid-gap: $padding-small;
     z-index: 9999;

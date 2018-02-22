@@ -1,8 +1,8 @@
-/* Styles SCSS */
+/* autoprefixer: off */
 
 @import "./app/shared/scss/index";
 
-/* View Item */
+/* Styles SCSS */
 
 .view-item {
     padding: $padding-large;
@@ -10,5 +10,5 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    grid-gap: $padding-large;
+    grid-gap: $padding-tiny;
 }

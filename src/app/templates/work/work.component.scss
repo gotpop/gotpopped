@@ -12,3 +12,22 @@
         opacity: .5;
     }
 }
+
+.work-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title title title title" "img . text text";
+    grid-gap: $padding-small;
+    .work-title-bar {
+        grid-area: title;
+    }
+    .work-text {
+        grid-area: text;
+        line-height: $line-height;
+    }
+    .work-image {
+        grid-area: img;
+        padding: $padding-large;
+        background: $white;
+    }
+}

@@ -1,18 +1,21 @@
 /* Imports */
 
+
+/* autoprefixer: off */
+
 @import "../../../shared/scss/index";
 
 /* SCSS */
 
 .social svg {
     max-width: 100px;
-    fill: #999;
+    fill: $footer-text;
 }
 
 .social-link {
-    margin: 1rem;
+    margin: $margin-tiny;
 }
 
 .social {
-    margin: 2rem;
+    margin: $margin-medium;
 }
