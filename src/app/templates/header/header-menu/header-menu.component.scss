@@ -9,6 +9,7 @@
     color: $dark2;
     padding: $padding-small;
     align-items: center;
+    grid-column: span 3;
 }
 
 @media screen and (min-width: $large-up) {
