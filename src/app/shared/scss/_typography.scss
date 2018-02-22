@@ -6,7 +6,13 @@ a {
 
 html {
     font-family: 'Code-Pro-LC';
-    font-size: 16px;
+    font-size: 14px;
+    @media (min-width: $small-up) {
+        font-size: 2vw;
+    }
+    @media (min-width: $medium-up) {
+        font-size: 1rem;
+    }
 }
 
 body {

@@ -8,12 +8,27 @@
     grid-area: menu;
     color: $dark2;
     padding: $padding-small;
+    align-items: center;
+}
+
+@media screen and (min-width: $large-up) {
+     :host {
+        justify-self: end;
+    }
 }
 
 .header-menu {
     display: grid;
-    grid-auto-flow: column;
-    grid-gap: $padding-small;
+    grid-auto-flow: row;
+    grid-gap: $padding-tiny;
+}
+
+@media screen and (min-width: $medium-up) {
+    .header-menu {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: $padding-small;
+    }
 }
 
 .header-menu-list {

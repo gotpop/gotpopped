@@ -12,13 +12,11 @@ html {
 
 body {
     min-height: 100vh;
-    max-width: 100%;
     overflow-x: hidden;
 }
 
 img {
-    margin-top: 2rem;
-    max-width: 720px;
+    max-width: 100%;
     height: auto;
     border-radius: 2px;
 }

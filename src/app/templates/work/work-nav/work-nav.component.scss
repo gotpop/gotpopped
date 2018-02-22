@@ -6,14 +6,21 @@
 
 .work-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: $padding-medium;
+}
+
+@media screen and (min-width: $medium-up) {
+    .work-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: $padding-medium;
+    }
 }
 
 .work-button {
     background: $white;
     padding: $padding-medium $padding-medium;
-    margin-bottom: $margin-large;
     border-radius: $radius;
     cursor: pointer;
     text-align: center;

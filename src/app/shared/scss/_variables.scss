@@ -64,17 +64,17 @@ $hover: $background-light;
 
 /* Padding */
 
-$padding-tiny: .5em;
-$padding-small: 1em;
-$padding-medium: 2em;
-$padding-large: 3em;
+$padding-tiny: .5rem;
+$padding-small: 1rem;
+$padding-medium: 2rem;
+$padding-large: 3rem;
 
 /* Margin */
 
-$margin-tiny: .5em;
-$margin-small: 1em;
-$margin-medium: 2em;
-$margin-large: 3em;
+$margin-tiny: .5rem;
+$margin-small: 1rem;
+$margin-medium: 2rem;
+$margin-large: 3rem;
 
 /* Font file path */
 
@@ -95,4 +95,7 @@ $header-colour: $dark4;
 
 /* Media Queries */
 
-$medium-up: 800px;
+$small-up: 500px;
+$medium-up: 900px;
+$large-up: 1200px;
+$huge-up: 1600px;
