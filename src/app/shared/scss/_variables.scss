@@ -48,27 +48,29 @@ $secondary: blue;
 
 $site-background: $lighttint1;
 $header-background: #c5d2db;
-$panel-background: $lighttint2;
+$panel-background: $site-background;
 $footer-background: #c5d2db;
 $footer-text: #303a3f;
 
-/* Applied Vars */
+/* Shadows */
 
-$shadow1: 5px 5px 5px rgba($dark4, .5);
-$shadow2: 0px 5px 20px inset rgba($black, .1);
-$shadow3: 0px -10px 20px rgba($black, .2);
+$shadow: 5px 5px 5px rgba($dark4, .5);
+$shadow-inset: 0px 5px 20px inset rgba($black, .1);
 
-/* Variables */
+/* Links */
 
 $active: $primary;
 $hover: $dark1;
 
-/* Spacing */
+/* Padding */
 
 $padding-tiny: .5em;
 $padding-small: 1em;
 $padding-medium: 2em;
 $padding-large: 3em;
+
+/* Margin */
+
 $margin-tiny: .5em;
 $margin-small: 1em;
 $margin-medium: 2em;
