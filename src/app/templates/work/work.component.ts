@@ -1,14 +1,32 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 import { BehanceService } from '../../shared/services/behance.service';
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  styleUrls: ['./work.component.scss'],
+  animations: [
+    trigger('slideIn', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-60px)', opacity: '0' }),
+        animate('800ms ease-out')
+      ])
+    ])
+  ]
 })
 export class WorkComponent implements OnInit {
+
+  state = 'inactive';
 
   @HostBinding('class') class = 'view-item';
 

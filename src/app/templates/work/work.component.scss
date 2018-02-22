@@ -4,6 +4,10 @@
 
 /* SCSS */
 
+:host {
+    min-height: 100vh;
+}
+
 .work-title-bar {
     display: flex;
     align-items: center;
@@ -16,7 +20,7 @@
 .work-item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "title title title title" "img . text text";
+    grid-template-areas: "title title title title" "text text . img";
     grid-gap: $padding-small;
     .work-title-bar {
         grid-area: title;

@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JsonpModule, HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
@@ -42,7 +43,8 @@ import { SiteComponent } from './templates/site/site.component';
     RouterModule,
     routes,
     JsonpModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [
     BehanceService
