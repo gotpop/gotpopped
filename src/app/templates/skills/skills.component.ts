@@ -20,7 +20,7 @@ import { skillsObject } from '../../shared/data/skills';
         query(':enter', [
           style({ opacity: 0 }),
           stagger(100, [
-            animate('0.5s', style({ opacity: 1 }))
+            animate('0.3s', style({ opacity: 1 }))
           ])
         ])
       ])

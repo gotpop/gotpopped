@@ -28,6 +28,7 @@
     width: 100%;
     overflow: hidden;
     .icon {
+        display: none;
         z-index: -2;
         transform: rotate(45deg);
         max-height: 100px;
@@ -43,7 +44,7 @@
     }
 }
 
-@media screen and (min-width: $medium-up) {
+@media screen and (min-width: $large-up) {
     .header-logo-wrap {
         padding-left: 4rem;
         justify-content: flex-start;

@@ -19,6 +19,9 @@
     }
 }
 
+
+/* Burger */
+
 .mobile-menu-trigger-burger,
 .mobile-menu-trigger-burger:after,
 .mobile-menu-trigger-burger:before {
@@ -28,7 +31,7 @@
     width: 30px;
     background: rgba($dark1, .8);
     position: absolute;
-    top: 20px;
+    top: 38px;
     display: block;
     content: "";
     transition: all 300ms ease-in-out;

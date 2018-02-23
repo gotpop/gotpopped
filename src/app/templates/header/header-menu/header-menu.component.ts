@@ -10,7 +10,14 @@ export class HeaderMenuComponent implements OnInit {
 
   public menuOpen = false;
 
-  constructor() { }
+  constructor() {
+    const mq = window.matchMedia('screen and (min-width:900px)');
+    if (mq.matches) {
+      this.menuOpen = true;
+    } else {
+      this.menuOpen = false;
+    }
+  }
 
   ngOnInit() {
   }

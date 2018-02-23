@@ -10,6 +10,13 @@ import { Router, UrlTree, UrlSegmentGroup, UrlSegment, PRIMARY_OUTLET } from '@a
   templateUrl: './work-nav.component.html',
   styleUrls: ['./work-nav.component.scss'],
   animations: [
+    trigger('slideIn', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-100px)', opacity: '0' }),
+        animate('400ms ease-out')
+      ])
+    ]),
     trigger('listAnimation', [
       transition('* => *', [ // each time the binding value changes
         query(':enter', [
@@ -28,6 +35,7 @@ export class WorkNavComponent implements OnInit {
   public projects: any;
   private workRoute: string;
   public workRouteParsed: string;
+  public state = 'inactive';
 
   constructor(
     private _behanceService: BehanceService,
