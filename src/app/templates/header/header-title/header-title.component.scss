@@ -24,10 +24,9 @@
 .header-logo-wrap {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     overflow: hidden;
-    padding-left: 4rem;
     .icon {
         z-index: -2;
         transform: rotate(45deg);
@@ -41,5 +40,12 @@
     }
     &:hover svg {
         fill: $primary;
+    }
+}
+
+@media screen and (min-width: $medium-up) {
+    .header-logo-wrap {
+        padding-left: 4rem;
+        justify-content: flex-start;
     }
 }

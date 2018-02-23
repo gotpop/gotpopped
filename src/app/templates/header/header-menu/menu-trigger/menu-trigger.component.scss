@@ -5,13 +5,17 @@
 /* SCSS */
 
 .mobile-menu-trigger {
-    display: none;
     background: $light1;
-    padding: 1rem;
+    padding: $padding-medium;
     position: absolute;
-    top: 0; // right: -124px;
-    .mobile & {
-        display: flex;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+@media screen and (min-width: $medium-up) {
+    .mobile-menu-trigger {
+        display: none;
     }
 }
 

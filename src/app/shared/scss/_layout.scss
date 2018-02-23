@@ -8,7 +8,7 @@ app-root {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: "header" "site";
+    grid-template-areas: "header" "worknav" "site";
 }
 
 app-site {

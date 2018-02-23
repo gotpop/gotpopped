@@ -4,6 +4,11 @@
 
 /* SCSS */
 
+:host {
+    // position: absolute;
+    grid-area: worknav;
+}
+
 .work-buttons {
     display: grid;
     grid-template-columns: 1fr;

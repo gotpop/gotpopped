@@ -45,6 +45,6 @@
         grid-template-columns: 2fr 1fr 1fr 1fr;
         grid-template-areas: "title title title title" "text img img img";
         grid-template-rows: auto 1fr;
-        grid-gap: $padding-large;
+        grid-gap: $padding-large; // position: relative;
     }
 }
