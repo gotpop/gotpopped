@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehanceService } from '../../../shared/services/behance.service';
-import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
+import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
 
 @Component({
   selector: 'app-work-nav',
@@ -23,12 +23,14 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 export class WorkNavComponent implements OnInit {
 
   public projects: any;
-  public showWorkNav = false;
-  public id;
 
+<<<<<<< HEAD
   constructor(
     private _behanceService: BehanceService
   ) { }
+=======
+  constructor(private _behanceService: BehanceService) { }
+>>>>>>> parent of 138c3c0... Added condition to el
 
   ngOnInit() {
     this._behanceService.getProjects().subscribe(projects => {

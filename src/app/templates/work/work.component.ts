@@ -26,7 +26,7 @@ import { BehanceService } from '../../shared/services/behance.service';
 })
 export class WorkComponent implements OnInit {
 
-  public state = 'inactive';
+  state = 'inactive';
 
   @HostBinding('class') class = 'view-item';
 
