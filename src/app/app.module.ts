@@ -18,9 +18,10 @@ import { MenuTriggerComponent } from './templates/header/header-menu/menu-trigge
 import { WorkComponent } from './templates/work/work.component';
 import { SkillsComponent } from './templates/skills/skills.component';
 import { SocialComponent } from './shared/components/social/social.component';
-import { BehanceService } from './shared/services/behance.service';
 import { WorkNavComponent } from './templates/work/work-nav/work-nav.component';
 import { SiteComponent } from './templates/site/site.component';
+
+import { BehanceService } from './shared/services/behance.service';
 
 @NgModule({
   declarations: [

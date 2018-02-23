@@ -1,3 +1,4 @@
-<div class="work-buttons" *ngIf="projects" [@listAnimation]="projects.length">
+<div class="work-buttons" *ngIf="projects && workRouteParsed === 'work'">
   <div class="work-button" [routerLink]="['/work', project.id]" routerLinkActive="active" *ngFor="let project of projects">{{project.name}}</div>
 </div>
+<!-- [@listAnimation]="projects.length" -->

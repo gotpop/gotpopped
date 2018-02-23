@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { BehanceService } from '../../../shared/services/behance.service';
 import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
 
+import { Location } from '@angular/common';
+import { Router, UrlTree, UrlSegmentGroup, UrlSegment, PRIMARY_OUTLET } from '@angular/router';
+
 @Component({
   selector: 'app-work-nav',
   templateUrl: './work-nav.component.html',
@@ -23,10 +26,35 @@ import { trigger, transition, style, animate, query, stagger, state } from '@ang
 export class WorkNavComponent implements OnInit {
 
   public projects: any;
+  private workRoute: string;
+  public workRouteParsed: string;
 
   constructor(
-    private _behanceService: BehanceService
-  ) { }
+    private _behanceService: BehanceService,
+    private location: Location,
+    private router: Router
+  ) {
+    router.events.subscribe((val) => {
+      if (location.path() !== '') {
+        // Get location
+        this.workRoute = location.path();
+        // Break into segments
+        const tree: UrlTree = router.parseUrl(this.workRoute);
+        const g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
+        const s: UrlSegment[] = g.segments;
+        // Set the parsed segment
+        this.workRouteParsed = s[0].path;
+      } else {
+        this.workRoute = 'home';
+        // Break into segments
+        const tree: UrlTree = router.parseUrl(this.workRoute);
+        const g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
+        const s: UrlSegment[] = g.segments;
+        // Set the parsed segment
+        this.workRouteParsed = s[0].path;
+      }
+    });
+  }
 
   ngOnInit() {
     this._behanceService.getProjects().subscribe(projects => {
