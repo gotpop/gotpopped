@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { BehanceService } from '../../../shared/services/behance.service';
 import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-work-nav',
@@ -23,8 +25,14 @@ import { trigger, transition, style, animate, query, stagger, state } from '@ang
 export class WorkNavComponent implements OnInit {
 
   public projects: any;
+  public showWorkNav = false;
+  public id;
 
-  constructor(private _behanceService: BehanceService) { }
+  constructor(
+    private _behanceService: BehanceService,
+    private _route: ActivatedRoute,
+    public router: Router
+  ) { }
 
   ngOnInit() {
     this._behanceService.getProjects().subscribe(projects => {
