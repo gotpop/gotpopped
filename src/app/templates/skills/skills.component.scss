@@ -15,7 +15,7 @@
 
 .skills-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: $padding-medium;
     color: $body-colour;
     border-radius: $radius;
@@ -23,5 +23,17 @@
         font-size: 1rem;
         padding: $padding-small $padding-medium;
         background: #fff;
+    }
+}
+
+@media screen and (min-width: $medium-up) {
+    .skills-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: $large-up) {
+    .skills-list {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
