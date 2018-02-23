@@ -5,7 +5,6 @@
 /* SCSS */
 
 :host {
-    // position: absolute;
     grid-area: worknav;
 }
 
@@ -13,6 +12,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $padding-medium;
+    background: $white;
 }
 
 @media screen and (min-width: $medium-up) {
@@ -24,7 +24,6 @@
 }
 
 .work-button {
-    background: $white;
     padding: $padding-medium $padding-medium;
     border-radius: $radius;
     cursor: pointer;
