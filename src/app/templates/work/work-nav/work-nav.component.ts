@@ -24,13 +24,9 @@ export class WorkNavComponent implements OnInit {
 
   public projects: any;
 
-<<<<<<< HEAD
   constructor(
     private _behanceService: BehanceService
   ) { }
-=======
-  constructor(private _behanceService: BehanceService) { }
->>>>>>> parent of 138c3c0... Added condition to el
 
   ngOnInit() {
     this._behanceService.getProjects().subscribe(projects => {
