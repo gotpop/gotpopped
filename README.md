@@ -1,3 +1,28 @@
+# Component based portfolio site.
+
+A portfolio website built using Angular 5 & CSS Grid layout.
+
+### Tools
+
+* Angular 5
+* CSS Grid
+
+## Live
+
+http://www.gotpop.net
+
+## Staging
+
+https://gotpop-staging.herokuapp.com
+
+## Build
+
+`git clone git@github.com:gotpop/gotpop.git`
+
+`npm i`
+
+`ng serve`
+
 # Gotpop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
