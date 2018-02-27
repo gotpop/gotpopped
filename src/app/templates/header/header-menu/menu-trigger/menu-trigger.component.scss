@@ -5,11 +5,10 @@
 /* SCSS */
 
 .mobile-menu-trigger {
-    background: $light1;
     padding: $padding-medium;
     position: absolute;
     top: 0;
-    right: 0;
+    right: $padding-medium;
     cursor: pointer;
 }
 
@@ -63,6 +62,5 @@
 }
 
 .mobile-menu-trigger-text {
-    display: block;
-    margin-left: 3rem;
+    display: none;
 }
