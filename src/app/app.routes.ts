@@ -12,8 +12,8 @@ export const router: Routes = [
     redirectTo: '/work/62283705',
     pathMatch: 'full'
   },
-  { path: 'work/:id', component: WorkComponent },
-  { path: 'skills', component: SkillsComponent },
+  { path: 'work/:id', component: WorkComponent, data: { state: 'home' } },
+  { path: 'skills', component: SkillsComponent, data: { state: 'skills' } },
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
