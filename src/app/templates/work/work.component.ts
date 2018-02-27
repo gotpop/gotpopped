@@ -47,7 +47,24 @@ export class WorkComponent implements OnInit {
       this._behanceService.getProject(this.id).subscribe(projects => {
         this.project = projects.project;
       });
+      // Get the projects for next/prev btns
+      this._behanceService.getProjects().subscribe(projects => {
+        this.projects = projects;
+        this.next(this.id);
+        console.log('hello', this.projects.projects);
+      });
     });
+
+  }
+
+  public next(id) {
+
+    const mappedArrayOfProjects = this.projects.map(obj => {
+      const rObj = {};
+      rObj[obj.key] = obj.value;
+      return rObj;
+    });
+    console.log('ma index', mappedArrayOfProjects);
   }
 
 }
