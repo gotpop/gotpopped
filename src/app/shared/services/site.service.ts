@@ -19,7 +19,7 @@ export class SiteService {
     if (queries.small) {
       this._width = 'small';
     } else if (queries.medium) {
-      this._width = 'mediun';
+      this._width = 'medium';
     } else if (queries.large) {
       this._width = 'large';
     } else if (queries.huge) {

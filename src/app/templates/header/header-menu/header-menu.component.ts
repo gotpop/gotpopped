@@ -22,7 +22,7 @@ export class HeaderMenuComponent implements OnInit {
   onResize() {
     this._width = this._site.checkSiteWidth();
 
-    if (this._width === 'small') {
+    if (this._width === 'small' || 'medium') {
       this.menuOpen = false;
     } else {
       this.menuOpen = true;
