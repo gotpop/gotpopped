@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { SiteService } from '../../../shared/services/site.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -8,23 +9,28 @@ import { Component, OnInit } from '@angular/core';
 
 export class HeaderMenuComponent implements OnInit {
 
-  public menuOpen = false;
+  public menuOpen = true;
+  private _width;
 
-  constructor() {
-    const mq = window.matchMedia('screen and (min-width:900px)');
-    if (mq.matches) {
-      this.menuOpen = true;
-    } else {
-      this.menuOpen = false;
-    }
+  constructor(private _site: SiteService) {
   }
 
   ngOnInit() {
   }
 
+  @HostListener('window:resize')
+  onResize() {
+    this._width = this._site.checkSiteWidth();
+
+    if (this._width === 'small') {
+      this.menuOpen = false;
+    } else {
+      this.menuOpen = true;
+    }
+  }
+
   handleToggleUpdated(event: boolean) {
     this.menuOpen = event;
-    console.log('Logged! ', this.menuOpen);
   }
 
 }

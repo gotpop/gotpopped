@@ -8,11 +8,13 @@ import { SiteService } from './shared/services/site.service';
 })
 export class AppComponent {
 
+  private _width;
+
   constructor(private _site: SiteService) { }
 
   @HostListener('window:resize')
   onResize() {
-    this._site.checkSiteWidth();
+    this._width = this._site.checkSiteWidth();
   }
 
 }
