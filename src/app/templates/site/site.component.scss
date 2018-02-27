@@ -1,6 +1,7 @@
 /* Site */
 
-// :host {
-//     max-width: 600px;
-//     ;
-// }
+:host {
+    main {
+        min-height: 100vh;
+    }
+}
