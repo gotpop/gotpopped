@@ -16,17 +16,21 @@ export class HeaderMenuComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._checkWidth();
   }
 
-  @HostListener('window:resize')
-  onResize() {
+  private _checkWidth() {
     this._width = this._site.checkSiteWidth();
-
-    if (this._width === 'small' || 'medium') {
+    if (this._width === 'small' || this._width === 'medium') {
       this.menuOpen = false;
     } else {
       this.menuOpen = true;
     }
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this._checkWidth();
   }
 
   handleToggleUpdated(event: boolean) {
