@@ -12,8 +12,7 @@ export class HeaderMenuComponent implements OnInit {
   public menuOpen = true;
   private _width;
 
-  constructor(private _site: SiteService) {
-  }
+  constructor(private _site: SiteService) { }
 
   ngOnInit() {
     this._checkWidth();
@@ -33,7 +32,7 @@ export class HeaderMenuComponent implements OnInit {
     this._checkWidth();
   }
 
-  handleToggleUpdated(event: boolean) {
+  public handleToggleUpdated(event: boolean) {
     this.menuOpen = event;
   }
 
