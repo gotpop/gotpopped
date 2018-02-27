@@ -37,4 +37,8 @@ export class HeaderMenuComponent implements OnInit {
     this.menuOpen = event;
   }
 
+  public closeMenu() {
+    console.log('Close menu!!');
+  }
+
 }
