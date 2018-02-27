@@ -18,7 +18,7 @@ import { BehanceService } from '../../shared/services/behance.service';
     trigger('slideIn', [
       state('in', style({ transform: 'translateX(0)' })),
       transition('void => *', [
-        style({ transform: 'translateX(-60px)', opacity: '0' }),
+        style({ transform: 'translateX(100px)', opacity: '0' }),
         animate('800ms ease-out')
       ])
     ])

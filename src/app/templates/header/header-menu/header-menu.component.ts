@@ -32,12 +32,12 @@ export class HeaderMenuComponent implements OnInit {
     this._checkWidth();
   }
 
-  public handleToggleUpdated(event: boolean) {
-    this.menuOpen = event;
+  public closeMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
-  public closeMenu() {
-    console.log('Close menu!!');
+  public handleMenuToggle() {
+    this.menuOpen = !this.menuOpen;
   }
 
 }

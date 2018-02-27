@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { BehanceService } from '../../../shared/services/behance.service';
-import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
-
 import { Location } from '@angular/common';
 import { Router, UrlTree, UrlSegmentGroup, UrlSegment, PRIMARY_OUTLET } from '@angular/router';
+import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
+
+import { BehanceService } from '../../../shared/services/behance.service';
 
 @Component({
   selector: 'app-work-nav',
@@ -11,18 +11,18 @@ import { Router, UrlTree, UrlSegmentGroup, UrlSegment, PRIMARY_OUTLET } from '@a
   styleUrls: ['./work-nav.component.scss'],
   animations: [
     trigger('slideIn', [
-      state('in', style({ transform: 'translateX(0)' })),
+      state('in', style({ transform: 'translateY(0)' })),
       transition('void => *', [
-        style({ transform: 'translateX(-100px)', opacity: '0' }),
+        style({ transform: 'translateY(-80px)', opacity: '0' }),
         animate('400ms ease-out')
       ])
     ]),
     trigger('listAnimation', [
-      transition('* => *', [ // each time the binding value changes
+      transition('* => *', [
         query(':enter', [
           style({ opacity: 0 }),
-          stagger(100, [
-            animate('.5s', style({ opacity: 1 }))
+          stagger(200, [
+            animate('1.5s', style({ opacity: 1 }))
           ])
         ])
       ])
@@ -36,12 +36,14 @@ export class WorkNavComponent implements OnInit {
   private workRoute: string;
   public workRouteParsed: string;
   public state = 'inactive';
+  public apiOk = false;
 
   constructor(
     private _behanceService: BehanceService,
     private location: Location,
     private router: Router
   ) {
+    // Set parent route location
     router.events.subscribe((val) => {
       if (location.path() !== '') {
         // Get location
@@ -66,7 +68,13 @@ export class WorkNavComponent implements OnInit {
 
   ngOnInit() {
     this._behanceService.getProjects().subscribe(projects => {
+      // Set projects
       this.projects = projects.projects;
+      console.log(this.projects);
+      // First iteration of error handling
+      if (this.projects.length > 0) {
+        this.apiOk = true;
+      }
     });
   }
 

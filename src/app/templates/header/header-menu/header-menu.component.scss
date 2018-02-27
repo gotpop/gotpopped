@@ -8,7 +8,8 @@
     grid-area: menu;
     color: $dark2;
     padding: $padding-small;
-    align-items: center; // grid-column: span 3;
+    align-items: center;
+    z-index: 99999;
 }
 
 @media screen and (min-width: $large-up) {
