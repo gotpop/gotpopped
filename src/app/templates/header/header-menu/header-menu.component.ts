@@ -33,7 +33,9 @@ export class HeaderMenuComponent implements OnInit {
   }
 
   public closeMenu() {
-    this.menuOpen = !this.menuOpen;
+    if (this._width === 'small' || this._width === 'medium') {
+      this.menuOpen = !this.menuOpen;
+    }
   }
 
   public handleMenuToggle() {
