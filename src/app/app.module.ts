@@ -22,6 +22,7 @@ import { WorkNavComponent } from './templates/work/work-nav/work-nav.component';
 import { SiteComponent } from './templates/site/site.component';
 
 import { BehanceService } from './shared/services/behance.service';
+import { SiteService } from './shared/services/site.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { BehanceService } from './shared/services/behance.service';
     BrowserAnimationsModule
   ],
   providers: [
-    BehanceService
+    BehanceService,
+    SiteService
   ],
   bootstrap: [AppComponent]
 })
