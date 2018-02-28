@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, UrlTree, UrlSegmentGroup, UrlSegment, PRIMARY_OUTLET } from '@angular/router';
 import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
+import { RouterLink } from '@angular/router';
 
 import { BehanceService } from '../../../shared/services/behance.service';
 
@@ -70,7 +71,6 @@ export class WorkNavComponent implements OnInit {
     this._behanceService.getProjects().subscribe(projects => {
       // Set projects
       this.projects = projects.projects;
-      console.log(this.projects);
       // First iteration of error handling
       if (this.projects.length > 0) {
         this.apiOk = true;
