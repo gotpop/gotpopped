@@ -39,6 +39,7 @@ export class WorkComponent implements OnInit {
   public projects: any;
   public project: any;
   public nextId;
+  public error;
 
   constructor(
     private route: ActivatedRoute,
@@ -52,15 +53,13 @@ export class WorkComponent implements OnInit {
       this._behanceService.getProject(this.id).subscribe(projects => {
         this.project = projects.project;
       });
-      // Get the projects for next/prev btns
-      this._behanceService.getProjects().subscribe(projects => {
-        this.projects = projects.projects;
-        this.next(this.id);
-      });
       this._behanceService.getProjects().subscribe(projects => {
         // Set projects
         this.projects = projects.projects;
-      });
+        this.next(this.id);
+      }, error => console.log('this.error: ', error)
+      );
+
     });
 
   }
