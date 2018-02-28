@@ -74,7 +74,7 @@ export class WorkComponent implements OnInit {
 
     // Project Id
     let currentProjId;
-    let nextId;
+    let nextIndex;
 
     proj.map((obj, index) => {
 
@@ -82,26 +82,22 @@ export class WorkComponent implements OnInit {
       if (obj.id === id) {
         currentIndex = index;
         currentProjId = obj.id;
-        console.log('currentIndex:', currentIndex);
-        console.log(index);
-        // console.log('Next ID:', nextId);
       }
 
-      if ((index + 1) === currentIndex) {
+      if (index === (currentIndex + 1)) {
         this.nextId = obj.id;
-        nextId = obj.id;
-        console.log('yay');
-
+        console.log('this.nextId:', this.nextId);
       }
 
+      // Check if last project & set index
+      if (index === (proj.length - 1)) {
+        nextIndex = 0;
+      }
 
-      // // Check if last project
-      // if (index === (proj.length - 1)) {
-      //   // console.log('Last: ', obj.id);
-      //   // Set next to be the first project in array
-      //   nextId = obj.id;
-      // }
-
+      // Set project id based on index
+      if (index === nextIndex) {
+        this.nextId = obj.id;
+      }
 
     });
 
