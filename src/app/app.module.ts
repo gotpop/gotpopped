@@ -23,6 +23,7 @@ import { SiteComponent } from './templates/site/site.component';
 
 import { BehanceService } from './shared/services/behance.service';
 import { SiteService } from './shared/services/site.service';
+import { PaginationComponent } from './shared/components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SiteService } from './shared/services/site.service';
     SkillsComponent,
     SocialComponent,
     WorkNavComponent,
-    SiteComponent
+    SiteComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

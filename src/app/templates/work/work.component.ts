@@ -32,7 +32,7 @@ export class WorkComponent implements OnInit {
   @HostBinding('class') class = 'view-item';
 
   private subscribeToRouteParams: any;
-  public id;
+  public id: number;
   public idIndexPrev;
   public idIndexnext;
   public idIndex;
@@ -52,12 +52,12 @@ export class WorkComponent implements OnInit {
       // Once we have the Id we can request the project.
       this._behanceService.getProject(this.id).subscribe(projects => {
         this.project = projects.project;
-      });
+      }, error => console.log('Project error: ', error));
       this._behanceService.getProjects().subscribe(projects => {
         // Set projects
         this.projects = projects.projects;
         this.next(this.id);
-      }, error => console.log('this.error: ', error)
+      }, error => console.log('Projects error: ', error)
       );
 
     });
@@ -66,38 +66,32 @@ export class WorkComponent implements OnInit {
 
   public next(id) {
 
-    // Setup
     const proj = this.projects;
-
     let currentIndex;
-
-    // Project Id
     let currentProjId;
     let nextIndex;
 
+    // Get
     proj.map((obj, index) => {
-
       // Get current project
       if (obj.id === id) {
         currentIndex = index;
         currentProjId = obj.id;
       }
-
-      if (index === (currentIndex + 1)) {
-        this.nextId = obj.id;
-        console.log('this.nextId:', this.nextId);
-      }
-
       // Check if last project & set index
       if (index === (proj.length - 1)) {
         nextIndex = 0;
       }
+    });
 
+    // Set
+    proj.map((obj, index) => {
       // Set project id based on index
       if (index === nextIndex) {
         this.nextId = obj.id;
+      } else if (index === (currentIndex + 1)) {
+        this.nextId = obj.id;
       }
-
     });
 
   }
