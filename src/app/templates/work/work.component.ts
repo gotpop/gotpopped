@@ -9,7 +9,6 @@ import {
 } from '@angular/animations';
 
 import { BehanceService } from '../../shared/services/behance.service';
-import { last } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-work',

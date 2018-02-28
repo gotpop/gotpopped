@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, UrlTree, UrlSegmentGroup, UrlSegment, PRIMARY_OUTLET } from '@angular/router';
 import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
-import { RouterLink } from '@angular/router';
 
 import { BehanceService } from '../../../shared/services/behance.service';
 

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pagination',
