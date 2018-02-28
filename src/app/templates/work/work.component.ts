@@ -56,42 +56,9 @@ export class WorkComponent implements OnInit {
       this._behanceService.getProjects().subscribe(projects => {
         // Set projects
         this.projects = projects.projects;
-        this.next(this.id);
       }, error => console.log('Projects error: ', error)
       );
 
-    });
-
-  }
-
-  public next(id) {
-
-    const proj = this.projects;
-    let currentIndex;
-    let currentProjId;
-    let nextIndex;
-
-    // Get
-    proj.map((obj, index) => {
-      // Get current project
-      if (obj.id === id) {
-        currentIndex = index;
-        currentProjId = obj.id;
-      }
-      // Check if last project & set index
-      if (index === (proj.length - 1)) {
-        nextIndex = 0;
-      }
-    });
-
-    // Set
-    proj.map((obj, index) => {
-      // Set project id based on index
-      if (index === nextIndex) {
-        this.nextId = obj.id;
-      } else if (index === (currentIndex + 1)) {
-        this.nextId = obj.id;
-      }
     });
 
   }

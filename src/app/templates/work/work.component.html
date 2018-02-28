@@ -9,8 +9,5 @@
   <div class="work-image" *ngIf="project.modules[0]">
     <img src="{{ project.modules[0].src }}" alt="Hackett" width="1001" height="569">
   </div>
+  <app-pagination [projects]="projects" [id]="id"></app-pagination>
 </section>
-
-<a [routerLink]="['/work', nextId]">
-  <span>Next</span>
-</a>
