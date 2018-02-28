@@ -6,6 +6,13 @@
 
 :host {
     grid-area: worknav;
+    display: none;
+}
+
+@media screen and (min-width: $medium-up) {
+     :host {
+        display: block;
+    }
 }
 
 .work-buttons {
