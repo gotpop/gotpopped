@@ -7,10 +7,6 @@ A portfolio website built using Angular 5 & CSS Grid layout.
 * Angular 5
 * CSS Grid
 
-## Live
-
-http://www.gotpop.net
-
 ## Staging
 
 https://gotpop-staging.herokuapp.com
