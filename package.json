@@ -11,7 +11,7 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run build && node server.js",
     "start-old": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
