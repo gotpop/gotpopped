@@ -4,6 +4,9 @@ import { ReactComponent as MyLogoGrid }  from '../assets/logo-grid.svg';
 import MenuItem from './MenuItem';
 import { Link } from "react-router-dom";
 
+import HeaderTitle from "./header-title/header-title.component.js";
+
+
 class Header extends Component {
 
     state = {
@@ -14,12 +17,7 @@ class Header extends Component {
     render() {
       return (
         <header className="he">
-          <section className="he-logo">
-            <Link className="he-logo__link" to="/">
-              <h2 className="he-logo__title">{ this.state.text }</h2>
-              <MyLogoGrid className="he-nav__svg" />
-            </Link>
-          </section>
+          <HeaderTitle></HeaderTitle>
           <div className="he-nav">
             <nav className="he-nav__bar">
               {this.props.menuItems.map( player => 

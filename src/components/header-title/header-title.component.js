@@ -1,16 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-header-title',
-  templateUrl: './header-title.component.html',
-  styleUrls: ['./header-title.component.scss']
-})
+import "./header-title.component.scss";
 
-export class HeaderTitleComponent implements OnInit {
+class HeaderTitle extends Component {
 
-  constructor() { }
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
 
-  ngOnInit() {
+  render() {
+    return (
+      <section class="header-logo-wrap" routerLink="/">
+      <h1 class="header-title">GotPop</h1>
+      <span class="icon">
+        Icon here
+      </span>
+    </section>
+    
+    );
   }
-
 }
+
+export default HeaderTitle;
