@@ -1,37 +1,6 @@
-// import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './scss/index.scss.scss';
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <p>
-//             Edit <code>src/App.js</code> and save to reload.
-//           </p>
-//           <a
-//             className="App-link"
-//             href="https://reactjs.org"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Learn React
-//           </a>
-//         </header>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
-
-
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 
-// import './styles/css/App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -59,20 +28,14 @@ class App extends Component {
       {
         key: 2,
         id: 2,
-        title: "Step 1",
+        title: "Work",
         url: "/step1"
       },
       {
         key: 3,
         id: 3,
-        title: "Step 2",
-        url: "/step2"
-      },
-      {
-        key: 4,
-        id: 4,
-        title: "Step 3",
-        url: "/step3"
+        title: "Skills",
+        url: "/skills"
       }
     ]
   };
