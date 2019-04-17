@@ -1,0 +1,24 @@
+/* Footer SCSS */
+
+@import "../../shared/scss/variables";
+
+/* Style */
+
+:host {
+    grid-area: footer;
+    background: $footer-background;
+    padding: $padding-large;
+    box-shadow: $shadow-inset;
+    display: grid;
+    justify-items: center;
+    flex: 1;
+}
+
+.social-link {
+    margin: $margin-tiny;
+    text-decoration: none;
+}
+
+small {
+    color: $secondary;
+}

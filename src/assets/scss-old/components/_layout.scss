@@ -1,0 +1,30 @@
+// Label
+
+.ap {
+    background: var(--white);
+    display: grid;
+    grid-row: 1;
+    min-height: 100vh;
+    grid-template-areas: 
+              "header header header"
+              ". main ."
+              "footer footer footer";
+    grid-template-rows: auto 1fr 130px;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-gap: 1rem;
+}
+  
+.ap__route {
+  background: var(--white);
+  grid-area: main;
+  padding: 1rem;
+  min-height: 80vh;
+}
+
+.ma__content {
+  margin-bottom: 3rem;
+
+  &+ .btn {
+    margin-left: 0;
+  }
+}

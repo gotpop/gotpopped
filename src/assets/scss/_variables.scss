@@ -1,0 +1,101 @@
+/* Basic */
+
+$white: #ffffff;
+$black: #000000;
+
+/* Light Colour Vars */
+
+$light1: rgb(236, 236, 236);
+$light2: rgb(204, 202, 202);
+$light3: rgb(179, 179, 179);
+$light4: rgb(182, 182, 182);
+
+/* light Tints */
+
+$lighttint1: #eaecee;
+$lighttint2: #c5cace;
+$lighttint3: #9a9da0;
+$lighttint4: #616e77;
+
+/* Dark Colour Vars */
+
+$dark1: rgb(102, 102, 102);
+$dark2: rgb(37, 36, 36);
+$dark3: rgb(39, 39, 39);
+$dark4: rgb(26, 25, 25);
+
+/* Dark Tints */
+
+$darktint1: #9ca7af;
+$darktint2: #5c6a75;
+$darktint3: #373d42;
+$darktint4: #23272b;
+
+/* Applied Vars main */
+
+$primary: rgb(216, 30, 30);
+$secondary: #303a3f;
+
+/* Applied Vars */
+
+$background-dark: #c9d2d8;
+$background-light: $lighttint1;
+
+/* Layout colours applied */
+
+$site-background: $background-light;
+$header-background: $background-dark;
+$panel-background: $background-light;
+$footer-background: $background-dark;
+
+/* Shadows */
+
+$shadow: 5px 5px 5px rgba($dark4, .5);
+$shadow-inset: 0px 5px 20px inset rgba($black, .1);
+
+/* Border radius */
+
+$radius: 2px;
+
+/* Links */
+
+$active: $primary;
+$hover: $background-light;
+
+/* Padding */
+
+$padding-tiny: .5rem;
+$padding-small: 1rem;
+$padding-medium: 2rem;
+$padding-large: 3rem;
+
+/* Margin */
+
+$margin-tiny: .5rem;
+$margin-small: 1rem;
+$margin-medium: 2rem;
+$margin-large: 3rem;
+
+/* Font file path */
+
+$fontPath: "/assets/fonts/codepro";
+
+/* Type */
+
+$line-height: 2em;
+
+/* Hightlights */
+
+$highlight: #5a656e;
+
+/* Typography colour */
+
+$body-colour: $dark4;
+$header-colour: $dark4;
+
+/* Media Queries */
+
+$small-up: 500px;
+$medium-up: 900px;
+$large-up: 1200px;
+$huge-up: 1600px;

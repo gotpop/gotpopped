@@ -1,0 +1,100 @@
+/* Imports */
+
+@import "../../../shared/scss/variables";
+
+/* SCSS */
+
+:host {
+    grid-area: worknav;
+    display: none;
+}
+
+@media screen and (min-width: $medium-up) {
+     :host {
+        display: block;
+    }
+}
+
+@media screen and (min-width: $large-up) {
+     :host {
+        margin: 0 6rem;
+    }
+}
+
+.work-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $padding-medium;
+    border-bottom: solid 1px $header-background;
+}
+
+@media screen and (min-width: $medium-up) {
+    .work-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: $padding-medium;
+    }
+}
+
+.work-button {
+    padding: $padding-medium $padding-medium;
+    border-radius: $radius;
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s ease;
+    &:hover {
+        background: $white;
+    }
+    &.active {
+        color: $primary;
+    }
+}
+
+// Loading
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
