@@ -11,13 +11,12 @@ class HeaderTitle extends Component {
 
   render() {
     return (
-      <section class="header-logo-wrap" routerLink="/">
-      <h1 class="header-title">GotPop</h1>
-      <span class="icon">
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
         Icon here
       </span>
     </section>
-    
     );
   }
 }

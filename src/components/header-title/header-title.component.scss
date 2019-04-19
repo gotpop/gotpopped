@@ -1,50 +1,50 @@
 // /* Imports */
 
-// @import "../../../shared/scss/variables";
+@import "../../assets/scss/variables";
 
 // /* SCSS */
 
-// :host {
-//     grid-area: title;
-//     cursor: pointer;
-//     color: $body-colour;
-//     display: flex;
-//     align-content: centre;
-// }
+:host {
+    grid-area: title;
+    cursor: pointer;
+    color: $body-colour;
+    display: flex;
+    align-content: centre;
+}
 
-// .header-title {
-//     margin: 0;
-//     position: relative;
-//     font-family: 'Code-Pro-Bold-LC';
-//     color: lighten($body-colour, 30%);
-//     font-size: 3rem;
-// }
+.header-title {
+    margin: 0;
+    position: relative;
+    font-family: 'Code-Pro-Bold-LC';
+    color: lighten($body-colour, 30%);
+    font-size: 3rem;
+}
 
-// .header-logo-wrap {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     overflow: hidden;
-//     .icon {
-//         display: none;
-//         z-index: -2;
-//         transform: rotate(45deg);
-//         max-height: 100px;
-//         max-width: 100px;
-//         height: 50px;
-//         svg {
-//             width: 100%;
-//             fill: lighten($body-colour, 30%);
-//         }
-//     }
-//     &:hover svg {
-//         fill: $primary;
-//     }
-// }
+.header-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    .icon {
+        display: none;
+        z-index: -2;
+        transform: rotate(45deg);
+        max-height: 100px;
+        max-width: 100px;
+        height: 50px;
+        svg {
+            width: 100%;
+            fill: lighten($body-colour, 30%);
+        }
+    }
+    &:hover svg {
+        fill: $primary;
+    }
+}
 
-// @media screen and (min-width: $large-up) {
-//     .header-logo-wrap {
-//         justify-content: flex-start;
-//     }
-// }
+@media screen and (min-width: $large-up) {
+    .header-logo-wrap {
+        justify-content: flex-start;
+    }
+}
