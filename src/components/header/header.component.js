@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 import "./header.component.scss";
 
-class HeaderTitle extends Component {
+import HeaderTitle from '../header-title/header-title.component.js';
+import HeaderMenu from '../header-menu/header-menu.component.js';
+
+class Header extends Component {
 
   // state = {
   //   text: "React Grid",
@@ -11,11 +14,12 @@ class HeaderTitle extends Component {
 
   render() {
     return (
-      <h1>Test</h1>
-          // <app-header-title></app-header-title>
-      // <app-header-menu></app-header-menu>
+      <div>
+          <HeaderTitle></HeaderTitle>
+          <HeaderMenu></HeaderMenu>
+      </div>
     );
   }
 }
 
-export default HeaderTitle;
+export default Header;
