@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
-})
-export class FooterComponent implements OnInit {
+import "./button.component.scss";
 
-  constructor() { }
+class FooterComponent extends Component {
 
-  ngOnInit() {
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
+
+  render() {
+    return (
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
+        Icon here
+      </span>
+    </section>
+    );
   }
-
 }
+
+export default FooterComponent;

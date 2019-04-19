@@ -1,30 +1,24 @@
-import { Component } from '@angular/core';
-import { trigger, animate, style, group, query, transition } from '@angular/animations';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-site',
-  templateUrl: './site.component.html',
-  styleUrls: ['./site.component.scss'],
-  animations: [
-    trigger('routerTransition', [
-      transition('* <=> *', [
-        query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
-        group([
-          query(':enter', [
-            style({ transform: 'translateX(100%)' }),
-            animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
-          ], { optional: true }),
-          query(':leave', [
-            style({ transform: 'translateX(0%)' }),
-            animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))], { optional: true }),
-        ])
-      ])
-    ])
-  ],
-})
-export class SiteComponent {
-  getState(outlet) {
-    // Changing the activatedRouteData.state triggers the animation
-    return outlet.activatedRouteData.state;
+import "./header-title.component.scss";
+
+class SiteComponent extends Component {
+
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
+
+  render() {
+    return (
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
+        Icon here
+      </span>
+    </section>
+    );
   }
 }
+
+export default SiteComponent;

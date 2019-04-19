@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-menu-trigger',
-  templateUrl: './menu-trigger.component.html',
-  styleUrls: ['./menu-trigger.component.scss']
-})
+import "./header-title.component.scss";
 
-export class MenuTriggerComponent implements OnInit {
+class MenuTriggerComponent extends Component {
 
-  constructor() { }
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
 
-  ngOnInit() {
+  render() {
+    return (
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
+        Icon here
+      </span>
+    </section>
+    );
   }
-
 }
 
-
-
+export default MenuTriggerComponent;

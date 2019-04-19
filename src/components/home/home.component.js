@@ -1,41 +1,24 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  animations: [
+import "./header-title.component.scss";
 
-    trigger('slideIn', [
+class HomeComponent extends Component {
 
-      state('in', style({ transform: 'translateX(0)' })),
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
 
-      transition('void => *', [
-        style({ transform: 'translateX(-60px)', opacity: '0' }),
-        animate('800ms ease-out')
-      ])
-    ])
-
-  ]
-})
-export class HomeComponent implements OnInit {
-
-  state = 'inactive';
-
-  @HostBinding('class') class = 'view-item';
-
-  constructor() { }
-
-  ngOnInit() {
+  render() {
+    return (
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
+        Icon here
+      </span>
+    </section>
+    );
   }
-
 }
 
-
+export default HomeComponent;

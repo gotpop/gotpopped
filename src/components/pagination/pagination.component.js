@@ -1,59 +1,24 @@
-import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
-})
-export class PaginationComponent implements OnInit, OnChanges {
+import "./header-title.component.scss";
 
-  @Input() projects;
-  @Input() id;
-  public nextId;
-  private _currentIndex;
-  private _currentProjId;
-  private _nextIndex;
+class PaginationComponent extends Component {
 
-  constructor() { }
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (this.projects) {
-      this.next(this.id);
-    }
+  render() {
+    return (
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
+        Icon here
+      </span>
+    </section>
+    );
   }
-
-  ngOnInit() {
-    if (this.projects) {
-      this.next(this.id);
-    }
-  }
-
-  public next(id) {
-
-    // Get
-    this.projects.map((obj, index) => {
-      // Get current project
-      if (obj.id === id) {
-        this._currentIndex = index;
-        this._currentProjId = obj.id;
-      }
-      // Check if last project & set index
-      if (index === (this.projects.length - 1)) {
-        this._nextIndex = 0;
-      }
-    });
-
-    // Set
-    this.projects.map((obj, index) => {
-      // Set project id based on index
-      if (index === this._nextIndex) {
-        this.nextId = obj.id;
-      } else if (index === (this._currentIndex + 1)) {
-        this.nextId = obj.id;
-      }
-    });
-
-  }
-
 }
 
+export default PaginationComponent;

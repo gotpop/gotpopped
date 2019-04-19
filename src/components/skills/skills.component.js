@@ -1,43 +1,24 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { trigger, transition, style, animate, query, stagger, state } from '@angular/animations';
+import React, { Component } from 'react';
 
-import { skillsObject } from '../../shared/data/skills';
+import "./header-title.component.scss";
 
-@Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
-  animations: [
-    trigger('slideIn', [
-      state('in', style({ transform: 'translateX(0)' })),
-      transition('void => *', [
-        style({ transform: 'translateX(-100px)', opacity: '0' }),
-        animate('400ms ease-out')
-      ])
-    ]),
-    trigger('listAnimation', [
-      transition('* => *', [ // each time the binding value changes
-        query(':enter', [
-          style({ opacity: 0 }),
-          stagger(100, [
-            animate('0.3s', style({ opacity: 1 }))
-          ])
-        ])
-      ])
-    ])
-  ]
-})
-export class SkillsComponent implements OnInit {
+class SkillsComponent extends Component {
 
-  public state = 'inactive';
-  public skills;
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
 
-  @HostBinding('class') class = 'view-item';
-
-  constructor() { }
-
-  ngOnInit() {
-    this.skills = skillsObject;
+  render() {
+    return (
+      <section className="header-logo-wrap">
+      <h1 className="header-title">GotPop</h1>
+      <span className="icon">
+        Icon here
+      </span>
+    </section>
+    );
   }
-
 }
+
+export default SkillsComponent;
