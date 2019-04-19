@@ -4,14 +4,14 @@
 
 /* Layout */
 
-app-root {
+.ap {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "header" "worknav" "site";
 }
 
-app-site {
+.home {
     grid-area: site;
     grid-column: span 3;
     background: $site-background;

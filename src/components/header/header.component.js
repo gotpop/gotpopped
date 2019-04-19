@@ -14,10 +14,10 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
+      <header className="he">
           <HeaderTitle></HeaderTitle>
           <HeaderMenu></HeaderMenu>
-      </div>
+      </header>
     );
   }
 }
