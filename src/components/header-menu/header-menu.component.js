@@ -1,45 +1,21 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { SiteService } from '../../../shared/services/site.service';
+import React, { Component } from 'react';
 
-@Component({
-  selector: 'app-header-menu',
-  templateUrl: './header-menu.component.html',
-  styleUrls: ['./header-menu.component.scss']
-})
+import "./header-menu.component.scss";
 
-export class HeaderMenuComponent implements OnInit {
+class HeaderMenuComponent extends Component {
 
-  public menuOpen = true;
-  private _width;
+  // state = {
+  //   text: "React Grid",
+  //   altText: "Click here to see this project on Github",
+  // };
 
-  constructor(private _site: SiteService) { }
-
-  ngOnInit() {
-    this._checkWidth();
+  render() {
+    return (
+      <h1>Test</h1>
+          // <app-header-title></app-header-title>
+      // <app-header-menu></app-header-menu>
+    );
   }
-
-  private _checkWidth() {
-    this._width = this._site.checkSiteWidth();
-    if (this._width === 'small' || this._width === 'medium') {
-      this.menuOpen = false;
-    } else {
-      this.menuOpen = true;
-    }
-  }
-
-  @HostListener('window:resize')
-  onResize() {
-    this._checkWidth();
-  }
-
-  public closeMenu() {
-    if (this._width === 'small' || this._width === 'medium') {
-      this.menuOpen = !this.menuOpen;
-    }
-  }
-
-  public handleMenuToggle() {
-    this.menuOpen = !this.menuOpen;
-  }
-
 }
+
+export default HeaderMenuComponent;

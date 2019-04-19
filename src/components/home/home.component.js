@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./header-title.component.scss";
+import "./home.component.scss";
 
 class HomeComponent extends Component {
 

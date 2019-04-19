@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./header-title.component.scss";
+import "./pagination.component.scss";
 
 class PaginationComponent extends Component {
 

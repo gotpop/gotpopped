@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./header-title.component.scss";
+import "./menu-trigger.component.scss";
 
 class MenuTriggerComponent extends Component {
 

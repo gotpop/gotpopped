@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./header-title.component.scss";
+import "./work-nav.component.scss";
 
 class WorkNavComponent extends Component {
 

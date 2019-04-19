@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./header-title.component.scss";
+import "./site.component.scss";
 
 class SiteComponent extends Component {
 

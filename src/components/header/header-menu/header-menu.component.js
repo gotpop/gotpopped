@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SiteService } from '../../../shared/services/site.service';
 
-import "./button.component.scss";
+// import "./button.component.scss";
 
 class HeaderMenuComponent extends Component {
 
