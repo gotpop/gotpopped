@@ -11,12 +11,11 @@ class MenuTriggerComponent extends Component {
 
   render() {
     return (
-      <section className="header-logo-wrap">
-      <h1 className="header-title">GotPop</h1>
-      <span className="icon">
-        Icon here
-      </span>
-    </section>
+<a id="mobileMenuTrigger" class="mobile-menu-trigger">
+  <span class="mobile-menu-trigger-burger"></span>
+  <span class="mobile-menu-trigger-text">Menu</span>
+</a>
+
     );
   }
 }

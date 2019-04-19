@@ -11,12 +11,20 @@ class WorkNavComponent extends Component {
 
   render() {
     return (
-      <section className="header-logo-wrap">
-      <h1 className="header-title">GotPop</h1>
-      <span className="icon">
-        Icon here
-      </span>
-    </section>
+<div class="loading" *ngIf="!apiOk && workRouteParsed === 'work'">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+</div>
+<div *ngIf="projects && workRouteParsed === 'work' && apiOk">
+  <div [@slideIn]='state'>
+    <div class="work-buttons" [@listAnimation]="projects.length">
+      <div class="work-button" [routerLink]="['/work', project.id]" routerLinkActive="active" *ngFor="let project of projects">{{project.name}}</div>
+    </div>
+  </div>
+</div>
+
     );
   }
 }

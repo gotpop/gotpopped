@@ -11,12 +11,13 @@ class HomeComponent extends Component {
 
   render() {
     return (
-      <section className="header-logo-wrap">
-      <h1 className="header-title">GotPop</h1>
-      <span className="icon">
-        Icon here
-      </span>
-    </section>
+<article [@slideIn]='state'>
+  <h2>Hello, my name's Liam.</h2>
+  <p>I build enterprise websites that perform well on all devices, focusing on responsive design, aesthetics, clean code &amp;
+    page speed.</p>
+  <app-button></app-button>
+</article>
+
     );
   }
 }

@@ -11,12 +11,16 @@ class SkillsComponent extends Component {
 
   render() {
     return (
-      <section className="header-logo-wrap">
-      <h1 className="header-title">GotPop</h1>
-      <span className="icon">
-        Icon here
-      </span>
-    </section>
+<section class="skills-title-bar" [@slideIn]='state'>
+  <h2>Skills</h2>
+  <p>Here's a quick overview of my skillset.</p>
+</section>
+<div [@listAnimation]="skills.length">
+  <ul class="skills-list">
+    <li *ngFor="let skill of skills">{{skill.name}}</li>
+  </ul>
+</div>
+
     );
   }
 }

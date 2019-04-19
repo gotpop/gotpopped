@@ -11,12 +11,8 @@ class FooterComponent extends Component {
 
   render() {
     return (
-      <section className="header-logo-wrap">
-      <h1 className="header-title">GotPop</h1>
-      <span className="icon">
-        Icon here
-      </span>
-    </section>
+      <app-social></app-social>
+      <small>© Copyright GotPop 2016</small>
     );
   }
 }

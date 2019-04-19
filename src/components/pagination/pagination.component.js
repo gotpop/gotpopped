@@ -11,12 +11,10 @@ class PaginationComponent extends Component {
 
   render() {
     return (
-      <section className="header-logo-wrap">
-      <h1 className="header-title">GotPop</h1>
-      <span className="icon">
-        Icon here
-      </span>
-    </section>
+<a class="btn" [routerLink]="['/work', nextId]">
+  <span>Next project -></span>
+</a>
+
     );
   }
 }
