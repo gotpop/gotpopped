@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./button.component.scss";
+import "./footer.component.scss";
 
 class FooterComponent extends Component {
 
@@ -11,8 +11,8 @@ class FooterComponent extends Component {
 
   render() {
     return (
-      <app-social></app-social>
-      <small>© Copyright GotPop 2016</small>
+      <div><app-social></app-social>
+      <small>© Copyright GotPop 2016</small></div>
     );
   }
 }
