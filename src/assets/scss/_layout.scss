@@ -11,11 +11,15 @@
     grid-template-areas: "header" "worknav" "site";
 }
 
-.home {
+.site {
     grid-area: site;
     grid-column: span 3;
     background: $site-background;
     display: flex;
     flex-direction: column;
     background: $site-background;
+}
+
+main {
+    min-height: 100vh;
 }
