@@ -27,7 +27,7 @@ class BehanceService {
 
 
  get() {
-  fetch('https://www.behance.net/v2/users/gotpop/projects?api_key=H2rbXT84MudGzvzQtdbRWCgnBpeTvVmj')
+  return fetch('https://www.behance.net/v2/users/gotpop/projects?api_key=H2rbXT84MudGzvzQtdbRWCgnBpeTvVmj')
   .then(
     function(response) {
       if (response.status !== 200) {

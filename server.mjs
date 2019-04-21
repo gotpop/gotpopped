@@ -22,6 +22,11 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
+// Behance
+let goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
+let thisBehance = goBehance.getProjects();
+let ello = goBehance.get();
+
 app.post('/api/behance', function (req, res) {
   var body = req.body;
   console.log('post Behance', body)
@@ -29,14 +34,3 @@ app.post('/api/behance', function (req, res) {
 });
 
 app.listen(port);
-
-
-let goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
-
-let thisBehance = goBehance.getProjects();
-
-let ello = goBehance.get();
-
-new Promise();
-
-console.log('Hello', ello);
