@@ -19,6 +19,7 @@
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.11",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -28,8 +29,9 @@
     "yarn": "^1.15.2"
   },
   "scripts": {
-    "start": "npm run build && node server.js",
+    "start": "npm run build && node server.mjs",
     "serve": "react-scripts start",
+    "server": "nodemon --experimental-modules server.mjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -43,7 +45,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-  }
+  ]
 }

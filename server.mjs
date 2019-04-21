@@ -1,22 +1,52 @@
 //server.js
+import Behance from "node-behance-api";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const express = require('express');
-const favicon = require('express-favicon');
-const path = require('path');
+// https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+// console.log('Hello', process.env);
+
+import express from 'express';
+// import favicon from 'express-favicon';
+import path from 'path';
 const port = process.env.PORT || 8080;
 const app = express();
-app.use(favicon(__dirname + '/build/favicon.ico'));
+// app.use(favicon(__dirname + '/build/favicon.ico'));
 // the __dirname is the current directory from where the script is running
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/ping', function (req, res) {
- return res.send('pong');
+  return res.send('pong');
 });
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(port);
+
+
+// var Behance = require("node-behance-api");
+// var behance = new Behance({"client_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"})
+// Behance.initOptions();
+// behance.get({
+//     api: Behance.APIS.GET_USER,
+//     params: { //or simply behance.get('user',
+//         user:'deepakmshrma'
+
+//     }
+// }, function (error, result) {
+//     if (error)
+//         console.log(error)
+//     else
+//         console.log(result)
+// });
+
+
+
+
+
+
 
 // //////////////////////////////////////////////////////////////////////
 // // Note : Express is only used on Heroku
