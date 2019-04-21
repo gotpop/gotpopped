@@ -20,7 +20,7 @@ let thisBehance = goBehance.getProjects();
 
 app.use(express.static(path.join('./', 'build')));
 
-let maUrl = 'https://www.behance.net/v2/users/gotpop/projects?api_key=H2rbXT84MudGzvzQtdbRWCgnBpeTvVmj';
+let maUrl = `https://www.behance.net/v2/users/${process.env.BE_USERNAME}/projects?api_key=${process.env.BE_API_KEY}`;
 
 app.get('/ping', function (req, res) {
   let maData = 'unset';
