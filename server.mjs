@@ -3,34 +3,42 @@ import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
 import express from 'express';
-import Behance from './node/behance.service'
+import Behance from './node/behance.service';
+import fetch from "node-fetch";
 
 // Node 10+ does not support __dirname
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(new URL(
+  import.meta.url).pathname);
 
 //Express
 const port = process.env.PORT || 8080;
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('/ping', function (req, res) {
-  return res.send('pong');
-});
-
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 // Behance
 let goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
 let thisBehance = goBehance.getProjects();
-let ello = goBehance.get();
 
-app.post('/api/behance', function (req, res) {
-  var body = req.body;
-  console.log('post Behance', body)
-  res.send(req.body);
+app.use(express.static(path.join('./', 'build')));
+
+let maUrl = 'https://www.behance.net/v2/users/gotpop/projects?api_key=H2rbXT84MudGzvzQtdbRWCgnBpeTvVmj';
+
+app.get('/ping', function (req, res) {
+  let maData = 'unset';
+
+  fetch(maUrl)
+  .then(response => response.json())
+  .then(data => {
+    maData = data.projects[0].name;
+    console.log(typeof data.projects[0].name); // Prints result from `response.json()` in getRequest
+    res.send(maData);
+  })
+  .catch(error => console.error(error));
 });
 
-app.listen(port);
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(port, function () {
+  console.log('GotPop is running on http://localhost:' + port);
+});
