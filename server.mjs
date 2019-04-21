@@ -15,22 +15,16 @@ const port = process.env.PORT || 8080;
 const app = express();
 
 // Behance
-let goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
-let thisBehance = goBehance.getProjects();
+const goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
+const thisBehance = goBehance.getProjects();
 
 app.use(express.static(path.join('./', 'build')));
 
-let maUrl = `https://www.behance.net/v2/users/${process.env.BE_USERNAME}/projects?api_key=${process.env.BE_API_KEY}`;
-
-app.get('/ping', function (req, res) {
-  let maData = 'unset';
-
-  fetch(maUrl)
+app.get('/behance/projects', function (req, res) {
+  fetch(thisBehance)
   .then(response => response.json())
   .then(data => {
-    maData = data.projects[0].name;
-    console.log(typeof data.projects[0].name); // Prints result from `response.json()` in getRequest
-    res.send(maData);
+    res.send(data);
   })
   .catch(error => console.error(error));
 });
