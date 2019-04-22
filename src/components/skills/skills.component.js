@@ -15,7 +15,7 @@ class SkillsComponent extends Component {
     const listItems = skills.map((link) =>
     <li key={link.name}>{link.name}</li> 
     );
-		console.log("TCL: SkillsComponent -> render -> listItems", listItems)
+		// console.log("TCL: SkillsComponent -> render -> listItems", listItems)
     return (
       <section className="skills-title-bar">
         <h2>Skills</h2>
