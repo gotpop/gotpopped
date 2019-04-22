@@ -20,12 +20,12 @@ class Gallery extends Component {
     return (
       <div>
         <h1>Work</h1>
-        <ul>
+        <ul className="gp-gallery">
           {this.state.movies.map(movie => {
-            return <li key={`movie-${movie.id}`}>
-            {movie.name}
-            {movie.covers.original}
-            <img src="{`movie.covers.origina}" alt="hello"/>
+            return <li key={`movie-${movie.id}`} className={movie.name}>
+            <h1>{movie.name}</h1>
+            <p>{movie.id}</p>
+            <img className={movie.name} key={movie.id} src={movie.covers.original} alt="Gallery"/>
             </li>
           })}
         </ul>

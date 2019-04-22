@@ -31,7 +31,7 @@
     "yarn": "^1.15.2"
   },
   "scripts": {
-    "start": " node --experimental-modules server.mjs",
+    "start": "node --experimental-modules server.mjs",
     "serve": "react-scripts start",
     "server": "nodemon --experimental-modules server.mjs",
     "build": "react-scripts build",
@@ -43,7 +43,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:3001",
   "browserslist": [
     ">0.2%",
     "not dead",
