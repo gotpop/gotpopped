@@ -19,9 +19,23 @@ const goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
 const thisBehance = goBehance.getProjects();
 
 app.use(express.static(path.join(__dirname, 'build')));
- 
+
 app.get('/behance/projects', function (req, res) {
   fetch(thisBehance)
+  .then(response => response.json())
+  .then(data => {
+    res.send(data);
+  })
+  .catch(error => console.error(error));
+});
+
+app.get('/behance/project', function (req, res) {
+
+  let projectId = req.query.projectId;
+  const thisBehanceProject = goBehance.getProject(projectId);
+  console.log("TCL: thisBehance", thisBehanceProject);
+  
+  fetch(thisBehanceProject)
   .then(response => response.json())
   .then(data => {
     res.send(data);
