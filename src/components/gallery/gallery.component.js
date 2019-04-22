@@ -1,33 +1,14 @@
 import React, { Component } from 'react';
-
 import "./gallery.component.scss";
 
 class Gallery extends Component {
 
-  // state = {
-  //   data : [],
-  //   movies : []
-  // };
-
-  constructor() {
-    super()
-    this.state = { movies: [] }
-  }
-
-
+  state = {
+    data : [],
+    movies : []
+  };
 
   componentDidMount() {
-    // fetch('/behance/projects')
-    //   .then(response => response.json())
-    //   .then(data => this.setState({ data }))
-    //   .then(data => {
-    //     this.setState(data);
-    //     console.log('Logging the  data', this.state.data);
-    //   });
-
-      //  var myRequest = new Request(website);
-    // let movies = [];
-
     fetch('/behance/projects')
       .then(response => response.json())
       .then(data => {
@@ -38,10 +19,14 @@ class Gallery extends Component {
   render() {
     return (
       <div>
-        <h1>Movie List</h1>
+        <h1>Work</h1>
         <ul>
           {this.state.movies.map(movie => {
-            return <li key={`movie-${movie.id}`}>{movie.name}</li>
+            return <li key={`movie-${movie.id}`}>
+            {movie.name}
+            {movie.covers.original}
+            <img src="{`movie.covers.origina}" alt="hello"/>
+            </li>
           })}
         </ul>
       </div>
