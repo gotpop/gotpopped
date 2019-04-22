@@ -1,0 +1,12 @@
+/* Global imports for non component SCSS */
+
+@import "variables";
+@import "reset";
+@import "fonts";
+@import "global";
+@import "typography";
+@import "layout";
+
+body {
+    background: hotpink !important;
+}

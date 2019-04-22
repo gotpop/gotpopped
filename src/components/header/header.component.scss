@@ -1,0 +1,47 @@
+/* Import */
+
+
+/* autoprefixer: off */
+
+@import "../../assets/scss/variables";
+
+/* Header */
+
+.he {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "menu";
+    grid-gap: $padding-small;
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+    color: #999;
+    background: $header-background;
+    padding: $padding-tiny;
+    box-shadow: $shadow-inset;
+}
+
+@media screen and (min-width: $medium-up) {
+     .he {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "title menu";
+        grid-gap: $padding-small;
+        justify-content: end;
+        padding: $padding-medium;
+    }
+}
+
+@media screen and (min-width: $large-up) {
+     .he {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 6rem 1fr 1fr 3fr;
+        grid-template-areas: ". title menu menu";
+        grid-gap: 0;
+        justify-content: end;
+        padding: 0;
+    }
+}

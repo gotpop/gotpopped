@@ -1,0 +1,28 @@
+// Summary
+
+.summary {
+    margin-bottom: 4rem;
+}
+
+.summary__list {
+    margin: 0 0 2rem 0;
+    padding: 0;
+}
+
+.summary__item {
+    list-style-type: none;
+    display: flex;
+
+    &:nth-child(odd) {
+        background: var(--light1);
+    }
+}
+
+.summary__key {
+    padding: 1em 0 1em 1em;
+    font-weight: bold;
+}
+
+.summary__value {
+    padding: 1em 0 1em .5em;
+}

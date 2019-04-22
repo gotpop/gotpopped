@@ -1,26 +1,97 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
+
+import './styles.scss';
+
+import Header from './components/header/header.component';
+import Home from './components/home/home.component.js';
+import Work from './components/work/work.component.js';
+import Skills from './components/skills/skills.component.js';
+import Footer from './components/footer/footer.component.js';
 
 class App extends Component {
+
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     data: 'hello',
+  //   };
+  // }
+  
+  state = {
+    text: "Logo",
+    score: 25,
+    toDashboard: false,
+    formDetails: null,
+    formDetails2: null,
+    formDetails3: null,
+    menuItems: [
+      {
+        key: 1,
+        id: 1,
+        title: "Home",
+        url: "/"
+      },
+      {
+        key: 2,
+        id: 2,
+        title: "Work",
+        url: "/work"
+      },
+      {
+        key: 3,
+        id: 3,
+        title: "Skills",
+        url: "/skills"
+      }
+    ]
+  };
+
+  setNameInApp = (maState) => {
+    console.log('maState', maState)
+    this.setState({
+      formDetails: maState
+    });
+  };
+  
+  setNameInApp2 = (maState) => {
+    this.setState({
+      formDetails2: maState
+    });
+  };
+  
+  setNameInApp3 = (maState) => {
+    this.setState({
+      formDetails3: maState
+    });
+  };
+
+  // componentDidMount() {
+  //   fetch('/behance/projects')
+  //     .then(response => response.json())
+  //     .then(data => this.setState({ data }))
+  //     .then(data => {
+  //       console.log('Logging data', this.state.data);
+  //     });
+  // }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className="ap">
+          <Header menuItems={this.state.menuItems} />
+          <div className="site">
+            <main>
+              <Route exact path="/" component={Home} />
+              {/* Render components to pass props */}
+              <Route path="/work" render={ () => <Work setNameInApp={this.setNameInApp} />} />
+              <Route path="/skills" render={ () => <Skills setNameInApp2={this.setNameInApp2} />} />
+            </main>
+            <Footer />
+          </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }

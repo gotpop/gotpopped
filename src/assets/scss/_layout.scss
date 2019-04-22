@@ -1,0 +1,25 @@
+/* Layout */
+
+@import 'variables';
+
+/* Layout */
+
+.ap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "worknav" "site";
+}
+
+.site {
+    grid-area: site;
+    grid-column: span 3;
+    background: $site-background;
+    display: flex;
+    flex-direction: column;
+    background: $site-background;
+}
+
+main {
+    min-height: 100vh;
+}

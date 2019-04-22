@@ -1,0 +1,10 @@
+// Footer
+
+.fo {
+    background: var(--dark2);
+    color: var(--light4);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
