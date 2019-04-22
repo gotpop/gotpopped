@@ -22,7 +22,7 @@ class BehanceService {
    this.projectApiUrl = 'https://www.behance.net/v2/projects/' + project_id
      + '?api_key=' + this.api_key;
 
-   return this._jsonp.get(this.projectApiUrl).map(response => response.json());
+     return this.projectApiUrl;
  }
 
 }
