@@ -1,9 +1,15 @@
 /* Import */
 @import "../../assets/scss/variables";
 
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
 /* Gallery */
 
 // img {
 //     display: block;
 //     margin: 20px;
 // }
+
+main {
+    max-width: 1000px;
+}
