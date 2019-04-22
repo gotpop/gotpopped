@@ -11,7 +11,7 @@
     "js"
   ],
   "engines": {
-    "node": ">=8.0.0",
+    "node": ">=11.0.0",
     "npm": ">=5.6.0"
   },
   "dependencies": {
@@ -31,13 +31,14 @@
     "yarn": "^1.15.2"
   },
   "scripts": {
-    "start": "npm run build && node server.mjs",
+    "start": " node --experimental-modules server.mjs",
     "serve": "react-scripts start",
     "server": "nodemon --experimental-modules server.mjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rm -rf build"
+    "clean": "rm -rf build",
+    "heroku-postbuild" : "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
