@@ -12,4 +12,4 @@ const skillsObject = [
   { name: 'OO Javascript' }
 ];
 
-export { skillsObject };
+export default skillsObject;
