@@ -1,9 +1,7 @@
 /* Imports */
-
 @import "../../../../shared/scss/variables";
 
 /* SCSS */
-
 .mobile-menu-trigger {
     padding: $padding-medium;
     position: absolute;
@@ -18,9 +16,7 @@
     }
 }
 
-
 /* Burger */
-
 .mobile-menu-trigger-burger,
 .mobile-menu-trigger-burger:after,
 .mobile-menu-trigger-burger:before {
