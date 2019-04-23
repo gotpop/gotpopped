@@ -3,9 +3,9 @@ import fetch from "node-fetch";
 
 class BehanceService {
 
- constructor(username, api_key) {
-    this.username = username;
-    this.api_key = api_key;
+ constructor(env) {
+    this.username = env.BE_USERNAME;
+    this.api_key = env.BE_API_KEY;
     this.projectsApiUrl;
     this.projectApiUrl;
   }
