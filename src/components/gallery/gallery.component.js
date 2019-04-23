@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Glide from '@glidejs/glide';
 import "./gallery.component.scss";
 
-// import moduleName from 'module';
-
 class Gallery extends Component {
 
   state = {
@@ -15,33 +13,34 @@ class Gallery extends Component {
     fetch('/behance/projects')
       .then(response => response.json())
       .then(data => {
-        this.setState({ allProjectsArray: data.projects });
+        this.setState({
+          allProjectsArray: data.projects
+        });
         this.getProject(data.projects);
       });
-      
-      
-      
+  }
+
+  getProject(projects) {
+    let singleProjects = [];
+    let promiseArray = [];
+
+    // Create an array of fetch promises 
+    for (const project of projects) {
+      promiseArray.push(
+        fetch(`/behance/project/?projectId=${project.id}`)
+        .then(response => response.json())
+        .then(data => {
+          singleProjects.push(data.project);
+        })
+      );
     }
-    
-    getProject(projects) {
-      let singleProjects = [];
-      let promiseArray = [];
-      
-      // Create an array of fetch promises 
-      for (const project of projects) {
-        promiseArray.push(
-          fetch(`/behance/project/?projectId=${project.id}`)
-          .then(response => response.json())
-          .then(data => {
-            singleProjects.push(data.project);
-          })
-          );
-        }
-        
-        // Execute and wait for all to resolve before setting state
-        Promise.all(promiseArray).then(()=> {
-          this.setState({ singleProjectsArray: singleProjects });
-          new Glide('.glide').mount();
+
+    // Execute and wait for all to resolve before setting state
+    Promise.all(promiseArray).then(() => {
+      this.setState({
+        singleProjectsArray: singleProjects
+      });
+      new Glide('.glide').mount();
     });
   }
 

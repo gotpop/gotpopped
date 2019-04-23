@@ -1,13 +1,7 @@
-import { Injectable } from '@angular/core';
-
-@Injectable()
+// Site
 export class SiteService {
 
-  private _width;
-
-  constructor() { }
-
-  public checkSiteWidth() {
+  checkSiteWidth() {
 
     const queries = {
       small: window.matchMedia('(min-width: 0px) and (max-width: 500px)').matches,
@@ -17,16 +11,16 @@ export class SiteService {
     };
 
     if (queries.small) {
-      this._width = 'small';
+      this.width = 'small';
     } else if (queries.medium) {
-      this._width = 'medium';
+      this.width = 'medium';
     } else if (queries.large) {
-      this._width = 'large';
+      this.width = 'large';
     } else if (queries.huge) {
-      this._width = 'huge';
+      this.width = 'huge';
     }
 
-    return this._width;
+    return this.width;
   }
 
 }

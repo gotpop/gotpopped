@@ -1,5 +1,4 @@
-/* Behance service */
-import fetch from "node-fetch";
+// Behance service 
 
 class BehanceService {
 
