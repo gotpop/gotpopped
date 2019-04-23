@@ -10,14 +10,6 @@ import Skills from './components/skills/skills.component.js';
 import Footer from './components/footer/footer.component.js';
 
 class App extends Component {
-
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     data: 'hello',
-  //   };
-  // }
   
   state = {
     text: "Logo",
@@ -66,15 +58,6 @@ class App extends Component {
       formDetails3: maState
     });
   };
-
-  // componentDidMount() {
-  //   fetch('/behance/projects')
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ data }))
-  //     .then(data => {
-  //       console.log('Logging data', this.state.data);
-  //     });
-  // }
   
   render() {
     return (
