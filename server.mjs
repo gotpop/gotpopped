@@ -15,7 +15,7 @@ const port = process.env.PORT || 3001;
 const app = express();
 
 // Behance
-const goBehance = new Behance(process.env.BE_USERNAME, process.env.BE_API_KEY);
+const goBehance = new Behance(process.env);
 const thisBehance = goBehance.getProjects();
 
 app.use(express.static(path.join(__dirname, 'build')));
