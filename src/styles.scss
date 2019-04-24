@@ -7,16 +7,17 @@
 .view-item {
     padding: $padding-tiny;
     margin: $margin-tiny;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-gap: $padding-tiny;
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: auto 1fr;
+    // grid-gap: $padding-tiny;
     min-height: 100vh;
 }
 
-@media screen and (min-width: $small-up) {
-    .view-item {
-        padding: $padding-large;
-        margin: $margin-large;
-    }
-}
+// @media screen and (min-width: $small-up) {
+//     .view-item {
+//         padding: $padding-large;
+//         margin: $margin-large;
+//     }
+// }

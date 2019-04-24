@@ -11,8 +11,8 @@
     "js"
   ],
   "engines": {
-    "node": "11.10.0",
-    "npm": "6.7.0"
+    "node": "11.0.0",
+    "npm": "6.4.1"
   },
   "dependencies": {
     "@glidejs/glide": "^3.3.0",
