@@ -14,8 +14,8 @@ class SkillsComponent extends Component {
       <section className="skills-title-bar">
         <h2>Skills</h2>
         <p>Skills go here</p>
-        <div className="navigation">
-          <ul>
+        <div>
+          <ul className="skills-list">
             {listItems}
           </ul>
         </div>
