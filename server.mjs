@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
 import express from 'express';
+const favicon = require('express-favicon');
 import Behance from './node/behance.service';
 import fetch from "node-fetch";
 
@@ -19,6 +20,7 @@ const goBehance = new Behance(process.env);
 const thisBehance = goBehance.getProjects();
 
 app.use(express.static(path.join(__dirname, 'build')));
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 app.get('/behance/projects', function (req, res) {
   fetch(thisBehance)
