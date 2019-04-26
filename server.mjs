@@ -13,7 +13,7 @@ const __dirname = path.dirname(new URL(
 
 //Express
 const port = process.env.PORT || 3001;
-const envy = process.evv.ENVIRONMENT;
+const envy = process.env.ENVIRONMENT;
 const app = express();
 
 // Behance
