@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
 import express from 'express';
-const favicon = require('express-favicon');
+import favicon from 'express-favicon';
 import Behance from './node/behance.service';
 import fetch from "node-fetch";
 
