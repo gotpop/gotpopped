@@ -13,6 +13,7 @@ const __dirname = path.dirname(new URL(
 
 //Express
 const port = process.env.PORT || 3001;
+const envy = process.evv.ENVIRONMENT;
 const app = express();
 
 // Behance
@@ -20,7 +21,7 @@ const goBehance = new Behance(process.env);
 const thisBehance = goBehance.getProjects();
 
 app.use(function(req, res, next) {
-  if ((req.get('X-Forwarded-Proto') !== 'https')) {
+  if ((req.get('X-Forwarded-Proto') !== 'https') && envy === "staging" || "production") {
     res.redirect('https://' + req.get('Host') + req.url);
   } else
     next();
