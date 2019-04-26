@@ -21,11 +21,18 @@ const goBehance = new Behance(process.env);
 const thisBehance = goBehance.getProjects();
 
 app.use(function(req, res, next) {
-  if ((req.get('X-Forwarded-Proto') !== 'https') && envy === "staging" || "production") {
+  if ((req.get('X-Forwarded-Proto') !== 'https')) {
     res.redirect('https://' + req.get('Host') + req.url);
   } else
     next();
 });
+
+// app.use(function(req, res, next) {
+//   if ((req.get('X-Forwarded-Proto') !== 'https') && envy === "staging" || "production") {
+//     res.redirect('https://' + req.get('Host') + req.url);
+//   } else
+//     next();
+// });
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(favicon(__dirname + '/public/favicon.png'));
