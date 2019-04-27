@@ -5,4 +5,22 @@
 /* Gallery */
 main {
     max-width: 1000px;
+    max-width: 80vw;
+}
+
+main .glide__track {
+    overflow: visible;
+}
+
+.glide__slide {
+    display: flex;
+
+    article {
+        flex: 1 1 40%;
+        margin-right: 1rem;
+    }
+
+    figure {
+        flex: 1 1 60%;
+    }
 }

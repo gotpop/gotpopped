@@ -51,10 +51,16 @@ class Gallery extends Component {
           <ul className="gp-gallery glide__slides">
             {this.state.singleProjectsArray.map(movie => {
               return <li key={`movie-${movie.id}`} className="glide__slide">
-              <h1>{movie.name}</h1>
-              <p>{movie.id}</p>
-              <img className={movie.name} key={movie.id} src={movie.modules[0].sizes.original} alt="Gallery"/>
-              </li>
+
+                      <article>
+                      <h1>{movie.name}</h1>
+                      <p>{movie.id}</p>
+                      <p className={movie.name} key={movie.id}>{movie.modules[1].text_plain}</p>
+                        </article>
+                        <figure>
+                          <img className={movie.name} key={movie.id} src={movie.modules[0].sizes.original} alt="Gallery"/>
+                        </figure>
+                      </li>
             })}
           </ul>
         </div>
