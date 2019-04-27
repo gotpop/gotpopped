@@ -14,7 +14,7 @@ class MenuTriggerComponent extends Component {
 
   render() {
     return (
-      <div id="mobileMenuTrigger" className="mobile-menu-trigger" onClick={this.activateLasers}>
+      <div id="mobileMenuTrigger" className="mobile-menu-trigger">
         <span className="mobile-menu-trigger-burger"></span>
         <span className="mobile-menu-trigger-text">Menu</span>
       </div>
