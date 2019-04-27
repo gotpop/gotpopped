@@ -40,7 +40,12 @@
     }
     &:hover svg {
         fill: $primary;
+        transition: fill .4s ease;
     }
+}
+
+.he-logo__link {
+    padding-top: 8px;
 }
 
 @media screen and (min-width: $large-up) {
