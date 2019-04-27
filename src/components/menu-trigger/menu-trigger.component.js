@@ -7,14 +7,13 @@ class MenuTriggerComponent extends Component {
     active: false
   };
 
-  activateLasers() {
-    console.log('Clicked!');
+  toggss = (e) => {
+    this.props.togg('test-key', e);
   }
-
 
   render() {
     return (
-      <div id="mobileMenuTrigger" className="mobile-menu-trigger">
+      <div onClick={this.toggss} id="mobileMenuTrigger" className="mobile-menu-trigger">
         <span className="mobile-menu-trigger-burger"></span>
         <span className="mobile-menu-trigger-text">Menu</span>
       </div>
