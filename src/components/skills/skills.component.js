@@ -11,11 +11,11 @@ class SkillsComponent extends Component {
     );
 
     return (
-      <section className="skills-title-bar">
+      <section className="si__view si__view--skills">
         <h2>Skills</h2>
         <p>Skills go here</p>
         <div>
-          <ul className="skills-list">
+          <ul className="skills__list">
             {listItems}
           </ul>
         </div>

@@ -63,8 +63,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="ap">
           <Header menuItems={this.state.menuItems} />
-          <div className="site">
-            <main>
+          <div className="si">
+            <main className="ma">
               <Route exact path="/" component={Home} />
               {/* Render components to pass props */}
               <Route path="/work" render={ () => <Work setNameInApp={this.setNameInApp} />} />

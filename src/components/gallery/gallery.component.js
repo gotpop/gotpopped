@@ -48,19 +48,18 @@ class Gallery extends Component {
     return (
       <div className="glide">
         <div className="glide__track" data-glide-el="track">
-          <ul className="gp-gallery glide__slides">
+          <ul className="glide__slides">
             {this.state.singleProjectsArray.map(movie => {
               return <li key={`movie-${movie.id}`} className="glide__slide">
-
                       <article>
-                      <h1>{movie.name}</h1>
-                      <p>{movie.id}</p>
-                      <p className={movie.name} key={movie.id}>{movie.modules[1].text_plain}</p>
-                        </article>
-                        <figure>
-                          <img className={movie.name} key={movie.id} src={movie.modules[0].sizes.original} alt="Gallery"/>
-                        </figure>
-                      </li>
+                        <h1>{movie.name}</h1>
+                        <p>{movie.id}</p>
+                        <p className={movie.name} key={movie.id}>{movie.modules[1].text_plain}</p>
+                      </article>
+                      <figure>
+                        <img className={movie.name} key={movie.id} src={movie.modules[0].sizes.original} alt="Gallery"/>
+                      </figure>
+                    </li>
             })}
           </ul>
         </div>
