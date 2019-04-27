@@ -12,7 +12,6 @@ class HeaderMenuComponent extends Component {
   toggleClass = (key, e) => {
     const currentState = this.state.active;
     this.setState({ active: !currentState });
-    console.log('Hello', key, e);
   };
 
   render() {
