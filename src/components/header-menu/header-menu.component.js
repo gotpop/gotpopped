@@ -16,8 +16,8 @@ class HeaderMenuComponent extends Component {
 
   render() {
     return (
-        <section className="header-menu">
-          <nav className={this.state.active ? 'menu-active': null}>
+        <section className="header-menu-wrap">
+          <nav className={this.state.active ? 'menu-active header-menu': 'header-menu'}>
             <NavLink className="header-menu-item" to="/" exact={true} activeClassName='active'>
                 <span>HOME</span>
                 <span className="icon">
