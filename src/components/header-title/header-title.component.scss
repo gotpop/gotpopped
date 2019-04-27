@@ -26,6 +26,7 @@
     justify-content: center;
     width: 100%;
     overflow: hidden;
+
     .icon {
         display: none;
         z-index: -2;
@@ -38,6 +39,13 @@
             fill: lighten($body-colour, 30%);
         }
     }
+
+    svg {
+        width: 100%;
+        fill: lighten($body-colour, 30%);
+        max-width: 240px;;
+    }
+
     &:hover svg {
         fill: $primary;
         transition: fill .4s ease;

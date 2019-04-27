@@ -1,4 +1,4 @@
-//server.js
+//server.js imports
 import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
@@ -11,28 +11,22 @@ import fetch from "node-fetch";
 const __dirname = path.dirname(new URL(
   import.meta.url).pathname);
 
-//Express
+//Express variables
 const port = process.env.PORT || 3001;
 const envy = process.env.ENVIRONMENT;
 const app = express();
 
-// Behance
+// Behance variables
 const goBehance = new Behance(process.env);
 const thisBehance = goBehance.getProjects();
 
+// Force https unless local dev environment
 app.use(function(req, res, next) {
-  if ((req.get('X-Forwarded-Proto') !== 'https')) {
+  if ((req.get('X-Forwarded-Proto') !== 'https') && envy !== 'local') {
     res.redirect('https://' + req.get('Host') + req.url);
   } else
     next();
 });
-
-// app.use(function(req, res, next) {
-//   if ((req.get('X-Forwarded-Proto') !== 'https') && envy === "staging" || "production") {
-//     res.redirect('https://' + req.get('Host') + req.url);
-//   } else
-//     next();
-// });
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(favicon(__dirname + '/public/favicon.png'));
