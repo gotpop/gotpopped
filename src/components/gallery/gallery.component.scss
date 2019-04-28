@@ -4,49 +4,52 @@
 
 // Gallery
 .ma .glide__track {
-    overflow: visible;
+  overflow: visible;
 }
 
 .glide__slide {
-    display: flex;
+  display: flex;
+  flex-direction: column;
 
-    article {
-        flex: 1 1 40%;
-        margin-right: 3rem;
-    }
+  article {
+    flex: 1 1 40%;
+    margin-right: 3rem;
+  }
 
-    h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1em;
-    }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
 
-    p {
-        color: rgba(black, .7);   
-    }
-
+  p {
+    color: rgba(black, .7);
+  }
 }
 
 .glide__figure {
-    flex: 1 1 60%;
-    margin: 1rem 3rem 0 0;
+  flex: 1 1 60%;
+  margin: 1rem 3rem 0 0;
 
+}
+
+@media screen and (min-width: $medium-up) {
+  .glide__slide {
+    flex-direction: row;
+  }
 }
 
 @keyframes fadeInDown {
-
-0% {
+  0% {
     opacity: 0;
     transform: translateY(40px);
-}
-100% {
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(0);
-}
-
+  }
 }
 
 .glide__slide {
-    // opacity: 0;
-    // animation: fadeIn .4s fi;
-    animation: fadeInDown 500ms ease-in-out;
+  animation: fadeInDown 500ms ease-in-out;
 }
