@@ -5,11 +5,13 @@ a {
 }
 
 html {
-    font-family: 'Code-Pro-LC';
+    font-family: $header7;
     font-size: 14px;
+
     @media (min-width: $small-up) {
         font-size: 2vw;
     }
+
     @media (min-width: $medium-up) {
         font-size: 1rem;
     }
@@ -20,13 +22,13 @@ body {
 }
 
 h1 {
-    font-family: 'Code-Pro-LC';
+    font-family: $header1;
     font-size: 3rem;
     line-height: $line-height;
 }
 
 h2 {
-    // font-family: 'Code-Pro-Light';
+    font-family: $header7;
     line-height: $line-height;
     font-size: 2rem;
 }
@@ -42,6 +44,7 @@ h6 {
 
 p {
     line-height: $line-height;
+    font-family: $header2;
 }
 
 li {

@@ -13,7 +13,6 @@ class SkillsComponent extends Component {
       <main className="ma ma--skills">
         <section className="skills">
           <h2>Skills</h2>
-          <p>Skills go here</p>
           <div>
             <ul className="skills__list">
               {listItems}
