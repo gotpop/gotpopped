@@ -40,7 +40,9 @@ class Gallery extends Component {
       this.setState({
         singleProjectsArray: singleProjects
       });
-      new Glide('.glide').mount();
+      new Glide('.glide', {
+        type: 'carousel'
+      }).mount();
     });
   }
 
@@ -56,7 +58,7 @@ class Gallery extends Component {
                         <p>{movie.id}</p>
                         <p className={movie.name} key={movie.id}>{movie.modules[1].text_plain}</p>
                       </article>
-                      <figure>
+                      <figure className="glide__figure">
                         <img className={movie.name} key={movie.id} src={movie.modules[0].sizes.original} alt="Gallery"/>
                       </figure>
                     </li>
