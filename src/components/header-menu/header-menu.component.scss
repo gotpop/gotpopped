@@ -1,9 +1,7 @@
 /* Imports */
-
 @import "../../assets/scss/_variables.scss";
 
 /* Menu */
-
 .he-menu__wrap {
     grid-area: menu;
     color: $dark2;
@@ -54,7 +52,7 @@
         background: $hover;
     }
 
-    &.active {
+    &--active {
         color: $light1;
         background: $primary;
 
