@@ -18,7 +18,7 @@ class HeaderMenuComponent extends Component {
     return (
         <section className="he-menu__wrap">
           <nav className={this.state.active ? 'he-menu he-menu--active': 'he-menu'}>
-            <NavLink className="he-menu__item" to="/" exact={true} activeClassName='active'>
+            <NavLink className="he-menu__item" to="/" exact={true} activeClassName='he-menu__item--active'>
               <span>HOME</span>
               <span className="he-menu__icon">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="73.4 103.2 471.2 430.5"
@@ -29,7 +29,7 @@ class HeaderMenuComponent extends Component {
                 </svg>
               </span>
             </NavLink>
-            <NavLink className="he-menu__item" to="/work" activeClassName='he-menu__item-active'>
+            <NavLink className="he-menu__item" to="/work" activeClassName='he-menu__item--active'>
               <span>WORK</span>
               <span className="he-menu__icon">
                 <svg version="1.1" x="0px" y="0px" viewBox="37.5 170.9 537 297.2" enableBackground="new 37.5 170.9 537 297.2">
@@ -39,7 +39,7 @@ class HeaderMenuComponent extends Component {
                 </svg>
               </span>
             </NavLink>
-            <NavLink className="he-menu__item" to="/skills" activeClassName='he-menu__item-active'>
+            <NavLink className="he-menu__item" to="/skills" activeClassName='he-menu__item--active'>
                 <span>SKILLS</span>
                 <span className="he-menu__icon">
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="103.9 117.4 404.8 404.7"
