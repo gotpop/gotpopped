@@ -27,7 +27,7 @@
     width: 30px;
     background: rgba($dark1, .8);
     position: absolute;
-    top: 38px;
+    top: 16px;
     display: block;
     content: "";
     transition: all 300ms ease-in-out;
@@ -41,20 +41,20 @@
     top: 10px;
 }
 
-.menu-open .mobile-menu-trigger-burger {
+.he-menu--active + button .mobile-menu-trigger-burger {
     background-color: transparent;
 }
 
-.menu-open .mobile-menu-trigger-burger:after,
-.menu-open .mobile-menu-trigger-burger:before {
+.he-menu--active + button .mobile-menu-trigger-burger:after,
+.he-menu--active + button .mobile-menu-trigger-burger:before {
     top: 0;
 }
 
-.menu-open .mobile-menu-trigger-burger:before {
+.he-menu--active + button .mobile-menu-trigger-burger:before {
     transform: rotate(45deg);
 }
 
-.menu-open .mobile-menu-trigger-burger:after {
+.he-menu--active + button .mobile-menu-trigger-burger:after {
     transform: rotate(-45deg);
 }
 

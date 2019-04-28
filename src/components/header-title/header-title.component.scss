@@ -1,10 +1,8 @@
-// /* Imports */
-
+// Imports
 @import "../../assets/scss/variables";
 
-// /* SCSS */
-
-.header-logo-wrap {
+// SCSS
+.he-logo__wrap {
     grid-area: title;
     cursor: pointer;
     color: $body-colour;
@@ -12,33 +10,12 @@
     align-content: centre;
 }
 
-.header-title {
-    margin: 0;
-    position: relative;
-    font-family: 'Code-Pro-Bold-LC';
-    color: lighten($body-colour, 30%);
-    font-size: 3rem;
-}
-
-.header-logo-wrap {
+.he-logo__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     overflow: hidden;
-
-    .icon {
-        display: none;
-        z-index: -2;
-        transform: rotate(45deg);
-        max-height: 100px;
-        max-width: 100px;
-        height: 50px;
-        svg {
-            width: 100%;
-            fill: lighten($body-colour, 30%);
-        }
-    }
 
     svg {
         width: 100%;
@@ -57,7 +34,7 @@
 }
 
 @media screen and (min-width: $large-up) {
-    .header-logo-wrap {
+    .he-logo__link {
         justify-content: flex-start;
     }
 }
