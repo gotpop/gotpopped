@@ -1,2 +1,24 @@
 // Import
 @import "../../assets/scss/variables";
+
+.ma--work {
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:    ". spaceglide ."
+                            ". glide ."
+                            ". spaceglide2 .";
+    display: grid;
+    max-width: 100vw;
+}
+
+.glide {
+    grid-area: glide;
+    max-width: 800px;
+    
+    &:before {
+        grid-area: spaceglide;
+    }
+    &:after {
+        grid-area: spaceglide2;
+    }
+}

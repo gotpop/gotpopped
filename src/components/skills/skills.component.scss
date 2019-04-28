@@ -1,6 +1,23 @@
 // Imports
 @import "../../assets/scss/variables";
 
+/* Home SCSS */
+.ma--skills {
+    grid-template-columns: 6rem 1fr 6rem;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:    ". spaceskills ."
+                            ". skills .";
+    display: grid;
+}
+
+.skills {
+    grid-area: skills;
+    
+    &:before {
+        grid-area: spaceskills;
+    }
+}
+
 // SCS
 .skills__list {
     display: grid;

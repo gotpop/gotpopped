@@ -11,13 +11,15 @@ class SkillsComponent extends Component {
 
     return (
       <main className="ma ma--skills">
-        <h2>Skills</h2>
-        <p>Skills go here</p>
-        <div>
-          <ul className="skills__list">
-            {listItems}
-          </ul>
-        </div>
+        <section className="skills">
+          <h2>Skills</h2>
+          <p>Skills go here</p>
+          <div>
+            <ul className="skills__list">
+              {listItems}
+            </ul>
+          </div>
+        </section>
       </main>
     );
   }
