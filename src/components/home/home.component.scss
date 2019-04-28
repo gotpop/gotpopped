@@ -1,4 +1,16 @@
 /* Home SCSS */
+.ma--home {
+    grid-template-columns: 6rem 3fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:    ". space ."
+                            ". intro .";
+    display: grid;
+}
+
 .intro {
-    max-width: 600px;
+    grid-area: intro;
+    
+    &:before {
+        grid-area: space;
+    }
 }

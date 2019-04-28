@@ -3,19 +3,14 @@
 
 // SCSS
 .he-logo__wrap {
-    grid-area: title;
-    cursor: pointer;
-    color: $body-colour;
-    display: flex;
-    align-content: centre;
-}
-
-.he-logo__wrap {
-    display: flex;
     align-items: center;
+    color: $body-colour;
+    cursor: pointer;
+    display: flex;
+    grid-area: title;
     justify-content: center;
-    width: 100%;
     overflow: hidden;
+    width: 100%;
 
     svg {
         width: 100%;
@@ -34,7 +29,7 @@
 }
 
 @media screen and (min-width: $large-up) {
-    .he-logo__link {
+    .he-logo__wrap {
         justify-content: flex-start;
     }
 }
