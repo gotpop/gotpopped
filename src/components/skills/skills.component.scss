@@ -1,12 +1,8 @@
-/* Imports */
+// Imports
 @import "../../assets/scss/variables";
 
-/* SCSS */
-.skills-title-bar {
-    margin-bottom: 2em;
-}
-
-.skills-list {
+// SCS
+.skills__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $padding-medium;
@@ -20,13 +16,13 @@
 }
 
 @media screen and (min-width: $medium-up) {
-    .skills-list {
+    .skills__list {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (min-width: $large-up) {
-    .skills-list {
+    .skills__list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
