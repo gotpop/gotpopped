@@ -5,9 +5,9 @@ import Gallery from '../gallery/gallery.component';
 class WorkComponent extends Component {
   render() {
     return (
-      <section className="ma__view ma__view--work">
+      <main className="ma ma--work">
         <Gallery></Gallery>
-      </section>
+      </main>
     );
   }
 }

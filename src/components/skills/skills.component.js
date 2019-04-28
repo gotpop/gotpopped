@@ -10,7 +10,7 @@ class SkillsComponent extends Component {
     );
 
     return (
-      <section className="ma__view ma__view--skills">
+      <main className="ma ma--skills">
         <h2>Skills</h2>
         <p>Skills go here</p>
         <div>
@@ -18,7 +18,7 @@ class SkillsComponent extends Component {
             {listItems}
           </ul>
         </div>
-      </section>
+      </main>
     );
   }
 }

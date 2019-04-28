@@ -63,15 +63,13 @@ class App extends Component {
       <BrowserRouter>
         <div className="ap">
           <Header menuItems={this.state.menuItems} />
-          <div className="si">
-            <main className="ma">
-              <Route exact path="/" component={Home} />
-              {/* Render components to pass props */}
-              <Route path="/work" render={ () => <Work setNameInApp={this.setNameInApp} />} />
-              <Route path="/skills" render={ () => <Skills setNameInApp2={this.setNameInApp2} />} />
-            </main>
+          <section className="si">
+            <Route exact path="/" component={Home} />
+            {/* Render components to pass props */}
+            <Route path="/work" render={ () => <Work setNameInApp={this.setNameInApp} />} />
+            <Route path="/skills" render={ () => <Skills setNameInApp2={this.setNameInApp2} />} />
             <Footer />
-          </div>
+          </section>
         </div>
       </BrowserRouter>
     );
