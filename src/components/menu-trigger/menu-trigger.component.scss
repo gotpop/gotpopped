@@ -9,6 +9,8 @@
     top: $padding-medium;
     right: $padding-medium;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 @media screen and (min-width: $medium-up) {

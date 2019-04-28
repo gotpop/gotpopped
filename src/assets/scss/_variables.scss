@@ -63,12 +63,6 @@ $margin-small: 1rem;
 $margin-medium: 2rem;
 $margin-large: 3rem;
 
-// Font file path
-$fontPath: "../fonts/codepro";
-
-// Type
-$line-height: 2em;
-
 // Hightlights
 $highlight: #5a656e;
 
@@ -81,3 +75,27 @@ $small-up: 500px;
 $medium-up: 900px;
 $large-up: 1200px;
 $huge-up: 1600px;
+
+// Fonts LC
+$header1: 'Code-Pro-Light-LC';
+$header2: 'Code-Pro-LC';
+$header3: 'Code-Pro-Bold-LC';
+$header4: 'Code-Pro-Black-LC';
+
+// Fonts AC
+$header5: 'Code-Pro-Light';
+$header6: 'Code-Pro-Light-Demo';
+$header7: 'Code-Pro';
+$header8: 'Code-Pro-Demo';
+$header9: 'Code-Pro-Bold';
+$header10: 'Code-Pro-Black';
+
+// Font file path
+$fontPath: "../fonts/codepro";
+
+// Type
+$line-height: 2em;
+
+$font1: 1rem;
+$font2: 2rem;
+$font3: 3rem;

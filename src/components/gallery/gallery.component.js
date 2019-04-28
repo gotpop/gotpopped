@@ -54,8 +54,7 @@ class Gallery extends Component {
             {this.state.singleProjectsArray.map(movie => {
               return <li key={`movie-${movie.id}`} className="glide__slide">
                       <article>
-                        <h1>{movie.name}</h1>
-                        <p>{movie.id}</p>
+                        <h2>{movie.name}</h2>
                         <p className={movie.name} key={movie.id}>{movie.modules[1].text_plain}</p>
                       </article>
                       <figure className="glide__figure">

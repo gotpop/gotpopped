@@ -1,4 +1,7 @@
-/* Home SCSS */
+// Import
+@import "../../assets/scss/variables";
+
+// Home SCSS 
 .ma--home {
     grid-template-columns: 6rem 3fr 4fr;
     grid-template-rows: 1fr 5fr;
@@ -12,5 +15,9 @@
     
     &:before {
         grid-area: space;
+    }
+
+    h2 {
+        font-family: $header2;
     }
 }
