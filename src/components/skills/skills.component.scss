@@ -1,12 +1,25 @@
-/* Imports */
+// Imports
 @import "../../assets/scss/variables";
 
-/* SCSS */
-.skills-title-bar {
-    margin-bottom: 2em;
+/* Home SCSS */
+.ma--skills {
+    grid-template-columns: 6rem 1fr 6rem;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:    ". spaceskills ."
+                            ". skills .";
+    display: grid;
 }
 
-.skills-list {
+.skills {
+    grid-area: skills;
+    
+    &:before {
+        grid-area: spaceskills;
+    }
+}
+
+// SCS
+.skills__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $padding-medium;
@@ -20,13 +33,13 @@
 }
 
 @media screen and (min-width: $medium-up) {
-    .skills-list {
+    .skills__list {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (min-width: $large-up) {
-    .skills-list {
+    .skills__list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }

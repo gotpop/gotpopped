@@ -1,1 +1,35 @@
-// App.scss
+// Imports 
+@import "./assets/scss/variables";
+
+// Layout
+.ap {
+  display: grid;
+  grid-template-areas: "header" "site";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.si {
+  background: $site-background;
+  display: grid;
+  grid-area: site;
+  grid-template-areas: "main" "footer";
+  grid-template-rows: 100vh auto;
+}
+
+.ma {
+  grid-area: main;
+}
+
+// .ma__view {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+// @media screen and (min-width: $small-up) {
+//     .ma__view {
+//         padding: $padding-large;
+//         margin: $margin-large;
+//     }
+// }

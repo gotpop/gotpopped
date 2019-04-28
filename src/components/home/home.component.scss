@@ -1,12 +1,16 @@
 /* Home SCSS */
+.ma--home {
+    grid-template-columns: 6rem 3fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:    ". space ."
+                            ". intro .";
+    display: grid;
+}
 
-main {
-    // padding: 3rem;
-    margin: 3rem;
-    display: flex;
-
-    article {
-        max-width: 600px;
-        ;
+.intro {
+    grid-area: intro;
+    
+    &:before {
+        grid-area: space;
     }
 }

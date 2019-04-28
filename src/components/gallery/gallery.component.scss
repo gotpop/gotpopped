@@ -1,14 +1,9 @@
-/* Import */
+// Import
 @import "../../assets/scss/variables";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
-/* Gallery */
-main {
-    max-width: 1000px;
-    max-width: 80vw;
-}
-
-main .glide__track {
+// Gallery
+.ma .glide__track {
     overflow: visible;
 }
 
@@ -20,7 +15,8 @@ main .glide__track {
         margin-right: 1rem;
     }
 
-    figure {
+    glide_figure {
         flex: 1 1 60%;
+        margin-right: 1rem;
     }
 }

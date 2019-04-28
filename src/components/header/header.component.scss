@@ -1,20 +1,20 @@
-/* Import */
+// Import
 @import "../../assets/scss/variables";
 
-/* Header */
+// Header
 .he {
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "title" "menu";
     grid-gap: 0;
-    z-index: 9999;
-    position: sticky;
+    z-index: 99;
     top: 0;
     color: #999;
     background: $header-background;
     padding: $padding-tiny;
     box-shadow: $shadow-inset;
+    max-width: calc(100vw - 17px);
 }
 
 @media screen and (min-width: $medium-up) {
