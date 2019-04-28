@@ -3,12 +3,7 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 /* Gallery */
-main {
-    max-width: 1000px;
-    max-width: 80vw;
-}
-
-main .glide__track {
+.ma .glide__track {
     overflow: visible;
 }
 

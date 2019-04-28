@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import skills from '../../data/skills';
-
 import "./skills.component.scss";
 
 class SkillsComponent extends Component {
@@ -11,7 +10,7 @@ class SkillsComponent extends Component {
     );
 
     return (
-      <section className="si__view si__view--skills">
+      <section className="ma__view ma__view--skills">
         <h2>Skills</h2>
         <p>Skills go here</p>
         <div>
