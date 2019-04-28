@@ -41,7 +41,9 @@ class Gallery extends Component {
         singleProjectsArray: singleProjects
       });
       new Glide('.glide', {
-        type: 'carousel'
+        type: 'carousel',
+        perView: 1,
+        gap: 100,
       }).mount();
     });
   }

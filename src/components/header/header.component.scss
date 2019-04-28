@@ -3,40 +3,40 @@
 
 // Header
 .he {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "menu";
-    grid-gap: 0;
-    z-index: 99;
-    top: 0;
-    color: #999;
     background: $header-background;
-    padding: $padding-tiny;
     box-shadow: $shadow-inset;
-    max-width: calc(100vw - 17px);
+    color: #999;
+    display: grid;
+    grid-area: header;
+    grid-gap: 0;
+    grid-template-areas: "title" "menu";
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: $padding-tiny;
+    top: 0;
+    z-index: 99;
 }
 
 @media screen and (min-width: $medium-up) {
-     .he {
-        grid-area: header;
+    .he {
         display: grid;
-        // grid-template-columns: 1fr 3fr;
-        grid-template-columns: 6rem 1fr 1fr 3fr;
-        grid-template-areas: "title title menu menu";
+        grid-area: header;
         grid-gap: 0;
+        grid-template-areas: "title title menu menu";
+        grid-template-columns: 6rem 1fr 1fr 3fr;
         justify-content: end;
+        max-width: calc(100vw - 17px);
         padding: $padding-tiny;
     }
 }
 
 @media screen and (min-width: $large-up) {
      .he {
-        grid-area: header;
         display: grid;
-        grid-template-columns: 6rem 3fr 1fr 3fr;
-        grid-template-areas: ". title menu menu";
+        grid-area: header;
         grid-gap: 0;
+        grid-template-areas: ". title menu menu";
+        grid-template-columns: 6rem 3fr 1fr 3fr;
         justify-content: end;
         padding: 0;
     }
