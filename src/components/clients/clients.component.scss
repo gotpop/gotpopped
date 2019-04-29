@@ -17,6 +17,7 @@
 
 .clients {
   grid-area: clients;
+  animation: fadeInUp 400ms ease-in-out;
 
   h2 {
     margin-bottom: 1em;
@@ -30,7 +31,6 @@
   grid-gap: $padding-medium;
   color: $body-colour;
   border-radius: $radius;
-  animation: fadeInUp 400ms ease-in-out;
 
   li {
     font-size: 1rem;
