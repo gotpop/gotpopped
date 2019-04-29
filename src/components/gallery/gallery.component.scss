@@ -7,6 +7,14 @@
   overflow: visible;
 }
 
+.glide {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
 .glide__slide {
   display: flex;
   flex-direction: column;
