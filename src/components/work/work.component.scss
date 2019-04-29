@@ -4,12 +4,16 @@
 // layout
 .ma--work {
     display: grid;
-    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-columns: 2rem 1fr 2rem;
     grid-template-rows: 1fr 10fr 1fr;
     grid-template-areas:    ". spaceglide ."
-                            ". glide ."
-                            ". spaceglide2 .";
+    ". glide ."
+    ". spaceglide2 .";
     max-width: 100vw;
+    
+    @media screen and (min-width: $medium-up) {
+        grid-template-columns: 2fr 8fr 2fr;
+    }
 
     @media screen and (min-width: $large-up) {
             grid-template-rows: 1fr 5fr 1fr;
