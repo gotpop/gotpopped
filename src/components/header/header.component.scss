@@ -15,29 +15,17 @@
     padding: $padding-tiny;
     top: 0;
     z-index: 99;
-}
 
-@media screen and (min-width: $medium-up) {
-    .he {
-        display: grid;
-        grid-area: header;
-        grid-gap: 0;
+    @media screen and (min-width: $medium-up) {
         grid-template-areas: "title title menu menu";
         grid-template-columns: 6rem 1fr 1fr 3fr;
         justify-content: end;
-        max-width: calc(100vw - 17px);
-        padding: $padding-tiny;
     }
-}
-
-@media screen and (min-width: $large-up) {
-     .he {
-        display: grid;
-        grid-area: header;
-        grid-gap: 0;
+    
+    @media screen and (min-width: $large-up) {
         grid-template-areas: ". title menu menu";
         grid-template-columns: 6rem 3fr 1fr 3fr;
-        justify-content: end;
+        max-width: calc(100vw - 17px);
         padding: 0;
     }
 }
