@@ -2,44 +2,46 @@
 @import "../../assets/scss/variables";
 
 /* Home SCSS */
-.ma--skills {
+.ma--clients {
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 10fr 2fr;
+  grid-template-areas: ". . ."
+    ". clients ."
+    ". . .";
+  display: grid;
+
+  @media screen and (min-width: $large-up) {
     grid-template-columns: 6rem 1fr 6rem;
-    grid-template-rows: 1fr 5fr;
-    grid-template-areas:    ". spaceskills ."
-                            ". skills .";
-    display: grid;
+  }
 }
 
-.skills {
-    grid-area: skills;
-    
-    &:before {
-        grid-area: spaceskills;
-    }
+.clients {
+  grid-area: clients;
+
+  h2 {
+    margin-bottom: 1em;
+  }
 }
 
-// SCS
-.skills__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: $padding-medium;
-    color: $body-colour;
-    border-radius: $radius;
-    li {
-        font-size: 1rem;
-        padding: $padding-small $padding-medium;
-        background: #fff;
-    }
-}
+// SCSS
+.clients__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $padding-medium;
+  color: $body-colour;
+  border-radius: $radius;
 
-@media screen and (min-width: $medium-up) {
-    .skills__list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+  li {
+    font-size: 1rem;
+    padding: $padding-small $padding-medium;
+    background: #fff;
+  }
 
-@media screen and (min-width: $large-up) {
-    .skills__list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  @media screen and (min-width: $medium-up) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: $large-up) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

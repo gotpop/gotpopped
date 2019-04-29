@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import skills from '../../data/skills';
+import clients from '../../data/clients';
 import "./clients.component.scss";
 
-class SkillsComponent extends Component {
+class ClientsComponent extends Component {
 
   render() {
-    const listItems = skills.map((link) =>
+    const listItems = clients.map((link) =>
       <li key={link.name}>{link.name}</li> 
     );
 
@@ -24,4 +24,4 @@ class SkillsComponent extends Component {
   }
 }
 
-export default SkillsComponent;
+export default ClientsComponent;

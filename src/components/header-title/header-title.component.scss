@@ -26,6 +26,10 @@
 
 .he-logo__link {
     padding-top: 8px;
+
+    &--active svg {
+        fill: $primary;
+    }
 }
 
 @media screen and (min-width: $large-up) {
