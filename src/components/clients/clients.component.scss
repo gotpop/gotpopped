@@ -25,21 +25,18 @@
     grid-gap: $padding-medium;
     color: $body-colour;
     border-radius: $radius;
+
     li {
         font-size: 1rem;
         padding: $padding-small $padding-medium;
         background: #fff;
     }
-}
 
-@media screen and (min-width: $medium-up) {
-    .clients__list {
+    @media screen and (min-width: $medium-up) {
         grid-template-columns: 1fr 1fr;
     }
-}
-
-@media screen and (min-width: $large-up) {
-    .clients__list {
+    
+    @media screen and (min-width: $large-up) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
