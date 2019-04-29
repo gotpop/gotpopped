@@ -44,7 +44,7 @@ app.get('/behance/project', function (req, res) {
 
   let projectId = req.query.projectId;
   const thisBehanceProject = goBehance.getProject(projectId);
-  console.log("TCL: thisBehance", thisBehanceProject);
+  console.log("thisBehance", thisBehanceProject);
   
   fetch(thisBehanceProject)
   .then(response => response.json())
