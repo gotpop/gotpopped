@@ -4,17 +4,18 @@
 /* Home SCSS */
 .ma--clients {
     grid-template-columns: 6rem 1fr 6rem;
-    grid-template-rows: 1fr 5fr;
-    grid-template-areas:    ". spaceclients ."
-                            ". clients .";
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:    ". . ."
+                            ". clients ."
+                            ". . .";
     display: grid;
 }
 
 .clients {
     grid-area: clients;
-    
-    &:before {
-        grid-area: spaceclients;
+
+    h2 {
+        margin-bottom: 1em;
     }
 }
 
