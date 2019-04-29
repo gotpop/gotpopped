@@ -3,19 +3,23 @@
 
 // Button SCSS
 .btn {
-    padding: 1rem 2rem;
-    background: $primary;
-    display: flex;
     align-items: center;
-    margin: 2rem 0 0 0;
-    transition: all .6s ease;
-    color: $light1;
-    max-width: 300px;
+    background: $primary;
     border-radius: $radius;
+    color: $light1;
+    display: flex;
     font-size: 1.2rem;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 2rem 0 0 0;
+    padding: 1rem 2rem;
+    transition: all .6s ease;
+    
     &:hover {
         background: lighten($primary, 5%);
+    }
+
+    @media screen and (min-width: $medium-up) {
+        justify-content: space-between;
     }
 }
 
@@ -24,6 +28,7 @@
     width: 50px;
     height: 50px;
     display: flex;
+    
     svg {
         width: 50px;
         height: auto;

@@ -5,13 +5,11 @@
 .he-menu__wrap {
     grid-area: menu;
     color: $dark2;
-    padding: $padding-small;
     align-items: center;
     z-index: 99999;
-}
-
-@media screen and (min-width: $large-up) {
-    .he-menu__wrap {
+    
+    @media screen and (min-width: $large-up) {
+        padding: $padding-small;
         justify-self: end;
     }
 }
@@ -24,15 +22,14 @@
     &--active {
         display: grid;
     }
-}
-
-@media screen and (min-width: $medium-up) {
-    .he-menu {
+ 
+    @media screen and (min-width: $medium-up) {
         display: grid;
         grid-auto-flow: column;
         grid-gap: $padding-small;
     }
 }
+
 
 .he-menu__item {
     display: flex;

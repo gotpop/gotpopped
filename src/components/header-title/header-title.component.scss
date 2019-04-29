@@ -12,6 +12,10 @@
     overflow: hidden;
     width: 100%;
 
+    @media screen and (min-width: $large-up) {
+            justify-content: flex-start;
+    }
+
     svg {
         width: 100%;
         fill: lighten($body-colour, 30%);
@@ -29,11 +33,5 @@
 
     &--active svg {
         fill: $primary;
-    }
-}
-
-@media screen and (min-width: $large-up) {
-    .he-logo__wrap {
-        justify-content: flex-start;
     }
 }
