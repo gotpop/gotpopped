@@ -2,24 +2,24 @@
 @import "../../assets/scss/variables";
 
 /* Home SCSS */
-.ma--skills {
+.ma--clients {
     grid-template-columns: 6rem 1fr 6rem;
     grid-template-rows: 1fr 5fr;
-    grid-template-areas:    ". spaceskills ."
-                            ". skills .";
+    grid-template-areas:    ". spaceclients ."
+                            ". clients .";
     display: grid;
 }
 
-.skills {
-    grid-area: skills;
+.clients {
+    grid-area: clients;
     
     &:before {
-        grid-area: spaceskills;
+        grid-area: spaceclients;
     }
 }
 
 // SCS
-.skills__list {
+.clients__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $padding-medium;
@@ -33,13 +33,13 @@
 }
 
 @media screen and (min-width: $medium-up) {
-    .skills__list {
+    .clients__list {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (min-width: $large-up) {
-    .skills__list {
+    .clients__list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
