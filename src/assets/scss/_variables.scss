@@ -76,6 +76,14 @@ $medium-up: 900px;
 $large-up: 1200px;
 $huge-up: 1600px;
 
+// Font file path
+$fontPath: "../fonts/codepro";
+$fontPath2: "../fonts/leitura";
+
+// Body text
+$body-regular: 'LeituraNews-Roman2';
+$body-italic: 'LeituraNews-Italic2';
+
 // Fonts LC
 $header1: 'Code-Pro-Light-LC';
 $header2: 'Code-Pro-LC';
@@ -89,9 +97,6 @@ $header7: 'Code-Pro';
 $header8: 'Code-Pro-Demo';
 $header9: 'Code-Pro-Bold';
 $header10: 'Code-Pro-Black';
-
-// Font file path
-$fontPath: "../fonts/codepro";
 
 // Type
 $line-height: 2em;

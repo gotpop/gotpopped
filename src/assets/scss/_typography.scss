@@ -1,17 +1,12 @@
 // Typography 
-
-a {
-    text-decoration: none;
-}
-
 html {
-    font-family: $header7;
+    font-family: $body-regular;
     font-size: 14px;
-
+    
     @media (min-width: $small-up) {
         font-size: 2vw;
     }
-
+    
     @media (min-width: $medium-up) {
         font-size: 1rem;
     }
@@ -19,6 +14,10 @@ html {
 
 body {
     color: $body-colour;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
@@ -44,7 +43,7 @@ h6 {
 
 p {
     line-height: $line-height;
-    font-family: $header2;
+    font-family: $body-regular;
 }
 
 li {
