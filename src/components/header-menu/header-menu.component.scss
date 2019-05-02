@@ -37,13 +37,13 @@
     margin: 0;
     flex: 1 1 auto;
     padding: $padding-tiny $padding-medium;
-    color: $body-colour;
+    color: $dark3;
     display: flex;
     align-items: center;
     border-radius: $radius;
     justify-content: space-around;
     font-size: 1.2em;
-    font-family: $header2;
+    font-family: $header-medium;
 
     &:hover {
         transition: all 0.5s ease;

@@ -11,7 +11,7 @@
     display: grid;
     
     @media screen and (min-width: $medium-up) {
-        grid-template-columns: 2fr 6fr 6fr;
+        grid-template-columns: 1fr 6fr 6fr;
         grid-template-rows: 1fr 5fr 2fr;
     }
 
@@ -24,8 +24,4 @@
 .intro {
     grid-area: intro;
     animation: fadeInUp 400ms ease-in-out;
-    
-    h2 {
-        font-family: $header2;
-    }
 }

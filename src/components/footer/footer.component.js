@@ -6,8 +6,8 @@ class FooterComponent extends Component {
   render() {
     return (
       <footer className="fo">
-        <small>© Copyright GotPop 2019</small>
         <Social></Social>
+        <small>© Copyright GotPop 2019</small>
       </footer>
     );
   }
