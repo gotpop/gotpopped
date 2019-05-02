@@ -92,19 +92,19 @@
 
 // Leitura
 @font-face {
-    font-family: 'LeituraNews-Italic2';
-    src: url('webfonts/394ABF_0_0.eot');
-    src: url('webfonts/394ABF_0_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/394ABF_0_0.woff2') format('woff2'), 
-    url('webfonts/394ABF_0_0.woff') format('woff'),
-    url('webfonts/394ABF_0_0.ttf') format('truetype');
-}
- 
-@font-face {
     font-family: 'LeituraNews-Roman2';
-    src: url('webfonts/394ABF_1_0.eot');
-    src: url('webfonts/394ABF_1_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/394ABF_1_0.woff2') format('woff2'),
-    url('webfonts/394ABF_1_0.woff') format('woff'),
-    url('webfonts/394ABF_1_0.ttf') format('truetype');
+    src: url('#{$fontPath2}/LeituraNews-Roman2.eot');
+    src: url('#{$fontPath2}/LeituraNews-Roman2.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontPath2}/LeituraNews-Roman2.woff2') format('woff2'),
+    url('#{$fontPath2}/LeituraNews-Roman2.woff') format('woff'),
+    url('#{$fontPath2}/LeituraNews-Roman2.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LeituraNews-Italic2';
+    src: url('#{$fontPath2}/LeituraNews-Italic2.eot');
+    src: url('#{$fontPath2}/LeituraNews-Italic2.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontPath2}/LeituraNews-Italic2.woff2') format('woff2'), 
+    url('#{$fontPath2}/LeituraNews-Italic2.woff') format('woff'),
+    url('#{$fontPath2}/LeituraNews-Italic2.ttf') format('truetype');
 }
