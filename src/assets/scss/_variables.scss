@@ -16,9 +16,9 @@ $lighttint4: #616e77;
 
 // Dark Colour Vars
 $dark1: rgb(102, 102, 102);
-$dark2: rgb(37, 36, 36);
+$dark2: rgb(63, 62, 62);
 $dark3: rgb(39, 39, 39);
-$dark4: rgb(26, 25, 25);
+$dark4: rgb(53, 51, 51);
 
 // Dark Tints
 $darktint1: #9ca7af;
@@ -67,8 +67,8 @@ $margin-large: 3rem;
 $highlight: #5a656e;
 
 // Typography colour
-$body-colour: $dark4;
-$header-colour: $dark4;
+$body-colour: $dark1;
+$header-colour: $dark3;
 
 // Media Queries
 $small-up: 500px;
@@ -77,26 +77,18 @@ $large-up: 1200px;
 $huge-up: 1600px;
 
 // Font file path
-$fontPath: "../fonts/codepro";
-$fontPath2: "../fonts/leitura";
+$fontPath: "../fonts/";
+$fontPath1: "#{$fontPath}codepro";
+$fontPath2: "#{$fontPath}leitura";
+$fontPath3: "#{$fontPath}avenir";
 
 // Body text
 $body-regular: 'LeituraNews-Roman2';
 $body-italic: 'LeituraNews-Italic2';
 
-// Fonts LC
-$header1: 'Code-Pro-Light-LC';
-$header2: 'Code-Pro-LC';
-$header3: 'Code-Pro-Bold-LC';
-$header4: 'Code-Pro-Black-LC';
-
-// Fonts AC
-$header5: 'Code-Pro-Light';
-$header6: 'Code-Pro-Light-Demo';
-$header7: 'Code-Pro';
-$header8: 'Code-Pro-Demo';
-$header9: 'Code-Pro-Bold';
-$header10: 'Code-Pro-Black';
+// Headers
+$header-light: 'Avenir LT Std 35 Light';
+$header-medium: 'Avenir LT Std 65 Medium';
 
 // Type
 $line-height: 2em;

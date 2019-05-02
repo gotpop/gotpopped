@@ -7,7 +7,8 @@
     background: $primary;
     border-radius: $radius;
     color: $light1;
-    display: flex;
+    display: inline-flex;
+    font-family: $header-medium;
     font-size: 1.2rem;
     justify-content: center;
     margin: 2rem 0 0 0;

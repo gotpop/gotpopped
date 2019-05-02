@@ -12,7 +12,7 @@ class ClientsComponent extends Component {
     return (
       <main className="ma ma--clients">
         <section className="clients">
-          <h2>clients</h2>
+          <h2>Clients</h2>
           <div>
             <ul className="clients__list">
               {listItems}
