@@ -8,11 +8,11 @@
     border-radius: $radius;
     color: $light1;
     display: inline-flex;
-    font-family: $header-medium;
-    font-size: 1.2rem;
+    font-family: $header-medium;    
+    font-size: .8rem;
     justify-content: center;
     margin: 2rem 0 0 0;
-    padding: 1rem 2rem;
+    padding: .4em 2rem;
     transition: all .6s ease;
     
     &:hover {
