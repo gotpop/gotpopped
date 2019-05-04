@@ -1,12 +1,16 @@
-import {UPDATE_USER} from '../actions/user-actions';
+import { UPDATE_USER } from '../actions/user-actions';
 
 export default function userReducer(state = '', {
     type,
     payload
 }) {
+    
+    console.log("TCL: UPDATE_USER.user", UPDATE_USER.user)
+	console.log("TCL: payload", payload)
+    
     switch (type) {
-        case UPDATE_USER.user:
-            return payload;
+        case UPDATE_USER:
+            return payload.user;
         default:
             return state;
     }

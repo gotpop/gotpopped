@@ -3,7 +3,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import './App.scss';
 
 import { connect } from 'react-redux';
-import { updateUser } from './actions/user-actions';
+import { updateUser }  from './actions/user-actions';
+// import userReducer from './reducers/user-reducer';
 
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
@@ -31,19 +32,20 @@ import Clients from './components/clients/clients.component';
       // console.log("TCL: state.user", this.state.user)
       this.props.onUpdateUser('Rich');
       
-      // console.log("TCL: state.user", this.state.user)
+      console.log("TCL: state.user", this.state);
     // console.log('Checkout', this);
     
   }
 
   render() {
     return (
-      <BrowserRouter>
-        <div className="ap">
+      <div>
           <section>
             <div className="update" onClick={this.onUpdateUser}>Update User</div>
             <h1>{this.props.user}</h1> 
           </section>
+      <BrowserRouter>
+        <div className="ap">
           <Header/>
           <section className="si">
             <Route exact path="/" component={Home} />
@@ -54,6 +56,7 @@ import Clients from './components/clients/clients.component';
           </section>
         </div>
       </BrowserRouter>
+      </div>
     );
   }
 }
