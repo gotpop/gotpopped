@@ -23,28 +23,28 @@ class App extends Component {
         this.props.onUpdateUser('Rich');
     }
 
-  render() {
-    return (
-      <div>
-        <section>
-          <div className="update" onClick={this.onUpdateUser}>Update User</div>
-          <h1>{this.props.user}</h1> 
-        </section>
-        <BrowserRouter>
-          <div className="ap">
-            <Header/>
-            <section className="si">
-              <Route exact path="/" component={Home} />
-              <Route path="/clients" render={ () => <Clients/>} />
-              <Route path="/work" render={ () => <Work/>} />
-              <Route path="/skills" render={ () => <Skills/>} />
-              <Footer />
-            </section>
-          </div>
-        </BrowserRouter>
-      </div>
-    );
-  }
+    render() {
+      return (
+        <div>
+          <section>
+            <div className="update" onClick={this.onUpdateUser}>Update User</div>
+            <h1>{this.props.user}</h1> 
+          </section>
+          <BrowserRouter>
+            <div className="ap">
+              <Header/>
+              <section className="si">
+                <Route exact path="/" component={Home} />
+                <Route path="/clients" render={ () => <Clients/>} />
+                <Route path="/work" render={ () => <Work/>} />
+                <Route path="/skills" render={ () => <Skills/>} />
+                <Footer />
+              </section>
+            </div>
+          </BrowserRouter>
+        </div>
+      );
+    }
 }
 
 const mapStateToProps = state => ({
