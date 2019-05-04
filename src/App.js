@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.scss';
 
-import { connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
@@ -51,25 +51,4 @@ class App extends Component {
   }
 }
 
-// export default App;
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-
-// import React from 'react';
-
-
-// const App = (props) => {
-
-// return(
-//   <div>
-//    <p>{props.count}</p>
-//    <button onClick={props.increment}>+</button>
-//    <button  onClick={props.decrement}>-</button>
-//   </div>
-//  );
-
-// };
-
-
-
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
