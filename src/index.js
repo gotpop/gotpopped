@@ -12,6 +12,14 @@ function productsReducer(state = [], action) {
 }
 
 function userReducer(state = '', action) {
+
+    switch (action.type) {
+        case 'updateUser':
+
+        return action.payload;
+        default:
+    console.log('Sorry, we are out of ');
+    }
     return state;
 }
 
@@ -28,7 +36,19 @@ const store = createStore(allReducers,
     window.devToolsExtension && window.devToolsExtension()
 );
 
-console.log("TCL: store", store.getState())
+console.log("TCL: store", store.getState());
+
+const updateUserAction = {
+    type: 'updateUser',
+    payload: {
+        user: 'Mum'
+    }
+};
+
+store.dispatch(updateUserAction);
+
+console.log("TCL: store", store.getState());
+
 
 
 ReactDOM.render(<App />, document.getElementById('gotPop'));
