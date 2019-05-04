@@ -20,9 +20,7 @@ class App extends Component {
     }
 
     onUpdateUser() {
-        // console.log("TCL: state.user", this.state.user)
         this.props.onUpdateUser('Rich');
-        console.log("TCL: state.user", this.state);
     }
 
   render() {
