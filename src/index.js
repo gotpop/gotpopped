@@ -4,41 +4,36 @@ import './assets/scss/index.scss';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { combineReducers, createStore } from 'redux';
-import provider from 'react-redux';
 
-function productsReducer(state = [], action) {
-    return state;
-}
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-function userReducer(state = '', {type, payload}) {
+const counter = (state = 0, action) => {
 
-    switch (type) {
-        case 'updateUser':
+    switch(action.type) {
+    
+    case 'INCREMENT':
+       return state = state + 1;
+    
+    case 'DECREMENT':
+       return state = state - 1;
+    
+    default:
+       return state;
+     }
+    
+    };
+    
+    const store = createStore(counter, 
+        {
+            products: [{ name: 'iphone'}],
+            user: 'Liam'
+        },
+        window.devToolsExtension && window.devToolsExtension());
 
-        return payload;
-        default:
-    console.log('Sorry, we are out of ');
-    }
-    return state;
-}
+    
 
-const allReducers = combineReducers({
-    products: productsReducer,
-    user: userReducer
-});
-
-const store = createStore(allReducers, 
-    {
-        products: [{ name: 'iphone'}],
-        user: 'Liam'
-    },
-    window.devToolsExtension && window.devToolsExtension()
-);
-
-console.log("TCL: store", store.getState());
-
-ReactDOM.render(<provider store={store}><App /></provider>, document.getElementById('gotPop'));
+ReactDOM.render( <Provider store={store}><App /></Provider>, document.getElementById('gotPop'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

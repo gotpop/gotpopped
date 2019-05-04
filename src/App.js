@@ -2,12 +2,35 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.scss';
 
+import { connect} from 'react-redux';
+
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
 import Work from './components/work/work.component.js';
 import Skills from './components/skills/skills.component.js';
 import Footer from './components/footer/footer.component.js';
 import Clients from './components/clients/clients.component';
+
+function mapStateToProps(state) {
+
+    return {
+        count: state
+    };
+
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        increment: () => dispatch({
+            type: 'INCREMENT'
+        }),
+        decrement: () => dispatch({
+            type: 'DECREMENT'
+        })
+    };
+
+}
+
 
 class App extends Component {
   render() {
@@ -28,4 +51,25 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+// import React from 'react';
+
+
+// const App = (props) => {
+
+// return(
+//   <div>
+//    <p>{props.count}</p>
+//    <button onClick={props.increment}>+</button>
+//    <button  onClick={props.decrement}>-</button>
+//   </div>
+//  );
+
+// };
+
+
+
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
