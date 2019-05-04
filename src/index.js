@@ -20,7 +20,11 @@ const allReducers = combineReducers({
     user: userReducer
 });
 
-const store = createStore(allReducers);
+const store = createStore(allReducers, {
+    products: [{ name: 'iphone'}],
+    user: 'Liam'
+});
+
 console.log("TCL: store", store.getState())
 
 
