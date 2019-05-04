@@ -4,7 +4,6 @@ import './App.scss';
 
 import { connect } from 'react-redux';
 import { updateUser }  from './actions/user-actions';
-// import userReducer from './reducers/user-reducer';
 
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
@@ -13,49 +12,38 @@ import Skills from './components/skills/skills.component.js';
 import Footer from './components/footer/footer.component.js';
 import Clients from './components/clients/clients.component';
 
-
-  
-  class App extends Component {
+class App extends Component {
     
     constructor(props) {
-      super(props);
-      
-      this.onUpdateUser = this.onUpdateUser.bind(this);
+        super(props);
+        this.onUpdateUser = this.onUpdateUser.bind(this);
     }
-    
-    // onUpdateUser = () => {
-    //   this.props.onUpdateUser('Rich');
-    //   console.log("TCL: state.user", this.state.user)
-    // }
-    
+
     onUpdateUser() {
-      // console.log("TCL: state.user", this.state.user)
-      this.props.onUpdateUser('Rich');
-      
-      console.log("TCL: state.user", this.state);
-    // console.log('Checkout', this);
-    
-  }
+        // console.log("TCL: state.user", this.state.user)
+        this.props.onUpdateUser('Rich');
+        console.log("TCL: state.user", this.state);
+    }
 
   render() {
     return (
       <div>
-          <section>
-            <div className="update" onClick={this.onUpdateUser}>Update User</div>
-            <h1>{this.props.user}</h1> 
-          </section>
-      <BrowserRouter>
-        <div className="ap">
-          <Header/>
-          <section className="si">
-            <Route exact path="/" component={Home} />
-            <Route path="/clients" render={ () => <Clients/>} />
-            <Route path="/work" render={ () => <Work/>} />
-            <Route path="/skills" render={ () => <Skills/>} />
-            <Footer />
-          </section>
-        </div>
-      </BrowserRouter>
+        <section>
+          <div className="update" onClick={this.onUpdateUser}>Update User</div>
+          <h1>{this.props.user}</h1> 
+        </section>
+        <BrowserRouter>
+          <div className="ap">
+            <Header/>
+            <section className="si">
+              <Route exact path="/" component={Home} />
+              <Route path="/clients" render={ () => <Clients/>} />
+              <Route path="/work" render={ () => <Work/>} />
+              <Route path="/skills" render={ () => <Skills/>} />
+              <Footer />
+            </section>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }

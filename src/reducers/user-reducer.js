@@ -5,8 +5,7 @@ export default function userReducer(state = '', {
     payload
 }) {
     
-    console.log("TCL: UPDATE_USER.user", UPDATE_USER.user)
-	console.log("TCL: payload", payload)
+	// console.log("TCL: payload", payload.user);
     
     switch (type) {
         case UPDATE_USER:
