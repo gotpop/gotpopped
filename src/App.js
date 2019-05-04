@@ -12,14 +12,7 @@ import Skills from './components/skills/skills.component.js';
 import Footer from './components/footer/footer.component.js';
 import Clients from './components/clients/clients.component';
 
-const mapStateToProps = state => ({
-    products: state.products,
-    user: state.user
-  });
-  
-  const mapActionsToProps = {
-    onUpdateUser: updateUser
-  };
+
   
   class App extends Component {
     
@@ -36,9 +29,10 @@ const mapStateToProps = state => ({
     
     onUpdateUser() {
       // console.log("TCL: state.user", this.state.user)
-    this.props.onUpdateUser('Rich');
-
-    console.log('Checkout', this);
+      this.props.onUpdateUser('Rich');
+      
+      // console.log("TCL: state.user", this.state.user)
+    // console.log('Checkout', this);
     
   }
 
@@ -63,5 +57,14 @@ const mapStateToProps = state => ({
     );
   }
 }
+
+const mapStateToProps = state => ({
+  products: state.products,
+  user: state.user
+});
+
+const mapActionsToProps = {
+  onUpdateUser: updateUser
+};
 
 export default connect(mapStateToProps, mapActionsToProps)(App);
