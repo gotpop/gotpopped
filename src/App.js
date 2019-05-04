@@ -11,26 +11,14 @@ import Skills from './components/skills/skills.component.js';
 import Footer from './components/footer/footer.component.js';
 import Clients from './components/clients/clients.component';
 
-function mapStateToProps(state) {
+const mapStateToProps = state => ({
+    products: state.products,
+    user: state.user
+});
 
-    return {
-        count: state
-    };
-
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        increment: () => dispatch({
-            type: 'INCREMENT'
-        }),
-        decrement: () => dispatch({
-            type: 'DECREMENT'
-        })
-    };
-
-}
-
+const mapActionsToProps = {
+  
+};
 
 class App extends Component {
   render() {
@@ -51,4 +39,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapActionsToProps)(App);
