@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./button.component.scss";
 
+import { connect } from 'react-redux';
+import { updateComponent }  from '../../actions/update-component-actions';
+
 class ButtonComponent extends Component {
+
+  onRefreshComponent = () => {
+    this.props.onRefreshComponent(true);
+  }
 
   render() {
     return (
-      <Link className="btn" to="/work">
+      <Link className="btn" to="/work" onClick={this.onRefreshComponent}>
         <span>VIEW PROJECTS</span>
         <span className="btn__icon">
           <svg enableBackground="new 42.8 191 526.3 257.1" version="1.1" viewBox="42.8 191 526.3 257.1" x="0px" y="0px">
@@ -20,4 +27,12 @@ class ButtonComponent extends Component {
   }
 }
 
-export default ButtonComponent;
+const mapStateToProps = state => ({
+  updateComponent: state.updateComponent
+});
+
+const mapActionsToProps = {
+  onRefreshComponent: updateComponent
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(ButtonComponent);
