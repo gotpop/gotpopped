@@ -28,7 +28,11 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname1, 'build')));
+
+app.use(express.static('build', {extensions: ['html', 'htm']}));
+// app.use(express.static('index.html', { root: './build' }));
+
 app.use(favicon(__dirname + '/public/favicon.png'));
 
 app.get('/behance/projects', function (req, res) {
@@ -55,7 +59,8 @@ app.get('/behance/project', function (req, res) {
 });
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  // res.sendFile(path.join(__dirname1, 'build', 'index.html'));
+  res.sendFile('index.html', { root: './build' })
 });
 
 app.listen(port, function () {
