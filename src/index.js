@@ -17,7 +17,7 @@ const store = createStore(allReducers,
     {
         menu: true
     },
-    window.devToolsExtension && window.devToolsExtension()
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('gotPop'));
