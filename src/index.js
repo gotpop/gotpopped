@@ -5,7 +5,28 @@ import './assets/scss/index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('gotPop'));
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
+import userReducer from './reducers/user-reducer';
+import productsReducer from './reducers/products-reducer';
+import menuReducer from './reducers/menu-reducer';
+
+const allReducers = combineReducers({
+    products: productsReducer,
+    user: userReducer,
+    menu: menuReducer
+});
+
+const store = createStore(allReducers, 
+    {
+        products: [{ name: 'iphone'}],
+        user: 'Liam',
+        menu: true
+    },
+    window.devToolsExtension && window.devToolsExtension()
+);
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('gotPop'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

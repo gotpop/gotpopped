@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import "./header-menu.component.scss";
-import MenuTrigger from '../menu-trigger/menu-trigger.component';
+
+import { connect } from 'react-redux';
 
 class HeaderMenuComponent extends Component {
-
-  state = {
-    active: false,
-  };
-
-  toggleClass = (key, e) => {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
-  };
-
   render() {
     return (
         <section className="he-menu__wrap">
-          <nav className={this.state.active ? 'he-menu he-menu--active': 'he-menu'}>
+          <nav className={this.props.menu ? 'he-menu he-menu--active': 'he-menu'}>
             <NavLink className="he-menu__item" to="/clients" activeClassName='he-menu__item--active' onClick={this.toggleClass}>
               <span>CLIENTS</span>
               <span className="he-menu__icon">
@@ -49,10 +40,13 @@ class HeaderMenuComponent extends Component {
                 </span>
             </NavLink>
         </nav>
-        <MenuTrigger togg={this.toggleClass}></MenuTrigger>
       </section>
     );
   }
 }
 
-export default HeaderMenuComponent;
+const mapStateToProps = state => ({
+  menu: state.menu
+});
+
+export default connect(mapStateToProps)(HeaderMenuComponent);
