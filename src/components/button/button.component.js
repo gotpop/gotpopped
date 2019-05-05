@@ -8,7 +8,8 @@ import { updateComponent }  from '../../actions/update-component-actions';
 class ButtonComponent extends Component {
 
   onRefreshComponent = () => {
-    this.props.onRefreshComponent(true);
+    let updateComponentStatus = this.props.updateComponent;
+    this.props.onRefreshComponent(!updateComponentStatus);
   }
 
   render() {
