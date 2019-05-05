@@ -1,9 +1,19 @@
 {
   "name": "gotpop",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": "GotPop",
   "license": "ISC",
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "npm run build && node --experimental-modules server.mjs",
+    "serve": "react-scripts start",
+    "server": "nodemon --experimental-modules server.mjs",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean": "rm -rf build"
+  },
   "keywords": [
     "static",
     "html",
@@ -32,15 +42,6 @@
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
     "yarn": "^1.15.2"
-  },
-  "scripts": {
-    "start": "npm run build && node --experimental-modules server.mjs",
-    "serve": "react-scripts start",
-    "server": "nodemon --experimental-modules server.mjs",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "clean": "rm -rf build"
   },
   "eslintConfig": {
     "extends": "react-app"
