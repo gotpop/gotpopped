@@ -6,15 +6,6 @@ import { updateMenu }  from '../../actions/menu-actions';
 
 class MenuTriggerComponent extends Component {
 
-//   constructor(props) {
-//     super(props);
-//     this.onUpdateMenu = this.onUpdateMenu.bind(this);
-// }
-
-  // clickEventForParent = (e) => {
-  //   this.props.togg('test-key', e);
-  // }
-
   onUpdateMenu = () => {
     let menuStatus = this.props.menu;
     this.props.onUpdateMenu(!menuStatus);
