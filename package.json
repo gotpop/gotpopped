@@ -1,9 +1,10 @@
 {
   "name": "gotpop",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": "GotPop",
   "license": "ISC",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "npm run build && node --experimental-modules server.mjs",
     "serve": "react-scripts start",
