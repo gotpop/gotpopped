@@ -8,16 +8,19 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import menuReducer from './reducers/menu-reducer';
+import updateComponentReducer from './reducers/update-component-reducer';
 
 const allReducers = combineReducers({
-    menu: menuReducer
+    menu: menuReducer,
+    updateComponent: updateComponentReducer
 });
 
 const store = createStore(allReducers, 
     {
-        menu: true
+        menu: true,
+        updateComponent: false
     },
-    window.devToolsExtension && window.devToolsExtension()
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('gotPop'));
