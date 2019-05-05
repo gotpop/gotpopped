@@ -3,13 +3,20 @@ import { NavLink } from "react-router-dom";
 import "./header-menu.component.scss";
 
 import { connect } from 'react-redux';
+import { updateMenu }  from '../../actions/menu-actions';
 
 class HeaderMenuComponent extends Component {
+
+  onUpdateMenu = () => {
+    let menuStatus = this.props.menu;
+    this.props.onUpdateMenu(!menuStatus);
+  }
+
   render() {
     return (
         <section className="he-menu__wrap">
           <nav className={this.props.menu ? 'he-menu he-menu--active': 'he-menu'}>
-            <NavLink className="he-menu__item" to="/clients" activeClassName='he-menu__item--active' onClick={this.toggleClass}>
+            <NavLink className="he-menu__item" to="/clients" activeClassName='he-menu__item--active' onClick={this.onUpdateMenu}>
               <span>CLIENTS</span>
               <span className="he-menu__icon">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="73.4 103.2 471.2 430.5"
@@ -20,7 +27,7 @@ class HeaderMenuComponent extends Component {
                 </svg>
               </span>
             </NavLink>
-            <NavLink className="he-menu__item" to="/work" activeClassName='he-menu__item--active' onClick={this.toggleClass}>
+            <NavLink className="he-menu__item" to="/work" activeClassName='he-menu__item--active' onClick={this.onUpdateMenu}>
               <span>WORK</span>
               <span className="he-menu__icon">
                 <svg version="1.1" x="0px" y="0px" viewBox="37.5 170.9 537 297.2" enableBackground="new 37.5 170.9 537 297.2">
@@ -30,7 +37,7 @@ class HeaderMenuComponent extends Component {
                 </svg>
               </span>
             </NavLink>
-            <NavLink className="he-menu__item" to="/skills" activeClassName='he-menu__item--active' onClick={this.toggleClass}>
+            <NavLink className="he-menu__item" to="/skills" activeClassName='he-menu__item--active' onClick={this.onUpdateMenu}>
                 <span>SKILLS</span>
                 <span className="he-menu__icon">
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="103.9 117.4 404.8 404.7"
@@ -49,4 +56,8 @@ const mapStateToProps = state => ({
   menu: state.menu
 });
 
-export default connect(mapStateToProps)(HeaderMenuComponent);
+const mapActionsToProps = {
+  onUpdateMenu: updateMenu
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(HeaderMenuComponent);
