@@ -22,8 +22,6 @@ class MenuTriggerComponent extends Component {
 }
 
 const mapStateToProps = state => ({
-  products: state.products,
-  user: state.user,
   menu: state.menu
 });
 

@@ -3,13 +3,8 @@ import { NavLink } from "react-router-dom";
 import "./header-menu.component.scss";
 
 import { connect } from 'react-redux';
-import { updateUser }  from '../../actions/user-actions';
 
 class HeaderMenuComponent extends Component {
-
-  state = {
-    active: false,
-  };
 
   toggleClass = () => {
     const currentState = this.state.active;
@@ -57,13 +52,7 @@ class HeaderMenuComponent extends Component {
 }
 
 const mapStateToProps = state => ({
-  products: state.products,
-  user: state.user,
   menu: state.menu
 });
 
-const mapActionsToProps = {
-  onUpdateUser: updateUser
-};
-
-export default connect(mapStateToProps, mapActionsToProps)(HeaderMenuComponent);
+export default connect(mapStateToProps)(HeaderMenuComponent);
