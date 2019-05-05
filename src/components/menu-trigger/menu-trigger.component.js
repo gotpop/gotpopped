@@ -13,10 +13,12 @@ class MenuTriggerComponent extends Component {
 
   render() {
     return (
-      <button onClick={this.onUpdateMenu} className="menu-trigger">
-        <span className={this.props.menu ? 'menu-trigger__burger menu-trigger__burger--active': 'menu-trigger__burger'}></span>
-        <span className="menu-trigger__text">Menu</span>
-      </button>
+      <div className="menu-trigger__wrap">
+        <button onClick={this.onUpdateMenu} className="menu-trigger">
+          <span className={this.props.menu ? 'menu-trigger__burger menu-trigger__burger--active': 'menu-trigger__burger'}></span>
+          <span className="menu-trigger__text">Menu</span>
+        </button>
+      </div>
     );
   }
 }

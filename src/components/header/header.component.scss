@@ -8,8 +8,8 @@
     display: grid;
     grid-area: header;
     grid-gap: 0;
-    grid-template-areas: "title" "menu";
-    grid-template-columns: 1fr;
+    grid-template-areas: ". title trigger" "menu menu menu";
+    grid-template-columns: 1fr 2fr 1fr;
     max-width: 100%;
     padding: $padding-tiny;
     top: 0;
