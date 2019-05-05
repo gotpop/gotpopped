@@ -5,12 +5,6 @@ import "./header-menu.component.scss";
 import { connect } from 'react-redux';
 
 class HeaderMenuComponent extends Component {
-
-  toggleClass = () => {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
-  };
-
   render() {
     return (
         <section className="he-menu__wrap">
