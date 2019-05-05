@@ -1,9 +1,8 @@
-/* Imports */
-
+// Imports
 @import "../../assets/scss/_variables.scss";
 
-/* SCSS */
-.mobile-menu-trigger {
+// SCSS
+.menu-trigger {
     padding: $padding-medium;
     position: absolute;
     top: $padding-medium;
@@ -11,59 +10,60 @@
     cursor: pointer;
     background: none;
     border: none;
-}
 
-@media screen and (min-width: $medium-up) {
-    .mobile-menu-trigger {
+    @media screen and (min-width: $medium-up) {
+        display: none;
+    }
+
+    &__text {
         display: none;
     }
 }
 
-/* Burger */
-.mobile-menu-trigger-burger,
-.mobile-menu-trigger-burger:after,
-.mobile-menu-trigger-burger:before {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 30px;
-    background: rgba($dark1, .8);
-    position: absolute;
-    top: 18px;
-    display: block;
-    content: "";
-    transition: all 300ms ease-in-out;
+// Burger
+.menu-trigger {
+
+    &__burger,
+    &__burger:after,
+    &__burger:before {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 30px;
+        background: rgba($dark1, .8);
+        position: absolute;
+        top: 18px;
+        display: block;
+        content: "";
+        transition: all 300ms ease-in-out;
+    }
+
+    &__burger {
+        left: 5px;
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            top: 10px;
+        }
+    }
 }
 
-.mobile-menu-trigger-burger {
-    left: 5px;
-}
-
-.mobile-menu-trigger-burger:before {
-    top: -10px;
-}
-
-.mobile-menu-trigger-burger:after {
-    top: 10px;
-}
-
-.he-menu--active + button .mobile-menu-trigger-burger {
+.menu-trigger__burger--active {
     background-color: transparent;
-}
 
-.he-menu--active + button .mobile-menu-trigger-burger:after,
-.he-menu--active + button .mobile-menu-trigger-burger:before {
-    top: 0;
-}
+    &::after,
+    &::before {
+        top: 0;
+    }
 
-.he-menu--active + button .mobile-menu-trigger-burger:before {
-    transform: rotate(45deg);
-}
+    &::before {
+        transform: rotate(45deg);
+    }
 
-.he-menu--active + button .mobile-menu-trigger-burger:after {
-    transform: rotate(-45deg);
-}
-
-.mobile-menu-trigger-text {
-    display: none;
+    &::after {
+        transform: rotate(-45deg);
+    }
 }
