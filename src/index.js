@@ -21,7 +21,7 @@ const store = createStore(allReducers,
     {
         products: [{ name: 'iphone'}],
         user: 'Liam',
-        menu: 'open'
+        menu: true
     },
     window.devToolsExtension && window.devToolsExtension()
 );

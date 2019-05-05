@@ -25,11 +25,6 @@ class App extends Component {
 
     render() {
       return (
-        <div>
-          <section>
-            <div className="update" onClick={this.onUpdateUser}>Update User</div>
-            <h1>{this.props.user}</h1> 
-          </section>
           <BrowserRouter>
             <div className="ap">
               <Header/>
@@ -42,7 +37,6 @@ class App extends Component {
               </section>
             </div>
           </BrowserRouter>
-        </div>
       );
     }
 }

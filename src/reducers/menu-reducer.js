@@ -1,6 +1,6 @@
 import { UPDATE_MENU } from '../actions/menu-actions';
 
-export default function menuReducer(state = '', {
+export default function menuReducer(state = Boolean, {
     type,
     payload
 }) {
