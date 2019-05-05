@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.scss';
 
-import { connect } from 'react-redux';
-import { updateUser }  from './actions/user-actions';
-
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
 import Work from './components/work/work.component.js';
@@ -13,16 +10,6 @@ import Footer from './components/footer/footer.component.js';
 import Clients from './components/clients/clients.component';
 
 class App extends Component {
-    
-    constructor(props) {
-        super(props);
-        this.onUpdateUser = this.onUpdateUser.bind(this);
-    }
-
-    onUpdateUser() {
-        this.props.onUpdateUser('Rich');
-    }
-
     render() {
       return (
           <BrowserRouter>
@@ -41,13 +28,4 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-  products: state.products,
-  user: state.user
-});
-
-const mapActionsToProps = {
-  onUpdateUser: updateUser
-};
-
-export default connect(mapStateToProps, mapActionsToProps)(App);
+export default (App);
