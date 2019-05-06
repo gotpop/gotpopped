@@ -19,8 +19,17 @@
   grid-area: main;
 }
 
-.update {
-  background: deeppink;
-  cursor: pointer;
-  padding: 4rem;
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}
+
+html,
+body {
+  position: fixed;
+  overflow: hidden;
 }
