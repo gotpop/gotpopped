@@ -2,16 +2,23 @@
 @import "../../assets/scss/variables";
 
 // layout
+.client {
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo__wrap {
-  display: inline-block;
-	// position: relative;
-	// width: 100%;
-	// padding-bottom: 100%; 
-	// vertical-align: middle; 
-  // overflow: hidden;
+  max-width: 100px;
+  height: auto;
   
-  // svg {
-  //   max-width: 100px;
-  //   height: auto;
-  // }
+  svg {
+    max-width: 100px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all .4s ease;
+
+    .client:hover & {
+      filter: grayscale(0%);
+    }
+  }
 }
