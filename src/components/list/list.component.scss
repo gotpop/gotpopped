@@ -2,34 +2,16 @@
 @import "../../assets/scss/variables";
 
 // layout
-.ma--work {
-  display: grid;
-  grid-template-columns: 2rem 1fr 2rem;
-  grid-template-rows: 1fr 10fr 1fr;
-  grid-template-areas: ". . ."
-    ". glide glide"
-    ". . .";
-
-  @media screen and (min-width: $medium-up) {
-    grid-template-columns: 1fr 8fr 2fr;
-  }
-
-  @media screen and (min-width: $large-up) {
-    grid-template-rows: 1fr 5fr 1fr;
-    grid-template-columns: 6rem 1fr 1rem;
-  }
-}
-
-.glide {
-  grid-area: glide;
-  max-width: 400px;
-  min-height: 50vh;
-
-  @media screen and (min-width: $medium-up) {
-    max-width: 700px;
-  }
-
-  @media screen and (min-width: $large-up) {
-    max-width: 1000px;
-  }
+.logo__wrap {
+  display: inline-block;
+	// position: relative;
+	// width: 100%;
+	// padding-bottom: 100%; 
+	// vertical-align: middle; 
+  // overflow: hidden;
+  
+  // svg {
+  //   max-width: 100px;
+  //   height: auto;
+  // }
 }
