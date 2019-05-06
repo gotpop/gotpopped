@@ -1,18 +1,30 @@
-/* Global SCSS */
+// Global SCSS
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    position: fixed;
+    overflow: hidden;
     background: $site-background;
+    
+    @media screen and (min-width: $medium-up) {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: static;
+    }
 }
 
 body {
-    min-height: 100vh;
-    overflow-x: hidden;
+    position: fixed;
+    overflow: hidden;
+
+    @media screen and (min-width: $medium-up) {
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: static;
+    }
 }
 
 img {
