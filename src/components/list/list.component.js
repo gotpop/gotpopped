@@ -7,7 +7,7 @@ class ListComponent extends Component {
         return (
             <li>
                 <div>{this.props.item.name}</div>
-                <Icon name="Domestos"/>
+                <Icon name={this.props.item.name}/>
             </li>
         );
     }
