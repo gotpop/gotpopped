@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import React, {Component} from 'react';
+import {BrowserRouter, Route} from "react-router-dom";
+import {AnimatedSwitch} from 'react-router-transition';
 import './App.scss';
-
-import { AnimatedSwitch } from 'react-router-transition';
 
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
@@ -13,27 +12,32 @@ import Clients from './components/clients/clients.component';
 
 class App extends Component {
     render() {
-      return (
-          <BrowserRouter>
-            <div className="ap">
-              <Header/>
-              <section className="si">
-                <AnimatedSwitch
-                  atEnter={{ opacity: 0 }}
-                  atLeave={{ opacity: 0 }}
-                  atActive={{ opacity: 1 }}
-                  className="switch-wrapper">
-                  <Route exact path="/" component={Home} />
-                  <Route path="/clients" render={ () => <Clients/>} />
-                  <Route path="/work" render={ () => <Work/>} />
-                  <Route path="/skills" render={ () => <Skills/>} />
-                  <Footer />
-                </AnimatedSwitch>
-              </section>
-            </div>
-          </BrowserRouter>
-      );
+        return (
+            <BrowserRouter>
+                <div className="ap">
+                    <Header/>
+                    <section className="si">
+                        <AnimatedSwitch
+                            atEnter={{
+                            opacity: 0
+                        }}
+                            atLeave={{
+                            opacity: 0
+                        }}
+                            atActive={{
+                            opacity: 1
+                        }}
+                            className="switch-wrapper">
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/clients" component={Clients}/>
+                            <Route path="/work" component={Work}/>
+                            <Route path="/skills" component={Skills}/>
+                        </AnimatedSwitch>
+                    </section>
+                </div>
+            </BrowserRouter>
+        );
     }
 }
 
-export default (App);
+export default(App);
