@@ -26,4 +26,6 @@
 .switch-wrapper > div {
   position: absolute;
   width: 100%;
+  background: $site-background;
+  overflow: hidden;
 }

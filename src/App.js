@@ -7,7 +7,6 @@ import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
 import Work from './components/work/work.component.js';
 import Skills from './components/skills/skills.component.js';
-import Footer from './components/footer/footer.component.js';
 import Clients from './components/clients/clients.component';
 
 class App extends Component {
@@ -19,14 +18,15 @@ class App extends Component {
                     <section className="si">
                         <AnimatedSwitch
                             atEnter={{
-                            opacity: 0
+                            offset: -100
                         }}
                             atLeave={{
-                            opacity: 0
+                            offset: 100
                         }}
                             atActive={{
-                            opacity: 1
+                            offset: 0
                         }}
+                            mapStyles={(styles) => ({transform: `translateX(${styles.offset}%)`})}
                             className="switch-wrapper">
                             <Route exact path="/" component={Home}/>
                             <Route path="/clients" component={Clients}/>
