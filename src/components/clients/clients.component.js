@@ -1,24 +1,23 @@
 import React, {Component} from 'react';
-import clients from '../../data/clients';
+import ListItem from '../list/list.component';
 import Footer from '../footer/footer.component.js';
+import clients from '../../data/clients';
 import "./clients.component.scss";
 
 class ClientsComponent extends Component {
     render() {
-        const listItems = clients.map((link) => <li key={link.name}>{link.name}</li>);
-
+        const List = ({list}) => (
+            <ul className="clients__list">
+                {list.map(item => (<ListItem key={item.name} item={item}/>))}
+            </ul>
+        );
         return (
             <div>
                 <main className="ma ma--clients">
                     <section className="clients">
                         <h2>Clients</h2>
-                        <div>
-                            <ul className="clients__list">
-                                {listItems}
-                            </ul>
-                        </div>
+                        <List list={clients}/>
                     </section>
-
                 </main>
                 <Footer/>
             </div>
