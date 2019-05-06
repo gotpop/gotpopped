@@ -24,3 +24,11 @@
   cursor: pointer;
   padding: 4rem;
 }
+
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}

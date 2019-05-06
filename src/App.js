@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.scss';
 
+import { AnimatedSwitch } from 'react-router-transition';
+
 import Header from './components/header/header.component';
 import Home from './components/home/home.component.js';
 import Work from './components/work/work.component.js';
@@ -16,11 +18,17 @@ class App extends Component {
             <div className="ap">
               <Header/>
               <section className="si">
-                <Route exact path="/" component={Home} />
-                <Route path="/clients" render={ () => <Clients/>} />
-                <Route path="/work" render={ () => <Work/>} />
-                <Route path="/skills" render={ () => <Skills/>} />
-                <Footer />
+                <AnimatedSwitch
+                  atEnter={{ opacity: 0 }}
+                  atLeave={{ opacity: 0 }}
+                  atActive={{ opacity: 1 }}
+                  className="switch-wrapper">
+                  <Route exact path="/" component={Home} />
+                  <Route path="/clients" render={ () => <Clients/>} />
+                  <Route path="/work" render={ () => <Work/>} />
+                  <Route path="/skills" render={ () => <Skills/>} />
+                  <Footer />
+                </AnimatedSwitch>
               </section>
             </div>
           </BrowserRouter>
