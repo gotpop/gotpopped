@@ -3,29 +3,30 @@
 
 // Layout
 .ap {
-  display: grid;
-  grid-template-areas: "header" "site";
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-areas: "header""site";
+    grid-template-columns: 1fr;
 }
 
 .si {
-  background: $site-background;
-  display: grid;
-  grid-area: site;
-  grid-template-areas: "main" "footer";
+    background: $site-background;
+    display: grid;
+    grid-area: site;
+    grid-template-areas: "main""footer";
 }
 
 .ma {
-  grid-area: main;
+    grid-area: main;
+    min-height: 100vh;
 }
 
 .switch-wrapper {
-  position: relative;
+    position: relative;
 }
 
-.switch-wrapper > div {
-  position: absolute;
-  width: 100%;
-  background: $site-background;
-  overflow: hidden;
+.switch-wrapper>div {
+    position: absolute;
+    width: 100%;
+    background: $site-background;
+    overflow: hidden;
 }
