@@ -3,22 +3,27 @@ import clients from '../../data/clients';
 import Footer from '../footer/footer.component.js';
 import "./clients.component.scss";
 
+const List = ({list}) => (
+    <ul className="clients__list">
+        {list.map(item => (<ListItem key={item.name} item={item}/>))}
+    </ul>
+);
+
+const ListItem = ({item}) => (
+    <li>
+        <div>{item.name}</div>
+    </li>
+);
+
 class ClientsComponent extends Component {
     render() {
-        const listItems = clients.map((link) => <li key={link.name}>{link.name}</li>);
-
         return (
             <div>
                 <main className="ma ma--clients">
                     <section className="clients">
                         <h2>Clients</h2>
-                        <div>
-                            <ul className="clients__list">
-                                {listItems}
-                            </ul>
-                        </div>
+                        <List list={clients}/>
                     </section>
-
                 </main>
                 <Footer/>
             </div>
