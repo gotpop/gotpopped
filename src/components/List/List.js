@@ -8,12 +8,10 @@ class ListComponent extends Component {
             <li>
                 <article className="client">
                     <h3>{this.props.item.name}</h3>
-                    <div className="logo__wrap">
+                    <div className={`logo__wrap logo__wrap--${this.props.item.name}`}>
                         <Icon
                             name={this.props.item.name}
-                            width="200"
-                            height="100"
-                            viewBox="0 0 200 50"/>
+                            viewBox={this.props.item.viewBox}/>
                     </div>
                 </article>
             </li>

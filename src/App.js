@@ -18,7 +18,7 @@ class App extends Component {
                     <section className="si">
                         <AnimatedSwitch
                             atEnter={{ opacity: 0 }}
-                            atLeave={{ opacity: 0 }}
+                            atLeave={{ opacity: 1 }}
                             atActive={{ opacity: 1 }}
                             className="switch-wrapper">
                             <Route exact path="/" component={Home}/>
