@@ -3,22 +3,22 @@
 
 // layout
 .client {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo__wrap {
-  max-width: 100px;
-  height: auto;
-  
-  svg {
     max-width: 100px;
     height: auto;
-    filter: grayscale(100%);
-    transition: all .4s ease;
 
-    .client:hover & {
-      filter: grayscale(0%);
+    svg {
+        max-width: 100px;
+        height: auto;
+        filter: grayscale(100%);
+        transition: all .4s ease;
+
+        .client:hover & {
+            filter: grayscale(0%);
+        }
     }
-  }
 }
