@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component} from './node_modules/react';
 import "./work.component.scss";
-import Gallery from '../gallery/gallery.component';
-import Footer from '../footer/footer.component.js';
+import Gallery from '../Gallery/Gallery';
+import Footer from '../Footer/Footer.js/index.js';
 
 class WorkComponent extends Component {
     render() {

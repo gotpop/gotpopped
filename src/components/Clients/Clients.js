@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import ListItem from '../list/list.component';
-import Footer from '../footer/footer.component.js';
+import React, {Component} from './node_modules/react';
+import ListItem from '../List/List';
+import Footer from '../Footer/Footer.js/index.js';
 import clients from '../../data/clients';
 import "./clients.component.scss";
 
