@@ -14,11 +14,15 @@
     svg {
         max-width: 100px;
         height: auto;
-        filter: grayscale(100%);
         transition: all 0.4s ease;
-
+        
+        @media screen and (min-width: $medium-up) {
+            filter: grayscale(100%);
+        }
         .client:hover & {
-            filter: grayscale(0%);
+            @media screen and (min-width: $medium-up) {
+                filter: grayscale(0%);
+            }
         }
     }
 }
