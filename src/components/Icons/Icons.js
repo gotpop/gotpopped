@@ -19,6 +19,20 @@ import {ReactComponent as Codepen} from '../../assets/img/svg/icons/codepen.svg'
 import {ReactComponent as Github} from '../../assets/img/svg/icons/github.svg';
 import {ReactComponent as Linkedin} from '../../assets/img/svg/icons/linkedin.svg';
 
+// Import skills logos
+import {ReactComponent as Angular} from '../../assets/img/svg/logos/skills/angular.svg';
+import {ReactComponent as Cssgrid} from '../../assets/img/svg/logos/skills/cssgrid.svg';
+import {ReactComponent as Design} from '../../assets/img/svg/logos/skills/design.svg';
+import {ReactComponent as Es6} from '../../assets/img/svg/logos/skills/es6.svg';
+import {ReactComponent as Git} from '../../assets/img/svg/logos/skills/git.svg';
+import {ReactComponent as Html5} from '../../assets/img/svg/logos/skills/html5.svg';
+import {ReactComponent as Jsdom} from '../../assets/img/svg/logos/skills/jsdom.svg';
+import {ReactComponent as ReactIcon} from '../../assets/img/svg/logos/skills/react.svg';
+import {ReactComponent as Redux} from '../../assets/img/svg/logos/skills/redux.svg';
+import {ReactComponent as Testing} from '../../assets/img/svg/logos/skills/testing.svg';
+import {ReactComponent as Vue} from '../../assets/img/svg/logos/skills/vue.svg';
+import {ReactComponent as Webpack} from '../../assets/img/svg/logos/skills/webpack.svg';
+
 const Icon = props => {
     switch (props.name) {
         case "Gotpop":
@@ -51,6 +65,30 @@ const Icon = props => {
             return <Linkedin {...props}/>;
         case "Skills":
             return <Skills {...props}/>;
+        case "Angular":
+            return <Angular {...props}/>;
+        case "Cssgrid":
+            return <Cssgrid {...props}/>;
+        case "Design":
+            return <Design {...props}/>;
+        case "Es6":
+            return <Es6 {...props}/>;
+        case "Git":
+            return <Git {...props}/>;
+        case "Html5":
+            return <Html5 {...props}/>;
+        case "Jsdom":
+            return <Jsdom {...props}/>;
+        case "ReactIcon":
+            return <ReactIcon {...props}/>;
+        case "Redux":
+            return <Redux {...props}/>;
+        case "Testing":
+            return <Testing {...props}/>;
+        case "Vue":
+            return <Vue {...props}/>;
+        case "Webpack":
+            return <Webpack {...props}/>;
         default:
             return <div/>;
     }

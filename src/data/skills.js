@@ -1,25 +1,53 @@
 // Skills data
 const skillsObject = [
     {
-        name: 'Html 5'
+        name: 'angular',
+        title: 'Domestos',
+        content: 'Some content'
     }, {
-        name: 'CSS3'
+        name: 'cssgrid',
+        title: 'Mercedes Benz',
+        content: 'Some content'
     }, {
-        name: 'Vannila JavaScript ES6'
+        name: 'design',
+        title: 'Aetna Insurance',
+        content: 'Some content'
     }, {
-        name: 'Single page applications'
+        name: 'es6',
+        title: 'Columbus Insurance',
+        content: 'Some content'
     }, {
-        name: 'Rich media web'
+        name: 'git',
+        title: 'Magnum Ice Cream',
+        content: 'Some content'
     }, {
-        name: 'Git'
+        name: 'html5',
+        title: 'Virgin Radio',
+        content: 'Some content'
     }, {
-        name: 'Webpack'
+        name: 'jsdom',
+        title: 'Discovery Education',
+        content: 'Some content'
     }, {
-        name: 'UI Design'
+        name: 'react',
+        title: 'Discovery Education',
+        content: 'Some content'
     }, {
-        name: 'Angular(2)'
+        name: 'redux',
+        title: 'Discovery Education',
+        content: 'Some content'
     }, {
-        name: 'OO Javascript'
+        name: 'testing',
+        title: 'Discovery Education',
+        content: 'Some content'
+    }, {
+        name: 'vue',
+        title: 'Discovery Education',
+        content: 'Some content'
+    }, {
+        name: 'webpack',
+        title: 'Discovery Education',
+        content: 'Some content'
     }
 ];
 
