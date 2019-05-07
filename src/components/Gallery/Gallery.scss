@@ -1,0 +1,45 @@
+// Import
+@import "../../assets/scss/variables";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Gallery
+.ma .glide__track {
+    overflow: visible;
+}
+
+.glide {
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.glide__slide {
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 400ms ease-in-out;
+
+    @media screen and (min-width: $medium-up) {
+            flex-direction: row;
+    }
+
+    article {
+        flex: 1 1 40%;
+        margin-right: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    p {
+        color: rgba(black, 0.7);
+    }
+}
+
+.glide__figure {
+    flex: 1 1 60%;
+    margin: 1rem 3rem 0 0;
+}

@@ -1,0 +1,16 @@
+// Imports
+@import "../../assets/scss/variables";
+
+// SCSS
+.social {
+    margin: $margin-medium;
+}
+
+.social svg {
+    max-width: 100px;
+    fill: $secondary;
+}
+
+.social__link {
+    margin: $margin-tiny;
+}

@@ -14,14 +14,22 @@ class DealWithTouchEvents {
 
         for (const touchItem of touchItemsArray) {
             sampleItem = touchItem;
-            
-            touchItem.addEventListener('touchstart', ()=> {
+
+            touchItem.addEventListener('touchstart', () => {
                 if (this.isTouchActive === false) {
-                    touchItem.classList.add('not-touched');
-                    touchItem.classList.remove('touched');
+                    touchItem
+                        .classList
+                        .add('not-touched');
+                    touchItem
+                        .classList
+                        .remove('touched');
                 } else if (this.isTouchActive === true) {
-                    touchItem.classList.add('touched');
-                    touchItem.classList.remove('not-touched');
+                    touchItem
+                        .classList
+                        .add('touched');
+                    touchItem
+                        .classList
+                        .remove('not-touched');
                 };
 
                 this.isTouchActive = !this.isTouchActive;
@@ -34,8 +42,10 @@ class DealWithTouchEvents {
     getWindowWidth(direction, width) {
         if (direction === ('min' || 'max') && width.length > 4) {
             const widthString = `(${direction}-width: ${width})`;
-            const widthMatches = window.matchMedia(widthString).matches;
-            
+            const widthMatches = window
+                .matchMedia(widthString)
+                .matches;
+
             return widthMatches
         } else {
             console.error('getWindowWidth() must have valid input properties');

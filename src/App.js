@@ -3,11 +3,11 @@ import {BrowserRouter, Route} from "react-router-dom";
 import {AnimatedSwitch} from 'react-router-transition';
 import './App.scss';
 
-import Header from './components/header/header.component';
-import Home from './components/home/home.component.js';
-import Work from './components/work/work.component.js';
-import Skills from './components/skills/skills.component.js';
-import Clients from './components/clients/clients.component';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Work from './components/Work/Work';
+import Skills from './components/Skills/Skills';
+import Clients from './components/Clients/Clients';
 
 class App extends Component {
     render() {
@@ -17,16 +17,9 @@ class App extends Component {
                     <Header/>
                     <section className="si">
                         <AnimatedSwitch
-                            atEnter={{
-                            offset: -100
-                        }}
-                            atLeave={{
-                            offset: 100
-                        }}
-                            atActive={{
-                            offset: 0
-                        }}
-                            mapStyles={(styles) => ({transform: `translateX(${styles.offset}%)`})}
+                            atEnter={{ opacity: 0 }}
+                            atLeave={{ opacity: 0 }}
+                            atActive={{ opacity: 1 }}
                             className="switch-wrapper">
                             <Route exact path="/" component={Home}/>
                             <Route path="/clients" component={Clients}/>

@@ -1,0 +1,49 @@
+// Imports
+@import "../../assets/scss/variables";
+
+/* Home SCSS */
+.ma--clients {
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 10fr 2fr;
+    grid-template-areas:
+        ". . ."
+        ". clients ."
+        ". . .";
+    display: grid;
+
+    @media screen and (min-width: $large-up) {
+        grid-template-columns: 6rem 1fr 6rem;
+    }
+}
+
+.clients {
+    grid-area: clients;
+    animation: fadeInUp 400ms ease-in-out;
+
+    h2 {
+        margin-bottom: 1em;
+    }
+}
+
+// SCSS
+.clients__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $padding-medium;
+    color: $body-colour;
+    border-radius: $radius;
+
+    li {
+        font-size: 1rem;
+        padding: $padding-small $padding-medium;
+        background: #fff;
+    }
+
+    @media screen and (min-width: $medium-up) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: $large-up) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

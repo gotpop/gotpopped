@@ -1,0 +1,76 @@
+// Imports
+@import "../../assets/scss/_variables.scss";
+
+// SCSS
+.menu-trigger {
+    padding: $padding-medium;
+    position: relative;
+    // top: $padding-medium;
+    // right: $padding-medium;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background: $lighttint2;
+
+    @media screen and (min-width: $medium-up) {
+        display: none;
+    }
+
+    &__text {
+        display: none;
+    }
+
+    &__wrap {
+        grid-area: trigger;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Burger
+.menu-trigger {
+    &__burger,
+    &__burger:after,
+    &__burger:before {
+        cursor: pointer;
+        border-radius: 0.25rem;
+        height: 0.5rem;
+        width: 3rem;
+        background: rgba($dark1, 1);
+        position: absolute;
+        top: 1.7rem;
+        display: block;
+        content: "";
+        transition: all 200ms ease-in-out;
+    }
+
+    &__burger {
+        right: 0.5rem;
+
+        &::before {
+            top: -1rem;
+        }
+
+        &::after {
+            top: 1rem;
+        }
+    }
+}
+
+.menu-trigger__burger--active {
+    background-color: transparent;
+
+    &::after,
+    &::before {
+        top: 0;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

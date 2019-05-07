@@ -1,10 +1,10 @@
-// Imports 
+// Imports
 @import "./assets/scss/variables";
 
 // Layout
 .ap {
     display: grid;
-    grid-template-areas: "header""site";
+    grid-template-areas: "header" "site";
     grid-template-columns: 1fr;
 }
 
@@ -12,7 +12,7 @@
     background: $site-background;
     display: grid;
     grid-area: site;
-    grid-template-areas: "main""footer";
+    grid-template-areas: "main" "footer";
 }
 
 .ma {
@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.switch-wrapper>div {
+.switch-wrapper > div {
     position: absolute;
     width: 100%;
     background: $site-background;
