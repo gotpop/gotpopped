@@ -1,206 +1,208 @@
-/* Fonts */
+// Fonts
 
 @font-face {
-  font-family: 'Code-Pro-Black-LC';
-  src: url('#{$fontPath1}/33F95F_0_0.eot');
-  src: url('#{$fontPath1}/33F95F_0_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_0_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_0_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_0_0.ttf') format('truetype');
+    font-family: "Code-Pro-Black-LC";
+    src: url("#{$fontPath1}/33F95F_0_0.eot");
+    src: url("#{$fontPath1}/33F95F_0_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_0_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_0_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_0_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Black';
-  src: url('#{$fontPath1}/33F95F_1_0.eot');
-  src: url('#{$fontPath1}/33F95F_1_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_1_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_1_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_1_0.ttf') format('truetype');
+    font-family: "Code-Pro-Black";
+    src: url("#{$fontPath1}/33F95F_1_0.eot");
+    src: url("#{$fontPath1}/33F95F_1_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_1_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_1_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_1_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Demo';
-  src: url('#{$fontPath1}/33F95F_2_0.eot');
-  src: url('#{$fontPath1}/33F95F_2_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_2_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_2_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_2_0.ttf') format('truetype');
+    font-family: "Code-Pro-Demo";
+    src: url("#{$fontPath1}/33F95F_2_0.eot");
+    src: url("#{$fontPath1}/33F95F_2_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_2_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_2_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_2_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Bold-LC';
-  src: url('#{$fontPath1}/33F95F_3_0.eot');
-  src: url('#{$fontPath1}/33F95F_3_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_3_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_3_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_3_0.ttf') format('truetype');
+    font-family: "Code-Pro-Bold-LC";
+    src: url("#{$fontPath1}/33F95F_3_0.eot");
+    src: url("#{$fontPath1}/33F95F_3_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_3_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_3_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_3_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Light-LC';
-  src: url('#{$fontPath1}/33F95F_4_0.eot');
-  src: url('#{$fontPath1}/33F95F_4_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_4_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_4_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_4_0.ttf') format('truetype');
+    font-family: "Code-Pro-Light-LC";
+    src: url("#{$fontPath1}/33F95F_4_0.eot");
+    src: url("#{$fontPath1}/33F95F_4_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_4_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_4_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_4_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Light-Demo';
-  src: url('#{$fontPath1}/33F95F_5_0.eot');
-  src: url('#{$fontPath1}/33F95F_5_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_5_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_5_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_5_0.ttf') format('truetype');
+    font-family: "Code-Pro-Light-Demo";
+    src: url("#{$fontPath1}/33F95F_5_0.eot");
+    src: url("#{$fontPath1}/33F95F_5_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_5_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_5_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_5_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-LC';
-  src: url('#{$fontPath1}/33F95F_6_0.eot');
-  src: url('#{$fontPath1}/33F95F_6_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_6_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_6_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_6_0.ttf') format('truetype');
+    font-family: "Code-Pro-LC";
+    src: url("#{$fontPath1}/33F95F_6_0.eot");
+    src: url("#{$fontPath1}/33F95F_6_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_6_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_6_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_6_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Light';
-  src: url('#{$fontPath1}/33F95F_7_0.eot');
-  src: url('#{$fontPath1}/33F95F_7_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_7_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_7_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_7_0.ttf') format('truetype');
+    font-family: "Code-Pro-Light";
+    src: url("#{$fontPath1}/33F95F_7_0.eot");
+    src: url("#{$fontPath1}/33F95F_7_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_7_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_7_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_7_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro-Bold';
-  src: url('#{$fontPath1}/33F95F_8_0.eot');
-  src: url('#{$fontPath1}/33F95F_8_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_8_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_8_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_8_0.ttf') format('truetype');
+    font-family: "Code-Pro-Bold";
+    src: url("#{$fontPath1}/33F95F_8_0.eot");
+    src: url("#{$fontPath1}/33F95F_8_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_8_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_8_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_8_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Code-Pro';
-  src: url('#{$fontPath1}/33F95F_9_0.eot');
-  src: url('#{$fontPath1}/33F95F_9_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath1}/33F95F_9_0.woff2') format('woff2'),
-  url('#{$fontPath1}/33F95F_9_0.woff') format('woff'),
-  url('#{$fontPath1}/33F95F_9_0.ttf') format('truetype');
+    font-family: "Code-Pro";
+    src: url("#{$fontPath1}/33F95F_9_0.eot");
+    src: url("#{$fontPath1}/33F95F_9_0.eot?#iefix") format("embedded-opentype"),
+        url("#{$fontPath1}/33F95F_9_0.woff2") format("woff2"),
+        url("#{$fontPath1}/33F95F_9_0.woff") format("woff"),
+        url("#{$fontPath1}/33F95F_9_0.ttf") format("truetype");
 }
 
 // Leitura
 @font-face {
-  font-family: 'LeituraNews-Roman2';
-  src: url('#{$fontPath2}/LeituraNews-Roman2.eot');
-  src: url('#{$fontPath2}/LeituraNews-Roman2.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath2}/LeituraNews-Roman2.woff2') format('woff2'),
-  url('#{$fontPath2}/LeituraNews-Roman2.woff') format('woff'),
-  url('#{$fontPath2}/LeituraNews-Roman2.ttf') format('truetype');
+    font-family: "LeituraNews-Roman2";
+    src: url("#{$fontPath2}/LeituraNews-Roman2.eot");
+    src: url("#{$fontPath2}/LeituraNews-Roman2.eot?#iefix")
+            format("embedded-opentype"),
+        url("#{$fontPath2}/LeituraNews-Roman2.woff2") format("woff2"),
+        url("#{$fontPath2}/LeituraNews-Roman2.woff") format("woff"),
+        url("#{$fontPath2}/LeituraNews-Roman2.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'LeituraNews-Italic2';
-  src: url('#{$fontPath2}/LeituraNews-Italic2.eot');
-  src: url('#{$fontPath2}/LeituraNews-Italic2.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontPath2}/LeituraNews-Italic2.woff2') format('woff2'),
-  url('#{$fontPath2}/LeituraNews-Italic2.woff') format('woff'),
-  url('#{$fontPath2}/LeituraNews-Italic2.ttf') format('truetype');
+    font-family: "LeituraNews-Italic2";
+    src: url("#{$fontPath2}/LeituraNews-Italic2.eot");
+    src: url("#{$fontPath2}/LeituraNews-Italic2.eot?#iefix")
+            format("embedded-opentype"),
+        url("#{$fontPath2}/LeituraNews-Italic2.woff2") format("woff2"),
+        url("#{$fontPath2}/LeituraNews-Italic2.woff") format("woff"),
+        url("#{$fontPath2}/LeituraNews-Italic2.ttf") format("truetype");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 55 Roman';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 55 Roman'), url('#{$fontPath3}/AvenirLTStd-Roman.woff') format('woff');
+    font-family: "Avenir LT Std 55 Roman";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 55 Roman"),
+        url("#{$fontPath3}/AvenirLTStd-Roman.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 55 Oblique';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 55 Oblique'), url('#{$fontPath3}/AvenirLTStd-Oblique.woff') format('woff');
+    font-family: "Avenir LT Std 55 Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 55 Oblique"),
+        url("#{$fontPath3}/AvenirLTStd-Oblique.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 35 Light';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 35 Light'), url('#{$fontPath3}/AvenirLTStd-Light.woff') format('woff');
+    font-family: "Avenir LT Std 35 Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 35 Light"),
+        url("#{$fontPath3}/AvenirLTStd-Light.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 35 Light Oblique';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 35 Light Oblique'), url('#{$fontPath3}/AvenirLTStd-LightOblique.woff') format('woff');
+    font-family: "Avenir LT Std 35 Light Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 35 Light Oblique"),
+        url("#{$fontPath3}/AvenirLTStd-LightOblique.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 45 Book';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 45 Book'), url('#{$fontPath3}/AvenirLTStd-Book.woff') format('woff');
+    font-family: "Avenir LT Std 45 Book";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 45 Book"),
+        url("#{$fontPath3}/AvenirLTStd-Book.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 45 Book Oblique';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 45 Book Oblique'), url('#{$fontPath3}/AvenirLTStd-BookOblique.woff') format('woff');
+    font-family: "Avenir LT Std 45 Book Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 45 Book Oblique"),
+        url("#{$fontPath3}/AvenirLTStd-BookOblique.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 65 Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 65 Medium'), url('#{$fontPath3}/AvenirLTStd-Medium.woff') format('woff');
+    font-family: "Avenir LT Std 65 Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 65 Medium"),
+        url("#{$fontPath3}/AvenirLTStd-Medium.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 65 Medium Oblique';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 65 Medium Oblique'), url('#{$fontPath3}/AvenirLTStd-MediumOblique.woff') format('woff');
+    font-family: "Avenir LT Std 65 Medium Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 65 Medium Oblique"),
+        url("#{$fontPath3}/AvenirLTStd-MediumOblique.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 85 Heavy';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 85 Heavy'), url('#{$fontPath3}/AvenirLTStd-Heavy.woff') format('woff');
+    font-family: "Avenir LT Std 85 Heavy";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 85 Heavy"),
+        url("#{$fontPath3}/AvenirLTStd-Heavy.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 85 Heavy Oblique';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 85 Heavy Oblique'), url('#{$fontPath3}/AvenirLTStd-HeavyOblique.woff') format('woff');
+    font-family: "Avenir LT Std 85 Heavy Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 85 Heavy Oblique"),
+        url("#{$fontPath3}/AvenirLTStd-HeavyOblique.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 95 Black';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 95 Black'), url('#{$fontPath3}/AvenirLTStd-Black.woff') format('woff');
+    font-family: "Avenir LT Std 95 Black";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 95 Black"),
+        url("#{$fontPath3}/AvenirLTStd-Black.woff") format("woff");
 }
 
-
 @font-face {
-  font-family: 'Avenir LT Std 95 Black Oblique';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir LT Std 95 Black Oblique'), url('#{$fontPath3}/AvenirLTStd-BlackOblique.woff') format('woff');
+    font-family: "Avenir LT Std 95 Black Oblique";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir LT Std 95 Black Oblique"),
+        url("#{$fontPath3}/AvenirLTStd-BlackOblique.woff") format("woff");
 }

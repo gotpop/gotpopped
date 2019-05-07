@@ -41,8 +41,8 @@ $panel-background: $background-light;
 $footer-background: $background-dark;
 
 // Shadows
-$shadow: 5px 5px 5px rgba($dark4, .5);
-$shadow-inset: 0px 5px 20px inset rgba($black, .1);
+$shadow: 5px 5px 5px rgba($dark4, 0.5);
+$shadow-inset: 0px 5px 20px inset rgba($black, 0.1);
 
 // Border radius
 $radius: 2px;
@@ -52,13 +52,13 @@ $active: $primary;
 $hover: $background-light;
 
 // Padding
-$padding-tiny: .5rem;
+$padding-tiny: 0.5rem;
 $padding-small: 1rem;
 $padding-medium: 2rem;
 $padding-large: 3rem;
 
-// Margin 
-$margin-tiny: .5rem;
+// Margin
+$margin-tiny: 0.5rem;
 $margin-small: 1rem;
 $margin-medium: 2rem;
 $margin-large: 3rem;
@@ -83,12 +83,12 @@ $fontPath2: "#{$fontPath}leitura";
 $fontPath3: "#{$fontPath}avenir";
 
 // Body text
-$body-regular: 'LeituraNews-Roman2';
-$body-italic: 'LeituraNews-Italic2';
+$body-regular: "LeituraNews-Roman2";
+$body-italic: "LeituraNews-Italic2";
 
 // Headers
-$header-light: 'Avenir LT Std 35 Light';
-$header-medium: 'Avenir LT Std 65 Medium';
+$header-light: "Avenir LT Std 35 Light";
+$header-medium: "Avenir LT Std 65 Medium";
 
 // Type
 $line-height: 2em;

@@ -1,4 +1,4 @@
-/* Reset */
+// Reset
 
 html,
 body,
@@ -89,7 +89,6 @@ video {
     vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -124,7 +123,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
