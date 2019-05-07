@@ -1,22 +1,22 @@
 import React from 'react';
 
 // Import logos
-import {ReactComponent as Domestos} from '../assets/img/svg/logos/domestos.svg';
-import {ReactComponent as Mercedes} from '../assets/img/svg/logos/mercedes.svg';
-import {ReactComponent as Aetna} from '../assets/img/svg/logos/aetna.svg';
-import {ReactComponent as Columbus} from '../assets/img/svg/logos/columbus.svg';
-import {ReactComponent as Magnum} from '../assets/img/svg/logos/magnum.svg';
-import {ReactComponent as Discovery} from '../assets/img/svg/logos/discovery.svg';
-import {ReactComponent as Virgin} from '../assets/img/svg/logos/virgin.svg';
+import {ReactComponent as Domestos} from '../../assets/img/svg/logos/clients/domestos.svg';
+import {ReactComponent as Mercedes} from '../../assets/img/svg/logos/clients/mercedes.svg';
+import {ReactComponent as Aetna} from '../../assets/img/svg/logos/clients/aetna.svg';
+import {ReactComponent as Columbus} from '../../assets/img/svg/logos/clients/columbus.svg';
+import {ReactComponent as Magnum} from '../../assets/img/svg/logos/clients/magnum.svg';
+import {ReactComponent as Discovery} from '../../assets/img/svg/logos/clients/discovery.svg';
+import {ReactComponent as Virgin} from '../../assets/img/svg/logos/clients/virgin.svg';
 
 // Import icons
-import {ReactComponent as Clients} from '../assets/img/svg/icons/clients.svg';
-import {ReactComponent as Code} from '../assets/img/svg/icons/code.svg';
-import {ReactComponent as Codepen} from '../assets/img/svg/icons/codepen.svg';
-import {ReactComponent as Github} from '../assets/img/svg/icons/github.svg';
-import {ReactComponent as Linkedin} from '../assets/img/svg/icons/linkedin.svg';
-import {ReactComponent as Search} from '../assets/img/svg/icons/search.svg';
-import {ReactComponent as Skills} from '../assets/img/svg/icons/skills.svg';
+import {ReactComponent as Clients} from '../../assets/img/svg/icons/clients.svg';
+import {ReactComponent as Code} from '../../assets/img/svg/icons/code.svg';
+import {ReactComponent as Codepen} from '../../assets/img/svg/icons/codepen.svg';
+import {ReactComponent as Github} from '../../assets/img/svg/icons/github.svg';
+import {ReactComponent as Linkedin} from '../../assets/img/svg/icons/linkedin.svg';
+import {ReactComponent as Search} from '../../assets/img/svg/icons/search.svg';
+import {ReactComponent as Skills} from '../../assets/img/svg/icons/skills.svg';
 
 const Icon = props => {
     switch (props.name) {

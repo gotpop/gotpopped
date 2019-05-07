@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import "./button.component.scss";
-import Icon from "../Icons"
+import Icon from "../Icons/Icons"
 
 import {connect} from 'react-redux';
 import {updateComponent} from '../../actions/update-component-actions';

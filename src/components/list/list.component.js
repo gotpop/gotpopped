@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "./list.component.scss";
-import Icon from '../Icons';
+import Icon from '../Icons/Icons';
 
 class ListComponent extends Component {
     render() {
