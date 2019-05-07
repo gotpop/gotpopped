@@ -18,6 +18,11 @@
 .glide__slide {
     display: flex;
     flex-direction: column;
+    animation: fadeInUp 400ms ease-in-out;
+
+    @media screen and (min-width: $medium-up) {
+            flex-direction: row;
+    }
 
     article {
         flex: 1 1 40%;
@@ -37,14 +42,4 @@
 .glide__figure {
     flex: 1 1 60%;
     margin: 1rem 3rem 0 0;
-}
-
-@media screen and (min-width: $medium-up) {
-    .glide__slide {
-        flex-direction: row;
-    }
-}
-
-.glide__slide {
-    animation: fadeInUp 400ms ease-in-out;
 }

@@ -1,15 +1,16 @@
 // Import
 @import "../../assets/scss/variables";
 
-// Home SCSS 
+// Home SCSS
 .ma--home {
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 1fr 5fr 4fr;
-    grid-template-areas:    ". . ."
-    ". intro ."
-    ". . .";
+    grid-template-areas:
+        ". . ."
+        ". intro ."
+        ". . .";
     display: grid;
-    
+
     @media screen and (min-width: $medium-up) {
         grid-template-columns: 1fr 6fr 6fr;
         grid-template-rows: 1fr 5fr 2fr;
@@ -19,7 +20,6 @@
         grid-template-columns: 6rem 3fr 6fr;
     }
 }
-
 
 .intro {
     grid-area: intro;

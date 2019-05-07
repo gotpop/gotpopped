@@ -11,21 +11,20 @@
     background: none;
     border: none;
     background: $lighttint2;
-    
+
     @media screen and (min-width: $medium-up) {
         display: none;
     }
-    
+
     &__text {
         display: none;
     }
-    
+
     &__wrap {
         grid-area: trigger;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 }
 
@@ -35,8 +34,8 @@
     &__burger:after,
     &__burger:before {
         cursor: pointer;
-        border-radius: .25rem;
-        height: .5rem;
+        border-radius: 0.25rem;
+        height: 0.5rem;
         width: 3rem;
         background: rgba($dark1, 1);
         position: absolute;
@@ -47,7 +46,7 @@
     }
 
     &__burger {
-        right: .5rem;
+        right: 0.5rem;
 
         &::before {
             top: -1rem;
