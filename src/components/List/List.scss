@@ -8,20 +8,23 @@
 }
 
 .logo__wrap {
-    max-width: 100px;
-    height: auto;
+    // max-width: 100px;
+    // height: auto;
+    background: #eee;
+    padding: 1rem;
 
     svg {
-        max-width: 100px;
+        max-width: 50px;
         height: auto;
         transition: all 0.4s ease;
-        
+        width: 100%;
+
         @media screen and (min-width: $medium-up) {
-            filter: grayscale(100%);
+            // filter: grayscale(100%);
         }
         .client:hover & {
             @media screen and (min-width: $medium-up) {
-                filter: grayscale(0%);
+                // filter: grayscale(0%);
             }
         }
     }
