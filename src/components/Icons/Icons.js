@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Import logos 
+// Import logos
 import {ReactComponent as Domestos} from '../assets/img/svg/logos/domestos.svg';
 import {ReactComponent as Mercedes} from '../assets/img/svg/logos/mercedes.svg';
 import {ReactComponent as Aetna} from '../assets/img/svg/logos/aetna.svg';
