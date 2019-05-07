@@ -4,49 +4,47 @@
 
 // Gallery
 .ma .glide__track {
-  overflow: visible;
+    overflow: visible;
 }
 
 .glide {
-  cursor: grab;
+    cursor: grab;
 
-  &:active {
-    cursor: grabbing;
-  }
+    &:active {
+        cursor: grabbing;
+    }
 }
 
 .glide__slide {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  article {
-    flex: 1 1 40%;
-    margin-right: 3rem;
-  }
+    article {
+        flex: 1 1 40%;
+        margin-right: 3rem;
+    }
 
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1em;
-  }
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
 
-  p {
-    color: rgba(black, .7);
-  }
+    p {
+        color: rgba(black, 0.7);
+    }
 }
 
 .glide__figure {
-  flex: 1 1 60%;
-  margin: 1rem 3rem 0 0;
-
+    flex: 1 1 60%;
+    margin: 1rem 3rem 0 0;
 }
 
 @media screen and (min-width: $medium-up) {
-  .glide__slide {
-    flex-direction: row;
-  }
+    .glide__slide {
+        flex-direction: row;
+    }
 }
 
-
 .glide__slide {
-  animation: fadeInUp 400ms ease-in-out;
+    animation: fadeInUp 400ms ease-in-out;
 }

@@ -9,11 +9,11 @@
     color: $light1;
     display: inline-flex;
     font-family: $header-medium;
-    font-size: .8rem;
+    font-size: 0.8rem;
     justify-content: center;
     margin: 2rem 0 0 0;
-    padding: .4em 2rem;
-    transition: all .6s ease;
+    padding: 0.4em 2rem;
+    transition: all 0.6s ease;
 
     &:hover {
         background: lighten($primary, 5%);

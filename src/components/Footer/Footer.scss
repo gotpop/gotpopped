@@ -1,4 +1,4 @@
-// Footer SCSS 
+// Footer SCSS
 @import "../../assets/scss/variables";
 
 // Adjust padding to account for scrollbar width
@@ -7,7 +7,8 @@
 .fo {
     grid-area: footer;
     background: $footer-background;
-    padding: $padding-large calc(#{$padding-large} + 17px) $padding-large $padding-large;
+    padding: $padding-large calc(#{$padding-large} + 17px) $padding-large
+        $padding-large;
     box-shadow: $shadow-inset;
     display: grid;
     justify-items: center;
