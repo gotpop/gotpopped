@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
+import Icon from "../Icons/Icons";
 import "./HeaderMenu.scss";
 
 import {connect} from 'react-redux';
@@ -45,7 +46,9 @@ class HeaderMenuComponent extends Component {
                         activeClassName='he-menu__item--active'
                         onClick={this.closeMenu}>
                         <span>CLIENTS</span>
-                        <span className="he-menu__icon"></span>
+                        <span className="he-menu__icon">
+                            <Icon name="Clients"/>
+                        </span>
                     </NavLink>
                     <NavLink
                         className="he-menu__item"
@@ -53,7 +56,9 @@ class HeaderMenuComponent extends Component {
                         activeClassName='he-menu__item--active'
                         onClick={this.closeMenu}>
                         <span>WORK</span>
-                        <span className="he-menu__icon"></span>
+                        <span className="he-menu__icon">
+                            <Icon name="Code"/>
+                        </span>
                     </NavLink>
                     <NavLink
                         className="he-menu__item"
@@ -61,7 +66,9 @@ class HeaderMenuComponent extends Component {
                         activeClassName='he-menu__item--active'
                         onClick={this.closeMenu}>
                         <span>SKILLS</span>
-                        <span className="he-menu__icon"></span>
+                        <span className="he-menu__icon">
+                            <Icon name="Skills"/>
+                        </span>
                     </NavLink>
                 </nav>
             </section>

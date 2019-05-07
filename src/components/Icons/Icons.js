@@ -10,16 +10,19 @@ import {ReactComponent as Discovery} from '../../assets/img/svg/logos/clients/di
 import {ReactComponent as Virgin} from '../../assets/img/svg/logos/clients/virgin.svg';
 
 // Import icons
+import {ReactComponent as Gotpop} from '../../assets/img/svg/logos/site/gotpop.svg';
 import {ReactComponent as Clients} from '../../assets/img/svg/icons/clients.svg';
 import {ReactComponent as Code} from '../../assets/img/svg/icons/code.svg';
+import {ReactComponent as Skills} from '../../assets/img/svg/icons/skills.svg';
+import {ReactComponent as Search} from '../../assets/img/svg/icons/search.svg';
 import {ReactComponent as Codepen} from '../../assets/img/svg/icons/codepen.svg';
 import {ReactComponent as Github} from '../../assets/img/svg/icons/github.svg';
 import {ReactComponent as Linkedin} from '../../assets/img/svg/icons/linkedin.svg';
-import {ReactComponent as Search} from '../../assets/img/svg/icons/search.svg';
-import {ReactComponent as Skills} from '../../assets/img/svg/icons/skills.svg';
 
 const Icon = props => {
     switch (props.name) {
+        case "Gotpop":
+            return <Gotpop {...props}/>;
         case "Domestos":
             return <Domestos {...props}/>;
         case "Mercedes":

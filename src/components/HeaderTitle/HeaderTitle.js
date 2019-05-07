@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
+import Icon from "../Icons/Icons";
 import "./HeaderTitle.scss";
 
 import {connect} from 'react-redux';
@@ -22,7 +23,9 @@ class HeaderTitle extends Component {
                     to="/"
                     exact={true}
                     activeClassName='he-logo__link--active'
-                    onClick={this.onRefreshComponent}></NavLink>
+                    onClick={this.onRefreshComponent}>
+                        <Icon name="Gotpop"/>
+                    </NavLink>
             </section>
         );
     }
