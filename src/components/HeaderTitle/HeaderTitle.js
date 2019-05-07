@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
-
-import "./header-title.component.scss";
+import "./HeaderTitle.scss";
 
 import {connect} from 'react-redux';
 import {updateComponent} from '../../actions/update-component-actions';

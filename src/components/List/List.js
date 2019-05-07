@@ -1,5 +1,5 @@
-import React, {Component} from './node_modules/react';
-import "./list.component.scss";
+import React, {Component} from 'react';
+import "./List.scss";
 import Icon from '../Icons/Icons';
 
 class ListComponent extends Component {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import "./home.component.scss";
-import Button from '../button/button.component';
-import Footer from '../footer/footer.component.js';
+import "./Home.scss";
+import Button from '../Button/Button';
+import Footer from '../Footer/Footer';
 
 class HomeComponent extends Component {
     render() {

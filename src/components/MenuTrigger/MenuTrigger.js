@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "./menu-trigger.component.scss";
+import "./MenuTrigger.scss";
 
 import {connect} from 'react-redux';
 import {updateMenu} from '../../actions/menu-actions';

@@ -1,7 +1,8 @@
-import React, {Component} from './node_modules/react';
-import "./header.component.scss";
-import HeaderTitle from '../HeaderTitle/header-title.component.js';
-import HeaderMenu from '../HeaderMenu/header-menu.component.js';
+import React, {Component} from 'react';
+import "./Header.scss";
+
+import HeaderTitle from '../HeaderTitle/HeaderTitle';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import MenuTrigger from '../MenuTrigger/MenuTrigger';
 
 class Header extends Component {

@@ -1,8 +1,8 @@
-import React, {Component} from './node_modules/react';
+import React, {Component} from 'react';
 import ListItem from '../List/List';
-import Footer from '../Footer/Footer.js/index.js';
+import Footer from '../Footer/Footer';
 import clients from '../../data/clients';
-import "./clients.component.scss";
+import "./Clients.scss";
 
 class ClientsComponent extends Component {
     render() {

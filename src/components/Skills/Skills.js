@@ -1,6 +1,6 @@
-import React, {Component} from './node_modules/react';
+import React, {Component} from 'react';
 import skills from '../../data/skills';
-import "./skills.component.scss";
+import "./Skills.scss";
 
 class SkillsComponent extends Component {
 

@@ -1,6 +1,6 @@
-import React, {Component} from './node_modules/react';
-import Glide from './node_modules/@glidejs/glide';
-import "./gallery.component.scss";
+import React, {Component} from 'react';
+import Glide from '@glidejs/glide';
+import "./Gallery.scss";
 
 class Gallery extends Component {
 

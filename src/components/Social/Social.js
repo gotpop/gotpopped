@@ -1,6 +1,5 @@
-import React, { Component } from './node_modules/react';
-
-import "./social.component.scss";
+import React, { Component } from 'react';
+import "./Social.scss";
 
 class SocialComponent extends Component {
   render() {

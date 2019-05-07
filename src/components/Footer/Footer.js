@@ -1,6 +1,6 @@
-import React, {Component} from './node_modules/react';
+import React, {Component} from 'react';
 import Social from "../Social/Social";
-import "./footer.component.scss";
+import "./Footer.scss";
 
 class FooterComponent extends Component {
     render() {
