@@ -10,8 +10,13 @@ import {ReactComponent as Discovery} from '../assets/img/svg/logos/discovery.svg
 import {ReactComponent as Virgin} from '../assets/img/svg/logos/virgin.svg';
 
 // Import icons
+import {ReactComponent as Clients} from '../assets/img/svg/icons/clients.svg';
+import {ReactComponent as Code} from '../assets/img/svg/icons/code.svg';
+import {ReactComponent as Codepen} from '../assets/img/svg/icons/codepen.svg';
+import {ReactComponent as Github} from '../assets/img/svg/icons/github.svg';
+import {ReactComponent as Linkedin} from '../assets/img/svg/icons/linkedin.svg';
 import {ReactComponent as Search} from '../assets/img/svg/icons/search.svg';
-
+import {ReactComponent as Skills} from '../assets/img/svg/icons/skills.svg';
 
 const Icon = props => {
     switch (props.name) {
@@ -31,6 +36,18 @@ const Icon = props => {
             return <Virgin {...props}/>;
         case "Search":
             return <Search {...props}/>;
+        case "Clients":
+            return <Clients {...props}/>;
+        case "Code":
+            return <Code {...props}/>;
+        case "Codepen":
+            return <Codepen {...props}/>;
+        case "Github":
+            return <Github {...props}/>;
+        case "Linkedin":
+            return <Linkedin {...props}/>;
+        case "Skills":
+            return <Skills {...props}/>;
         default:
             return <div/>;
     }
