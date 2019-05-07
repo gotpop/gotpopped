@@ -1,51 +1,51 @@
 // Skills data
 const skillsObject = [
     {
-        name: 'angular',
+        name: 'Angular',
         title: 'Domestos',
         content: 'Some content'
     }, {
-        name: 'cssgrid',
+        name: 'Cssgrid',
         title: 'Mercedes Benz',
         content: 'Some content'
     }, {
-        name: 'design',
+        name: 'Design',
         title: 'Aetna Insurance',
         content: 'Some content'
     }, {
-        name: 'es6',
+        name: 'Es6',
         title: 'Columbus Insurance',
         content: 'Some content'
     }, {
-        name: 'git',
+        name: 'Git',
         title: 'Magnum Ice Cream',
         content: 'Some content'
     }, {
-        name: 'html5',
+        name: 'Html5',
         title: 'Virgin Radio',
         content: 'Some content'
     }, {
-        name: 'jsdom',
+        name: 'Jsdom',
         title: 'Discovery Education',
         content: 'Some content'
     }, {
-        name: 'react',
+        name: 'React',
         title: 'Discovery Education',
         content: 'Some content'
     }, {
-        name: 'redux',
+        name: 'Redux',
         title: 'Discovery Education',
         content: 'Some content'
     }, {
-        name: 'testing',
+        name: 'Testing',
         title: 'Discovery Education',
         content: 'Some content'
     }, {
-        name: 'vue',
+        name: 'Vue',
         title: 'Discovery Education',
         content: 'Some content'
     }, {
-        name: 'webpack',
+        name: 'Webpack',
         title: 'Discovery Education',
         content: 'Some content'
     }
