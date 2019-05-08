@@ -6,6 +6,7 @@ import express from 'express';
 import favicon from 'express-favicon';
 import Behance from './node/behance.service';
 import fetch from "node-fetch";
+import compression from 'compression';
 
 // Node 10+ does not support __dirname
 const __dirname = path.dirname(new URL(
@@ -27,6 +28,8 @@ app.use(function (req, res, next) {
     } else
         next();
 });
+
+app.use(compression());
 
 // Set up server
 app.use(express.static('build', {
