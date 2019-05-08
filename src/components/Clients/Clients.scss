@@ -33,10 +33,11 @@
     color: $body-colour;
     border-radius: $radius;
 
-    li {
+    article {
         font-size: 1rem;
-        padding: $padding-small $padding-medium;
+        padding: $padding-medium;
         background: #fff;
+        border-radius: $radius;
     }
 
     @media screen and (min-width: $medium-up) {

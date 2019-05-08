@@ -32,11 +32,11 @@
     grid-gap: $padding-medium;
     color: $body-colour;
 
-    li {
+    article {
         border-radius: $radius;
         font-size: 1rem;
-        padding: $padding-small;
-        background: #fff;
+        padding: $padding-medium;
+        background: $white;;
     }
 
     @media screen and (min-width: $medium-up) {
