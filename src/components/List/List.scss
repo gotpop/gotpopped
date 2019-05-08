@@ -7,27 +7,12 @@
     justify-content: space-between;
 }
 
-.logo__wrap {
-    // max-width: 100px;
-    // height: auto;
-    // padding: 1rem;
-    // width: 40%;
-    // display: none;
-    
+.logo__wrap {    
     svg {
         max-width: 100px;
         max-height: 150px;
         height: auto;
         transition: all 0.4s ease;
         width: 100%;
-
-        @media screen and (min-width: $medium-up) {
-            // filter: grayscale(100%);
-        }
-        .client:hover & {
-            @media screen and (min-width: $medium-up) {
-                // filter: grayscale(0%);
-            }
-        }
     }
 }
