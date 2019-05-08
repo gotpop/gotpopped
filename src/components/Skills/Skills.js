@@ -7,7 +7,6 @@ import "./Skills.scss";
 class SkillsComponent extends Component {
 
     render() {
-        // const listItems = skills.map((link) => <li key={link.name}>{link.name}</li>);
         const List = ({list}) => (
             <ul className="skills__list">
                 {list.map(item => (<ListItem key={item.name} item={item}/>))}
