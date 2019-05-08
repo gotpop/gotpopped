@@ -5,6 +5,11 @@
 		}
 	],
 	"settings": {
-		"files.insertFinalNewline": true
+		"files.insertFinalNewline": true,
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#5A111D",
+			"titleBar.activeBackground": "#7F1828",
+			"titleBar.activeForeground": "#FEFBFC"
+		}
 	}
 }
