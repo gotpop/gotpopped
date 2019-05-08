@@ -10,12 +10,13 @@
 .logo__wrap {
     // max-width: 100px;
     // height: auto;
-    // background: yellow;
     // padding: 1rem;
-
+    // width: 40%;
+    
     svg {
+        background: yellow;
         max-width: 170px;
-        max-height: 50px;
+        max-height: 100px;
         height: auto;
         transition: all 0.4s ease;
         width: 100%;

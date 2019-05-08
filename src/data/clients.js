@@ -3,7 +3,7 @@ const clientsObject = [
     {
         name: 'Domestos',
         title: 'Domestos',
-        viewBox: '0 0 40 40',
+        viewBox: '0 0 30 30',
         content: 'Some content'
     }, {
         name: 'Mercedes',
