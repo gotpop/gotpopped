@@ -35,8 +35,9 @@
 
     article {
         font-size: 1rem;
-        padding: $padding-small;
+        padding: $padding-medium;
         background: #fff;
+        border-radius: $radius;
     }
 
     @media screen and (min-width: $medium-up) {
