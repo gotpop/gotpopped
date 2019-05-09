@@ -19,6 +19,10 @@ class Gallery extends Component {
             });
     }
 
+    handleResultPromiseState = (loaderBoolean) => {
+        this.props.loaderActiveAction(loaderBoolean); 
+    }
+
     getProject(projects) {
         let singleProjects = [];
         let promiseArray = [];
@@ -40,32 +44,30 @@ class Gallery extends Component {
                     perView: 1,
                     gap: 100
                 }).mount();
-                this.setState({loaderActive: false});
+                // Tell parent component that the gallery has loaded
+                this.handleResultPromiseState(true);
             });
     }
 
     render() {
         return (
             <div className="glide">
-                <div className={this.state.loaderActive
-                    ? 'lds-ripple lds-ripple--active'
-                    : 'lds-ripple'}><div></div><div></div></div>
                 <div className="glide__track" data-glide-el="track">
                     <ul className="glide__slides">
                         {this
                             .state
                             .singleProjectsArray
-                            .map(movie => {
-                                return <li key={`movie-${movie.id}`} className="glide__slide">
+                            .map(item => {
+                                return <li key={`item-${item.id}`} className="glide__slide">
                                     <article>
-                                        <h2>{movie.name}</h2>
-                                        <p className={movie.name} key={movie.id}>{movie.modules[1].text_plain}</p>
+                                        <h2>{item.name}</h2>
+                                        <p className={item.name} key={item.id}>{item.modules[1].text_plain}</p>
                                     </article>
                                     <figure className="glide__figure">
                                         <img
-                                            className={movie.name}
-                                            key={movie.id}
-                                            src={movie.modules[0].sizes.original}
+                                            className={item.name}
+                                            key={item.id}
+                                            src={item.modules[0].sizes.original}
                                             alt="Gallery"/>
                                     </figure>
                                 </li>
