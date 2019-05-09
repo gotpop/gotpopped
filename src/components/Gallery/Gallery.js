@@ -7,7 +7,7 @@ class Gallery extends Component {
     state = {
         singleProjectsArray: [],
         allProjectsArray: [],
-        galleryReady: false
+        loaderActive: true
     };
 
     componentDidMount() {
@@ -35,19 +35,19 @@ class Gallery extends Component {
             .all(promiseArray)
             .then(() => {
                 this.setState({singleProjectsArray: singleProjects});
-                this.setState({galleryReady: true});
                 new Glide('.glide', {
                     type: 'carousel',
                     perView: 1,
                     gap: 100
                 }).mount();
+                this.setState({loaderActive: false});
             });
     }
 
     render() {
         return (
             <div className="glide">
-                <div className={this.props.menu
+                <div className={this.state.loaderActive
                     ? 'lds-ripple lds-ripple--active'
                     : 'lds-ripple'}><div></div><div></div></div>
                 <div className="glide__track" data-glide-el="track">

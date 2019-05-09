@@ -46,14 +46,14 @@
 
 // CSS loader
 .lds-ripple {
-    display: inline-block;
     position: relative;
     width: 64px;
     height: 64px;
+    display: block;
     display: none;
-
+    
     &--active {
-        display: block;
+        display: inline-block;
     }
   }
 
