@@ -17,7 +17,7 @@ class WorkComponent extends Component {
 
     render() {
         return (
-            <div>
+            <section className="si">
                 <main
                     className={this.state.loaderActive
                     ? 'ma ma--work ma--loading'
@@ -26,7 +26,7 @@ class WorkComponent extends Component {
                     <Gallery loaderActiveAction={this.handleLoader}></Gallery>
                 </main>
                 <Footer/>
-            </div>
+            </section>
         );
     }
 }

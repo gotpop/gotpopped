@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 class HomeComponent extends Component {
     render() {
         return (
-            <div>
+            <section className="si">
                 <main className="ma ma--home">
                     <article className="intro">
                         <h2>Hello, my name's Liam.</h2>
@@ -16,7 +16,7 @@ class HomeComponent extends Component {
                     </article>
                 </main>
                 <Footer/>
-            </div>
+            </section>
         );
     }
 }

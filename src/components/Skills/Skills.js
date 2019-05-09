@@ -13,7 +13,7 @@ class SkillsComponent extends Component {
             </ul>
         );
         return (
-            <div>
+            <section className="si">
                 <main className="ma ma--skills">
                     <section className="skills">
                         <h2>Skills</h2>
@@ -21,7 +21,7 @@ class SkillsComponent extends Component {
                     </section>
                 </main>
                 <Footer/>
-            </div>
+            </section>
         );
     }
 }

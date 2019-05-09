@@ -14,12 +14,10 @@ class App extends Component {
             <BrowserRouter>
                 <div className="ap">
                     <Header/>
-                    <section className="si">
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/clients" component={Clients}/>
-                        <Route path="/work" component={Work}/>
-                        <Route path="/skills" component={Skills}/>
-                    </section>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/clients" component={Clients}/>
+                    <Route path="/work" component={Work}/>
+                    <Route path="/skills" component={Skills}/>
                 </div>
             </BrowserRouter>
         );
