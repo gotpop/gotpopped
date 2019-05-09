@@ -47,7 +47,7 @@ class HeaderMenuComponent extends Component {
                         onClick={this.closeMenu}>
                         <span>CLIENTS</span>
                         <span className="he-menu__icon">
-                            <Icon name="Clients"/>
+                            <Icon name="clients"/>
                         </span>
                     </NavLink>
                     <NavLink
@@ -57,7 +57,7 @@ class HeaderMenuComponent extends Component {
                         onClick={this.closeMenu}>
                         <span>WORK</span>
                         <span className="he-menu__icon">
-                            <Icon name="Code"/>
+                            <Icon name="code"/>
                         </span>
                     </NavLink>
                     <NavLink
@@ -67,7 +67,7 @@ class HeaderMenuComponent extends Component {
                         onClick={this.closeMenu}>
                         <span>SKILLS</span>
                         <span className="he-menu__icon">
-                            <Icon name="Skills"/>
+                            <Icon name="skills"/>
                         </span>
                     </NavLink>
                 </nav>

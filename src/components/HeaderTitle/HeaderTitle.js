@@ -24,7 +24,7 @@ class HeaderTitle extends Component {
                     exact={true}
                     activeClassName='he-logo__link--active'
                     onClick={this.onRefreshComponent}>
-                        <Icon name="Gotpop"/>
+                        <Icon name="gotpop"/>
                     </NavLink>
             </section>
         );
