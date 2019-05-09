@@ -13,7 +13,7 @@ import updateComponentReducer from './reducers/update-component-reducer';
 const allReducers = combineReducers({menu: menuReducer, updateComponent: updateComponentReducer});
 
 const store = createStore(allReducers, {
-    menu: true,
+    menu: false,
     updateComponent: false
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
