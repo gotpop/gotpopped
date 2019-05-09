@@ -54,6 +54,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "svgo": "^1.2.2",
     "react-dev-utils": "^9.0.0"
   }
 }
