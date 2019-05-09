@@ -8,6 +8,7 @@ import {ReactComponent as Columbus} from '../../assets/img/svg/logos/clients/col
 import {ReactComponent as Magnum} from '../../assets/img/svg/logos/clients/magnum.svg';
 import {ReactComponent as Discovery} from '../../assets/img/svg/logos/clients/discovery.svg';
 import {ReactComponent as Virgin} from '../../assets/img/svg/logos/clients/virgin.svg';
+import {ReactComponent as Unilever} from '../../assets/img/svg/logos/clients/unilever.svg';
 
 // Import icons
 import {ReactComponent as Gotpop} from '../../assets/img/svg/logos/site/gotpop.svg';
@@ -35,59 +36,61 @@ import {ReactComponent as Webpack} from '../../assets/img/svg/logos/skills/webpa
 
 const Icon = props => {
     switch (props.name) {
-        case "Gotpop":
+        case "gotpop":
             return <Gotpop {...props}/>;
-        case "Domestos":
+        case "domestos":
             return <Domestos {...props}/>;
-        case "Mercedes":
+        case "mercedes":
             return <Mercedes {...props}/>;
-        case "Aetna":
+        case "aetna":
             return <Aetna {...props}/>;
-        case "Columbus":
+        case "columbus":
             return <Columbus {...props}/>;
-        case "Magnum":
+        case "magnum":
             return <Magnum {...props}/>;
-        case "Discovery":
+        case "discovery":
             return <Discovery {...props}/>;
-        case "Virgin":
+        case "virgin":
             return <Virgin {...props}/>;
-        case "Search":
+        case "unilever":
+            return <Unilever {...props}/>;
+        case "search":
             return <Search {...props}/>;
-        case "Clients":
+        case "clients":
             return <Clients {...props}/>;
-        case "Code":
+        case "code":
             return <Code {...props}/>;
-        case "Codepen":
+        case "codepen":
             return <Codepen {...props}/>;
-        case "Github":
+        case "github":
             return <Github {...props}/>;
-        case "Linkedin":
+        case "linkedin":
             return <Linkedin {...props}/>;
-        case "Skills":
+        case "skills":
             return <Skills {...props}/>;
-        case "Angular":
+        case "angular":
             return <Angular {...props}/>;
-        case "Cssgrid":
+        case "cssgrid":
             return <Cssgrid {...props}/>;
-        case "Design":
+        case "design":
             return <Design {...props}/>;
-        case "Es6":
+        case "es6":
             return <Es6 {...props}/>;
-        case "Git":
+        case "git":
             return <Git {...props}/>;
-        case "Html5":
+        case "html5":
             return <Html5 {...props}/>;
-        case "Jsdom":
+        case "jsdom":
             return <Jsdom {...props}/>;
-        case "ReactIcon":
+        case "reactIcon":
             return <ReactIcon {...props}/>;
-        case "Redux":
+        case "redux":
             return <Redux {...props}/>;
-        case "Testing":
+        case "testing":
             return <Testing {...props}/>;
-        case "Vue":
+        case "vue":
             return <Vue {...props}/>;
-        case "Webpack":
+        case "webpack":
             return <Webpack {...props}/>;
         default:
             return <div/>;
