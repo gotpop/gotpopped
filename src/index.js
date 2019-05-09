@@ -13,7 +13,7 @@ import updateComponentReducer from './reducers/update-component-reducer';
 const allReducers = combineReducers({menu: menuReducer, updateComponent: updateComponentReducer});
 
 const store = createStore(allReducers, {
-    menu: true,
+    menu: false,
     updateComponent: false
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -24,3 +24,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls. Learn
 // more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// Add to debug envoronments in prep for conditional serviceworkers
+console.log(process.env);

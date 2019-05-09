@@ -9,17 +9,17 @@ class SocialComponent extends Component {
                 <nav className="social__nav">
                     <a className="social__link" href="http://codepen.io/gotpop/">
                         <span className="social__icon">
-                            <Icon name="Codepen"/>
+                            <Icon name="codepen"/>
                         </span>
                     </a>
                     <a className="social__link" href="http://uk.linkedin.com/in/gotpop">
                         <span className="social__icon">
-                            <Icon name="Linkedin"/>
+                            <Icon name="linkedin"/>
                         </span>
                     </a>
                     <a className="social__link" href="https://github.com/gotpop">
                         <span className="social__icon">
-                            <Icon name="Github"/>
+                            <Icon name="github"/>
                         </span>
                     </a>
                 </nav>

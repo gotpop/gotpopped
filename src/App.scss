@@ -19,14 +19,3 @@
     grid-area: main;
     min-height: 100vh;
 }
-
-.switch-wrapper {
-    position: relative;
-}
-
-.switch-wrapper > div {
-    position: absolute;
-    width: 100%;
-    background: $site-background;
-    overflow: hidden;
-}
