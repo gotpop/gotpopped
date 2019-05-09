@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import Icon from "../Icons/Icons";
 import "./HeaderMenu.scss";
-
 import {connect} from 'react-redux';
 import {updateMenu} from '../../actions/menu-actions';
 import {updateComponent} from '../../actions/update-component-actions';

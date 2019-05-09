@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "./MenuTrigger.scss";
-
 import {connect} from 'react-redux';
 import {updateMenu} from '../../actions/menu-actions';
 
