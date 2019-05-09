@@ -21,6 +21,22 @@
     }
 }
 
+.ma.ma--loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .glide {
+        display: none;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+    }
+}
+
 .glide {
     grid-area: glide;
     max-width: 400px;
