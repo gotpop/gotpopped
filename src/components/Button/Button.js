@@ -20,7 +20,7 @@ class ButtonComponent extends Component {
             <Link className="btn" to="/work" onClick={this.onRefreshComponent}>
                 <span>VIEW PROJECTS</span>
                 <span className="btn__icon">
-                    <Icon name="Search"/>
+                    <Icon name="search"/>
                 </span>
             </Link>
         );

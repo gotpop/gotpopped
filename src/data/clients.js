@@ -1,8 +1,8 @@
 // Client data
 const clientsObject = [
     {
-        name: 'domestos',
-        title: 'Domestos',
+        name: 'unilever',
+        title: 'Unilever',
         viewBox: '0 0 300 300',
         content: 'Some content'
     }, {
@@ -19,11 +19,6 @@ const clientsObject = [
         name: 'columbus',
         title: 'Columbus Insurance',
         viewBox: '90 0 400 350',
-        content: 'Some content'
-    }, {
-        name: 'magnum',
-        title: 'Magnum Ice Cream',
-        viewBox: '110 0 110 80',
         content: 'Some content'
     }, {
         name: 'virgin',
