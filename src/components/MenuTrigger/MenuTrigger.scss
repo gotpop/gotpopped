@@ -5,12 +5,10 @@
 .menu-trigger {
     padding: $padding-medium;
     position: relative;
-    // top: $padding-medium;
-    // right: $padding-medium;
     cursor: pointer;
     background: none;
     border: none;
-    background: $lighttint2;
+    background: transparent;
 
     @media screen and (min-width: $medium-up) {
         display: none;
