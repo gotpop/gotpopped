@@ -6,7 +6,8 @@ class Gallery extends Component {
 
     state = {
         singleProjectsArray: [],
-        allProjectsArray: []
+        allProjectsArray: [],
+        galleryReady: false
     };
 
     componentDidMount() {
@@ -34,6 +35,7 @@ class Gallery extends Component {
             .all(promiseArray)
             .then(() => {
                 this.setState({singleProjectsArray: singleProjects});
+                this.setState({galleryReady: true});
                 new Glide('.glide', {
                     type: 'carousel',
                     perView: 1,
@@ -45,6 +47,9 @@ class Gallery extends Component {
     render() {
         return (
             <div className="glide">
+                <div className={this.props.menu
+                    ? 'lds-ripple lds-ripple--active'
+                    : 'lds-ripple'}><div></div><div></div></div>
                 <div className="glide__track" data-glide-el="track">
                     <ul className="glide__slides">
                         {this
