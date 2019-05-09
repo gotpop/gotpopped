@@ -23,10 +23,5 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls. Learn
 // more about service workers: https://bit.ly/CRA-PWA
-if (process.env.NODE_ENV === "production") {
-    console.log(process.env);
-    serviceWorker.register();
-} else {
-    console.log(process.env);
-    serviceWorker.unregister();
-}
+// serviceWorker.unregister();
+serviceWorker.register();
