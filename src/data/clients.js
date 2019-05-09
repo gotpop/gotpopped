@@ -3,12 +3,12 @@ const clientsObject = [
     {
         name: 'unilever',
         title: 'Unilever',
-        viewBox: '0 0 300 300',
+        viewBox: '0 10 100 100',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'mercedes',
         title: 'Mercedes Benz',
-        viewBox: '-20 0 280 70',
+        viewBox: '0 0 80 80',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'aetna',
@@ -18,7 +18,7 @@ const clientsObject = [
     }, {
         name: 'columbus',
         title: 'Columbus Insurance',
-        viewBox: '90 0 400 350',
+        viewBox: '0 0 460 300',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'virgin',
@@ -28,7 +28,7 @@ const clientsObject = [
     }, {
         name: 'discovery',
         title: 'Discovery Education',
-        viewBox: '0 0 300 200',
+        viewBox: '18 0 80 22',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
 ];

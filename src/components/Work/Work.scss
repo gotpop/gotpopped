@@ -2,7 +2,17 @@
 @import "../../assets/scss/variables";
 
 // layout
-.ma--work {
+.ma--loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .glide {
+        display: none;
+    }
+}
+
+.ma--loaded {
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
     grid-template-rows: 1fr 10fr 1fr;
@@ -20,6 +30,8 @@
         grid-template-columns: 6rem 1fr 1rem;
     }
 }
+
+
 
 .glide {
     grid-area: glide;
