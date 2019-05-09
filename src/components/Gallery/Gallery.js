@@ -6,7 +6,8 @@ class Gallery extends Component {
 
     state = {
         singleProjectsArray: [],
-        allProjectsArray: []
+        allProjectsArray: [],
+        loaderActive: true
     };
 
     componentDidMount() {
@@ -39,12 +40,16 @@ class Gallery extends Component {
                     perView: 1,
                     gap: 100
                 }).mount();
+                this.setState({loaderActive: false});
             });
     }
 
     render() {
         return (
             <div className="glide">
+                <div className={this.state.loaderActive
+                    ? 'lds-ripple lds-ripple--active'
+                    : 'lds-ripple'}><div></div><div></div></div>
                 <div className="glide__track" data-glide-el="track">
                     <ul className="glide__slides">
                         {this
