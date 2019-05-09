@@ -44,8 +44,8 @@ class Gallery extends Component {
                     perView: 1,
                     gap: 100
                 }).mount();
-                // Tell parent component that the gallery has loaded
-                this.handleResultPromiseState(true);
+                // Tell parent component that the gallery has loadedw
+                this.handleResultPromiseState(false);
             });
     }
 

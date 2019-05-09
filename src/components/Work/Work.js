@@ -18,10 +18,11 @@ class WorkComponent extends Component {
     render() {
         return (
             <div>
-                <main className="ma ma--work">
-                    <Loading className={this.state.loaderActive
-                    ? 'lds-ripple'
-                    : 'lds-ripple lds-ripple--inactive'}></Loading>
+                <main
+                    className={this.state.loaderActive
+                    ? 'ma ma--work ma--loading'
+                    : 'ma ma--work ma--loaded'}>
+                    <Loading loaderActive={this.state.loaderActive}></Loading>
                     <Gallery loaderActiveAction={this.handleLoader}></Gallery>
                 </main>
                 <Footer/>

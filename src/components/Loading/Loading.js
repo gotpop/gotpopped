@@ -4,7 +4,9 @@ import "./Loading.scss";
 class Loading extends Component {
     render() {
         return (
-            <div><div></div><div></div></div>
+            <div className={this.props.loaderActive
+                ? 'lds-ripple'
+                : 'lds-ripple lds-ripple--inactive'}><div></div><div></div></div>
         );
     }
 }
