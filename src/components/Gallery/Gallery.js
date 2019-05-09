@@ -38,14 +38,15 @@ class Gallery extends Component {
         Promise
             .all(promiseArray)
             .then(() => {
-                this.setState({singleProjectsArray: singleProjects});
-                new Glide('.glide', {
+                const carousel = new Glide('.glide', {
                     type: 'carousel',
                     perView: 1,
                     gap: 100
-                }).mount();
-                // Tell parent component that the gallery has loaded
+                });
+                this.setState({singleProjectsArray: singleProjects});
                 this.handleResultPromiseState(false);
+                carousel.mount();
+                // Tell parent component that the gallery has loaded
             });
     }
 
