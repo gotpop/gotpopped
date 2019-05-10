@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Glide from '@glidejs/glide';
 import "./Gallery.scss";
+import db from "../../services/storage";
 
 class Gallery extends Component {
 
@@ -17,10 +18,20 @@ class Gallery extends Component {
                 this.setState({allProjectsArray: data.projects});
                 this.getProject(data.projects);
             });
+
+        // First iteration of IndexDb
+        db
+            .table('todos')
+            .toArray()
+            .then((todos) => {
+                this.setState({todos});
+            });
     }
 
     handleResultPromiseState = (loaderBoolean) => {
-        this.props.loaderActiveAction(loaderBoolean); 
+        this
+            .props
+            .loaderActiveAction(loaderBoolean);
     }
 
     getProject(projects) {
