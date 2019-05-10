@@ -11,13 +11,17 @@ class Gallery extends Component {
         loaderActive: true
     };
 
-    componentDidMount() {
+    getAllProjects = () => {
         fetch('/behance/projects')
             .then(response => response.json())
             .then(data => {
                 this.setState({allProjectsArray: data.projects});
                 this.getProject(data.projects);
             });
+    }
+
+    componentDidMount() {
+        this.getAllProjects();
 
         // First iteration of IndexDb
         db
@@ -26,6 +30,12 @@ class Gallery extends Component {
             .then((todos) => {
                 this.setState({todos});
             });
+        // db
+        //     .table('gallery')
+        //     .toArray()
+        //     .then((gallery) => {
+        //         this.setState({gallery});
+        //     });
     }
 
     handleResultPromiseState = (loaderBoolean) => {
@@ -55,9 +65,9 @@ class Gallery extends Component {
                     gap: 100
                 });
                 this.setState({singleProjectsArray: singleProjects});
+                // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
                 carousel.mount();
-                // Tell parent component that the gallery has loaded
             });
     }
 
