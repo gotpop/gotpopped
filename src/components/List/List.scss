@@ -2,11 +2,6 @@
 @import "../../assets/scss/variables";
 
 // layout
-.client {
-    // display: flex;
-    // justify-content: space-between;
-}
-
 .logo__wrap {
     float: right;
     shape-outside: circle();
@@ -20,6 +15,14 @@
     height: auto;
     transition: all 0.4s ease;
     width: 100%;
+
+    &--cssgrid {
+        fill: purple;
+    }
+
+    &--redux {
+        background: #3d3d3d;
+    }
 }
 
 .logo__icon--aetna,

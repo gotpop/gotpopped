@@ -1,7 +1,7 @@
 // Imports
 @import "../../assets/scss/variables";
 
-// SCSS
+// Logo
 .he-logo__wrap {
     align-items: center;
     color: $body-colour;
@@ -16,50 +16,26 @@
         justify-content: flex-start;
     }
 
-    svg {
-        width: 100%;
-        fill: $dark2;
-        max-width: 180px;
-        transition: fill 0.4s ease;
-    }
-
     &:hover svg {
-        // fill: $primary;
+        fill: $primary;
     }
 }
 
-.he-logo__link {
-    padding-top: 8px;
+.he-logo {
+    width: 100%;
+    max-width: 180px;
 
-    &--active svg {
-        // fill: $primary;
+    &__link {
+        padding-top: 8px;
     }
-}
 
-.logo-path {
-    // stroke-dasharray: 100;
-    // animation: dash 5s linear;
-    stroke-width: .2px;
-    // stroke-opacity: .5;
-    // stroke-linecap: round;
-    // stroke-linejoin: round;
-    // stroke-miterlimit: initial;
-    // stroke: black;
-    fill: transparent;
-
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 10s linear forwards;
-    animation-delay: 1s;
-  }
-
-  @keyframes dash {
-    from {
+    &__path {
+        animation-delay: 0.5s;
+        animation: logoStartUp 6s linear forwards;
+        fill-opacity: 0;
+        fill: $dark2;
+        stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
-    //   fill: red;
+        stroke-width: 0.2px;
     }
-    to {
-        stroke-dashoffset: 0;
-    //   fill: red;
-    }
-  }
+}

@@ -1,10 +1,10 @@
 // Imports
 @import "../../assets/scss/variables";
 
-// Home SCSS
+// Client SCSS
 .ma--skills {
     grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 1fr 10fr 2fr;
+    grid-template-rows: 5rem 10fr 2fr;
     grid-template-areas:
         ". . ."
         ". skills ."
@@ -16,28 +16,27 @@
     }
 }
 
-.skills {
+.skills__wrap {
     grid-area: skills;
-    // animation: fadeInUp 400ms ease-in-out;
-
-    h2 {
-        margin-bottom: 1em;
-    }
 }
 
-// SCS
-.skills__list {
+.skills__intro {
+    margin-bottom: 3rem;
+
+
+}
+
+.skills__text {
+    max-width: 600px;
+}
+
+// SCSS
+.skills__grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $padding-medium;
     color: $body-colour;
-
-    article {
-        border-radius: $radius;
-        font-size: 1rem;
-        padding: $padding-medium;
-        background: $white;;
-    }
+    border-radius: $radius;
 
     @media screen and (min-width: $medium-up) {
         grid-template-columns: 1fr 1fr;

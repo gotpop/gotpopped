@@ -7,7 +7,7 @@ import "./Clients.scss";
 class ClientsComponent extends Component {
     render() {
         const List = ({list}) => (
-            <div className="clients__list">
+            <div className="clients__grid">
                 {list.map(item => (<ListItem key={item.name} item={item}/>))}
             </div>
         );

@@ -1,9 +1,9 @@
 // Skills data
 const skillsObject = [
     {
-        name: 'angular',
-        title: 'Angular',
-        viewBox: '0 0 260 260',
+        name: 'reactIcon',
+        title: 'React',
+        viewBox: '0 0 800 800',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'cssgrid',
@@ -11,14 +11,14 @@ const skillsObject = [
         viewBox: '0 0 60 60',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
-        name: 'design',
-        title: 'Design',
-        viewBox: '0 10 55 60',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    }, {
         name: 'es6',
         title: 'ES6',
         viewBox: '0 0 260 260',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }, {
+        name: 'design',
+        title: 'Design',
+        viewBox: '0 10 55 60',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'git',
@@ -26,9 +26,9 @@ const skillsObject = [
         viewBox: '0 0 100 100',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
-        name: 'html5',
-        title: 'Html5',
-        viewBox: '0 0 500 600',
+        name: 'webpack',
+        title: 'Webpack',
+        viewBox: '400 300 1000 1000',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'jsdom',
@@ -36,9 +36,9 @@ const skillsObject = [
         viewBox: '-149 451 100 100',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
-        name: 'reactIcon',
-        title: 'React',
-        viewBox: '0 0 800 800',
+        name: 'angular',
+        title: 'Angular',
+        viewBox: '0 0 260 260',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
         name: 'redux',
@@ -56,9 +56,9 @@ const skillsObject = [
         viewBox: '0 0 270 230',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }, {
-        name: 'webpack',
-        title: 'Webpack',
-        viewBox: '400 300 1000 1000',
+        name: 'html5',
+        title: 'Html5',
+        viewBox: '0 0 500 600',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
 ];
