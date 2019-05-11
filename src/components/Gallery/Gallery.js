@@ -31,7 +31,24 @@ class Gallery extends Component {
                     .get('AllProjects');
             })
             .then((friend) => {
-                console.log("All projects: " + friend.storeAllProjects);
+                // console.log("All projects: " + friend.storeAllProjects);
+            })
+            .catch((error) => {
+                console.log("Ooops: " + error);
+            });
+    }
+
+    storeProjectsPages(projects) {
+        db
+            .gallery
+            .put({name: "AllProjectPages", storeAllProjects: projects})
+            .then(() => {
+                return db
+                    .gallery
+                    .get('AllProjectPages');
+            })
+            .then((friend) => {
+                // console.log("All projects: " + friend.storeAllProjects);
             })
             .catch((error) => {
                 console.log("Ooops: " + error);
@@ -68,6 +85,7 @@ class Gallery extends Component {
                     perView: 1,
                     gap: 100
                 });
+                this.storeProjectsPages(singleProjects);
                 this.setState({singleProjectsArray: singleProjects});
                 // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
