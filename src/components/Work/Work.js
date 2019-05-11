@@ -12,7 +12,6 @@ class WorkComponent extends Component {
 
     handleLoader = (loaderBoolean) => {
         this.setState({loaderActive: loaderBoolean});
-        console.log('this.state.loaderActive', this.state.loaderActive);
     }
 
     render() {

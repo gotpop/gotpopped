@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Glide from '@glidejs/glide';
 import "./Gallery.scss";
-// import db from "../../services/storage";
+import db from "../../services/storage";
 
 class Gallery extends Component {
 
@@ -17,23 +17,46 @@ class Gallery extends Component {
             .then(data => {
                 this.setState({allProjectsArray: data.projects});
                 this.getProject(data.projects);
+                this.storeAllProjects(data.projects);
+            });
+    }
+
+    storeAllProjects(projects) {
+        db
+            .gallery
+            .put({name: "AllProjects", storeAllProjects: projects})
+            .then(() => {
+                return db
+                    .gallery
+                    .get('AllProjects');
+            })
+            .then((friend) => {
+                // console.log("All projects: " + friend.storeAllProjects);
+            })
+            .catch((error) => {
+                console.log("Ooops: " + error);
+            });
+    }
+
+    storeProjectsPages(projects) {
+        db
+            .gallery
+            .put({name: "AllProjectPages", storeAllProjects: projects})
+            .then(() => {
+                return db
+                    .gallery
+                    .get('AllProjectPages');
+            })
+            .then((friend) => {
+                // console.log("All projects: " + friend.storeAllProjects);
+            })
+            .catch((error) => {
+                console.log("Ooops: " + error);
             });
     }
 
     componentDidMount() {
         this.getAllProjects();
-
-        // First iteration of IndexDb or make a new one
-
-        // async function asyncCall() {
-        //     // or make a new one
-        //     await db
-        //         .friends
-        //         .add({name: 'Camilla', age: 25, street: 'East 13:th Street'});
-        // }
-
-        // asyncCall();
-
     }
 
     handleResultPromiseState = (loaderBoolean) => {
@@ -62,6 +85,7 @@ class Gallery extends Component {
                     perView: 1,
                     gap: 100
                 });
+                this.storeProjectsPages(singleProjects);
                 this.setState({singleProjectsArray: singleProjects});
                 // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
