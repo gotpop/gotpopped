@@ -35,7 +35,7 @@ app.use(compression());
 app.use(express.static('build', {
     extensions: ['html', 'htm']
 }));
-app.use(favicon(__dirname + '/public/favicon.png'));
+// app.use(favicon(__dirname + '/public/favicon.png'));
 
 // Api
 app.get('/behance/projects', function (req, res) {
