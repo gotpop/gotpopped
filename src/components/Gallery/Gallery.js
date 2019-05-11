@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Glide from '@glidejs/glide';
 import "./Gallery.scss";
+// import db from "../../services/storage";
 
 class Gallery extends Component {
 
@@ -10,7 +11,7 @@ class Gallery extends Component {
         loaderActive: true
     };
 
-    componentDidMount() {
+    getAllProjects = () => {
         fetch('/behance/projects')
             .then(response => response.json())
             .then(data => {
@@ -19,8 +20,26 @@ class Gallery extends Component {
             });
     }
 
+    componentDidMount() {
+        this.getAllProjects();
+
+        // First iteration of IndexDb or make a new one
+
+        // async function asyncCall() {
+        //     // or make a new one
+        //     await db
+        //         .friends
+        //         .add({name: 'Camilla', age: 25, street: 'East 13:th Street'});
+        // }
+
+        // asyncCall();
+
+    }
+
     handleResultPromiseState = (loaderBoolean) => {
-        this.props.loaderActiveAction(loaderBoolean); 
+        this
+            .props
+            .loaderActiveAction(loaderBoolean);
     }
 
     getProject(projects) {
@@ -44,9 +63,9 @@ class Gallery extends Component {
                     gap: 100
                 });
                 this.setState({singleProjectsArray: singleProjects});
+                // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
                 carousel.mount();
-                // Tell parent component that the gallery has loaded
             });
     }
 
@@ -66,6 +85,8 @@ class Gallery extends Component {
                                     </article>
                                     <figure className="glide__figure">
                                         <img
+                                            width="1001"
+                                            height="569"
                                             className={item.name}
                                             key={item.id}
                                             src={item.modules[0].sizes.original}

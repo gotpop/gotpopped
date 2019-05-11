@@ -28,6 +28,7 @@
     "@glidejs/glide": "^3.3.0",
     "behance-api": "^1.1.4",
     "compression": "^1.7.4",
+    "dexie": "^2.0.4",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
@@ -54,7 +55,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "svgo": "^1.2.2",
-    "react-dev-utils": "^9.0.0"
+    "react-dev-utils": "^9.0.0",
+    "svgo": "^1.2.2"
   }
 }

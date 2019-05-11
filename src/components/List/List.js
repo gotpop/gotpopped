@@ -6,14 +6,15 @@ class ListComponent extends Component {
     render() {
         return (
             <article className="client">
-                <h3>{this.props.item.title}</h3>
                 <div className={`logo__wrap logo__wrap--${this.props.item.name}`}>
                     <Icon
+                        className={`logo__icon logo__icon--${this.props.item.name}`}
                         name={this.props.item.name}
                         viewBox={this.props.item.viewBox}
-                        preserveAspectRatio="xMaxYMid meet"
-                        shapeRendering="optimizeSpeed"/>
+                        preserveAspectRatio="xMaxYMid meet"/>
                 </div>
+                <h3>{this.props.item.title}</h3>
+                <p>{this.props.item.content}</p>
             </article>
         );
     }

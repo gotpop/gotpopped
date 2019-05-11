@@ -24,7 +24,7 @@
     }
 
     &:hover svg {
-        fill: $primary;
+        // fill: $primary;
     }
 }
 
@@ -32,6 +32,34 @@
     padding-top: 8px;
 
     &--active svg {
-        fill: $primary;
+        // fill: $primary;
     }
 }
+
+.logo-path {
+    // stroke-dasharray: 100;
+    // animation: dash 5s linear;
+    stroke-width: .2px;
+    // stroke-opacity: .5;
+    // stroke-linecap: round;
+    // stroke-linejoin: round;
+    // stroke-miterlimit: initial;
+    // stroke: black;
+    fill: transparent;
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 10s linear forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    //   fill: red;
+    }
+    to {
+        stroke-dashoffset: 0;
+    //   fill: red;
+    }
+  }
