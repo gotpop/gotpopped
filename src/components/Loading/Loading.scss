@@ -7,9 +7,15 @@
     width: 64px;
     height: 64px;
     display: inline-block;
-    
+
     &--inactive {
         display: none;
+    }
+
+    &__wrap {
+        height: calc(100% - 100px);
+        display: flex;
+        align-items: center;
     }
 }
 
