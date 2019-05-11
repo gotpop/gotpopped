@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Glide from '@glidejs/glide';
 import "./Gallery.scss";
-// import db from "../../services/storage";
+import db from "../../services/storage";
 
 class Gallery extends Component {
 
@@ -20,20 +20,31 @@ class Gallery extends Component {
             });
     }
 
+    dataBasez() {
+        
+        db.friends.put({name: "Rich", shoeSize: 7}).then (function(){
+            //
+            // Then when data is stored, read from it
+            //
+            return db.friends.get('Rich');
+        }).then(function (friend) {
+            //
+            // Display the result
+            //
+            alert ("Rich has shoe size " + friend.shoeSize);
+        }).catch(function(error) {
+           //
+           // Finally don't forget to catch any error
+           // that could have happened anywhere in the
+           // code blocks above.
+           //
+           alert ("Ooops: " + error);
+        });
+    }
+
     componentDidMount() {
         this.getAllProjects();
-
-        // First iteration of IndexDb or make a new one
-
-        // async function asyncCall() {
-        //     // or make a new one
-        //     await db
-        //         .friends
-        //         .add({name: 'Camilla', age: 25, street: 'East 13:th Street'});
-        // }
-
-        // asyncCall();
-
+        this.dataBasez();
     }
 
     handleResultPromiseState = (loaderBoolean) => {
