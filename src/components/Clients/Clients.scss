@@ -31,7 +31,7 @@
 }
 
 // SCSS
-.clients__list {
+.clients__grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $padding-medium;
@@ -47,7 +47,7 @@
     }
 }
 
-.client {
+.grid-item {
     animation: fadeInUp 400ms ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -61,7 +61,7 @@ $delay-list: 0s .2s .4s .6s .8s 1s;
 
 @each $current-delay in $delay-list {
     $i: index($delay-list, $current-delay);
-    .client:nth-child(#{$i}) {
+    .grid-item:nth-child(#{$i}) {
         animation-delay: $current-delay;
     }
 }

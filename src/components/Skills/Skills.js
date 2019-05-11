@@ -5,18 +5,21 @@ import skills from '../../data/skills';
 import "./Skills.scss";
 
 class SkillsComponent extends Component {
-
     render() {
         const List = ({list}) => (
-            <ul className="skills__list">
+            <div className="skills__grid">
                 {list.map(item => (<ListItem key={item.name} item={item}/>))}
-            </ul>
+            </div>
         );
         return (
             <section className="si">
                 <main className="ma ma--skills">
-                    <section className="skills">
-                        <h2>Skills</h2>
+                    <section className="skills__wrap">
+                        <section className="skills__intro">
+                            <h2 className="skills__title">Skills</h2>
+                            <p className="skills__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </section>
                         <List list={skills}/>
                     </section>
                 </main>
