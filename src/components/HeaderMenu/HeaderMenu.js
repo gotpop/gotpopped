@@ -46,7 +46,7 @@ class HeaderMenuComponent extends Component {
                         onClick={this.closeMenu}>
                         <span>CLIENTS</span>
                         <span className="he-menu__icon">
-                            <Icon name="clients"/>
+                            <Icon viewBox="0 0 75 65" name="clients"/>
                         </span>
                     </NavLink>
                     <NavLink
