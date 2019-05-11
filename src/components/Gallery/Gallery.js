@@ -18,7 +18,8 @@ class Gallery extends Component {
                 this.setState({allProjectsArray: data.projects});
                 this.getProject(data.projects);
                 this.storeAllProjects(data.projects);
-            });
+            })
+            .catch(error => console.error('Error:', error));
     }
 
     storeAllProjects(projects) {
@@ -73,7 +74,7 @@ class Gallery extends Component {
         for (const project of projects) {
             promiseArray.push(fetch(`/behance/project/?projectId=${project.id}`).then(response => response.json()).then(data => {
                 singleProjects.push(data.project);
-            }));
+            }).catch(error => console.error('Error:', error)));
         }
 
         // Execute and wait for all to resolve before setting state
