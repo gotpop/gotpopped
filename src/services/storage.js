@@ -1,13 +1,9 @@
+// Storage
 import Dexie from 'dexie';
 
-var db = new Dexie("friend_database");
+var db = new Dexie("gallery_database");
 db.version(1).stores({
-    friends: 'name,shoeSize'
+    gallery: 'name,storeAllProjects'
 });
-
-//
-// Put some data into it
-//
-
 
 export default db;

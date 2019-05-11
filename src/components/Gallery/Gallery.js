@@ -17,34 +17,29 @@ class Gallery extends Component {
             .then(data => {
                 this.setState({allProjectsArray: data.projects});
                 this.getProject(data.projects);
+                this.storeAllProjects(data.projects);
             });
     }
 
-    dataBasez() {
-        
-        db.friends.put({name: "Rich", shoeSize: 7}).then (function(){
-            //
-            // Then when data is stored, read from it
-            //
-            return db.friends.get('Rich');
-        }).then(function (friend) {
-            //
-            // Display the result
-            //
-            alert ("Rich has shoe size " + friend.shoeSize);
-        }).catch(function(error) {
-           //
-           // Finally don't forget to catch any error
-           // that could have happened anywhere in the
-           // code blocks above.
-           //
-           alert ("Ooops: " + error);
-        });
+    storeAllProjects(projects) {
+        db
+            .gallery
+            .put({name: "AllProjects", storeAllProjects: projects})
+            .then(() => {
+                return db
+                    .gallery
+                    .get('AllProjects');
+            })
+            .then((friend) => {
+                console.log("All projects: " + friend.storeAllProjects);
+            })
+            .catch((error) => {
+                console.log("Ooops: " + error);
+            });
     }
 
     componentDidMount() {
         this.getAllProjects();
-        this.dataBasez();
     }
 
     handleResultPromiseState = (loaderBoolean) => {
