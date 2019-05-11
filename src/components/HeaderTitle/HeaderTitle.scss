@@ -42,9 +42,9 @@
 
 @keyframes logoStartUp {
     0% {
-        stroke-dashoffset: 1000;
         fill-opacity: 0;
         fill: $dark2;
+        stroke-dashoffset: 1000;
     }
 
     20% {
@@ -57,8 +57,8 @@
     }
 
     100% {
-        stroke-opacity: 0;
         fill-opacity: 1;
         stroke-dashoffset: 0;
+        stroke-opacity: 0;
     }
 }
