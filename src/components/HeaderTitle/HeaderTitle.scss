@@ -39,7 +39,7 @@
 .logo-path {
     // stroke-dasharray: 100;
     // animation: dash 5s linear;
-    // stroke-width: .2px;
+    stroke-width: .2px;
     // stroke-opacity: .5;
     // stroke-linecap: round;
     // stroke-linejoin: round;
@@ -50,7 +50,7 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 10s linear forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
   }
 
   @keyframes dash {

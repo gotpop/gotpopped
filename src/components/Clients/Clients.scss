@@ -22,21 +22,12 @@
 
 .clients__intro {
     margin-bottom: 3rem;
+
+
 }
 
-.client {
-    animation: fadeInUp 400ms ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-$delay-list: 0s .2s .4s .6s .8s 1s;
-
-@each $current-delay in $delay-list {
-    $i: index($delay-list, $current-delay);
-    .client:nth-child(#{$i}) {
-        animation-delay: $current-delay;
-    }
+.clients__text {
+    max-width: 600px;
 }
 
 // SCSS
@@ -47,18 +38,30 @@ $delay-list: 0s .2s .4s .6s .8s 1s;
     color: $body-colour;
     border-radius: $radius;
 
-    article {
-        font-size: 1rem;
-        padding: $padding-medium;
-        background: rgba($white, 0.5);
-        border-radius: $radius;
-    }
-
     @media screen and (min-width: $medium-up) {
         grid-template-columns: 1fr 1fr;
     }
 
     @media screen and (min-width: $large-up) {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.client {
+    animation: fadeInUp 400ms ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: 1rem;
+    padding: $padding-medium;
+    background: rgba($white, 0.5);
+    border-radius: $radius
+}
+
+$delay-list: 0s .2s .4s .6s .8s 1s;
+
+@each $current-delay in $delay-list {
+    $i: index($delay-list, $current-delay);
+    .client:nth-child(#{$i}) {
+        animation-delay: $current-delay;
     }
 }

@@ -7,13 +7,22 @@
     // justify-content: space-between;
 }
 
-.logo__wrap {    
+.logo__wrap {
     float: right;
+    shape-outside: circle();
+    // width: 50px;
+    // height: 50px;
+    // clip-path: circle();
+    shape-margin: 2rem;
+}
+.logo__icon {
+    max-width: 50px;
+    height: auto;
+    transition: all 0.4s ease;
+    width: 100%;
+}
 
-    svg {
-        max-width: 50px;
-        height: auto;
-        transition: all 0.4s ease;
-        width: 100%;
-    }
+.logo__icon--aetna,
+.logo__icon--columbus {
+    max-width: 100px;
 }
