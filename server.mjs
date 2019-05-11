@@ -60,10 +60,10 @@ app.get('/behance/project', function (req, res) {
         .catch(error => console.error(error));
 });
 
-app.get('*', function (req, res) {
+app.all('*', (req, res) => {
     res.sendFile('index.html', {
         root: './build'
-    })
+    });
 });
 
 app.listen(port, function () {
