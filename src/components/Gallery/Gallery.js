@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Glide from '@glidejs/glide';
 import "./Gallery.scss";
 import db from "../../services/storage";
+// import indexDb from '../../services/indexDb';
 
 class Gallery extends Component {
 
@@ -57,7 +58,31 @@ class Gallery extends Component {
     }
 
     componentDidMount() {
-        this.getAllProjects();
+        // Check if starage has been used yet and if not then make an api call
+        let indexDbStorage;
+        db
+                    .gallery
+                    .get('AllProjectPages').then((stuff)=> {
+                        console.log('Content of IndexedDB', stuff);
+                        indexDbStorage = stuff.storeAllProjects;
+                        if (indexDbStorage === undefined) {
+                            this.getAllProjects();
+                            console.log('Fetch projects from api', indexDbStorage);
+                            
+                        } else {
+                            console.log('Fetch projects from indexDb', indexDbStorage);
+                            const carousel = new Glide('.glide', {
+                                type: 'carousel',
+                                perView: 1,
+                                gap: 100
+                            });
+                            // this.storeProjectsPages(singleProjects);
+                            this.setState({singleProjectsArray: indexDbStorage});
+                            // Tell parent component that the gallery has loaded
+                            this.handleResultPromiseState(false);
+                            carousel.mount();
+                        }
+                    });
     }
 
     handleResultPromiseState = (loaderBoolean) => {
