@@ -17,8 +17,7 @@ class ClientsComponent extends Component {
                     <section className="clients__wrap">
                         <section className="clients__intro">
                             <h2 className="clients__title">Clients</h2>
-                            <p className="clients__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className="clients__text">Here a brief overview of the clients that I've worked with.</p>
                         </section>
                         <List list={clients}/>
                     </section>
