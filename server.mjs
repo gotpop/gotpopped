@@ -22,43 +22,43 @@ const goBehance = new Behance(process.env);
 const thisBehance = goBehance.getProjects();
 
 // Force https unless local dev environment
-// app.use(function (req, res, next) {
-//     if ((req.get('X-Forwarded-Proto') !== 'https') && envy !== 'local') {
-//         res.redirect('https://' + req.get('Host') + req.url);
-//     } else
-//         next();
-// });
+app.use(function (req, res, next) {
+    if ((req.get('X-Forwarded-Proto') !== 'https') && envy !== 'local') {
+        res.redirect('https://' + req.get('Host') + req.url);
+    } else
+        next();
+});
 
-// app.use(compression());
+app.use(compression());
 
 // Set up server
 app.use(express.static('build', {
     extensions: ['html', 'htm']
 }));
-// app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 // Api
-// app.get('/behance/projects', function (req, res) {
-//     fetch(thisBehance)
-//         .then(response => response.json())
-//         .then(data => {
-//             res.send(data);
-//         })
-//         .catch(error => console.error(error));
-// });
+app.get('/behance/projects', function (req, res) {
+    fetch(thisBehance)
+        .then(response => response.json())
+        .then(data => {
+            res.send(data);
+        })
+        .catch(error => console.error(error));
+});
 
-// app.get('/behance/project', function (req, res) {
-//     let projectId = req.query.projectId;
-//     const thisBehanceProject = goBehance.getProject(projectId);
-//     console.log("thisBehance", thisBehanceProject);
+app.get('/behance/project', function (req, res) {
+    let projectId = req.query.projectId;
+    const thisBehanceProject = goBehance.getProject(projectId);
+    console.log("thisBehance", thisBehanceProject);
 
-//     fetch(thisBehanceProject)
-//         .then(response => response.json())
-//         .then(data => {
-//             res.send(data);
-//         })
-//         .catch(error => console.error(error));
-// });
+    fetch(thisBehanceProject)
+        .then(response => response.json())
+        .then(data => {
+            res.send(data);
+        })
+        .catch(error => console.error(error));
+});
 
 app.all('*', (req, res) => {
     res.sendFile('index.html', {
