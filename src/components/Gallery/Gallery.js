@@ -3,6 +3,7 @@ import Glide from '@glidejs/glide';
 import "./Gallery.scss";
 import db from "../../services/storage";
 // import indexDb from '../../services/indexDb';
+import Dexie from 'dexie';
 
 class Gallery extends Component {
 
@@ -57,32 +58,44 @@ class Gallery extends Component {
             });
     }
 
+    localBuild = () => {
+        db
+            .gallery
+            .get('AllProjectPages')
+            .then((stuff) => {
+                
+                const carousel = new Glide('.glide', {
+                    type: 'carousel',
+                    perView: 1,
+                    gap: 100
+                });
+                console.log("TCL: Gallery -> localBuild -> stuff", stuff.storeAllProjects)
+                // this.storeProjectsPages(stuff.storeAllProjects);
+                this.setState({singleProjectsArray: stuff.storeAllProjects});
+                // Tell parent component that the gallery has loaded
+                this.handleResultPromiseState(false);
+                carousel.mount();
+            });
+    }
+
+    checkDbExists = () => {
+        Dexie
+            .exists("gallery_database")
+            .then((exists) => {
+                if (exists) {
+                    this.localBuild();
+                } else {
+                    this.getAllProjects();
+                }
+            })
+            .catch(function (error) {
+                console.error("Oops, an error occurred when trying to check database existance");
+            });
+    }
+
     componentDidMount() {
         // Check if starage has been used yet and if not then make an api call
-        let indexDbStorage;
-        db
-                    .gallery
-                    .get('AllProjectPages').then((stuff)=> {
-                        console.log('Content of IndexedDB', stuff);
-                        indexDbStorage = stuff.storeAllProjects;
-                        if (indexDbStorage === undefined) {
-                            this.getAllProjects();
-                            console.log('Fetch projects from api', indexDbStorage);
-                            
-                        } else {
-                            console.log('Fetch projects from indexDb', indexDbStorage);
-                            const carousel = new Glide('.glide', {
-                                type: 'carousel',
-                                perView: 1,
-                                gap: 100
-                            });
-                            // this.storeProjectsPages(singleProjects);
-                            this.setState({singleProjectsArray: indexDbStorage});
-                            // Tell parent component that the gallery has loaded
-                            this.handleResultPromiseState(false);
-                            carousel.mount();
-                        }
-                    });
+        this.checkDbExists();
     }
 
     handleResultPromiseState = (loaderBoolean) => {
@@ -112,6 +125,7 @@ class Gallery extends Component {
                     gap: 100
                 });
                 this.storeProjectsPages(singleProjects);
+				console.log("TCL: Gallery -> singleProjects", singleProjects);
                 this.setState({singleProjectsArray: singleProjects});
                 // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
