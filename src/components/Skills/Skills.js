@@ -17,8 +17,7 @@ class SkillsComponent extends Component {
                     <section className="skills__wrap">
                         <section className="skills__intro">
                             <h2 className="skills__title">Skills</h2>
-                            <p className="skills__text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className="skills__text">Here's a few of the skills I've used professionally.</p>
                         </section>
                         <List list={skills}/>
                     </section>

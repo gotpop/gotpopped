@@ -13,7 +13,7 @@ class Gallery extends Component {
         loaderActive: true
     };
 
-    getAllProjects = () => {
+    buildGalleryFromApiData = () => {
         fetch('/behance/projects')
             .then(response => response.json())
             .then(data => {
@@ -28,14 +28,6 @@ class Gallery extends Component {
         db
             .gallery
             .put({name: "AllProjects", storeAllProjects: projects})
-            .then(() => {
-                return db
-                    .gallery
-                    .get('AllProjects');
-            })
-            .then((friend) => {
-                // console.log("All projects: " + friend.storeAllProjects);
-            })
             .catch((error) => {
                 console.log("Ooops: " + error);
             });
@@ -45,33 +37,22 @@ class Gallery extends Component {
         db
             .gallery
             .put({name: "AllProjectPages", storeAllProjects: projects})
-            .then(() => {
-                return db
-                    .gallery
-                    .get('AllProjectPages');
-            })
-            .then((friend) => {
-                // console.log("All projects: " + friend.storeAllProjects);
-            })
             .catch((error) => {
                 console.log("Ooops: " + error);
             });
     }
 
-    localBuild = () => {
+    buildGalleryFromLocalData = () => {
         db
             .gallery
             .get('AllProjectPages')
-            .then((stuff) => {
-                
+            .then((data) => {
                 const carousel = new Glide('.glide', {
                     type: 'carousel',
                     perView: 1,
                     gap: 100
                 });
-                console.log("TCL: Gallery -> localBuild -> stuff", stuff.storeAllProjects)
-                // this.storeProjectsPages(stuff.storeAllProjects);
-                this.setState({singleProjectsArray: stuff.storeAllProjects});
+                this.setState({singleProjectsArray: data.storeAllProjects});
                 // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
                 carousel.mount();
@@ -83,9 +64,9 @@ class Gallery extends Component {
             .exists("gallery_database")
             .then((exists) => {
                 if (exists) {
-                    this.localBuild();
+                    this.buildGalleryFromLocalData();
                 } else {
-                    this.getAllProjects();
+                    this.buildGalleryFromApiData();
                 }
             })
             .catch(function (error) {
@@ -125,7 +106,6 @@ class Gallery extends Component {
                     gap: 100
                 });
                 this.storeProjectsPages(singleProjects);
-				console.log("TCL: Gallery -> singleProjects", singleProjects);
                 this.setState({singleProjectsArray: singleProjects});
                 // Tell parent component that the gallery has loaded
                 this.handleResultPromiseState(false);
