@@ -54,7 +54,7 @@ const skillsObject = [
         name: 'vue',
         title: 'VueJS',
         viewBox: '0 0 270 230',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Vue whist not as poplular as other frameworks/libraries is a pleasure to work with. I\'ve used it both a Bought by Many and Your Favourite Story to build a sign up application for Mercedes Benz.'
     }, {
         name: 'html5',
         title: 'Html5',
