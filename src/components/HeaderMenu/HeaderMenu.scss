@@ -2,31 +2,28 @@
 @import "../../assets/scss/_variables.scss";
 
 // Menu
-.he-menu__wrap {
-    grid-area: menu;
-    color: $dark2;
+.he-menu {
     align-items: center;
     z-index: 99999;
-
-    @media screen and (min-width: $large-up) {
-        padding: $padding-small;
-        justify-self: end;
-    }
-}
-
-.he-menu {
+    grid-column: 2 / 6; 
     display: none;
     grid-auto-flow: row;
     grid-gap: $padding-tiny;
-
+    grid-auto-rows: minmax(auto, 100%);
+    
     &--active {
         display: grid;
     }
-
+    
     @media screen and (min-width: $medium-up) {
+        grid-column: 4 / 13;
         display: grid;
-        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: $padding-small;
+    }
+
+    @media screen and (min-width: $large-up) {
+        grid-column: 8 / 17;
     }
 }
 
@@ -35,7 +32,7 @@
     cursor: pointer;
     margin: 0;
     flex: 1 1 auto;
-    padding: $padding-tiny $padding-medium;
+    // padding: $padding-tiny $padding-medium;
     color: $dark3;
     display: flex;
     align-items: center;
@@ -43,6 +40,7 @@
     justify-content: space-around;
     font-size: 1rem;
     font-family: $header-medium;
+    background: $hover;
 
     &:hover {
         transition: all 0.5s ease;

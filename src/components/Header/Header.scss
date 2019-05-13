@@ -8,23 +8,19 @@
     display: grid;
     grid-area: header;
     grid-gap: 0;
-    grid-template-areas: ". title trigger" "menu menu menu";
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
     padding: $padding-tiny;
-    top: 0;
     z-index: 99;
-
+    
     @media screen and (min-width: $medium-up) {
-        grid-template-areas: "title title menu menu";
-        grid-template-columns: 1fr 1fr 1fr 3fr;
-        justify-content: end;
+        padding: $padding-small;
+        grid-gap: $margin-small;
+        grid-template-columns: repeat(12, 1fr);
     }
-
+    
     @media screen and (min-width: $large-up) {
-        grid-template-areas: ". title menu menu";
-        grid-template-columns: 6rem 3fr 1fr 3fr;
+        grid-template-columns: repeat(16, 1fr);
         max-width: calc(100vw - 17px);
-        padding: 0;
     }
 }

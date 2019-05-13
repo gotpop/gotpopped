@@ -16,16 +16,14 @@ class HeaderTitle extends Component {
 
     render() {
         return (
-            <section className="he-logo__wrap">
-                <NavLink
-                    className="he-logo__link"
-                    to="/"
-                    exact={true}
-                    activeClassName='he-logo__link--active'
-                    onClick={this.onRefreshComponent}>
-                        <Icon className="he-logo" name="gotpop"/>
-                    </NavLink>
-            </section>
+            <NavLink
+                className="he-logo__link"
+                to="/"
+                exact={true}
+                activeClassName='he-logo__link--active'
+                onClick={this.onRefreshComponent}>
+                <Icon className="he-logo" name="gotpop"/>
+            </NavLink>
         );
     }
 }

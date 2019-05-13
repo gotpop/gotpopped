@@ -34,43 +34,41 @@ class HeaderMenuComponent extends Component {
 
     render() {
         return (
-            <section className="he-menu__wrap">
-                <nav
-                    className={this.props.menu
-                    ? 'he-menu he-menu--active'
-                    : 'he-menu'}>
-                    <NavLink
-                        className="he-menu__item"
-                        to="/clients"
-                        activeClassName='he-menu__item--active'
-                        onClick={this.closeMenu}>
-                        <span>CLIENTS</span>
-                        <span className="he-menu__icon">
-                            <Icon viewBox="0 0 75 65" name="clients"/>
-                        </span>
-                    </NavLink>
-                    <NavLink
-                        className="he-menu__item"
-                        to="/work"
-                        activeClassName='he-menu__item--active'
-                        onClick={this.closeMenu}>
-                        <span>WORK</span>
-                        <span className="he-menu__icon">
-                            <Icon name="code"/>
-                        </span>
-                    </NavLink>
-                    <NavLink
-                        className="he-menu__item"
-                        to="/skills"
-                        activeClassName='he-menu__item--active'
-                        onClick={this.closeMenu}>
-                        <span>SKILLS</span>
-                        <span className="he-menu__icon">
-                            <Icon name="skills"/>
-                        </span>
-                    </NavLink>
-                </nav>
-            </section>
+            <nav
+                className={this.props.menu
+                ? 'he-menu he-menu--active'
+                : 'he-menu'}>
+                <NavLink
+                    className="he-menu__item"
+                    to="/clients"
+                    activeClassName='he-menu__item--active'
+                    onClick={this.closeMenu}>
+                    <span>CLIENTS</span>
+                    <span className="he-menu__icon">
+                        <Icon viewBox="0 0 75 65" name="clients"/>
+                    </span>
+                </NavLink>
+                <NavLink
+                    className="he-menu__item"
+                    to="/work"
+                    activeClassName='he-menu__item--active'
+                    onClick={this.closeMenu}>
+                    <span>WORK</span>
+                    <span className="he-menu__icon">
+                        <Icon name="code"/>
+                    </span>
+                </NavLink>
+                <NavLink
+                    className="he-menu__item"
+                    to="/skills"
+                    activeClassName='he-menu__item--active'
+                    onClick={this.closeMenu}>
+                    <span>SKILLS</span>
+                    <span className="he-menu__icon">
+                        <Icon name="skills"/>
+                    </span>
+                </NavLink>
+            </nav>
         );
     }
 }
