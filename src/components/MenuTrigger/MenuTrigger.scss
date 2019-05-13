@@ -10,16 +10,18 @@
     border: none;
     background: transparent;
 
-    @media screen and (min-width: $medium-up) {
-        display: none;
-    }
-
+    
     &__text {
         display: none;
     }
-
+    
     &__wrap {
-        grid-area: trigger;
+        @media screen and (min-width: $medium-up) {
+            display: none;
+        }
+        // grid-area: trigger;
+        grid-column: 6 / 6;
+        // grid-row: 1;
         display: flex;
         justify-content: center;
         align-items: center;

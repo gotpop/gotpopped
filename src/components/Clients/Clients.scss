@@ -3,45 +3,45 @@
 
 // Client SCSS
 .ma--clients {
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 5rem 10fr 5rem;
-    grid-template-areas:
-        ". . ."
-        ". clients ."
-        ". . .";
     display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+
+    @media screen and (min-width: $medium-up) {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 2rem auto auto 2rem;
+    }
 
     @media screen and (min-width: $large-up) {
-        grid-template-columns: 6rem 1fr 6rem;
+        grid-template-columns: repeat(16, 1fr);
     }
 }
 
-.clients__wrap {
-    grid-area: clients;
-}
-
 .clients__intro {
-    margin-bottom: 3rem;
-}
-
-.clients__text {
-    max-width: 600px;
+    background: rgba($white, 0.5);
+    grid-column: 2 / 12;
+    grid-row: 2 / 2;
+    padding: 1rem;
 }
 
 // SCSS
 .clients__grid {
+    grid-column: 1 / 12;
+    grid-row: 3 / 3;
+    animation: fadeInUp 400ms ease-in-out;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: $padding-medium;
-    color: $body-colour;
-    border-radius: $radius;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
 
     @media screen and (min-width: $medium-up) {
-        grid-template-columns: 1fr 1fr;
+        grid-column: 2 / 12;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (min-width: $large-up) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: 2 / 16;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -52,10 +52,10 @@
     font-size: 1rem;
     padding: $padding-medium;
     background: rgba($white, 0.5);
-    border-radius: $radius
+    border-radius: $radius;
 }
 
-$delay-list: 0s .2s .4s .6s .8s 1s 1.2s 1.4s 1.6s;
+$delay-list: 0s 0.2s 0.4s 0.6s 0.8s 1s 1.2s 1.4s 1.6s;
 
 @each $current-delay in $delay-list {
     $i: index($delay-list, $current-delay);
