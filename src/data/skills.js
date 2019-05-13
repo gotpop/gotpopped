@@ -34,22 +34,22 @@ const skillsObject = [
         name: 'jsdom',
         title: 'Jsdom',
         viewBox: '-149 451 100 100',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Jsdom is used for creating a virtual dom for testing with Jasmine.'
     }, {
         name: 'angular',
         title: 'Angular',
         viewBox: '0 0 260 260',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Angular is the second most popular framework/library.'
     }, {
         name: 'redux',
         title: 'Redux',
         viewBox: '0 0 100 100',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Redux is a state manager used with React'
     }, {
         name: 'testing',
         title: 'Testing',
         viewBox: '0 0 70 70',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'Like all good scientists I test!'
     }, {
         name: 'vue',
         title: 'VueJS',
@@ -59,7 +59,7 @@ const skillsObject = [
         name: 'html5',
         title: 'Html5',
         viewBox: '0 0 500 600',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        content: 'I write semantic markup.'
     }
 ];
 
