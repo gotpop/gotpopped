@@ -57,7 +57,7 @@
     border-radius: $radius
 }
 
-$delay-list: 0s .2s .4s .6s .8s 1s;
+$delay-list: 0s .2s .4s .6s .8s 1s 1.2s 1.4s 1.6s;
 
 @each $current-delay in $delay-list {
     $i: index($delay-list, $current-delay);
