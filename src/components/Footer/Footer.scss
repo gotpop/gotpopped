@@ -7,8 +7,8 @@
 .fo {
     grid-area: footer;
     background: $footer-background;
-    padding: $padding-large calc(#{$padding-large} + 17px) $padding-large
-        $padding-large;
+    padding: $large calc(#{$large} + 17px) $large
+        $large;
     box-shadow: $shadow-inset;
     display: grid;
     justify-items: center;
@@ -16,7 +16,7 @@
 }
 
 .social-link {
-    margin: $margin-tiny;
+    margin: $tiny;
     text-decoration: none;
 }
 

@@ -1,29 +1,51 @@
-// Import
 @import "../../assets/scss/variables";
 
-// layout
-.logo__wrap {
-    float: right;
-    max-height: 3em;
-    margin: 0em 0em 2em 2em;
-    shape-outside: circle(40%);
-}
-.logo__icon {
-    max-width: 50px;
-    height: auto;
-    transition: all 0.4s ease;
-    width: 100%;
-
-    &--cssgrid {
-        fill: purple;
+// list layout
+.item {
+    animation: fadeInUp 400ms ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    font-size: $small;
+    padding: $medium;
+    background: rgba($white, 0.5);
+    border-radius: $radius;
+    grid-column: span 4;
+    
+    &:nth-child(odd) {
+        grid-column: span 5;
     }
 
-    &--redux {
-        background: #3d3d3d;
+    &__logo-wrap {
+        float: right;
+        max-height: 3em;
+        margin: 0em 0em 2em 2em;
+        shape-outside: circle(40%);
+    }
+
+    &__logo-icon {
+        max-width: 50px;
+        height: auto;
+        transition: all 0.4s ease;
+        width: 100%;
+    
+        &--cssgrid {
+            fill: purple;
+        }
+    
+        &--redux {
+            background: #3d3d3d;
+        }
+
+        &--aetna,
+        &--columbus {
+            max-width: 100px;
+        }
     }
 }
 
-.logo__icon--aetna,
-.logo__icon--columbus {
-    max-width: 100px;
+@each $current-delay in $delay-list {
+    $i: index($delay-list, $current-delay);
+    .item:nth-child(#{$i}) {
+        animation-delay: $current-delay;
+    }
 }

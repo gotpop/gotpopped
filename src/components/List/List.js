@@ -5,10 +5,10 @@ import Icon from '../Icons/Icons';
 class ListComponent extends Component {
     render() {
         return (
-            <article className="grid-item">
-                <div className={`logo__wrap logo__wrap--${this.props.item.name}`}>
+            <article className="item">
+                <div className={`item__logo-wrap item__logo-wrap--${this.props.item.name}`}>
                     <Icon
-                        className={`logo__icon logo__icon--${this.props.item.name}`}
+                        className={`item__logo-icon item__logo-icon--${this.props.item.name}`}
                         name={this.props.item.name}
                         viewBox={this.props.item.viewBox}
                         preserveAspectRatio="xMaxYMid meet"/>
