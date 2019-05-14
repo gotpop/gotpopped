@@ -5,7 +5,7 @@
     display: grid;
     grid-gap: $small;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 2rem auto auto 2rem;
+    grid-template-rows: 2rem max-content max-content 4rem;
     margin: $small;
 
     @media screen and (min-width: $medium-up) {
@@ -20,7 +20,7 @@
 .clients__intro {
     grid-column: 2 / 12;
     grid-row: 2 / 2;
-    padding: $small;
+    padding: $small 0;
 }
 
 .clients__grid {
@@ -38,6 +38,6 @@
 
     @media screen and (min-width: $large-up) {
         grid-column: 2 / 16;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(14, 1fr);
     }
 }

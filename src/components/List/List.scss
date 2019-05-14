@@ -9,6 +9,11 @@
     padding: $medium;
     background: rgba($white, 0.5);
     border-radius: $radius;
+    grid-column: span 4;
+    
+    &:nth-child(odd) {
+        grid-column: span 5;
+    }
 
     &__logo-wrap {
         float: right;
