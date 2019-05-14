@@ -10,12 +10,12 @@
     grid-gap: 0;
     grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
-    padding: $padding-tiny;
+    padding: $tiny;
     z-index: 99;
     
     @media screen and (min-width: $medium-up) {
-        padding: $padding-small;
-        grid-gap: $margin-small;
+        padding: $small;
+        grid-gap: $small;
         grid-template-columns: repeat(12, 1fr);
     }
     
