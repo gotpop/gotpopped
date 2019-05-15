@@ -14,18 +14,20 @@
 }
 
 .glide {
-    grid-column: 1 / 12;
-    max-width: 400px;
+    grid-column: 1 / 7;
+    max-width: 100%;
     min-height: 50vh;
     grid-row: 3 / 3;
-
+    padding: 1rem;
+    
     @media screen and (min-width: $medium-up) {
-        max-width: 700px;
+        padding: 0rem;
+        max-width: 100%;
         grid-column: 2 / 12;
     }
     
     @media screen and (min-width: $large-up) {
         grid-column: 2 / 16;
-        max-width: 1000px;
+        max-width: 100%;
     }
 }

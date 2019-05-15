@@ -12,7 +12,9 @@
     grid-column: span 5;
     
     &:nth-child(3n+2) {
-        grid-column: span 4;
+        @media screen and (min-width: $large-up) {
+            grid-column: span 4;
+        }
     }
 
     &__logo-wrap {

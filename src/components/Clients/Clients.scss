@@ -17,7 +17,7 @@
 
     @media screen and (min-width: $medium-up) {
         grid-column: 2 / 12;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(10, 1fr);
     }
 
     @media screen and (min-width: $large-up) {
