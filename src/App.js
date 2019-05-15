@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div className="ap">
+                <div className="gotpop">
                     <Header/>
                     <Route exact path="/" component={Home}/>
                     <Route path="/clients" component={Clients}/>

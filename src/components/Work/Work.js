@@ -17,8 +17,8 @@ class WorkComponent extends Component {
         return (
             <main
                 className={this.state.loaderActive
-                ? 'ma ma--work ma--loading'
-                : 'ma ma--work ma--loaded'}>
+                ? 'main main--work main--loading'
+                : 'main main--work main--loaded'}>
                 <Loading loaderActive={this.state.loaderActive}></Loading>
                 <Gallery loaderActiveAction={this.handleLoader}></Gallery>
             </main>

@@ -11,7 +11,7 @@ class ClientsComponent extends Component {
             </div>
         );
         return (
-            <main className="ma ma--clients">
+            <main className="main main--clients">
                 <section className="clients__intro">
                     <h2 className="clients__title">Clients</h2>
                     <p className="clients__text">Here a brief overview of the clients that I've worked with.</p>

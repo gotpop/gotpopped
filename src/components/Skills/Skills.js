@@ -11,7 +11,7 @@ class SkillsComponent extends Component {
             </div>
         );
         return (
-            <main className="ma ma--skills">
+            <main className="main main--skills">
                 <section className="skills__intro">
                     <h2 className="skills__title">Skills</h2>
                     <p className="skills__text">Here's a few of the skills I've used professionally.</p>

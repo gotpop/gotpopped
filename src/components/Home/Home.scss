@@ -2,22 +2,6 @@
 @import "../../assets/scss/variables";
 
 // Home SCSS
-.ma--home {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 2rem min-content 4rem;
-    grid-gap: 1rem;
-    margin: 1rem;
-    
-    @media screen and (min-width: $medium-up) {
-        grid-template-columns: repeat(12, 1fr);
-    }
-    
-    @media screen and (min-width: $large-up) {
-        grid-template-columns: repeat(16, 1fr);
-    }
-}
-
 .intro {
     grid-column: 2 / 6;
     grid-row: 2 / 2;
