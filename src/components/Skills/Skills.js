@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ListItem from '../List/List';
-import Footer from '../Footer/Footer';
 import skills from '../../data/skills';
 import "./Skills.scss";
 
@@ -12,16 +11,13 @@ class SkillsComponent extends Component {
             </div>
         );
         return (
-            <section className="si">
-                <main className="ma ma--skills">
-                    <section className="skills__intro">
-                        <h2 className="skills__title">Skills</h2>
-                        <p className="skills__text">Here's a few of the skills I've used professionally.</p>
-                    </section>
-                    <List list={skills}/>
-                </main>
-                <Footer/>
-            </section>
+            <main className="ma ma--skills">
+                <section className="skills__intro">
+                    <h2 className="skills__title">Skills</h2>
+                    <p className="skills__text">Here's a few of the skills I've used professionally.</p>
+                </section>
+                <List list={skills}/>
+            </main>
         );
     }
 }

@@ -4,15 +4,15 @@
 // Layout
 .ap {
     display: grid;
-    grid-template-areas: "header" "site";
+    grid-template-areas: "header" "main" "footer";
     grid-template-columns: 1fr;
 }
 
-.si {
+.ma {
     background: $site-background;
     display: grid;
     grid-area: site;
-    grid-template-areas: "main" "footer";
+    grid-template-areas: "main";
 }
 
 .ma {

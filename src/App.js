@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import Work from './components/Work/Work';
 import Skills from './components/Skills/Skills';
 import Clients from './components/Clients/Clients';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                     <Route path="/clients" component={Clients}/>
                     <Route path="/work" component={Work}/>
                     <Route path="/skills" component={Skills}/>
+                    <Footer/>
                 </div>
             </BrowserRouter>
         );

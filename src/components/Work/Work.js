@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import "./Work.scss";
 import Gallery from '../Gallery/Gallery';
 import Loading from '../Loading/Loading';
-import Footer from '../Footer/Footer';
 
 class WorkComponent extends Component {
 
@@ -16,16 +15,13 @@ class WorkComponent extends Component {
 
     render() {
         return (
-            <section className="si">
-                <main
-                    className={this.state.loaderActive
-                    ? 'ma ma--work ma--loading'
-                    : 'ma ma--work ma--loaded'}>
-                    <Loading loaderActive={this.state.loaderActive}></Loading>
-                    <Gallery loaderActiveAction={this.handleLoader}></Gallery>
-                </main>
-                <Footer/>
-            </section>
+            <main
+                className={this.state.loaderActive
+                ? 'ma ma--work ma--loading'
+                : 'ma ma--work ma--loaded'}>
+                <Loading loaderActive={this.state.loaderActive}></Loading>
+                <Gallery loaderActiveAction={this.handleLoader}></Gallery>
+            </main>
         );
     }
 }
