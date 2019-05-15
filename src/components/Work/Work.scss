@@ -2,7 +2,7 @@
 @import "../../assets/scss/variables";
 
 // layout
-.ma--loading {
+.main.main--loading {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -13,37 +13,21 @@
     }
 }
 
-.ma--loaded {
-    display: grid;
-    grid-template-columns: 2rem 1fr 2rem;
-    grid-template-rows: 1fr 10fr 1fr;
-    grid-template-areas:
-        ". . ."
-        ". glide glide"
-        ". . .";
-
-    @media screen and (min-width: $medium-up) {
-        grid-template-columns: 1fr 8fr 2fr;
-    }
-
-    @media screen and (min-width: $large-up) {
-        grid-template-rows: 1fr 5fr 1fr;
-        grid-template-columns: 6rem 1fr 1rem;
-    }
-}
-
-
-
 .glide {
-    grid-area: glide;
-    max-width: 400px;
+    grid-column: 1 / 7;
+    max-width: 100%;
     min-height: 50vh;
-
+    grid-row: 3 / 3;
+    padding: 1rem;
+    
     @media screen and (min-width: $medium-up) {
-        max-width: 700px;
+        padding: 0rem;
+        max-width: 100%;
+        grid-column: 2 / 12;
     }
-
+    
     @media screen and (min-width: $large-up) {
-        max-width: 1000px;
+        grid-column: 2 / 16;
+        max-width: 100%;
     }
 }

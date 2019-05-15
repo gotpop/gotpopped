@@ -9,10 +9,12 @@
     padding: $medium;
     background: rgba($white, 0.5);
     border-radius: $radius;
-    grid-column: span 4;
+    grid-column: span 5;
     
-    &:nth-child(odd) {
-        grid-column: span 5;
+    &:nth-child(3n+2) {
+        @media screen and (min-width: $large-up) {
+            grid-column: span 4;
+        }
     }
 
     &__logo-wrap {

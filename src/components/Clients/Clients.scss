@@ -1,22 +1,6 @@
 @import "../../assets/scss/variables";
 
 // Client SCSS
-.ma--clients {
-    display: grid;
-    grid-gap: $small;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 2rem max-content max-content 4rem;
-    margin: $small;
-
-    @media screen and (min-width: $medium-up) {
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    @media screen and (min-width: $large-up) {
-        grid-template-columns: repeat(16, 1fr);
-    }
-}
-
 .clients__intro {
     grid-column: 2 / 12;
     grid-row: 2 / 2;
@@ -33,7 +17,7 @@
 
     @media screen and (min-width: $medium-up) {
         grid-column: 2 / 12;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(10, 1fr);
     }
 
     @media screen and (min-width: $large-up) {

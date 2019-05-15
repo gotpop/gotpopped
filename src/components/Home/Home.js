@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import "./Home.scss";
 import Button from '../Button/Button';
-import Footer from '../Footer/Footer';
 
 class HomeComponent extends Component {
     render() {
         return (
-            <section className="si">
-                <main className="ma ma--home">
+                <main className="main main--home">
                     <article className="intro">
                         <h2>Hello, my name's Liam.</h2>
                         <p>I build enterprise websites that perform well on all devices, focusing on
@@ -15,8 +13,7 @@ class HomeComponent extends Component {
                         <Button></Button>
                     </article>
                 </main>
-                <Footer/>
-            </section>
+               
         );
     }
 }

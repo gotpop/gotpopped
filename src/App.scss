@@ -1,21 +1,42 @@
 // Imports
 @import "./assets/scss/variables";
 
-// Layout
-.ap {
-    display: grid;
-    grid-template-areas: "header" "site";
-    grid-template-columns: 1fr;
-}
-
-.si {
+// Layout for all pages
+.main {
     background: $site-background;
-    display: grid;
-    grid-area: site;
-    grid-template-areas: "main" "footer";
-}
-
-.ma {
-    grid-area: main;
     min-height: 100vh;
+    display: grid;
+    grid-gap: $small;
+    margin: $small;
+    grid-template-columns: repeat(6, 1fr);
+
+    @media screen and (min-width: $medium-up) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    @media screen and (min-width: $large-up) {
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    &--home {
+        grid-template-rows: 6rem min-content 4rem;
+    }
+
+    &--clients,
+    &--skills {
+        grid-template-rows: 2rem max-content max-content 4rem;
+    }
+
+    &--loaded {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 2rem max-content max-content 4rem;
+        
+        @media screen and (min-width: $medium-up) {
+            grid-template-columns: repeat(12, 1fr);
+        }
+        
+        @media screen and (min-width: $large-up) {
+            grid-template-columns: repeat(16, 1fr);
+        }
+    }
 }

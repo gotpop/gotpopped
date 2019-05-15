@@ -6,8 +6,6 @@
     background: $header-background;
     box-shadow: $shadow-inset;
     display: grid;
-    grid-area: header;
-    grid-gap: 0;
     grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
     padding: $tiny;
