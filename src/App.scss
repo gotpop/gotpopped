@@ -6,11 +6,11 @@
     background: $site-background;
     min-height: 100vh;
     display: grid;
-    grid-gap: $small;
-    margin: $small;
-    grid-template-columns: repeat(6, 1fr);
-
+    grid-template-columns: repeat(12, 1fr);
+    
     @media screen and (min-width: $medium-up) {
+        grid-gap: $small;
+        margin: $small;
         grid-template-columns: repeat(12, 1fr);
     }
 
@@ -19,7 +19,7 @@
     }
 
     &--home {
-        grid-template-rows: 6rem min-content 4rem;
+        grid-template-rows: 6rem min-content auto;
     }
 
     &--clients,
@@ -28,8 +28,8 @@
     }
 
     &--loaded {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 2rem max-content max-content 4rem;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 6rem max-content max-content auto;
         
         @media screen and (min-width: $medium-up) {
             grid-template-columns: repeat(12, 1fr);
