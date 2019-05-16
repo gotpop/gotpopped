@@ -4,7 +4,7 @@
 // layout
 .main.main--loading {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     height: 100%;
 
@@ -14,11 +14,11 @@
 }
 
 .glide {
-    grid-column: 1 / 7;
+    grid-column: 2 / 8;
     max-width: 100%;
     min-height: 50vh;
     grid-row: 3 / 3;
-    padding: 1rem;
+    // padding: 1rem;
     
     @media screen and (min-width: $medium-up) {
         padding: 0rem;

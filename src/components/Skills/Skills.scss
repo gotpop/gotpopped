@@ -2,7 +2,7 @@
 
 // Client SCSS
 .skills__intro {
-    grid-column: 1 / 7;
+    grid-column: 2 / 12;
     grid-row: 2 / 2;
     padding: $small 0;
     
@@ -12,7 +12,7 @@
 }
 
 .skills__grid {
-    grid-column: 1 / 12;
+    grid-column: 2 / 12;
     grid-row: 3 / 3;
     animation: fadeInUp 400ms ease-in-out;
     display: grid;

@@ -34,8 +34,8 @@
     &__burger:after,
     &__burger:before {
         cursor: pointer;
-        border-radius: 0.25rem;
-        height: 0.5rem;
+        border-radius: 0.5rem;
+        height: 0.3rem;
         width: 3rem;
         background: rgba($dark1, 1);
         position: absolute;
