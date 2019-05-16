@@ -1,6 +1,7 @@
 {
   "short_name": "GotPop",
-  "name": "GotPop Web Development",
+  "name": "GotPop",
+  "description": "GotPop Web Development.",
   "icons": [
     {
       "src": "favicon.ico",
