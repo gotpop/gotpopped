@@ -143,9 +143,9 @@ class Gallery extends Component {
                             .singleProjectsArray
                             .map(item => {
                                 return <li key={`item-${item.id}`} className="glide__slide">
-                                    <article>
-                                        <h2>{item.name}</h2>
-                                        <p className={item.name} key={item.id}>{item.modules[1].text_plain}</p>
+                                    <article className="glide__article">
+                                        <h2 className="glide__title">{item.name}</h2>
+                                        <p className="glide__text" key={item.id}>{item.modules[1].text_plain}</p>
                                     </article>
                                     <figure className="glide__figure">
                                         <img

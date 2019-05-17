@@ -24,26 +24,28 @@
         flex-direction: row;
     }
 
-    article {
+    &__article {
+        margin-bottom: 2rem;
+
         @media screen and (min-width: $medium-up) {
             flex: 1 1 40%;
-            margin-right: 3rem;
+            margin: 0 3rem 0 0;
         }
     }
 
-    h2 {
+    &__title {
         font-size: 1.5rem;
         margin-bottom: 1em;
     }
 
-    p {
-        color: rgba(black, 0.7);
+    &__text {
+        color: rgba($black, 0.7);
     }
-}
 
-.glide__figure {
-    @media screen and (min-width: $medium-up) {
-        flex: 1 1 60%;
-        margin: 1rem 3rem 0 0;
+    &__figure {
+        @media screen and (min-width: $medium-up) {
+            flex: 1 1 60%;
+            margin: 1rem 3rem 0 0;
+        }
     }
 }
