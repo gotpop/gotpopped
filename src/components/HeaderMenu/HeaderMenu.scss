@@ -7,15 +7,15 @@
     display: none;
     grid-auto-flow: row;
     grid-auto-rows: minmax(auto, 100%);
-    grid-column: 1 / 7; 
+    grid-column: 1 / 7;
     grid-gap: $tiny;
     grid-template-columns: repeat(3, 1fr);
     z-index: 99999;
-    
+
     &--active {
         display: grid;
     }
-    
+
     @media screen and (min-width: $medium-up) {
         display: grid;
         grid-column: 4 / 13;
@@ -29,7 +29,6 @@
 }
 
 .he-menu__item {
-    // padding: $tiny $medium;
     align-items: center;
     background: $hover;
     border-radius: $radius;
@@ -56,7 +55,8 @@
             background: lighten($primary, 5%);
         }
 
-        svg {
+        svg,
+        path {
             fill: $light1;
         }
     }
@@ -65,12 +65,22 @@
 .he-menu__icon {
     display: flex;
     height: 30px;
-    margin: $small;
     min-width: 1rem;
-}
+    margin: 0.4rem 0;
 
-.he-menu__icon svg {
-    height: auto;
-    max-width: 1.5em;
-    width: 100%;
+    svg {
+        height: auto;
+        max-width: 1.5em;
+        width: 100%;
+
+        path {
+            stroke-width: 1px;
+            // fill: black;
+            stroke: black;
+        }
+    }
+
+    @media screen and (min-width: $medium-up) {
+        margin: $small;
+    }
 }

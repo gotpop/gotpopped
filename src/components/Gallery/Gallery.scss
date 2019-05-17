@@ -13,17 +13,6 @@
     &:active {
         cursor: grabbing;
     }
-}
-
-.glide__slide {
-    display: flex;
-    flex-direction: column;
-    animation: fadeInUp 400ms ease-in-out;
-
-    @media screen and (min-width: $medium-up) {
-        flex-direction: row;
-    }
-
     &__article {
         margin-bottom: 2rem;
 
@@ -46,6 +35,16 @@
         @media screen and (min-width: $medium-up) {
             flex: 1 1 60%;
             margin: 1rem 3rem 0 0;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        animation: fadeInUp 400ms ease-in-out;
+
+        @media screen and (min-width: $medium-up) {
+            flex-direction: row;
         }
     }
 }
