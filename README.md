@@ -11,7 +11,7 @@ https://gotpop.herokuapp.com
 
 https://www.gotpop.net
 
-Reference-style: 
+==========
 ![alt text][logo]
 
 [logo]: https://www.gotpop.net/images/icons-512.png "GotPop logo"
