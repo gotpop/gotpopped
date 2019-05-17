@@ -45,7 +45,7 @@ class HeaderMenuComponent extends Component {
                     onClick={this.closeMenu}>
                     <span>CLIENTS</span>
                     <span className="he-menu__icon">
-                        <Icon viewBox="0 0 75 65" name="clients"/>
+                        <Icon className="he-menu__icon-svg" viewBox="0 0 75 65" name="clients"/>
                     </span>
                 </NavLink>
                 <NavLink
@@ -55,7 +55,7 @@ class HeaderMenuComponent extends Component {
                     onClick={this.closeMenu}>
                     <span>WORK</span>
                     <span className="he-menu__icon">
-                        <Icon name="code"/>
+                        <Icon className="he-menu__icon-svg" name="code"/>
                     </span>
                 </NavLink>
                 <NavLink
@@ -65,7 +65,7 @@ class HeaderMenuComponent extends Component {
                     onClick={this.closeMenu}>
                     <span>SKILLS</span>
                     <span className="he-menu__icon">
-                        <Icon name="skills"/>
+                        <Icon className="he-menu__icon-svg" name="skills"/>
                     </span>
                 </NavLink>
             </nav>
