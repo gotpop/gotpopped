@@ -1,0 +1,5 @@
+{
+    "events": {
+        "start": "yarn start:dev"
+      }
+}
