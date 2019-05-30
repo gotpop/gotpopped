@@ -6,12 +6,11 @@
   "license": "ISC",
   "proxy": "http://localhost:3001",
   "scripts": {
-    "start": "npm run build && node --experimental-modules server.mjs",
-    "serve": "react-scripts start",
-    "server": "nodemon --experimental-modules server.mjs",
+    "start": "yarn run build && node --experimental-modules server.mjs",
+    "start:dev": "react-scripts start",
+    "serve": "nodemon --experimental-modules server.mjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "clean": "rm -rf build"
   },
   "keywords": [
