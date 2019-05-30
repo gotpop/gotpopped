@@ -17,4 +17,4 @@ https://www.gotpop.net
 
 ## Tests
 
-As with many React applications Jest is used for testing
+As with many React applications Jest is used for testing.
