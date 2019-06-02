@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clients from './Clients';
+import Gallery from './Gallery';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Clients />, div);
+  ReactDOM.render(<Gallery />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
