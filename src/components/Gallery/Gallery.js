@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import Glide from "@glidejs/glide";
 import Dexie from "dexie";
 import db from "../../services/storage";
-import StoreProjects from "../../services/indexDb";
+import StoreProjects from "../../services/store-projects";
+import Mount from "../../services/mount-gallery";
 import "./Gallery.scss";
 
 class Gallery extends Component {
 
     goStore = new StoreProjects();
+    goMount = new Mount();
 
     state = {
         singleProjectsArray: [],
@@ -32,17 +33,8 @@ class Gallery extends Component {
         db.gallery.get("AllProjectPages").then(data => {
             this.setState({ singleProjectsArray: data.storeAllProjects });
             this.handleResultPromiseState(false);
-            this.mountGallery();
+            this.goMount.init();
         });
-    }
-
-    mountGallery() {
-        const carousel = new Glide(".glide", {
-            type: "carousel",
-            perView: 1,
-            gap: 100
-        });
-        carousel.mount();
     }
 
     checkDbExists = () => {
@@ -64,8 +56,10 @@ class Gallery extends Component {
         let promiseArray = [];
 
         for (const project of projects) {
+            const url = `/behance/project/?projectId=${project.id}`;
+
             promiseArray.push(
-                fetch(`/behance/project/?projectId=${project.id}`)
+                fetch(url)
                     .then(response => response.json())
                     .then(data => singleProjects.push(data.project))
                     .catch(error => console.error("Error:", error))
@@ -76,7 +70,7 @@ class Gallery extends Component {
             this.goStore.storeProjectsPages(singleProjects);
             this.setState({ singleProjectsArray: singleProjects });
             this.handleResultPromiseState(false);
-            this.mountGallery();
+            this.goMount.init();
         });
     }
 

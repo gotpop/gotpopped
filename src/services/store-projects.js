@@ -9,9 +9,7 @@ class StoreProjects {
                 storeAllProjects: projects
             })
             .then()
-            .catch(error => {
-                console.log("Ooops: " + error);
-            });
+            .catch(error => console.log("Ooops: " + error));
     }
 
     storeAllProjects(projects) {
@@ -21,9 +19,7 @@ class StoreProjects {
                 storeAllProjects: projects
             })
             .then()
-            .catch(error => {
-                console.log("Ooops: " + error);
-            });
+            .catch(error => console.log("Ooops: " + error));
     }
 }
 
