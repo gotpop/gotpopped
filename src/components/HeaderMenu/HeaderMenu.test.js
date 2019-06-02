@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clients from './Clients';
+import HeaderMenu from './HeaderMenu';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Clients />, div);
+  ReactDOM.render(<HeaderMenu />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

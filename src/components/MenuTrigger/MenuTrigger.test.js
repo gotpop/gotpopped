@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clients from './Clients';
+import MenuTrigger from './MenuTrigger';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Clients />, div);
+  ReactDOM.render(<MenuTrigger />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clients from './Clients';
+import Icons from './Icons';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Clients />, div);
+  ReactDOM.render(<Icons />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
