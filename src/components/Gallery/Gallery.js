@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import Glide from "@glidejs/glide";
 import "./Gallery.scss";
 import db from "../../services/storage";
-// import indexDb from '../../services/indexDb';
+import StoreProjects from "../../services/indexDb";
 import Dexie from "dexie";
 
 class Gallery extends Component {
+
+    goStore = new StoreProjects();
+
     state = {
         singleProjectsArray: [],
         allProjectsArray: [],
@@ -18,38 +21,19 @@ class Gallery extends Component {
             .then(data => {
                 this.setState({ allProjectsArray: data.projects });
                 this.getProject(data.projects);
-                this.storeAllProjects(data.projects);
+                this.goStore.storeAllProjects(data.projects);
             })
             .catch(error => console.error("Error:", error));
-    };
-
-    storeAllProjects(projects) {
-        db.gallery
-            .put({ name: "AllProjects", storeAllProjects: projects })
-            .then()
-            .catch(error => {
-                console.log("Ooops: " + error);
-            });
-    }
-
-    storeProjectsPages(projects) {
-        db.gallery
-            .put({ name: "AllProjectPages", storeAllProjects: projects })
-            .then()
-            .catch(error => {
-                console.log("Ooops: " + error);
-            });
     }
 
     localBuild = () => {
         db.gallery.get("AllProjectPages").then(stuff => {
             this.setState({ singleProjectsArray: stuff.storeAllProjects });
-            // Tell parent component that the gallery has loaded
             this.handleResultPromiseState(false);
             this.mountGallery();
         });
-    };
-    
+    }
+
     mountGallery() {
         const carousel = new Glide(".glide", {
             type: "carousel",
@@ -73,22 +57,21 @@ class Gallery extends Component {
                     "Oops, an error occurred when trying to check database existance"
                 );
             });
-    };
+    }
 
     componentDidMount() {
-        // Check if starage has been used yet and if not then make an api call
         this.checkDbExists();
     }
 
     handleResultPromiseState = loaderBoolean => {
+        // Tell parent component that the gallery has loaded
         this.props.loaderActiveAction(loaderBoolean);
-    };
+    }
 
     getProject(projects) {
         let singleProjects = [];
         let promiseArray = [];
 
-        // Create an array of fetch promises
         for (const project of projects) {
             promiseArray.push(
                 fetch(`/behance/project/?projectId=${project.id}`)
@@ -100,11 +83,9 @@ class Gallery extends Component {
             );
         }
 
-        // Execute and wait for all to resolve before setting state
         Promise.all(promiseArray).then(() => {
-            this.storeProjectsPages(singleProjects);
+            this.goStore.storeProjectsPages(singleProjects);
             this.setState({ singleProjectsArray: singleProjects });
-            // Tell parent component that the gallery has loaded
             this.handleResultPromiseState(false);
             this.mountGallery();
         });
