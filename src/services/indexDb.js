@@ -1,15 +1,30 @@
-import db from "storage";
+import db from "./storage";
 
-class Gallery {
-    // Prototype method
-    save() {
-        return db.gallery.put(this); // Will only save own props.
+class StoreProjects {
+
+    storeProjectsPages(projects) {
+        db.gallery
+            .put({
+                name: "AllProjectPages",
+                storeAllProjects: projects
+            })
+            .then()
+            .catch(error => {
+                console.log("Ooops: " + error);
+            });
     }
 
-    // Prototype property
-    get age() {
-        return moment(Date.now()).diff (this.birthDate, 'years');
+    storeAllProjects(projects) {
+        db.gallery
+            .put({
+                name: "AllProjects",
+                storeAllProjects: projects
+            })
+            .then()
+            .catch(error => {
+                console.log("Ooops: " + error);
+            });
     }
 }
 
-db.gallery.mapToClass(Gallery);
+export default StoreProjects;
