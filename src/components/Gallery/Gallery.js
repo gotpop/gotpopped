@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Glide from "@glidejs/glide";
-import "./Gallery.scss";
+import Dexie from "dexie";
 import db from "../../services/storage";
 import StoreProjects from "../../services/indexDb";
-import Dexie from "dexie";
+import "./Gallery.scss";
 
 class Gallery extends Component {
 
@@ -18,17 +18,19 @@ class Gallery extends Component {
     getAllProjects = () => {
         fetch("/behance/projects")
             .then(response => response.json())
-            .then(data => {
-                this.setState({ allProjectsArray: data.projects });
-                this.getProject(data.projects);
-                this.goStore.storeAllProjects(data.projects);
-            })
+            .then(data => this.getAllProjectsCallback(data))
             .catch(error => console.error("Error:", error));
+    }
+        
+    getAllProjectsCallback(data) {
+        this.setState({ allProjectsArray: data.projects });
+        this.getProject(data.projects);
+        this.goStore.storeAllProjects(data.projects);
     }
 
     localBuild = () => {
-        db.gallery.get("AllProjectPages").then(stuff => {
-            this.setState({ singleProjectsArray: stuff.storeAllProjects });
+        db.gallery.get("AllProjectPages").then(data => {
+            this.setState({ singleProjectsArray: data.storeAllProjects });
             this.handleResultPromiseState(false);
             this.mountGallery();
         });
@@ -45,18 +47,8 @@ class Gallery extends Component {
 
     checkDbExists = () => {
         Dexie.exists("gallery_database")
-            .then(exists => {
-                if (exists) {
-                    this.localBuild();
-                } else {
-                    this.getAllProjects();
-                }
-            })
-            .catch(function(error) {
-                console.error(
-                    "Oops, an error occurred when trying to check database existance"
-                );
-            });
+            .then(exists => exists ? this.localBuild() : this.getAllProjects())
+            .catch(error => console.error("Error:", error));
     }
 
     componentDidMount() {
@@ -64,7 +56,6 @@ class Gallery extends Component {
     }
 
     handleResultPromiseState = loaderBoolean => {
-        // Tell parent component that the gallery has loaded
         this.props.loaderActiveAction(loaderBoolean);
     }
 
@@ -76,9 +67,7 @@ class Gallery extends Component {
             promiseArray.push(
                 fetch(`/behance/project/?projectId=${project.id}`)
                     .then(response => response.json())
-                    .then(data => {
-                        singleProjects.push(data.project);
-                    })
+                    .then(data => singleProjects.push(data.project))
                     .catch(error => console.error("Error:", error))
             );
         }
