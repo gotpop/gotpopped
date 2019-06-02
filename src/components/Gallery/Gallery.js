@@ -43,17 +43,21 @@ class Gallery extends Component {
 
     localBuild = () => {
         db.gallery.get("AllProjectPages").then(stuff => {
-            const carousel = new Glide(".glide", {
-                type: "carousel",
-                perView: 1,
-                gap: 100
-            });
             this.setState({ singleProjectsArray: stuff.storeAllProjects });
             // Tell parent component that the gallery has loaded
             this.handleResultPromiseState(false);
-            carousel.mount();
+            this.mountGallery();
         });
     };
+    
+    mountGallery() {
+        const carousel = new Glide(".glide", {
+            type: "carousel",
+            perView: 1,
+            gap: 100
+        });
+        carousel.mount();
+    }
 
     checkDbExists = () => {
         Dexie.exists("gallery_database")
@@ -98,17 +102,11 @@ class Gallery extends Component {
 
         // Execute and wait for all to resolve before setting state
         Promise.all(promiseArray).then(() => {
-            const carousel = new Glide(".glide", {
-                type: "carousel",
-                perView: 1,
-                gap: 100
-            });
             this.storeProjectsPages(singleProjects);
-            console.log("TCL: Gallery -> singleProjects", singleProjects);
             this.setState({ singleProjectsArray: singleProjects });
             // Tell parent component that the gallery has loaded
             this.handleResultPromiseState(false);
-            carousel.mount();
+            this.mountGallery();
         });
     }
 
