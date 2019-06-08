@@ -5,7 +5,6 @@ import Button from './Button';
 
 configure({ adapter: new Adapter() });
 
-import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import menuReducer from '../../reducers/menu-reducer';
 import updateComponentReducer from '../../reducers/update-component-reducer';
