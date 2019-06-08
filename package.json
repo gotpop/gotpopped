@@ -29,6 +29,8 @@
     "compression": "^1.7.4",
     "dexie": "^2.0.4",
     "dotenv": "^7.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
     "node-fetch": "^2.3.0",
@@ -55,6 +57,7 @@
   ],
   "devDependencies": {
     "react-dev-utils": "^9.0.0",
+    "react-test-renderer": "^16.8.6",
     "svgo": "^1.2.2"
   }
 }
