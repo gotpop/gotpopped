@@ -9,7 +9,7 @@ import Skills from './components/Skills/Skills';
 import Clients from './components/Clients/Clients';
 import Footer from './components/Footer/Footer';
 
-class App extends Component {
+export class App extends Component {
     render() {
         return (
             <BrowserRouter>

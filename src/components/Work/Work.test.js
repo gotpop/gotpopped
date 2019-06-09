@@ -5,7 +5,9 @@ import Work from './Work';
 
 configure({ adapter: new Adapter() });
 
-it('renders Work', () => {
-    const work = shallow(<Work />);
-    expect(work.find('main').length).toEqual(1);
+describe('Work', () => {
+    it('renders Work', () => {
+        const work = shallow(<Work />);
+        expect(work.find('main').length).toEqual(1);
+    });
 });

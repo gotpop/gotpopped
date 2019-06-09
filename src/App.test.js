@@ -1,21 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom'; 
-import App from './App';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { App } from './App';
 
-import {Provider} from 'react-redux';
-import {combineReducers, createStore} from 'redux';
-import menuReducer from './reducers/menu-reducer';
-import updateComponentReducer from './reducers/update-component-reducer';
+configure({ adapter: new Adapter() });
 
-const allReducers = combineReducers({menu: menuReducer, updateComponent: updateComponentReducer});
-
-const store = createStore(allReducers, {
-    menu: false,
-    updateComponent: false
-}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Provider store={store}><App/></Provider>, div);
-    ReactDOM.unmountComponentAtNode(div);
+it('renders button', () => {
+    const app = shallow(<App />);
+    expect(app.find('div').length).toEqual(1);
 });

@@ -1,35 +1,26 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import Icon from "../Icons/Icons";
-import "./HeaderMenu.scss";
 import {connect} from 'react-redux';
 import {updateMenu} from '../../actions/menu-actions';
 import {updateComponent} from '../../actions/update-component-actions';
+import "./HeaderMenu.scss";
 
-class HeaderMenuComponent extends Component {
+export class HeaderMenuComponent extends Component {
 
     onUpdateMenu = () => {
         let menuStatus = this.props.menu;
-        this
-            .props
-            .onUpdateMenu(!menuStatus);
+        this.props.onUpdateMenu(!menuStatus);
     }
 
     onRefreshComponent = () => {
-        // Force active menu to update
         this.forceUpdate();
     }
 
     closeMenu = () => {
         this.forceUpdate();
-        let mql = window
-            .matchMedia('(max-width: 900px)')
-            .matches;
-        if (mql) {
-            this
-                .props
-                .onUpdateMenu(false);
-        }
+        let mql = window.matchMedia('(max-width: 900px)').matches;
+        if (mql) {this.props.onUpdateMenu(false)}
     }
 
     render() {

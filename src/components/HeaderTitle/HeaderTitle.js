@@ -5,7 +5,7 @@ import "./HeaderTitle.scss";
 import {connect} from 'react-redux';
 import {updateComponent} from '../../actions/update-component-actions';
 
-class HeaderTitle extends Component {
+export class HeaderTitle extends Component {
 
     onRefreshComponent = () => {
         let updateComponentStatus = this.props.updateComponent;

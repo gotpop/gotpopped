@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Loading from './Loading';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Loading />, div);
-  ReactDOM.unmountComponentAtNode(div);
+configure({ adapter: new Adapter() });
+
+describe('Loading', () => {
+    const loaderActive = true;
+
+    it('Should render', () => {
+        const loading = shallow(<Loading item="{loaderActive}"/>);
+        expect(loading.find('div').length).toEqual(4);
+    });
 });
