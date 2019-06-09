@@ -41,7 +41,7 @@ class Gallery extends Component {
     }
 
     loadLocalOrRemoteData = async () => {
-        let dbExists = await checkIfDbExists();
+        const dbExists = await checkIfDbExists();
         dbExists ? this.localBuild() : this.getAllProjects();
     }
 
