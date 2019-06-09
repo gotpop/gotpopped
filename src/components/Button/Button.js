@@ -5,7 +5,7 @@ import "./Button.scss";
 import {connect} from 'react-redux';
 import {updateComponent} from '../../actions/update-component-actions';
 
-class ButtonComponent extends Component {
+export class ButtonComponent extends Component {
 
     onRefreshComponent = () => {
         let updateComponentStatus = this.props.updateComponent;
