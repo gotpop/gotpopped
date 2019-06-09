@@ -81,7 +81,7 @@ class Gallery extends Component {
                 <div className="glide__track" data-glide-el="track">
                     <ul className="glide__slides">
                         {this.state.singleProjectsArray.map(item => {
-                            return (<GalleryItem item={item}/>);
+                            return (<GalleryItem key={item.id} item={item}/>);
                         })}
                     </ul>
                 </div>
