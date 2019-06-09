@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Footer from './Footer';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Footer />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+configure({ adapter: new Adapter() });
+
+describe('Footer', () => {
+    it('Should render', () => {
+        const footer = shallow(<Footer />);
+        expect(footer.find('footer').length).toEqual(1);
+    });
+}); 

@@ -5,7 +5,9 @@ import Header from './Header';
 
 configure({ adapter: new Adapter() });
 
-it('renders header', () => {
-    const header = shallow(<Header />);
-    expect(header.find('header').length).toEqual(1);
+describe('Header', () => {
+    it('Should render', () => {
+        const header = shallow(<Header />);
+        expect(header.find('header').length).toEqual(1);
+    });
 });

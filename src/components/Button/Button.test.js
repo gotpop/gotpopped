@@ -5,7 +5,9 @@ import { ButtonComponent as Button} from './Button';
 
 configure({ adapter: new Adapter() });
 
-it('renders button', () => {
-    const buttton = shallow(<Button />);
-    expect(buttton.find('span').length).toEqual(2);
-});
+describe('Button', () => {
+    it('Should render', () => {
+        const buttton = shallow(<Button />);
+        expect(buttton.find('span').length).toEqual(2);
+    });
+}); 
