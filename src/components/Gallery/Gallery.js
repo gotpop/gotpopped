@@ -11,6 +11,9 @@ class Gallery extends Component {
     goStore = new StoreProjects();
     goMount = new Mount();
 
+   singleProjects = [];
+   promiseArray = [];
+
     state = {
         singleProjectsArray: [],
         allProjectsArray: [],
@@ -26,7 +29,8 @@ class Gallery extends Component {
         
     getAllProjectsCallback(data) {
         this.setState({ allProjectsArray: data.projects });
-        this.getProject(data.projects);
+        this.makeArrayOfSingleProjectFetch(data.projects);
+        this.getProject();
         this.goStore.storeAllProjects(data.projects);
     }
 
@@ -48,25 +52,23 @@ class Gallery extends Component {
     loadingAnimation = loaderBoolean => {
         this.props.loaderActiveAction(loaderBoolean);
     }
-    
-    getProject(projects) {
-        let singleProjects = [];
-        let promiseArray = [];
-        
+
+    makeArrayOfSingleProjectFetch(projects) {
         for (const project of projects) {
             const url = `/behance/project/?projectId=${project.id}`;
-
-            promiseArray.push(
+    
+            this.promiseArray.push(
                 fetch(url)
                 .then(response => response.json())
-                    .then(data => singleProjects.push(data.project))
-                    .catch(error => console.error("Error:", error))
-                    );
+                    .then(data => this.singleProjects.push(data.project))
+                    .catch(error => console.error("Error:", error)));
         }
-        
-        Promise.all(promiseArray).then(() => {
-            this.goStore.storeProjectsPages(singleProjects);
-            this.setState({ singleProjectsArray: singleProjects });
+    }
+    
+    getProject() {
+        Promise.all(this.promiseArray).then(() => {
+            this.goStore.storeProjectsPages(this.singleProjects);
+            this.setState({ singleProjectsArray: this.singleProjects });
             this.loadingAnimation(false);
             this.goMount.init();
         });
