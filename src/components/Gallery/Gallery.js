@@ -20,22 +20,19 @@ class Gallery extends Component {
         loaderActive: true
     };
 
-    getAllProjects = () => {
-        fetch("/behance/projects")
-            .then(response => response.json())
-            .then(data => this.getAllProjectsCallback(data))
-            .catch(error => console.error("Error:", error));
-    }
-        
-    getAllProjectsCallback(data) {
-        this.setState({ allProjectsArray: data.projects });
-        this.makeArrayOfSingleProjectFetch(data.projects);
-        this.getProject();
-        this.goStore.storeAllProjects(data.projects);
-    }
-
     loadingAnimation = loaderBoolean => {
         this.props.loaderActiveAction(loaderBoolean);
+    }
+
+    getProject() {
+        Promise.all(this.promiseArray).then(() => {
+            this.goStore.storeProjectsPages(this.singleProjects);
+            this.setState({
+                singleProjectsArray: this.singleProjects
+            });
+            this.loadingAnimation(false);
+            this.goMount.init();
+        });
     }
 
     makeArrayOfSingleProjectFetch(projects) {
@@ -50,15 +47,18 @@ class Gallery extends Component {
         }
     }
 
-    getProject() {
-        Promise.all(this.promiseArray).then(() => {
-            this.goStore.storeProjectsPages(this.singleProjects);
-            this.setState({
-                singleProjectsArray: this.singleProjects
-            });
-            this.loadingAnimation(false);
-            this.goMount.init();
-        });
+    getAllProjects = () => {
+        fetch("/behance/projects")
+            .then(response => response.json())
+            .then(data => this.getAllProjectsCallback(data))
+            .catch(error => console.error("Error:", error));
+    }
+        
+    getAllProjectsCallback(data) {
+        this.setState({ allProjectsArray: data.projects });
+        this.makeArrayOfSingleProjectFetch(data.projects);
+        this.getProject();
+        this.goStore.storeAllProjects(data.projects);
     }
 
     localBuildCallback(data) {
