@@ -34,21 +34,6 @@ class Gallery extends Component {
         this.goStore.storeAllProjects(data.projects);
     }
 
-    localBuild = () => {
-        db.gallery.get("AllProjectPages").then(data => this.localBuildActions(data));
-    }
-    
-    localBuildActions(data) {
-        this.setState({ singleProjectsArray: data.storeAllProjects });
-        this.loadingAnimation(false);
-        this.goMount.init();
-    }
-
-    loadLocalOrRemoteData = async () => {
-        const dbExists = await checkIfDbExists();
-        dbExists ? this.localBuild() : this.getAllProjects();
-    }
-
     loadingAnimation = loaderBoolean => {
         this.props.loaderActiveAction(loaderBoolean);
     }
@@ -56,22 +41,39 @@ class Gallery extends Component {
     makeArrayOfSingleProjectFetch(projects) {
         for (const project of projects) {
             const url = `/behance/project/?projectId=${project.id}`;
-    
+
             this.promiseArray.push(
                 fetch(url)
                 .then(response => response.json())
-                    .then(data => this.singleProjects.push(data.project))
-                    .catch(error => console.error("Error:", error)));
+                .then(data => this.singleProjects.push(data.project))
+                .catch(error => console.error("Error:", error)));
         }
     }
-    
+
     getProject() {
         Promise.all(this.promiseArray).then(() => {
             this.goStore.storeProjectsPages(this.singleProjects);
-            this.setState({ singleProjectsArray: this.singleProjects });
+            this.setState({
+                singleProjectsArray: this.singleProjects
+            });
             this.loadingAnimation(false);
             this.goMount.init();
         });
+    }
+
+    localBuildCallback(data) {
+        this.setState({ singleProjectsArray: data.storeAllProjects });
+        this.loadingAnimation(false);
+        this.goMount.init();
+    }
+
+    localBuild = () => {
+        db.gallery.get("AllProjectPages").then(data => this.localBuildCallback(data));
+    }
+
+    loadLocalOrRemoteData = async () => {
+        const dbExists = await checkIfDbExists();
+        dbExists ? this.localBuild() : this.getAllProjects();
     }
     
     componentDidMount() {
