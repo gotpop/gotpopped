@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+
 import db from "../../services/storage";
 import StoreProjects from "../../services/store-projects";
 import Mount from "../../services/mount-gallery";
 import GalleryItem from './GalleryItem';
 import checkIfDbExists from './checkIfDbExists';
+
 import "./Gallery.scss";
 
 class Gallery extends Component {
