@@ -35,7 +35,6 @@
     color: $dark3;
     cursor: pointer;
     display: flex;
-    display: flex;
     flex: 1 1 auto;
     font-family: $header-medium;
     font-size: 1rem;
@@ -49,15 +48,15 @@
 
     &--active {
         color: $light1;
-        background: $primary;
+        background: darken($primary, 5%);
 
         &:hover {
             background: lighten($primary, 5%);
         }
 
-        svg,
         path {
-            fill: $light1;
+            fill: currentColor;
+            stroke: currentColor;
         }
     }
 }
@@ -72,12 +71,6 @@
         height: auto;
         max-width: 1.5em;
         width: 100%;
-
-        path {
-            stroke-width: 1px;
-            // fill: black;
-            stroke: black;
-        }
     }
 
     @media screen and (min-width: $medium-up) {
