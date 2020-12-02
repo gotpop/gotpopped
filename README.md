@@ -19,4 +19,3 @@ https://www.gotpop.net
 
 As with many React applications Jest is used for testing.
 
-# Ben message
