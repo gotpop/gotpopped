@@ -1,3 +1,11 @@
+⚠️ Warning this is no longer maintained! ⚠️
+
+New version of my site can be found here: 
+
+https://github.com/gotpop/gotpop
+
+https://www.gotpop.net
+
 # GotPop
 
 A component based portfolio application build with React, Redux and CSS Grid layout.
