@@ -1,4 +1,4 @@
-# ⚠️ Warning this repo is no longer maintained! ⚠️
+# ⚠️ Warning! This repo is no longer maintained! ⚠️
 
 New version of my site can be found here: 
 
